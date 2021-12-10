@@ -1,9 +1,70 @@
- <!DOCTYPE html>
-<html>
-<title>BIGMA</title>
-<body>
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <title>Joe Burke</title>
+    <link rel="icon" type="image/x-icon" href="./resources/icon.png">
+    <style>
+      * {
+	  scrollbar-width: auto;
+	  scrollbar-color: rgb(06, 04, 25) rgb(217, 209, 217);
+      }
+      *::-webkit-scrollbar {
+	  width: 12px;
+      }
+      *::-webkit-scrollbar-track {
+	  background: rgb(217, 209, 217);
+      }
+      *::-webkit-scrollbar-thumb {
+	  background-color: rgb(06, 04, 25);
+	  border-radius: 20px;
+	  border: 3px solid rgb(217, 209, 217);
+      }
+      body {
+	  background-color: rgb(06, 04, 25);
+      }
+      .main {
+	  top: 0px;
+	  right: 0px;
+	  height: 2000px;
+	  width: 100%;
+	  margin: 0px;
+	  overflow-x: hidden;
+      }
+      div.backg {
+	  top: 0px;
+	  right: 0px;
+	  height: 100%;
+	  width: 100%;
+	  margin: 0px;
+	  position: fixed;
+	  z-index: -100;
+      }
+    </style>
+    <script>
 
-<p>don't contact me or i'll KILL YOU</p>
+      document.addEventListener("DOMContentLoaded", function (event) {
 
-</body>
+	  const cells = [];
+	  
+	  
+	  setInterval(function () {
+	      var c = document.getElementById("backAuto");
+	      var ctx = c.getContext("2d");
+	      ctx.canvas.width  = window.innerWidth;
+	      ctx.canvas.height = window.innerHeight;
+	      var imgData = ctx.createImageData(ctx.canvas.width, ctx.canvas.height);
+	      
+	      
+	  }, 100);  
+      })
+    </script>
+  </head>
+  <body class="main">
+    <div class="main">
+      <div class="backg">
+	 <canvas id="backAuto"></canvas>
+      </div>
+    </div>
+  </body>
 </html> 
