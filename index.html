@@ -21,7 +21,7 @@
 	  border: 3px solid rgb(217, 209, 217);
       }
       body {
-	  background-color: rgb(06, 04, 25);
+	  background-color: rgb(181, 26, 66);
       }
       .main {
 	  top: 0px;
@@ -32,38 +32,23 @@
 	  overflow-x: hidden;
       }
       div.backg {
-	  top: 0px;
-	  right: 0px;
-	  height: 100%;
 	  width: 100%;
+	  display: inline;
+	  text-align: center;
 	  margin: 0px;
 	  position: fixed;
 	  z-index: -100;
       }
+      canvas.backg {
+	  display: inline;
+      }
     </style>
-    <script>
-
-      document.addEventListener("DOMContentLoaded", function (event) {
-
-	  const cells = [];
-	  
-	  
-	  setInterval(function () {
-	      var c = document.getElementById("backAuto");
-	      var ctx = c.getContext("2d");
-	      ctx.canvas.width  = window.innerWidth;
-	      ctx.canvas.height = window.innerHeight;
-	      var imgData = ctx.createImageData(ctx.canvas.width, ctx.canvas.height);
-	      
-	      
-	  }, 100);  
-      })
-    </script>
+ <script src="scripts/backg.js"></script>
   </head>
   <body class="main">
     <div class="main">
       <div class="backg">
-	 <canvas id="backAuto"></canvas>
+	 <canvas class="backg" id="backAuto"></canvas>
       </div>
     </div>
   </body>
