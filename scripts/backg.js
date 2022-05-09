@@ -1,3 +1,5 @@
+var cells;
+
 document.addEventListener("DOMContentLoaded", function (event) {
 
     const c = document.getElementById("backAuto");
@@ -9,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     ctx.imageSmoothingEnabled = false;
 
     // I hate you JavaScript, I really do
-    let cells = new Array(c.height);
+    cells = new Array(c.height);
     for (let i = 0; i < c.height; i++) {
 	cells [i] = new Array(c.width);
 	for (let j = 0; j < c.width; j++) {
@@ -38,23 +40,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	    c.width  = Math.min(window.innerHeight, window.innerWidth)
 	    c.height = window.innerHeight;
 	    reset = true;
+	    return;
 	}
 	
 	const data = ctx.createImageData(c.width, c.height);
 	let p = 0;
-	for (let i = 0; i < c.width; i++) {
-	    for (let j = 0; j < c.height; j++) {
-		if (cells [i] [j] === 0) {
+	for (let i = 0; i < c.height; i++) {
+	    for (let j = 0; j < c.width; j++) {
+		if (cells[i][j] === 0) {
 		    data.data[p]     = 217;
 		    data.data[p + 1] = 209;
 		    data.data[p + 2] = 217;
 		}
-		else if (cells [i] [j] === 1) {
+		else if (cells[i][j] === 1) {
 		    data.data[p]     = 6;
 		    data.data[p + 1] = 4;
 		    data.data[p + 2] = 25;
 		}
-		else if (cells [i] [j] === -1) {
+		else if (cells[i][j] === -1) {
 		    data.data[p]     = 181;
 		    data.data[p + 1] = 26;
 		    data.data[p + 2] = 66;
@@ -72,14 +75,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	    line = 0;
 	    cells = new Array(c.height);
 	    for (let i = 0; i < c.height; i++) {
-		cells [i] = new Array(c.width);
+		cells[i] = new Array(c.width);
 		for (let j = 0; j < c.width; j++) {
-		    cells [i][j] = -1;
+		    cells[i][j] = -1;
 		}
 	    }
 	    let r = Math.floor(Math.random() * 4) + 1;
 	    for (let i = 0; i < r; i++) {
-		cells [0][Math.floor(Math.random() * 256)] = 0;
+		cells [0][Math.floor(Math.random() * c.width)] = 0;
 	    }
 	    rule[0][0][0] = (Math.floor(Math.random() * 10) % 2);
 	    rule[0][0][1] = (Math.floor(Math.random() * 10) % 2);
