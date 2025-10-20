@@ -1,0 +1,56 @@
+#+TITLE: Better Wheels Forever
+#+SUBTITLE: An Observation
+One of the things about programming is that it's not too hard to be right, but you can always be /more/ right. You could
+make it faster. Or purer. Or with more flexibily. Or more scalable. Or with less upfront work. Or more portably. Or less
+portably but with more ports. Or with a better API. Or in a better language. Or with fewer dependencies. Or just better
+dependencies. Or more comments. Or better documentation. Or with better test coverage. Or with a better toolchain. Or
+you could package your releases better. Or you could use a better license. Or you could make it more accessible to [[https://old.reddit.com/r/github/comments/1at9br4/i_am_new_to_github_and_i_have_lots_to_say/][this
+guy]]. Or you could--
+
+#+begin_center
+*​panting, out of breath, hunched over and holding up a single finger ☝️ to ask you to wait​*
+
+*​hack hack wheeze cough cough wheeze​*
+#+end_center
+
+It's like that one book by that one asshole about the how the only way to create great art in a world with a lot of
+existing great art is to misread your predecessors[fn:1]. To do better than them at what they weren't trying to do.
+Software development is about making the last guy's thing but "more right." "More correct." "More better."
+
+There's always another nerd more annoying than you, with stronger opinions than you, trying to do it more right than
+you. Then the next guy disagrees with them and does it again.
+
+Developers don't /make things./ You can't eat an NPM package. We come up with better ways to /do/ things (I mean that's
+literally the definition of 'procedure') and there's as many axes to measure /that/ on as there have been /thoughts./ We
+reinvent the wheel so much because that's all that software /can ever do./ *That's our only product.*
+
+This has a meta-circular effect on the industry, because, of course, our only products are our only tools are our only
+products are our only tools are our only products. We cannot /help ourselves/ but to ask if we can also describe how to
+do development better. Do meetings better. Do /laws/ better. (I don't just mean 'smart contracts' and so forth -- the
+GPL counts too.)
+
+Everybody succumbs to this demon, in one way or another, at one time or another. You expend the real for correctness,
+and it affords you nothing. No wonder, then, that there are so many annoying "tech bros" these days, preening about with
+their self-superiority and insane politics. This is what happens to your belief system when you lose the struggle in the
+easiest, most embarrassing way: think they can /win./ That one day we'll finally build the last wheel and it'll be
+*over.* The library of babel will be available as an NPM repository. Every problem ever had, solved. Solved the /right
+way./
+
+It's a necessarily paranoid worldview ("problems can't be structural or inherent, because then we wouldn't be able to
+finish all the wheels -> the reason we're still missing so many wheels must be deliberate obstruction -> this
+obstruction must be very powerful if it's still effective even though all my allies/friends/heroes are in charge ->
+GameStop is being targeted by evil wizards") and that's easy to make fun of, but we should not allow ourselves to fall
+into the trap of assuming /we're/ out of the cave, just because we saw the fire.
+
+Even the "I just care if it works or not :)" crowd is not immune. You can always try to redefine correctness, but you
+cannot /reject it./ No more than you can reject 'addition', or 'art', or 'gravity', anyway. It's like politics: you
+cannot have "no opinion" on it, because "I have no opinion" /is an opinion./ "I don't care about doing things perfectly"
+is a standard of perfection. Your act of denial is haunted by the thing itself! Around and around and around, we go.
+
+So what /can/ we do? iunno. Try to keep our heads cool about Lennart Poettering, I guess. Cope with a harsh reality in
+whatever the ways we can. Learn to live with losing ground. Other platitudes.
+
+Anyway, back to editing my ~.emacs~...
+
+* Footnotes
+[fn:1] The Anxiety of Influence: A Theory of Poetry by Harold Bloom. I haven't read it myself.

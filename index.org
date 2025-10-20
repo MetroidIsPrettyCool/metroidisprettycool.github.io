@@ -1,0 +1,204 @@
+#+TITLE: My Wabsite
+#+OPTIONS: toc:nil
+#+attr_html: :width 25% :align center
+[[./images/icon-bepis-scaled.png]]
+#+TOC: headlines 1
+* Introduction
+Hi! Welcome to my ~#webpresence~.
+
+There's not much here, which is sort of deliberate. Just wanted to replace the nonsense that was here previously with
+something that isn't /obviously unfinished./ Maybe I'll expand later, maybe I won't. At the moment I have no current
+plans to do besides GitHub Pages-squat.
+
+You can find me most places under the username "metroidisprettycool", "metroidipc", "mipc", or some variation thereof.
+It's unprofessional, clearly, but I made my first real "social media" account (Reddit, since deleted) under that name
+and I value consistency more than I value being professional.
+* Projects
+Here's a list of projects I'm proud of:
+
+...
+* No But Really
+Okay, okay. It's just the [[./essays/00-more-right.org][Wheel Problem]]. I can recognize that. All of these, and especially the ones I'm not showing
+you, took up days and weeks and months of my life, and by the end the most biggest thing I'd learned was how /not/ to do
+things. Very valuable! Also very embarrassing. "Here's something I tried my best on, it's wrong."
+
+This is the subset of stuff that I hate less than I don't. Hopefully they at least demonstrate a progression and not a
+/re/​gression. (For the record, this is sorted in reverse chronological order.) All of 'em toys of varying shades, and
+most are first tries at new libraries or new patterns or new technologies or new somethings-or-others. One day I'd like
+to go back to all of them and do 'em right. /More/ right, anyway...
+** Branchless FizzBuzz 2
+[[https://github.com/MetroidIsPrettyCool/branchless-fizzbuzz-2]]
+*** The Pitch
+This is an implementation of the classic "FizzBuzz" interview problem in a combination of x64 assembly and C that uses
+absolutely no conditional logic to implement the actual "What do we print for this number ~i~?" logic, inspired by this
+blog post: [[http://philcrissman.net/posts/eulers-fizzbuzz/]]. Doing this in Assembly is not strictly necessary, but I
+wanted full control of the executable's content. (Can't trust an optimizing compiler to follow my silly rules.)
+
+This is also an attempt to explore so-called "literate programming" with Emacs ~org-mode~. The README is the README, and
+also the source code, and also the comments, and also the documentation; all of it interleaved together.
+*** Post-Mortem
+1. This one is misnamed, which I only realized too late. It should be something like "No-Conditional Logic FizzBuzz".
+
+   See, my /original attempt/ was called "Branchless FizzBuzz", and "Branchless" was a lot more accurate to that
+   project. (It relied on lookup tables as substitutes for ~Jcc~ instructions. Cheating!)
+
+   Now I can't rename the repository without breaking links to it. Oh well.
+
+2. Intel's Software Developer's Manual(s) are /admirably/ comprehensive, but a bad place to start if you're a beginner.
+   I should have gone with AMD's from the start; they're simpler reads, organized far better for learning than pure
+   reference, and don't bother with a lot of the legacy details that aren't important to me (yet).
+
+3. Discriminating between inputs and composing result characters are both shockingly easy with bitwise operations, once
+   you've derived the theory. A little disappointingly easy. Perhaps I'll try a v3 where I also ban bitwise
+   instructions? I'm unsure how well that would work -- would it just devolve into re-deriving bitwise math from other
+   instructions?
+
+   I suppose I might just have to see for myself.
+
+4. The "literate" workflow is a joy on small projects. Every language should have the ability to embed spreadsheets into
+   non-code! Or to do these kinds of polyglot code and data generation!
+
+   I have some reservations about applying it to big projects, however.
+
+   ~org~ just doesn't integrate with modern toolchains well enough. How am I supposed to use LSP when all my source is
+   in these discretized chunks all interleaved with text, other files, other languages, etc? ~org-babel-detangle~ and
+   then jumping back and forth between representations? Sounds pretty error-prone.
+
+   Doc comments are less powerful but they'll never give you such a hassle. Even better, they don't lead to editor
+   lock-in. Emacs is brilliant, but bad marketing if you're looking for contributors.
+
+   Nonetheless, I still find myself wanting to do this again. For scripts, configuration files, small personal projects,
+   little corners of big projects, perhaps documentation, stuff you were already using Emacs for... I can see a home for
+   ~org-babel~ here.
+** i68
+- i68apollo :: https://github.com/MetroidIsPrettyCool/i68apollo
+- i68soyuz :: https://github.com/MetroidIsPrettyCool/i68soyuz
+*** The Pitch
+Okay, so a bit of context is needed here. This monster:
+
+#+attr_html: :width 50% :align center
+[[./images/TI-92_Plus.jpg]]
+
+is the TI-92+ graphing calculator. It's a neat little gadget, really stretches the line between "graphing calculator"
+and "low-spec portable general-purpose computer". Sporting a QWERTY keyboard, an MC68000SEC processor, a proprietary
+(but fully reverse-engineered) data I/O port for file transfer, explicit support for running compiled (and actually
+native, too) programs, and an OS that lets user programs touch /all/ hardware, it makes a pretty good platform for
+learning bare-metal programming.
+
+So I thought I'd give it a try, to make something more practical out of my calculator collection. More specifically, I
+wanted to try turning this guy into an input device for my PC. I don't have any USB controllers with good D-Pads!
+
+This required a two-part solution:
+
+1. a PC-side driver component, which talks to the calculator over USB (via the official "SilverLink" adapter cable,
+   which supports raw byte reads and writes) and converts the data it receives into keystroke events;
+2. and a calculator-side driver component, which talks to the PC over the D-Bus I/O port and periodically updates it on
+   the state of its keyboard matrix.
+
+I decided to name them "Apollo" and "Soyuz", respectively, after the 1975 Apollo-Soyuz Test Project. "Two
+ideologically-opposed machines coming together for the sake of progress" and so on.
+*** Post-Mortem
+1. I still like that logo I made. Probably the only thing here I'm still fully happy with.
+
+2. At one point during development, I decided to try porting ~i68soyuz~ to the TI-89, which is architecturally very
+   similar to the 92 Plus. That went pretty smoothly, just had to define some different CPP[fn:1] symbols in my Makefile
+   and configure a second key map in ~i68apollo~, so I decided to /also/ try porting it to the /TI-83 Plus/ -- an
+   architecturally very /different/ calculator -- while I was at it. This meant introducing another toolchain (the 83+
+   is z80-based and not 68k, TIGCC does not support it), re-working my build system, and adding a new set of processor
+   manuals and OS API documentation to my reading list.
+
+   In hindsight, this was a big mistake. What I /should have/ done was define a common spec and protocol for behavior,
+   then implement it for both architectures *separately.* I did not do this. I tried to do it all in one codebase.
+
+   The first consequence of this decision was that it immediately put me in Makefile hell. ~VPATH~ and ~include~ and
+   sub-Makefiles everywhere! Took days to engineer, and I still ended up having to put my Makefiles in ~build/~ instead
+   of ~src/~.
+
+   The second consequence was that, since I was using the TIGCC C compiler for my 68k targets, I was going to need to
+   find a C compiler for my z80 targets /too./ I salute the z88dk developers for their effort, I really do, but their
+   tooling just didn't justify the effort of a unified codebase. None of their backends supported the calling convention
+   used by TI's OS routines, and their standard library wasn't any help either -- it's meant to be cross-platform across
+   different historical z80 machines, not just TI calculators -- so half my time writing was spent making these
+   four-line "push, exchange/move, call, pop" wrapper functions around OS calls.
+
+   The third consequence is that it didn't even save me any time implementing shared logic! It turns out there kinda
+   /wasn't any./ All ~i68soyuz~ did was glue logic to plug some system calls into each other, and they're different
+   system calls on different platforms. They behave differently, they take different arguments, they have different
+   invariants. The bulk of my target-specific code ended up just being shims to keep the lie alive.
+
+   Auto-sleep ("APD") timers were the straw that broke the camel's back. They /worked,/ but the experience trying to
+   mangle the code base into working on all targets was frustrating enough to drop the project. Haven't been back since,
+   ~apd-dev~ is still unmerged into ~master~.
+
+3. Splitting ~i68apollo~ and ~i68soyuz~ into separate repositories was /also/ a mistake, monorepo would have been a
+   better fit for this project.
+
+   At /minimum,/ the opportunity to ~include_bytes!()~ Soyuz binaries into Apollo for automated installation (as opposed
+   to writing up instructions for how to install it manually, which is what I ended up doing) should not be overlooked.
+
+4. The actual implementation of ~i68apollo~ is complete garbage, and if I ever come back I'd like to throw it away and
+   start from scratch. It's all hack on top of copy-paste on top of copy-paste on top of "I don't know half of what's in
+   the standard library so I'm just going to write my own (bad) implementation!"
+
+   In particular, those enormous match statements make me feel a little ill. This is what ~phf_codegen~ is for! AAAAHHH!
+
+5. I regret my choice of ~uinput~ bindings, the same-named ~uinput~ crate only ever got in my way. I should have either
+   gone up in abstraction to something which is more featureful (and cross-platform), or down to something lower-level
+   like ~uinput-sys~. Centrism gives the downsides of both and the benefits of neither.
+
+6. ~rusb~, on the other hand, was a pretty good choice. Not happy with how I used it, though. I've learned a lot more
+   about the USB spec since making i68, and there's a lot I'd like to refactor. (I'd also like to make better use of the
+   standard library's I/O routines to do it, while I'm at it.)
+
+7. Binding the "special" keys (those without good analogs among the traditional X keysym definitions) to the "extra"
+   function keys was a half-measure I never got around to rectifying. What's the point in using a calculator as an input
+   device if you can't type math symbols with it?
+
+   Ideally, this would be accomplished by writing bona fide X or libinput (or whatever I need to target) keyboard
+   definitions for these devices that map physical (well, emulated by my driver, but I digress) scancodes to sequences
+   of Unicode characters, as well as the appropriate "shift", "2nd" and "diamond" layers. I want to be able to press
+   2nd+SIN and have it type "=sin⁻¹(="!
+
+   The absolutely /horrible/ state of the relevant X.org documentation deterred me from trying this, but I won't let it
+   deter me forever.
+
+   One day...
+** Breakout
+[[https://github.com/MetroidIsPrettyCool/breakout]]
+*** Pitch
+This one's old enough that I've forgotten most of the details. An Atari's Breakout-style game, yes. Another crack at
+OpenGL, clearly. There's also some really half-baked OpenAL here, too. I think the goal was just to keep adding features
+until it became a chore, then regroup?
+*** Post-Mortem
+1. Clearly, audio requires more work to integrate elegantly into a program than "just slap in some ~if~ statements". I
+   can see why someone would prefer frameworks that do this kind of state management for you.
+2. I'm still not happy with how I handled ~glium~, but at least it's saner than ~flap~.
+** Flap
+[[https://github.com/MetroidIsPrettyCool/flap]]
+*** Pitch
+An earlier attempt to get to grips with ~glium~, Rust's biggest (?) OpenGL wrapper crate. Also an attempt at a truly
+bizarre pattern where we encode object properties with location (i.e. "what variable is it bound to?").
+*** Post-Mortem
+1. No memory of exactly why I though that "variable determines function" pattern was a good idea. It was a pain to work
+   with and (apparently) I eventually just gave up trying to work with it. That's a result of some kind, I suppose.
+2. Notably, this is not a Flappy Bird clone, although I think that was the original plan. The prototype was just too
+   hard to rework.
+** Chess 2
+https://github.com/MetroidIsPrettyCool/Chess2
+*** Pitch
+Okay, this is about as far as I'm comfortable going back. This is a chess-like game I threw together partway through
+High School, written in Java because that's what AP Computer Science A was teaching.
+*** Post-Mortem
+1. Still hadn't figured out how to get Emacs to stop mixing tabs and spaces for indention, clearly.
+2. This project layout is ridiculous. Can't remember how I was building the thing, but I'm sure it was something like
+   ~javac *.java~, and then a really long ~jar foo bar etc.~ I'd have to copy and paste. Bleagh. Also, putting the
+   license and README in the docs folder was... well, I never did it again, that's for sure.
+3. I really dislike inheritance as pattern, or at least the way Java does it, and I think that started with this
+   project. "~PoolPiece~" should not extend ~Piece~, no matter how tempting it might be. Introducing an additional layer
+   of inheritance with an "~InPlayPiece~" might help, but ehhhhh I just think the pattern is just flawed from first
+   principles.
+4. Conversely, I strongly prefer DSLs for doing UI, and I think that started here, too. FXML /specifically/ is probably
+   not the way to go, however.
+* Footnotes
+
+[fn:1] That's CPP as in C Pre-Processor. Not that other thing.
