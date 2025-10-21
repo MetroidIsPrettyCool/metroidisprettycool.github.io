@@ -1,9 +1,10 @@
 #+TITLE: My Wabsite
 #+OPTIONS: toc:nil
 #+attr_html: :width 25% :align center
-[[./images/icon-bepis-scaled.png]]
-#+TOC: headlines 1
+[[file:images/icon-bepis-scaled.png]]
+#+TOC: headlines 2
 * Introduction
+** Introduction Introduction Introduction
 Hi! Welcome to my ~#webpresence~.
 
 There's not much here, which is sort of deliberate. Just wanted to replace the nonsense that was here previously with
@@ -13,14 +14,22 @@ plans to do besides GitHub Pages-squat.
 You can find me most places under the username "metroidisprettycool", "metroidipc", "mipc", or some variation thereof.
 It's unprofessional, clearly, but I made my first real "social media" account (Reddit, since deleted) under that name
 and I value consistency more than I value being professional.
-* Projects
+* 2. Projects
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
 Here's a list of projects I'm proud of:
 
-...
-* No But Really
-Okay, okay. It's just the [[./essays/00-more-right.org][Wheel Problem]]. I can recognize that. All of these, and especially the ones I'm not showing
-you, took up days and weeks and months of my life, and by the end the most biggest thing I'd learned was how /not/ to do
-things. Very valuable! Also very embarrassing. "Here's something I tried my best on, it's wrong."
+1.
+
+-----
+* Projects
+Okay, okay. It's just the [[./essays/00-more-right.org][Wheel Problem]]. I can recognize that, though doing so brings me no comfort.
+
+All of these, and especially the ones I'm not showing you, took up days and weeks and months of my life, and by the end
+the most biggest thing I'd learned was how /not/ to do things. Very valuable! Also very embarrassing. "Here's something
+I tried my best on, it's wrong."
 
 This is the subset of stuff that I hate less than I don't. Hopefully they at least demonstrate a progression and not a
 /re/​gression. (For the record, this is sorted in reverse chronological order.) All of 'em toys of varying shades, and
@@ -70,14 +79,81 @@ also the source code, and also the comments, and also the documentation; all of 
    Nonetheless, I still find myself wanting to do this again. For scripts, configuration files, small personal projects,
    little corners of big projects, perhaps documentation, stuff you were already using Emacs for... I can see a home for
    ~org-babel~ here.
+** Balanced Ternary in /Minecraft/
+No repository, sorry, but here's a short video I made:
+
+#+attr_html: :width 50% :align center
+[[yt:bKLdSUhCEEE]]
+*** The Pitch
+Okay, so, a bit of context is needed here.
+
+/Minecraft/ is a very popular video game, famous for many things. It's a voxel sandbox survival game. It's a 3-d paint
+program. It's a cross-platform scriptable multiplayer minigame client. It's the only[fn:2] Java video game.
+
+What unifies these identities is the promise /Minecraft/ makes to the player: "let go of fidelity, and we'll let you do
+whatever you want."
+
+One of the things you might want to do is build a computer. For this purpose, the game provides its so-called "redstone"
+system, whereby players can use in-game resources and a few rudimentary binary logic elements (NOT gates, diodes, etc.)
+to construct complex circuits from first principles.
+
+Another thing that /Minecraft/ is famous for is its "emergent complexity". With over fifteen years of constant
+development, systems start to pile up. They interact in inobvious ways. We find that, with the right conditions, at the
+right intersections of rules, there are new games to play within the metaphysics of the old.
+
+Case in point, the game's only two fluids -- water and lava -- have [[https://minecraft.wiki/w/Fluid][a surprisingly detailed behavior and interaction
+model]]. They "choose" where to flow based on the conditions of their environment ("What's the quickest path to go 'down'
+a unit?"), and when they flow into each other, they change their environment (create a solid block of some kind).
+
+By creating a network of careful shaped channels, we can create circuits which discriminate between possible inputs and
+selectively create blockages throughout the network. These blockages then halt, redirect, split, combine, or otherwise
+influence /more/ flows; which /themselves/ can be discriminated and used to selectively create /new/ blockages; and so
+on, and so on.
+
+This is, in a sense, a kind of transistor or relay. A switch than can toggle other switches. That's enough to build a
+digital computer!
+
+Not a /binary/ computer, however. Our circuits have *three* possible outputs: water, lava, and /air./ This maps neatly
+on the obscure "balanced ternary" number system, where water represents a digit value of ~1~, air represents a digit
+value of ~0~, and lava represents a digit value of ~-1~.
+
+The embedded video is a sped-up demonstration of a full adder I built using these principles (and a few others, like
+sand towers which communicate information "uphill"), solving this problem:
+
+\begin{align*} 69 + 34 = 103 = \\
+(1 \cdot 3^4 + 0 \cdot 3^3 + -1 \cdot 3^2 + -1 \cdot 3^1 + 0 \cdot 3^0) \\
++ (0 \cdot 3^4 + 1 \cdot 3^3 + 1 \cdot 3^2 + -1 \cdot 3^1 + 1 \cdot 3^0) \\
+= (1 \cdot 3^4 + 1 \cdot 3^3 + -1 \cdot 3^2 + 1 \cdot 3^1 + 1 \cdot 3^0) \end{align*}
+
+Or "Water Air Lava Lava Air" + "Air Water Water Lava Water" = "Water Water Lava Water Water".
+*** Post-Mortem
+1. That video is just... not very good. It's sped up by a weird coefficient, it's impossible to tell what's going on, I
+   feel like I'm always pointing the camera at the wrong part of the circuit, I didn't bother to disable the speed-up
+   effect for the "outro"...
+
+   I'm a pretty poor video editor, but I know I can do better than this.
+
+2. It's shame I never got around to writing up a decent guide to the theories of operation here. Or made a central
+   repository of circuit designs. There aren't a lot of people out there to whom this is all "background knowledge", so
+   having somewhere /comprehensive/ to point for resources would be a big help.
+
+3. I've never been satisfied with my decision to use sand towers[fn:4]. It was a concession to practicality[fn:3] on a
+   project otherwise so unconcerned with practically, and it always gave such uninteresting solutions to my design
+   problems.
+
+   Synchronization, for example. I needed a circuit which would accept a flow of some kind, and then only release it
+   when a second "sync" signal arrived. The difference in complexity between the "pure" solution and the "sand" solution
+   was /staggering,/ and I mean that as an insult to the sand solution. What's impressive about a glorified sluice gate?
+
+   If I revisit this topic, I'd like to eschew sand-based techniques where possible.
 ** i68
 - i68apollo :: https://github.com/MetroidIsPrettyCool/i68apollo
 - i68soyuz :: https://github.com/MetroidIsPrettyCool/i68soyuz
 *** The Pitch
-Okay, so a bit of context is needed here. This monster:
+This also needs some context. This monster: \\
 
 #+attr_html: :width 50% :align center
-[[./images/TI-92_Plus.jpg]]
+[[file:images/TI-92_Plus.jpg]] \\
 
 is the TI-92+ graphing calculator. It's a neat little gadget, really stretches the line between "graphing calculator"
 and "low-spec portable general-purpose computer". Sporting a QWERTY keyboard, an MC68000SEC processor, a proprietary
@@ -184,7 +260,7 @@ bizarre pattern where we encode object properties with location (i.e. "what vari
 2. Notably, this is not a Flappy Bird clone, although I think that was the original plan. The prototype was just too
    hard to rework.
 ** Chess 2
-https://github.com/MetroidIsPrettyCool/Chess2
+[[https://github.com/MetroidIsPrettyCool/Chess2]]
 *** Pitch
 Okay, this is about as far as I'm comfortable going back. This is a chess-like game I threw together partway through
 High School, written in Java because that's what AP Computer Science A was teaching.
@@ -200,5 +276,14 @@ High School, written in Java because that's what AP Computer Science A was teach
 4. Conversely, I strongly prefer DSLs for doing UI, and I think that started here, too. FXML /specifically/ is probably
    not the way to go, however.
 * Footnotes
+[fn:4] Sand is one of a handful of "gravity blocks" which will fall if unsupported. By supporting them with a different
+kind of block that will break if touched by a fluid, we can selectively drop these towers by directing a flow into them.
+This allows us to communicate information "uphill".
+
+[fn:3] /Minecraft/ liquids cannot flow uphill and they also cannot flow horizontally forever without the flow
+terminating, so circuits end up being very vertical. Unfortunately, "vertical" is the only axis on which /Minecraft/
+worlds are not effectively infinite.
+
+[fn:2] As far as the "gamer" public seems to care, anyway.
 
 [fn:1] That's CPP as in C Pre-Processor. Not that other thing.
