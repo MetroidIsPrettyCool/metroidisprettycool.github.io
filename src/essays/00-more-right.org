@@ -53,4 +53,5 @@ whatever the ways we can. Learn to live with losing ground. Other platitudes.
 Anyway, back to editing my ~.emacs~...
 
 * Footnotes
-[fn:1] The Anxiety of Influence: A Theory of Poetry by Harold Bloom. I haven't read it myself.
+[fn:1] /The Anxiety of Influence: A Theory of Poetry/ by Harold Bloom. I haven't read it myself; the man had a lot of
+really odious opinions. Great title though.

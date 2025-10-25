@@ -1,0 +1,264 @@
+#+TITLE: Taking Sides!
+#+SUBTITLE: Opinions On Some Trivial Debates
+#+OPTIONS: toc:3
+* Programming
+** Editors
+*** Editor War?
+#+ATTR_HTML: :align middle
+[[yt:V3QF1uAvbkU]]
+
+Emacs forever! ~(cl-loop while (rules :emacs) while (drools :vi) do (message "you already know it"))~
+
+Vi -- and its issue -- are *text editors.* They do many things, and they do not do all of them well. They open files,
+they insert text into files, they change text in files, they launch subcommands, they run shells, they multiplex, they
+do IPC, they gesture at extensibility. All in just one program. (Not what you were expecting me to say?)
+
+Emacs is an *environment.* It is a guest VM with host filesystem access (and remote filesystem access) and ten thousand
+preinstalled utilities for text manipulation. ~search-forward-regexp~, ~magit-status~, ~default-indent-new-line~,
+~eshell~, ~eww~ -- these are not commands. They're single purpose, well-made, filtering, plain text-acting,
+inter-operating /programs./ You can even go look up their source code, whenever you want! ~M-x find-function RET
+foo-bar RET~.[fn:1]
+
+Who's the real UNIX philosophy exemplar here? ~ed~ with bolt-ons? Or the purpose-built, hackable, extensible, cohesive
+software distribution?
+
+You can even use Elisp programs in your shell scripts! (With pipes!) Some trivial examples:
+
+#+begin_example
+$ emacs --batch --eval="(pp (car '(:foo :bar)))"
+:foo
+$ seq 10 | emacs --batch --eval='(with-temp-buffer (insert-file-contents "/dev/stdin")
+                                                   (while (re-search-forward "[123]" nil t)
+                                                     (replace-match "W"))
+                                                   (princ (buffer-string)))'
+W
+W
+4
+5
+6
+7
+8
+9
+W0
+$ emacs --batch \
+      --load=~/.emacs \
+      --file='index.org' \
+      --funcall=hack-dir-local-variables-non-file-buffer \
+      --funcall=org-publish-current-project
+Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
+Created yt link.
+Loading /home/fooUser/.org-timestamps/metroidisprettycool.github.io.cache...
+Publishing file /home/fooUser/metroidisprettycool.github.io/src/lists/00-taking-sides.org using ‘org-html-publish-to-html’
+Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
+Created yt link.
+Skipping unmodified file /home/fooUser/metroidisprettycool.github.io/src/essays/00-more-right.org
+Publishing file /home/fooUser/metroidisprettycool.github.io/src/essays/10-java.org using ‘org-html-publish-to-html’
+Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
+Created yt link.
+Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using ‘org-html-publish-to-html’
+#+end_example
+
+I admit it's less /flexible/ when you yank it out into shell-land like this, but why /should/ it be flexible? The
+ecosystem is the /point/ of the ecosystem. The interactivity is the /point/ of the interactivity.
+
+If I find I have a real need to move some data around between Emacs and a shell program, I've got so many more options
+from /within/ than I do without:
+
+1. There's the inferior shell, invoked with the command ~M-x shell~;
+2. and the Eshell, invoked with the command ~M-x eshell~;
+3. and inferior terminal mode, AKA ~term-mode~, invoked with the commands ~M-x term~ or ~M-x ansi-term~ (depending on
+   what /exactly/ you want, behavior-wise).
+4. Then there's the command ~shell-command~, invoked with ~M-!~ or ~M-x shell-command~, /or/ with a prefix argument
+   (~C-u M-!~, ~C-u M-x shell-command~) to insert output into the current buffer, /or/ called directly from lisp via
+   ~M-: (shell-command COMMAND &optional OUTPUT-BUFFER ERROR-BUFFER) RET~;
+5. and the command ~shell-command-on-region~, invoked with ~M-|~ or ~M-x shell-command-on-region~, /or/ with a
+   prefix argument (~C-u M-|~, ~C-u M-x shell-command-on-region~) to /replace/ the given region with the results.
+6. There's the command ~dired-do-shell-command~, bound by default to ~!~ in ~dired-mode~ and /also/ invocable with ~M-x
+   dired-do-shell-command~.
+7. There's the lisp function ~(make-process)~, invocable interactively with ~M-: (make-process &rest ARGS)~;
+8. and the lisp function ~(call-process)~, invocable interactively with ~M-: (call-process PROGRAM &optional INFILE
+   DESTINATION DISPLAY &rest ARGS)~;
+9. and the lisp function ~(call-process-region)~, invocable interactively with ~M-: (call-process-region START END
+   PROGRAM &optional DELETE BUFFER DISPLAY &rest ARGS)~.
+
+And guess what? Commands are merely a specially-marked kind of lisp function, so they're also usable anywhere a
+non-command lisp function would be, such as being invoked explicitly via ~M-:~, from within Elisp scripts, and from
+within other functions. All are customizable and hackable and extensible and re-usable and /documented./
+
+Everything in Emacs is documented! Want the help page for the function ~foobar~? ~C-h f foobar~, and as a bonus you get
+whatever key bindings will invoke it (if any). Want the help page for the variable ~foobar~? ~C-h v foobar~. Want both?
+(Elisp is a Lisp-2.) ~C-h o foobar~. Want to search for something in the Emacs ~info~ manual? ~C-h r~ for
+~info-emacs-manual~, then ~s~ in the ~info~ window for ~Info-search~, then just type what you're searching for. Repeat
+the search until you find it. What about the Elisp ~info~ manual? ~C-h R elisp~ for ~info-display-manual~, then ~s~ and
+the thing you're searching for like before. Want a specific ~info~ top-level manual, like, for example, the eshell
+manual? ~C-h R eshell~. Not sure what ~info~ manuals are installed? ~C-h i~. Need a man page instead? ~M-x man~. Not
+sure what keybindings are available in a given major-mode? ~C-h m~ lists the major mode of a window, and all the minor
+modes, and all their key bindings. Want to know what function a key binding runs? ~C-h k~, and then type the key
+binding, e.g. ~C-h k C-x C-f~ opens the help page for ~find-file~. It even works for mouse bindings, too!
+
+I could go on and on. What do Bash and Vi give me, in exchange for surrendering notions of buffers, regions, points,
+kill rings, kmacros, in-editor documentation, so on and so forth? Worse scripting languages? "Job control"?
+
+No thanks.
+*** Tabs vs. Spaces?
+Doesn't matter. Manual indentation is for monkeys on typewriters. (Significant whitespace is for idiots who /wish/ they
+were monkeys on typewriters.) As long as you, the maintainer, are willing to put in five minutes to enforce your norms
+with an ~.editorconfig~,[fn:2] I'll use whatever you want. Otherwise, ~M-x tabify~, ~M-x untabify~, and ~M-x
+indent-according-to-mode~ are my friends.
+** Paradigms
+*** Functional vs. OOP?
+1. Something something "true OOP has never been tried" something something "actually, I think you'll find it works
+   really well in Smalltalk/Objective C before it got bad/my custom fork of the Common Lisp interpreter/some other
+   language that, conspicuously, nobody is using to ship real software."
+
+   Perhaps, among all the many languages which call themselves "object-oriented", there exists one example which makes
+   writing good software easy and bad software hard. Myself? I have not found such a language. The state of those
+   following Java's lead is particularly dire...[fn:3]
+
+   Why must we /only/ encapsulate on object boundaries? Why must we eschew structuring programs as "collections of
+   things to do" for "collections of things we can do stuff /to/"? Does that not read as inside-out to people?
+
+2. "Pure functions" are a very elegant idea, on this I agree. I am /less/ sold on the universality of first-order
+   functions. Perhaps it only really shines when you get strict about your principles? I admit, most of my experience
+   with FP has been in multiparadigm languages. Lisp, Rust, etc.
+
+What I really want out of a language is first-class recognition that subprograms are heterogeneous. Some are pure,
+others stateful; some are ~sync~, some are ~async~; some run on servers, some run on clients; some parts on run CPUs,
+others on GPUs, or NPUs, or DSPs; some require SIMD, others MIMD; some run natively, others in browsers, others
+sandboxed, or in bytecode VMs; they interact with hierarchical caches; they interact with branch prediction; they talk
+to each other, they talk to themselves; and so on, and so on.
+
+I would like a language which recognizes this, and makes it easy to /tell the compiler/ what behavior it should expect
+of a variable, or a subprogram, or system resource. Not simply the things that it /does,/ but equally importantly the
+things it /doesn't/ do. We might then modularize our software on boundaries of shared effects and capabilities, each
+sub-module further constraining the possibility space until it is trivial to reason about.
+
+The more we can reason, the more powerful the metaprogramming we can provide. Each bottom-level module can settle into
+its own pseudo-DSL, describing behavior /as befits its nature./ "I am a collection of pure arithmetic functions on
+floats, here are some equations, please convert them to optimal SIMD", "I am a description of a protocol, here is my
+specification, prove its soundness and provide implementations of the things it describes", "I am a set of tasks, here
+is they require, what they do, and what they provide, please construct the backing parallel runtime and data structures
+to run them in", "I am a UI, here are my elements and their relationships, please construct an event loop to run them
+and the means to update my state" and so on and so forth.
+
+Wouldn't that be wonderful? To be able to /imply/ parallelization, or IPC, or fronted-backend, or coprocessor offload,
+all with just type signatures? At least for trivial cases?
+
+I understand that there are optimizations compilers will never intuit. A /lot/ of optimizations they'll never intuit. I
+hope that, for those cases, this approach would still make it easier to write programs than it would make them harder.
+
+I suspect the answer lies somewhere between LISP, Ada, CUDA, Julia, perhaps OpenMP, functional programming; but I
+confess I'm too uninformed to say anything definitive. Call me back when I'm more experienced?
+*** Dynamic vs. Static Typing?
+"Check it out guys: we managed to save a whole year building this new airliner by never checking if we bought the right
+materials!"
+
+I can accept dynamic typing for projects with less than a hundred SLOC. Two hundred is a perhaps. Three hundred is
+/really/ pushing it. Four hundred is way too big to reason about.
+
+If your language has types, I don't understand why you would want to wait as /long as possible/ to tell me I've used them
+wrong. You aren't saving me from errors, the error was there to begin with!
+*** Strong vs. Weak Typing?
+"Check it out guys: we managed to save a whole year building this new airliner by re-using all these old washing machine
+bolts! The thread pitches are different, but we just cranked 'em down anyways! They're almost flush, even!"
+
+Weak typing does not reduce program complexity, it just makes it harder to understand the complexity that was already
+there. I do not /want/ to add a integer to a string. That is not a well-formed operation. I cannot predict its behavior.
+I can /guess,/ but I'll never know for sure, unless I read the standard.
+
+More to the point, if I /can/ read the standard and therein I see that ~String + Integer~ actually means "convert this
+integer to a string with ~.toString()~ and then ~.join()~ them", then what benefit does this ambiguous ~+~ operator
+/actually/ give me over an explicit ~String.join(Integer.toString())~? Golf cred? Screw golf cred. I want to write what
+I mean.
+** Hardware
+*** AMD vs. Intel?
+Intel are an amusing company. Their in-house architectures all suck, their CPUs implementing those architectures suck,
+their CPUs implementing other people's architectures suck, their attempts to innovate always crash and burn, and somehow
+they're still /number 1./ How does that even happen?
+
+I'd like to see one of their wacky ideas finally pay off one day. 'Til then? Yeah, you should probably just buy AMD.
+*** RISC vs. CISC?
+Nobody is really making new "the ISA /is/ the metal" processors these days, it's all compromised. Did you know that ARM
+has a instruction just for JavaScript? ~FJCVTZS~, AKA "Floating-point Javascript convert to signed fixed-point, rounding
+toward zero".[fn:4]
+
+I think I'll just abstain on this one, and say go with whatever happens to have the best numbers at the moment.
+** Ideology
+*** LLMs and "Vibe Coding"?
+The most important fact to internalize about large language models is that they're profoundly stupid. They will lie,
+they will overstate, they will misunderstand, and they will be biased. Never make a decision regarding LLMs that does
+not centralize this fact.
+
+The /second/ most important fact to internalize is that they cannot tell you if they are confident in their answers,
+because they have no capacity for self-reflection. When's the last time you asked ChatGPT a question and replied asking
+for /your/ help? Has it *ever* happened? Never make a decision on the basis of an LLM's input without considering this
+too.
+
+Evangelists may attempt to convince you that the solution to these problems is only a matter of time. It is not. It is
+an inherent consequence of the "bigger autocomplete" approach.
+
+It /is/ still possible to get real, productive value out of LLMs -- particularly if you don't part with your money while
+doing so -- but only when these facts do not present problems. There /are/ circumstances where wrong answers are more
+useful than no answers. There are also circumstances where their answers are trivial to prove or disprove. These are the
+path. Stick tight, Little Red Riding Hood, and you won't have any regrets.
+
+I cannot say the same for faith in miracles.
+*** UNIX philosophy?
+Despite what I might have implied earlier, I don't really care about the UNIX philosophy.
+
+It's a decent set of principles for writing coreutils, but quickly grow inane when you try to apply them to anything
+real. What even is "a program"? I've never seen a good answer from the diehards that doesn't contradict what they seem
+to believe in practice.
+
+Look closer, and you'll find that most applications /are, in fact,/ collections of smaller programs that all do one
+thing well.
+
+#+begin_example
+$ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
+  | grep -E '^[^ ]+ /usr/bin.*[^/$]' \
+  | wc -l
+68
+#+end_example
+
+Just because /you/ don't know how to hack on them doesn't mean "Q.E.D. they're monoliths".
+
+Also: not everything is a file. Your pants are down and your embarrassing ~ioctl~-themed underwear is showing. See:
+
+#+ATTR_HTML: :align middle
+[[yt:9-IWMbJXoLM]]
+*** GPL vs MIT?
+FOSS is dead. Open source is dead. Free software is dead.[fn:5]
+
+When I /do/ want a license, I like the MPL, version 2.0.[fn:6]
+* Other
+** Garfield or Heathcliff?
+Heathcliff and it's not even close. It's not even comparable. Garfield is nothing. He's a vacuum. An empty wrapper. An
+egg with no yolk. A shadow on the wall. The snake eating its tail eating its tail eating its tail eating its tail eating
+its tail eating its tail eating its tail. Around and around and around forever.
+
+Heathcliff, on the other hand, is /funny./
+
+Or at least interesting. You just gotta marinade it in a for a little while. Maybe check out this interview with Peter
+Gallagher:
+
+https://solrad.co/let-the-art-stand-for-itself-a-conversation-with-peter-gallagher
+
+or this talk he did:
+
+#+ATTR_HTML: :align middle
+[[yt:o8_8En04p08]]
+* Footnotes
+[fn:1] Stuff that's in C source code (like ~car~ and ~cdr~ and ~self-insert-command~ and other primitives) require a bit
+of extra config. You can still look 'em up though.
+
+[fn:2] [[https://editorconfig.org/]]
+
+[fn:3] [[file:../essays/10-java.org]]
+
+[fn:4] [[https://developer.arm.com/documentation/ddi0602/2025-09/SIMD-FP-Instructions/FJCVTZS--Floating-point-Javascript-convert-to-signed-fixed-point--rounding-toward-zero-]]
+
+[fn:5] [[https://www.boringcactus.com/2020/08/13/post-open-source.html]]
+
+[fn:6] See [[https://choosealicense.com/licenses/mpl-2.0/]] for the high level,
+[[https://www.mozilla.org/en-US/MPL/2.0/]] for the nicely-formatted text, and
+[[https://www.mozilla.org/en-US/MPL/2.0/FAQ/]] for some of the nitty-gritty.

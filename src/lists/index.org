@@ -1,0 +1,7 @@
+#+TITLE: List Index
+#+HTML_LINK_UP: ../index.html
+Short thoughts on broad topics.
+* General-Topic
+1. [[file:00-taking-sides.org][Taking Sides!: Opinions On Some Trivial Debates]]
+* Technical
+1. [[file:10-programming-projects.org][My Major Programming Projects]]

@@ -7,12 +7,13 @@
 
 ;;; Code:
 
-(setq-local yt-iframe-format
+(defvar yt-iframe-format
   ;; You may want to change your width and height.
-  (concat "<iframe"
+  (concat "<iframe width=\"600\""
+          " height=\"338\""
           " src=\"https://www.youtube.com/embed/%s\""
           " frameborder=\"0\""
-          " allowfullscreen>%s</iframe>"))
+          ">%s</iframe>"))
 
 (org-add-link-type
  "yt"

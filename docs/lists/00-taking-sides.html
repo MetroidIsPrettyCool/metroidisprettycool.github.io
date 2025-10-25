@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-10-24 Fri 18:33 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Taking Sides!</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="icon" type="image/png" href="/favicon.ico" />
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Taking Sides!
+<br />
+<span class="subtitle">Opinions On Some Trivial Debates</span>
+</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc880472">1. Programming</a>
+<ul>
+<li><a href="#org6d9b42b">1.1. Editors</a>
+<ul>
+<li><a href="#orgb4c556b">1.1.1. Editor War?</a></li>
+<li><a href="#org7447d29">1.1.2. Tabs vs. Spaces?</a></li>
+</ul>
+</li>
+<li><a href="#org86549f9">1.2. Paradigms</a>
+<ul>
+<li><a href="#org1cda84d">1.2.1. Functional vs. OOP?</a></li>
+<li><a href="#orgfbeecef">1.2.2. Dynamic vs. Static Typing?</a></li>
+<li><a href="#org8313124">1.2.3. Strong vs. Weak Typing?</a></li>
+</ul>
+</li>
+<li><a href="#org8ccffe2">1.3. Hardware</a>
+<ul>
+<li><a href="#org6b6d51c">1.3.1. AMD vs. Intel?</a></li>
+<li><a href="#org2c7cd60">1.3.2. RISC vs. CISC?</a></li>
+</ul>
+</li>
+<li><a href="#org3b17a3b">1.4. Ideology</a>
+<ul>
+<li><a href="#org0251d1b">1.4.1. LLMs and &ldquo;Vibe Coding&rdquo;?</a></li>
+<li><a href="#org7b2c22a">1.4.2. UNIX philosophy?</a></li>
+<li><a href="#org02be15f">1.4.3. GPL vs MIT?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb6d236a">2. Other</a>
+<ul>
+<li><a href="#org9568472">2.1. Garfield or Heathcliff?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc880472" class="outline-2">
+<h2 id="orgc880472"><span class="section-number-2">1.</span> Programming</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org6d9b42b" class="outline-3">
+<h3 id="org6d9b42b"><span class="section-number-3">1.1.</span> Editors</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgb4c556b" class="outline-4">
+<h4 id="orgb4c556b"><span class="section-number-4">1.1.1.</span> Editor War?</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p align="middle">
+<iframe width="600" height="338" src="https://www.youtube.com/embed/V3QF1uAvbkU" frameborder="0"></iframe>
+</p>
+
+<p>
+Emacs forever! <code>(cl-loop while (rules :emacs) while (drools :vi) do (message "you already know it"))</code>
+</p>
+
+<p>
+Vi &#x2013; and its issue &#x2013; are <b>text editors.</b> They do many things, and they do not do all of them well. They open files,
+they insert text into files, they change text in files, they launch subcommands, they run shells, they multiplex, they
+do IPC, they gesture at extensibility. All in just one program. (Not what you were expecting me to say?)
+</p>
+
+<p>
+Emacs is an <b>environment.</b> It is a guest VM with host filesystem access (and remote filesystem access) and ten thousand
+preinstalled utilities for text manipulation. <code>search-forward-regexp</code>, <code>magit-status</code>, <code>default-indent-new-line</code>,
+<code>eshell</code>, <code>eww</code> &#x2013; these are not commands. They&rsquo;re single purpose, well-made, filtering, plain text-acting,
+inter-operating <i>programs.</i> You can even go look up their source code, whenever you want! <code>M-x find-function RET
+foo-bar RET</code>.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+
+<p>
+Who&rsquo;s the real UNIX philosophy exemplar here? <code>ed</code> with bolt-ons? Or the purpose-built, hackable, extensible, cohesive
+software distribution?
+</p>
+
+<p>
+You can even use Elisp programs in your shell scripts! (With pipes!) Some trivial examples:
+</p>
+
+<pre class="example" id="org9a51f06">
+$ emacs --batch --eval="(pp (car '(:foo :bar)))"
+:foo
+$ seq 10 | emacs --batch --eval='(with-temp-buffer (insert-file-contents "/dev/stdin")
+                                                   (while (re-search-forward "[123]" nil t)
+                                                     (replace-match "W"))
+                                                   (princ (buffer-string)))'
+W
+W
+4
+5
+6
+7
+8
+9
+W0
+$ emacs --batch \
+      --load=~/.emacs \
+      --file='index.org' \
+      --funcall=hack-dir-local-variables-non-file-buffer \
+      --funcall=org-publish-current-project
+Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
+Created yt link.
+Loading /home/fooUser/.org-timestamps/metroidisprettycool.github.io.cache...
+Publishing file /home/fooUser/metroidisprettycool.github.io/src/lists/00-taking-sides.org using ‘org-html-publish-to-html’
+Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
+Created yt link.
+Skipping unmodified file /home/fooUser/metroidisprettycool.github.io/src/essays/00-more-right.org
+Publishing file /home/fooUser/metroidisprettycool.github.io/src/essays/10-java.org using ‘org-html-publish-to-html’
+Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
+Created yt link.
+Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using ‘org-html-publish-to-html’
+</pre>
+
+<p>
+I admit it&rsquo;s less <i>flexible</i> when you yank it out into shell-land like this, but why <i>should</i> it be flexible? The
+ecosystem is the <i>point</i> of the ecosystem. The interactivity is the <i>point</i> of the interactivity.
+</p>
+
+<p>
+If I find I have a real need to move some data around between Emacs and a shell program, I&rsquo;ve got so many more options
+from <i>within</i> than I do without:
+</p>
+
+<ol class="org-ol">
+<li>There&rsquo;s the inferior shell, invoked with the command <code>M-x shell</code>;</li>
+<li>and the Eshell, invoked with the command <code>M-x eshell</code>;</li>
+<li>and inferior terminal mode, AKA <code>term-mode</code>, invoked with the commands <code>M-x term</code> or <code>M-x ansi-term</code> (depending on
+what <i>exactly</i> you want, behavior-wise).</li>
+<li>Then there&rsquo;s the command <code>shell-command</code>, invoked with <code>M-!</code> or <code>M-x shell-command</code>, <i>or</i> with a prefix argument
+(<code>C-u M-!</code>, <code>C-u M-x shell-command</code>) to insert output into the current buffer, <i>or</i> called directly from lisp via
+<code>M-: (shell-command COMMAND &amp;optional OUTPUT-BUFFER ERROR-BUFFER) RET</code>;</li>
+<li>and the command <code>shell-command-on-region</code>, invoked with <code>M-|</code> or <code>M-x shell-command-on-region</code>, <i>or</i> with a
+prefix argument (<code>C-u M-|</code>, <code>C-u M-x shell-command-on-region</code>) to <i>replace</i> the given region with the results.</li>
+<li>There&rsquo;s the command <code>dired-do-shell-command</code>, bound by default to <code>!</code> in <code>dired-mode</code> and <i>also</i> invocable with <code>M-x
+   dired-do-shell-command</code>.</li>
+<li>There&rsquo;s the lisp function <code>(make-process)</code>, invocable interactively with <code>M-: (make-process &amp;rest ARGS)</code>;</li>
+<li>and the lisp function <code>(call-process)</code>, invocable interactively with <code>M-: (call-process PROGRAM &amp;optional INFILE
+   DESTINATION DISPLAY &amp;rest ARGS)</code>;</li>
+<li>and the lisp function <code>(call-process-region)</code>, invocable interactively with <code>M-: (call-process-region START END
+   PROGRAM &amp;optional DELETE BUFFER DISPLAY &amp;rest ARGS)</code>.</li>
+</ol>
+
+<p>
+And guess what? Commands are merely a specially-marked kind of lisp function, so they&rsquo;re also usable anywhere a
+non-command lisp function would be, such as being invoked explicitly via <code>M-:</code>, from within Elisp scripts, and from
+within other functions. All are customizable and hackable and extensible and re-usable and <i>documented.</i>
+</p>
+
+<p>
+Everything in Emacs is documented! Want the help page for the function <code>foobar</code>? <code>C-h f foobar</code>, and as a bonus you get
+whatever key bindings will invoke it (if any). Want the help page for the variable <code>foobar</code>? <code>C-h v foobar</code>. Want both?
+(Elisp is a Lisp-2.) <code>C-h o foobar</code>. Want to search for something in the Emacs <code>info</code> manual? <code>C-h r</code> for
+<code>info-emacs-manual</code>, then <code>s</code> in the <code>info</code> window for <code>Info-search</code>, then just type what you&rsquo;re searching for. Repeat
+the search until you find it. What about the Elisp <code>info</code> manual? <code>C-h R elisp</code> for <code>info-display-manual</code>, then <code>s</code> and
+the thing you&rsquo;re searching for like before. Want a specific <code>info</code> top-level manual, like, for example, the eshell
+manual? <code>C-h R eshell</code>. Not sure what <code>info</code> manuals are installed? <code>C-h i</code>. Need a man page instead? <code>M-x man</code>. Not
+sure what keybindings are available in a given major-mode? <code>C-h m</code> lists the major mode of a window, and all the minor
+modes, and all their key bindings. Want to know what function a key binding runs? <code>C-h k</code>, and then type the key
+binding, e.g. <code>C-h k C-x C-f</code> opens the help page for <code>find-file</code>. It even works for mouse bindings, too!
+</p>
+
+<p>
+I could go on and on. What do Bash and Vi give me, in exchange for surrendering notions of buffers, regions, points,
+kill rings, kmacros, in-editor documentation, so on and so forth? Worse scripting languages? &ldquo;Job control&rdquo;?
+</p>
+
+<p>
+No thanks.
+</p>
+</div>
+</div>
+<div id="outline-container-org7447d29" class="outline-4">
+<h4 id="org7447d29"><span class="section-number-4">1.1.2.</span> Tabs vs. Spaces?</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+Doesn&rsquo;t matter. Manual indentation is for monkeys on typewriters. (Significant whitespace is for idiots who <i>wish</i> they
+were monkeys on typewriters.) As long as you, the maintainer, are willing to put in five minutes to enforce your norms
+with an <code>.editorconfig</code>,<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> I&rsquo;ll use whatever you want. Otherwise, <code>M-x tabify</code>, <code>M-x untabify</code>, and <code>M-x
+indent-according-to-mode</code> are my friends.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org86549f9" class="outline-3">
+<h3 id="org86549f9"><span class="section-number-3">1.2.</span> Paradigms</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org1cda84d" class="outline-4">
+<h4 id="org1cda84d"><span class="section-number-4">1.2.1.</span> Functional vs. OOP?</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ol class="org-ol">
+<li><p>
+Something something &ldquo;true OOP has never been tried&rdquo; something something &ldquo;actually, I think you&rsquo;ll find it works
+really well in Smalltalk/Objective C before it got bad/my custom fork of the Common Lisp interpreter/some other
+language that, conspicuously, nobody is using to ship real software.&rdquo;
+</p>
+
+<p>
+Perhaps, among all the many languages which call themselves &ldquo;object-oriented&rdquo;, there exists one example which makes
+writing good software easy and bad software hard. Myself? I have not found such a language. The state of those
+following Java&rsquo;s lead is particularly dire&#x2026;<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>
+</p>
+
+<p>
+Why must we <i>only</i> encapsulate on object boundaries? Why must we eschew structuring programs as &ldquo;collections of
+things to do&rdquo; for &ldquo;collections of things we can do stuff <i>to</i>&rdquo;? Does that not read as inside-out to people?
+</p></li>
+
+<li>&ldquo;Pure functions&rdquo; are a very elegant idea, on this I agree. I am <i>less</i> sold on the universality of first-order
+functions. Perhaps it only really shines when you get strict about your principles? I admit, most of my experience
+with FP has been in multiparadigm languages. Lisp, Rust, etc.</li>
+</ol>
+
+<p>
+What I really want out of a language is first-class recognition that subprograms are heterogeneous. Some are pure,
+others stateful; some are <code>sync</code>, some are <code>async</code>; some run on servers, some run on clients; some parts on run CPUs,
+others on GPUs, or NPUs, or DSPs; some require SIMD, others MIMD; some run natively, others in browsers, others
+sandboxed, or in bytecode VMs; they interact with hierarchical caches; they interact with branch prediction; they talk
+to each other, they talk to themselves; and so on, and so on.
+</p>
+
+<p>
+I would like a language which recognizes this, and makes it easy to <i>tell the compiler</i> what behavior it should expect
+of a variable, or a subprogram, or system resource. Not simply the things that it <i>does,</i> but equally importantly the
+things it <i>doesn&rsquo;t</i> do. We might then modularize our software on boundaries of shared effects and capabilities, each
+sub-module further constraining the possibility space until it is trivial to reason about.
+</p>
+
+<p>
+The more we can reason, the more powerful the metaprogramming we can provide. Each bottom-level module can settle into
+its own pseudo-DSL, describing behavior <i>as befits its nature.</i> &ldquo;I am a collection of pure arithmetic functions on
+floats, here are some equations, please convert them to optimal SIMD&rdquo;, &ldquo;I am a description of a protocol, here is my
+specification, prove its soundness and provide implementations of the things it describes&rdquo;, &ldquo;I am a set of tasks, here
+is they require, what they do, and what they provide, please construct the backing parallel runtime and data structures
+to run them in&rdquo;, &ldquo;I am a UI, here are my elements and their relationships, please construct an event loop to run them
+and the means to update my state&rdquo; and so on and so forth.
+</p>
+
+<p>
+Wouldn&rsquo;t that be wonderful? To be able to <i>imply</i> parallelization, or IPC, or fronted-backend, or coprocessor offload,
+all with just type signatures? At least for trivial cases?
+</p>
+
+<p>
+I understand that there are optimizations compilers will never intuit. A <i>lot</i> of optimizations they&rsquo;ll never intuit. I
+hope that, for those cases, this approach would still make it easier to write programs than it would make them harder.
+</p>
+
+<p>
+I suspect the answer lies somewhere between LISP, Ada, CUDA, Julia, perhaps OpenMP, functional programming; but I
+confess I&rsquo;m too uninformed to say anything definitive. Call me back when I&rsquo;m more experienced?
+</p>
+</div>
+</div>
+<div id="outline-container-orgfbeecef" class="outline-4">
+<h4 id="orgfbeecef"><span class="section-number-4">1.2.2.</span> Dynamic vs. Static Typing?</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+&ldquo;Check it out guys: we managed to save a whole year building this new airliner by never checking if we bought the right
+materials!&rdquo;
+</p>
+
+<p>
+I can accept dynamic typing for projects with less than a hundred SLOC. Two hundred is a perhaps. Three hundred is
+<i>really</i> pushing it. Four hundred is way too big to reason about.
+</p>
+
+<p>
+If your language has types, I don&rsquo;t understand why you would want to wait as <i>long as possible</i> to tell me I&rsquo;ve used them
+wrong. You aren&rsquo;t saving me from errors, the error was there to begin with!
+</p>
+</div>
+</div>
+<div id="outline-container-org8313124" class="outline-4">
+<h4 id="org8313124"><span class="section-number-4">1.2.3.</span> Strong vs. Weak Typing?</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+&ldquo;Check it out guys: we managed to save a whole year building this new airliner by re-using all these old washing machine
+bolts! The thread pitches are different, but we just cranked &rsquo;em down anyways! They&rsquo;re almost flush, even!&rdquo;
+</p>
+
+<p>
+Weak typing does not reduce program complexity, it just makes it harder to understand the complexity that was already
+there. I do not <i>want</i> to add a integer to a string. That is not a well-formed operation. I cannot predict its behavior.
+I can <i>guess,</i> but I&rsquo;ll never know for sure, unless I read the standard.
+</p>
+
+<p>
+More to the point, if I <i>can</i> read the standard and therein I see that <code>String + Integer</code> actually means &ldquo;convert this
+integer to a string with <code>.toString()</code> and then <code>.join()</code> them&rdquo;, then what benefit does this ambiguous <code>+</code> operator
+<i>actually</i> give me over an explicit <code>String.join(Integer.toString())</code>? Golf cred? Screw golf cred. I want to write what
+I mean.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8ccffe2" class="outline-3">
+<h3 id="org8ccffe2"><span class="section-number-3">1.3.</span> Hardware</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org6b6d51c" class="outline-4">
+<h4 id="org6b6d51c"><span class="section-number-4">1.3.1.</span> AMD vs. Intel?</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Intel are an amusing company. Their in-house architectures all suck, their CPUs implementing those architectures suck,
+their CPUs implementing other people&rsquo;s architectures suck, their attempts to innovate always crash and burn, and somehow
+they&rsquo;re still <i>number 1.</i> How does that even happen?
+</p>
+
+<p>
+I&rsquo;d like to see one of their wacky ideas finally pay off one day. &rsquo;Til then? Yeah, you should probably just buy AMD.
+</p>
+</div>
+</div>
+<div id="outline-container-org2c7cd60" class="outline-4">
+<h4 id="org2c7cd60"><span class="section-number-4">1.3.2.</span> RISC vs. CISC?</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+Nobody is really making new &ldquo;the ISA <i>is</i> the metal&rdquo; processors these days, it&rsquo;s all compromised. Did you know that ARM
+has a instruction just for JavaScript? <code>FJCVTZS</code>, AKA &ldquo;Floating-point Javascript convert to signed fixed-point, rounding
+toward zero&rdquo;.<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup>
+</p>
+
+<p>
+I think I&rsquo;ll just abstain on this one, and say go with whatever happens to have the best numbers at the moment.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3b17a3b" class="outline-3">
+<h3 id="org3b17a3b"><span class="section-number-3">1.4.</span> Ideology</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-org0251d1b" class="outline-4">
+<h4 id="org0251d1b"><span class="section-number-4">1.4.1.</span> LLMs and &ldquo;Vibe Coding&rdquo;?</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+The most important fact to internalize about large language models is that they&rsquo;re profoundly stupid. They will lie,
+they will overstate, they will misunderstand, and they will be biased. Never make a decision regarding LLMs that does
+not centralize this fact.
+</p>
+
+<p>
+The <i>second</i> most important fact to internalize is that they cannot tell you if they are confident in their answers,
+because they have no capacity for self-reflection. When&rsquo;s the last time you asked ChatGPT a question and replied asking
+for <i>your</i> help? Has it <b>ever</b> happened? Never make a decision on the basis of an LLM&rsquo;s input without considering this
+too.
+</p>
+
+<p>
+Evangelists may attempt to convince you that the solution to these problems is only a matter of time. It is not. It is
+an inherent consequence of the &ldquo;bigger autocomplete&rdquo; approach.
+</p>
+
+<p>
+It <i>is</i> still possible to get real, productive value out of LLMs &#x2013; particularly if you don&rsquo;t part with your money while
+doing so &#x2013; but only when these facts do not present problems. There <i>are</i> circumstances where wrong answers are more
+useful than no answers. There are also circumstances where their answers are trivial to prove or disprove. These are the
+path. Stick tight, Little Red Riding Hood, and you won&rsquo;t have any regrets.
+</p>
+
+<p>
+I cannot say the same for faith in miracles.
+</p>
+</div>
+</div>
+<div id="outline-container-org7b2c22a" class="outline-4">
+<h4 id="org7b2c22a"><span class="section-number-4">1.4.2.</span> UNIX philosophy?</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+Despite what I might have implied earlier, I don&rsquo;t really care about the UNIX philosophy.
+</p>
+
+<p>
+It&rsquo;s a decent set of principles for writing coreutils, but quickly grow inane when you try to apply them to anything
+real. What even is &ldquo;a program&rdquo;? I&rsquo;ve never seen a good answer from the diehards that doesn&rsquo;t contradict what they seem
+to believe in practice.
+</p>
+
+<p>
+Look closer, and you&rsquo;ll find that most applications <i>are, in fact,</i> collections of smaller programs that all do one
+thing well.
+</p>
+
+<pre class="example" id="org4de5080">
+$ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
+  | grep -E '^[^ ]+ /usr/bin.*[^/$]' \
+  | wc -l
+68
+</pre>
+
+<p>
+Just because <i>you</i> don&rsquo;t know how to hack on them doesn&rsquo;t mean &ldquo;Q.E.D. they&rsquo;re monoliths&rdquo;.
+</p>
+
+<p>
+Also: not everything is a file. Your pants are down and your embarrassing <code>ioctl</code>-themed underwear is showing. See:
+</p>
+
+<p align="middle">
+<iframe width="600" height="338" src="https://www.youtube.com/embed/9-IWMbJXoLM" frameborder="0"></iframe>
+</p>
+</div>
+</div>
+<div id="outline-container-org02be15f" class="outline-4">
+<h4 id="org02be15f"><span class="section-number-4">1.4.3.</span> GPL vs MIT?</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<p>
+FOSS is dead. Open source is dead. Free software is dead.<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></sup>
+</p>
+
+<p>
+When I <i>do</i> want a license, I like the MPL, version 2.0.<sup><a id="fnr.6" class="footref" href="#fn.6" role="doc-backlink">6</a></sup>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb6d236a" class="outline-2">
+<h2 id="orgb6d236a"><span class="section-number-2">2.</span> Other</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org9568472" class="outline-3">
+<h3 id="org9568472"><span class="section-number-3">2.1.</span> Garfield or Heathcliff?</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Heathcliff and it&rsquo;s not even close. It&rsquo;s not even comparable. Garfield is nothing. He&rsquo;s a vacuum. An empty wrapper. An
+egg with no yolk. A shadow on the wall. The snake eating its tail eating its tail eating its tail eating its tail eating
+its tail eating its tail eating its tail. Around and around and around forever.
+</p>
+
+<p>
+Heathcliff, on the other hand, is <i>funny.</i>
+</p>
+
+<p>
+Or at least interesting. You just gotta marinade it in a for a little while. Maybe check out this interview with Peter
+Gallagher:
+</p>
+
+<p>
+<a href="https://solrad.co/let-the-art-stand-for-itself-a-conversation-with-peter-gallagher">https://solrad.co/let-the-art-stand-for-itself-a-conversation-with-peter-gallagher</a>
+</p>
+
+<p>
+or this talk he did:
+</p>
+
+<p align="middle">
+<iframe width="600" height="338" src="https://www.youtube.com/embed/o8_8En04p08" frameborder="0"></iframe>
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Stuff that&rsquo;s in C source code (like <code>car</code> and <code>cdr</code> and <code>self-insert-command</code> and other primitives) require a bit
+of extra config. You can still look &rsquo;em up though.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://editorconfig.org/">https://editorconfig.org/</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="../essays/10-java.html">../essays/10-java.html</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://developer.arm.com/documentation/ddi0602/2025-09/SIMD-FP-Instructions/FJCVTZS--Floating-point-Javascript-convert-to-signed-fixed-point--rounding-toward-zero-">https://developer.arm.com/documentation/ddi0602/2025-09/SIMD-FP-Instructions/FJCVTZS--Floating-point-Javascript-convert-to-signed-fixed-point--rounding-toward-zero-</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://www.boringcactus.com/2020/08/13/post-open-source.html">https://www.boringcactus.com/2020/08/13/post-open-source.html</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+See <a href="https://choosealicense.com/licenses/mpl-2.0/">https://choosealicense.com/licenses/mpl-2.0/</a> for the high level,
+<a href="https://www.mozilla.org/en-US/MPL/2.0/">https://www.mozilla.org/en-US/MPL/2.0/</a> for the nicely-formatted text, and
+<a href="https://www.mozilla.org/en-US/MPL/2.0/FAQ/">https://www.mozilla.org/en-US/MPL/2.0/FAQ/</a> for some of the nitty-gritty.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Created: 2025-10-24 Fri 18:33</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

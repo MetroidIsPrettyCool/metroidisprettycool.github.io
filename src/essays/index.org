@@ -1,0 +1,7 @@
+#+TITLE: Essay Index
+#+HTML_LINK_UP: ../index.html
+Miscellaneous long-form opinions.
+* General-Topic
+1. [[file:00-more-right.org][Better Wheels Forever: An Observation]]
+* Technical
+1. [[file:10-java.org][On Java]]

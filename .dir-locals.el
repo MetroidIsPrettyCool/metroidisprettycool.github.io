@@ -22,4 +22,12 @@
                                                                "/index.html"
 
                                                                :html-link-up
-                                                               "../index.html")))))))
+                                                               "./index.html"
+
+                                                               :html-doctype
+                                                               "xhtml-frameset"
+
+                                                               :html-head-extra
+                                                               ,(concat "<link rel=\"icon\""
+                                                                        " type=\"image/png\""
+                                                                        " href=\"/favicon.ico\" />"))))))))
