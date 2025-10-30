@@ -3,10 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-10-24 Fri 18:33 -->
+<!-- 2025-10-30 Thu 13:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Taking Sides!</title>
+<meta name="author" content="Joseph Burke" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -288,7 +289,7 @@ software distribution?
 You can even use Elisp programs in your shell scripts! (With pipes!) Some trivial examples:
 </p>
 
-<pre class="example" id="org9a51f06">
+<pre class="example" id="org8d04d02">
 $ emacs --batch --eval="(pp (car '(:foo :bar)))"
 :foo
 $ seq 10 | emacs --batch --eval='(with-temp-buffer (insert-file-contents "/dev/stdin")
@@ -313,12 +314,8 @@ Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source).
 Created yt link.
 Loading /home/fooUser/.org-timestamps/metroidisprettycool.github.io.cache...
 Publishing file /home/fooUser/metroidisprettycool.github.io/src/lists/00-taking-sides.org using ‘org-html-publish-to-html’
-Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
-Created yt link.
 Skipping unmodified file /home/fooUser/metroidisprettycool.github.io/src/essays/00-more-right.org
 Publishing file /home/fooUser/metroidisprettycool.github.io/src/essays/10-java.org using ‘org-html-publish-to-html’
-Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
-Created yt link.
 Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using ‘org-html-publish-to-html’
 </pre>
 
@@ -349,6 +346,8 @@ prefix argument (<code>C-u M-|</code>, <code>C-u M-x shell-command-on-region</co
    DESTINATION DISPLAY &amp;rest ARGS)</code>;</li>
 <li>and the lisp function <code>(call-process-region)</code>, invocable interactively with <code>M-: (call-process-region START END
    PROGRAM &amp;optional DELETE BUFFER DISPLAY &amp;rest ARGS)</code>.</li>
+<li>and like three or for more I don&rsquo;t remember the details of.</li>
+<li>Oh, and like a billion external packages from GNU, NonGNU, MELPA, etc.</li>
 </ol>
 
 <p>
@@ -360,19 +359,20 @@ within other functions. All are customizable and hackable and extensible and re-
 <p>
 Everything in Emacs is documented! Want the help page for the function <code>foobar</code>? <code>C-h f foobar</code>, and as a bonus you get
 whatever key bindings will invoke it (if any). Want the help page for the variable <code>foobar</code>? <code>C-h v foobar</code>. Want both?
-(Elisp is a Lisp-2.) <code>C-h o foobar</code>. Want to search for something in the Emacs <code>info</code> manual? <code>C-h r</code> for
-<code>info-emacs-manual</code>, then <code>s</code> in the <code>info</code> window for <code>Info-search</code>, then just type what you&rsquo;re searching for. Repeat
-the search until you find it. What about the Elisp <code>info</code> manual? <code>C-h R elisp</code> for <code>info-display-manual</code>, then <code>s</code> and
-the thing you&rsquo;re searching for like before. Want a specific <code>info</code> top-level manual, like, for example, the eshell
-manual? <code>C-h R eshell</code>. Not sure what <code>info</code> manuals are installed? <code>C-h i</code>. Need a man page instead? <code>M-x man</code>. Not
-sure what keybindings are available in a given major-mode? <code>C-h m</code> lists the major mode of a window, and all the minor
-modes, and all their key bindings. Want to know what function a key binding runs? <code>C-h k</code>, and then type the key
-binding, e.g. <code>C-h k C-x C-f</code> opens the help page for <code>find-file</code>. It even works for mouse bindings, too!
+(Elisp is a Lisp-2.) <code>C-h o foobar</code>. Not sure what exactly you&rsquo;re looking for? Try <code>M-x apropos</code> to do a search. Want to
+search for something in the Emacs <code>info</code> manual? <code>C-h r</code> for <code>info-emacs-manual</code>, then <code>s</code> in the <code>info</code> window for
+<code>Info-search</code>, then just type what you&rsquo;re searching for. Repeat the search until you find it. What about the Elisp
+<code>info</code> manual? <code>C-h R elisp</code> for <code>info-display-manual</code>, then <code>s</code> and the thing you&rsquo;re searching for like before. Want a
+specific <code>info</code> top-level manual, like, for example, the eshell manual? <code>C-h R eshell</code>. Not sure what <code>info</code> manuals are
+installed? <code>C-h i</code>. Need a man page instead? <code>M-x man</code>. Not sure what keybindings are available in a given major-mode?
+<code>C-h m</code> lists the major mode of a window, and all the minor modes, and all their key bindings. Want to know what
+function a key binding runs? <code>C-h k</code>, and then type the key binding, e.g. <code>C-h k C-x C-f</code> opens the help page for
+<code>find-file</code>. It even works for mouse bindings, too!
 </p>
 
 <p>
-I could go on and on. What do Bash and Vi give me, in exchange for surrendering notions of buffers, regions, points,
-kill rings, kmacros, in-editor documentation, so on and so forth? Worse scripting languages? &ldquo;Job control&rdquo;?
+I could go on and on. What do Bash and Vi and tmux and a thousand little ncurses programs &#x2013; all of which are still
+complexity you need to learn, I might add &#x2013; give me that Emacs doesn&rsquo;t? Worse scripting languages? &ldquo;Job control&rdquo;?
 </p>
 
 <p>
@@ -546,32 +546,59 @@ I think I&rsquo;ll just abstain on this one, and say go with whatever happens to
 <h4 id="org0251d1b"><span class="section-number-4">1.4.1.</span> LLMs and &ldquo;Vibe Coding&rdquo;?</h4>
 <div class="outline-text-4" id="text-1-4-1">
 <p>
-The most important fact to internalize about large language models is that they&rsquo;re profoundly stupid. They will lie,
-they will overstate, they will misunderstand, and they will be biased. Never make a decision regarding LLMs that does
-not centralize this fact.
+The most important fact to internalize about large language models is that they&rsquo;re <i>profoundly</i> stupid. They will lie,
+they will overstate, they will misunderstand, and they will be biased. There is no question you can ask that will never
+get a wrong answer. Never do anything with an LLM&rsquo;s &ldquo;opinion&rdquo; that does not <b>centralize</b> this fact.
 </p>
 
 <p>
-The <i>second</i> most important fact to internalize is that they cannot tell you if they are confident in their answers,
-because they have no capacity for self-reflection. When&rsquo;s the last time you asked ChatGPT a question and replied asking
-for <i>your</i> help? Has it <b>ever</b> happened? Never make a decision on the basis of an LLM&rsquo;s input without considering this
-too.
+The second most important fact to internalize is: they cannot tell you if they&rsquo;re <i>actually</i> confident, or are just
+answering <i>as if</i> they were confident. On some level they&rsquo;re the same thing. What&rsquo;s the last time you asked ChatGPT a
+question and replied by asking for <i>your</i> help? Has it <b>ever</b> happened? There&rsquo;s simply no possible way to know if an LLM
+has a real understanding of a problem if you don&rsquo;t have that yourself. Never make a decision on the basis of an LLM&rsquo;s
+input without considering this too.
 </p>
 
 <p>
-Evangelists may attempt to convince you that the solution to these problems is only a matter of time. It is not. It is
-an inherent consequence of the &ldquo;bigger autocomplete&rdquo; approach.
+Evangelists may attempt to convince you that the solutions to these problems are only a matter of time.
 </p>
 
 <p>
-It <i>is</i> still possible to get real, productive value out of LLMs &#x2013; particularly if you don&rsquo;t part with your money while
-doing so &#x2013; but only when these facts do not present problems. There <i>are</i> circumstances where wrong answers are more
-useful than no answers. There are also circumstances where their answers are trivial to prove or disprove. These are the
-path. Stick tight, Little Red Riding Hood, and you won&rsquo;t have any regrets.
+I disagree.
 </p>
 
 <p>
-I cannot say the same for faith in miracles.
+There&rsquo;s only one real way to get value (and I mean &rsquo;value&rsquo; here as coldly and pragmatically as possible) out of
+something that is architecturally incapable of meta-cognition:
+</p>
+
+<ol class="org-ol">
+<li>Only ever bet your <b>time</b> on a right answer, and as little as possible.</li>
+<li>Stay transactional. This isn&rsquo;t a conversation, <i>you are trying to take advantage of The Man&rsquo;s several billion
+ill-spent dollars.</i></li>
+<li>Keep conversations as short as possible and delete them as often as possible, to serve points 1 and 2. If you want a
+permanent record of what you&rsquo;ve learned, take notes somewhere else.</li>
+</ol>
+
+<p>
+In other words: if the worst consequence &#x2013; long- <i>and</i> short-term &#x2013; is that you waste a couple minutes, go right ahead
+with whatever you were doing. Maybe it&rsquo;ll work, maybe it won&rsquo;t. Doesn&rsquo;t hurt to try!
+</p>
+
+<p>
+But if the worst consequence is anything bigger than that &#x2013; from &ldquo;an hour or so lost&rdquo; up to &ldquo;thousands of dollars down
+the drain&rdquo; or &ldquo;production database deleted without backup&rdquo; &#x2013; reconsider what it is you&rsquo;re trying to do. Break the
+problem down into smaller parts where the answers are easy to verify. &ldquo;How do I make Flappy Bird in Objective-C&rdquo; will
+only end badly, &ldquo;how do I compile Objective-C with <code>gcc</code>&rdquo; will either be right, or it&rsquo;ll breadcrumb you to the right
+answer anyway, or at <i>worst</i> will just fail really obviously. Write down what you&rsquo;ve learned, or at least take a mental
+note of what&rsquo;s happened, then delete the conversation and go again. The less it knows about what you&rsquo;re doing, the more
+general its responses will be; and the more general its responses are, the easier it will be verify them.
+</p>
+
+<p>
+And for the love of god don&rsquo;t copy-paste code. Data, maybe, if the verification is easier than the generation, but not
+<i>code.</i> Ask for example implementations only when you want a sense of the APIs you&rsquo;ll need, then write it yourself &#x2013;
+cross-referencing with the LLM answer if that&rsquo;s helpful &#x2013; and it&rsquo;ll work out better in the long run.
 </p>
 </div>
 </div>
@@ -593,7 +620,7 @@ Look closer, and you&rsquo;ll find that most applications <i>are, in fact,</i> c
 thing well.
 </p>
 
-<pre class="example" id="org4de5080">
+<pre class="example" id="orgceb4293">
 $ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
   | grep -E '^[^ ]+ /usr/bin.*[^/$]' \
   | wc -l
@@ -698,7 +725,8 @@ See <a href="https://choosealicense.com/licenses/mpl-2.0/">https://choosealicens
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Created: 2025-10-24 Fri 18:33</p>
+<p class="author">Author: Joseph Burke</p>
+<p class="date">Created: 2025-10-30 Thu 13:01</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

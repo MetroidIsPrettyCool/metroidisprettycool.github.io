@@ -49,12 +49,8 @@ Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source).
 Created yt link.
 Loading /home/fooUser/.org-timestamps/metroidisprettycool.github.io.cache...
 Publishing file /home/fooUser/metroidisprettycool.github.io/src/lists/00-taking-sides.org using ‘org-html-publish-to-html’
-Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
-Created yt link.
 Skipping unmodified file /home/fooUser/metroidisprettycool.github.io/src/essays/00-more-right.org
 Publishing file /home/fooUser/metroidisprettycool.github.io/src/essays/10-java.org using ‘org-html-publish-to-html’
-Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
-Created yt link.
 Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using ‘org-html-publish-to-html’
 #+end_example
 
@@ -80,6 +76,8 @@ from /within/ than I do without:
    DESTINATION DISPLAY &rest ARGS)~;
 9. and the lisp function ~(call-process-region)~, invocable interactively with ~M-: (call-process-region START END
    PROGRAM &optional DELETE BUFFER DISPLAY &rest ARGS)~.
+10. and like three or for more I don't remember the details of.
+11. Oh, and like a billion external packages from GNU, NonGNU, MELPA, etc.
 
 And guess what? Commands are merely a specially-marked kind of lisp function, so they're also usable anywhere a
 non-command lisp function would be, such as being invoked explicitly via ~M-:~, from within Elisp scripts, and from
@@ -87,17 +85,18 @@ within other functions. All are customizable and hackable and extensible and re-
 
 Everything in Emacs is documented! Want the help page for the function ~foobar~? ~C-h f foobar~, and as a bonus you get
 whatever key bindings will invoke it (if any). Want the help page for the variable ~foobar~? ~C-h v foobar~. Want both?
-(Elisp is a Lisp-2.) ~C-h o foobar~. Want to search for something in the Emacs ~info~ manual? ~C-h r~ for
-~info-emacs-manual~, then ~s~ in the ~info~ window for ~Info-search~, then just type what you're searching for. Repeat
-the search until you find it. What about the Elisp ~info~ manual? ~C-h R elisp~ for ~info-display-manual~, then ~s~ and
-the thing you're searching for like before. Want a specific ~info~ top-level manual, like, for example, the eshell
-manual? ~C-h R eshell~. Not sure what ~info~ manuals are installed? ~C-h i~. Need a man page instead? ~M-x man~. Not
-sure what keybindings are available in a given major-mode? ~C-h m~ lists the major mode of a window, and all the minor
-modes, and all their key bindings. Want to know what function a key binding runs? ~C-h k~, and then type the key
-binding, e.g. ~C-h k C-x C-f~ opens the help page for ~find-file~. It even works for mouse bindings, too!
+(Elisp is a Lisp-2.) ~C-h o foobar~. Not sure what exactly you're looking for? Try ~M-x apropos~ to do a search. Want to
+search for something in the Emacs ~info~ manual? ~C-h r~ for ~info-emacs-manual~, then ~s~ in the ~info~ window for
+~Info-search~, then just type what you're searching for. Repeat the search until you find it. What about the Elisp
+~info~ manual? ~C-h R elisp~ for ~info-display-manual~, then ~s~ and the thing you're searching for like before. Want a
+specific ~info~ top-level manual, like, for example, the eshell manual? ~C-h R eshell~. Not sure what ~info~ manuals are
+installed? ~C-h i~. Need a man page instead? ~M-x man~. Not sure what keybindings are available in a given major-mode?
+~C-h m~ lists the major mode of a window, and all the minor modes, and all their key bindings. Want to know what
+function a key binding runs? ~C-h k~, and then type the key binding, e.g. ~C-h k C-x C-f~ opens the help page for
+~find-file~. It even works for mouse bindings, too!
 
-I could go on and on. What do Bash and Vi give me, in exchange for surrendering notions of buffers, regions, points,
-kill rings, kmacros, in-editor documentation, so on and so forth? Worse scripting languages? "Job control"?
+I could go on and on. What do Bash and Vi and tmux and a thousand little ncurses programs -- all of which are still
+complexity you need to learn, I might add -- give me that Emacs doesn't? Worse scripting languages? "Job control"?
 
 No thanks.
 *** Tabs vs. Spaces?
@@ -185,24 +184,43 @@ toward zero".[fn:4]
 I think I'll just abstain on this one, and say go with whatever happens to have the best numbers at the moment.
 ** Ideology
 *** LLMs and "Vibe Coding"?
-The most important fact to internalize about large language models is that they're profoundly stupid. They will lie,
-they will overstate, they will misunderstand, and they will be biased. Never make a decision regarding LLMs that does
-not centralize this fact.
+The most important fact to internalize about large language models is that they're /profoundly/ stupid. They will lie,
+they will overstate, they will misunderstand, and they will be biased. There is no question you can ask that will never
+get a wrong answer. Never do anything with an LLM's "opinion" that does not *centralize* this fact.
 
-The /second/ most important fact to internalize is that they cannot tell you if they are confident in their answers,
-because they have no capacity for self-reflection. When's the last time you asked ChatGPT a question and replied asking
-for /your/ help? Has it *ever* happened? Never make a decision on the basis of an LLM's input without considering this
-too.
+The second most important fact to internalize is: they cannot tell you if they're /actually/ confident, or are just
+answering /as if/ they were confident. On some level they're the same thing. What's the last time you asked ChatGPT a
+question and replied by asking for /your/ help? Has it *ever* happened? There's simply no possible way to know if an LLM
+has a real understanding of a problem if you don't have that yourself. Never make a decision on the basis of an LLM's
+input without considering this too.
 
-Evangelists may attempt to convince you that the solution to these problems is only a matter of time. It is not. It is
-an inherent consequence of the "bigger autocomplete" approach.
+Evangelists may attempt to convince you that the solutions to these problems are only a matter of time.
 
-It /is/ still possible to get real, productive value out of LLMs -- particularly if you don't part with your money while
-doing so -- but only when these facts do not present problems. There /are/ circumstances where wrong answers are more
-useful than no answers. There are also circumstances where their answers are trivial to prove or disprove. These are the
-path. Stick tight, Little Red Riding Hood, and you won't have any regrets.
+I disagree.
 
-I cannot say the same for faith in miracles.
+There's only one real way to get value (and I mean 'value' here as coldly and pragmatically as possible) out of
+something that is architecturally incapable of meta-cognition:
+
+1. Only ever bet your *time* on a right answer, and as little as possible.
+2. Stay transactional. This isn't a conversation, /you are trying to take advantage of The Man's several billion
+   ill-spent dollars./
+3. Keep conversations as short as possible and delete them as often as possible, to serve points 1 and 2. If you want a
+   permanent record of what you've learned, take notes somewhere else.
+
+In other words: if the worst consequence -- long- /and/ short-term -- is that you waste a couple minutes, go right ahead
+with whatever you were doing. Maybe it'll work, maybe it won't. Doesn't hurt to try!
+
+But if the worst consequence is anything bigger than that -- from "an hour or so lost" up to "thousands of dollars down
+the drain" or "production database deleted without backup" -- reconsider what it is you're trying to do. Break the
+problem down into smaller parts where the answers are easy to verify. "How do I make Flappy Bird in Objective-C" will
+only end badly, "how do I compile Objective-C with ~gcc~" will either be right, or it'll breadcrumb you to the right
+answer anyway, or at /worst/ will just fail really obviously. Write down what you've learned, or at least take a mental
+note of what's happened, then delete the conversation and go again. The less it knows about what you're doing, the more
+general its responses will be; and the more general its responses are, the easier it will be verify them.
+
+And for the love of god don't copy-paste code. Data, maybe, if the verification is easier than the generation, but not
+/code./ Ask for example implementations only when you want a sense of the APIs you'll need, then write it yourself --
+cross-referencing with the LLM answer if that's helpful -- and it'll work out better in the long run.
 *** UNIX philosophy?
 Despite what I might have implied earlier, I don't really care about the UNIX philosophy.
 
