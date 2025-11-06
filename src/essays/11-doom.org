@@ -1,0 +1,54 @@
+#+TITLE: Can't Pray the Oscillator Frequency Away
+#+SUBTITLE: Doom is Probably More Demanding Than You Thought it Was
+
+It's a pet peeve of mine that /Doom/ (1993) gets sooooo much focus in the popular conception of the hacking[fn:1] scene
+("can it run Doom tho?"), because I honestly don't think most people have a good grasp of what its hardware requirements
+actually /are./
+
+See, /Doom/ is a complicated program, but more importantly it's also a complicated *game,* i.e. interactive software. it
+doesn't just have to /run,/ it has to run within a set of real-world constraints, too. Stuff like "don't take several
+hours to draw a single frame."
+
+Id did not set out to make the most portable game ever. They set out to show off the cutting edge of PC gaming in 1993.
+That meant a 32-bit CPU (80386 or better [you'd want better]), 4 MB of RAM /minimum,/ and graphics hardware that could
+keep up (VGA or better). Plenty of contemporary devices couldn't handle that, e.g. the Amiga. Plenty of devices /still/
+can't handle that.
+
+It's not a question of optimization, or of clever workarounds, or of the author's technical ability. There is no way
+optimize "the game needs to draw the level to the screen" faster than the physical limits of the drawing hardware, no
+workaround for "keep track of the enemies in a level" that does not involve keeping track of the enemies in a level, and
+no level of technical ability which will let you do more with the system than the silicon is capable of. You cannot pray
+the oscillator frequency away and just "do it anyway" It'd be like trying to play mail chess on a 4x4 board with no
+pieces in a country with no mail service. The complexity of the system /is/ the complexity of the system.
+
+Take that headline that was circling around a couple years ago: "This Programmer Figured Out How to Play /Doom/ on a
+Pregnancy Test".[fn:2] Not true! Foone Turing did not get /Doom/ running on a pregnancy test microcontroller, because
+that is not physically possible. What /did/ they do? They got /Doom/ running on a 32-bit ARM devkit -- think "Game Boy
+Advance" power levels, both have roughly similar CPUs -- that was wired up to the /display/ of a pregnancy test. No shit
+you can get /Doom/ to run on something with the specs of a GBA, right? There was an official port of /Doom/ the Game Boy
+Advance!
+
+So why is /Doom/ here? Because after Id open-sourced the engine, it has become a common answer to the question "what
+interactive graphical application has the most modular codebase?" The actual demo is the /LCD driver./ /Doom/'s role
+here could just as well be filled by a screensaver, or one of those trippy C64 fastload graphics, or an e-book reader.
+
+It's like watching someone demonstrate a new ACE[fn:3] exploit they found, and seeing people come away coming away with
+the conclusion that the impressive part was "This Programmer Managed to Open The Windows Calculator on Windows 11". No!
+That's not where the effort went!
+
+*​sigh​*.
+
+I guess "Programmer Writes Driver" doesn't get as many clicks.
+
+/Oh well.../
+
+{{{license-footer(2025)}}}
+* Footnotes
+[fn:1] That's the "understand systems and get them to do unexpected things" sense of "hacker", as opposed to "cracker". \\
+
+See: [[https://en.wiktionary.org/wiki/hacker#Noun]], definition 1.4; and [[https://en.wiktionary.org/wiki/cracker#Noun]],
+definition 8.3.
+
+[fn:2] [[https://www.popularmechanics.com/science/a33957256/this-programmer-figured-out-how-to-play-doom-on-a-pregnancy-test/]]
+
+[fn:3] Arbitrary Code Execution. See: [[https://en.wikipedia.org/wiki/Arbitrary_code_execution]]

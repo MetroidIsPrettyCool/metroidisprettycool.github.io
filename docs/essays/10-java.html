@@ -3,10 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-10-25 Sat 02:03 -->
+<!-- 2025-11-06 Thu 09:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>On Java</title>
+<meta name="author" content="Joseph Burke" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -293,6 +294,16 @@ Portability? Runtime polymorphism? Dependency injection? Instrumentation? Done b
 </p>
 
 <p>
+Backwards compatibility? In a post-JSR 376 world?<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></sup> People don&rsquo;t get stuck on Java 8 because they &ldquo;feel like it&rdquo;.
+Oracle has never had any problems hard-locking you and your dependencies to specific runtime versions &#x2013; and because
+&ldquo;only dynamic linking ever for any reason&rdquo;, that means the JDK and toolchain, too. Bring in a single critical dependency
+using a removed feature, and the trap swings shut. You can&rsquo;t move up, you can&rsquo;t move down. Oh, does your
+mission-critical third party HAL need CORBA? Sorry, I guess that means you can&rsquo;t use multi-line string literals. Oh,
+does your legacy codebase need to derive base classes from Java EE? Guess you can&rsquo;t migrate the rest of it to Jakarta
+EE, the <i>namespace</i> is different. <b>What?</b>
+</p>
+
+<p>
 Reflection? Exceptions? Aspect-oriented programming? Runtime inheritance? Come on. Done better by better languages,
 <i>and</i> anti-patterns &#x2013; inheritance in particular. <code>Dog</code> extends <code>Animal</code> is all well and good, James, but it turns out
 that we need to model our application, too. <code>Dog</code> extends <code>Animal</code> extends <code>AbstractLivingThingBean</code> which implements
@@ -303,14 +314,28 @@ that we need to model our application, too. <code>Dog</code> extends <code>Anima
 </p>
 
 <p>
-Even <code>.class</code> files themselves have been done better by better languages! Kotlin, Scala, Groovy, Clojure &#x2013; turns out
-developers want to be able to translate the high-level things they write into a portable low-level representation,
-rather than just write portable low-level representations (but with words instead of numbers). Who knew?
+Java provides nothing make programming easier, or maintenance easier, or release packaging easier, or customer support
+easier. The ecosystem tooling that does exist, exists <i>in spite</i> of how ill-suited the language is to them. Or perhaps
+because. Good luck trying to manage a JavaFX dependency without Spring Boot&#x2026;
+</p>
+
+<p>
+It doesn&rsquo;t have to be this way. If runtime reflection is so important to you, why not take advantage of the fact that
+this is a container for <i>code?</i> Give each class a synthetic &ldquo;aboutMe&rdquo; method that the JVM and other classes can use to
+ask for information! Or take the CLR route and use an explicit metadata table. Something!
+</p>
+
+<p>
+Moreover, even if we still want to target <code>.class</code> files in their current form, we can still allow syntax sugar! Kotlin,
+Scala, Groovy, Clojure &#x2013; turns out developers want to be able to translate the high-level things they write into a
+portable low-level representation, rather than just write portable low-level representations (but with words instead of
+numbers). Who knew?
 </p>
 
 <p>
 I&rsquo;ll <i>use</i> Java, of course. If demanded. There are worse things to be single-minded about than classes. The Eclipse LSP
-goes a long way to make complicated ideas easier to express.
+goes a long way to make complicated ideas easier to express. (In much the same way that any system of higher-level
+abstractions makes writing code easier to express.)
 </p>
 
 <p>
@@ -318,6 +343,15 @@ But you&rsquo;ll never see me advocate for Java. Especially not within education
 especially not if interop with another JVM language is an option. <i>Please</i> use something which respects that your needs
 are different from <code>javac</code>&rsquo;s needs.
 </p>
+<div id="outline-container-org509afa5" class="outline-2">
+<h2 id="org509afa5">License:</h2>
+<div class="outline-text-2" id="text-org509afa5">
+<p>
+Copyright 2025 <a href="https://github.com/MetroidIsPrettyCool">Joseph Burke</a>. All original content published to this website is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> 🅭🅯🄎
+license, unless explicitly stated otherwise.
+</p>
+</div>
+</div>
 <div id="footnotes">
 <h2 class="footnotes">Footnotes: </h2>
 <div id="text-footnotes">
@@ -325,7 +359,11 @@ are different from <code>javac</code>&rsquo;s needs.
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
 I&rsquo;ll fucking &ldquo;illegal reflective access&rdquo; your <i>dick</i>, how about that? While the <code>ProtectionManager</code> watches? Gonna
 warn me about THAT? Gonna go running to the maintainers of <code>javassist.util.proxy.SecurityActions</code>? Gonna deny it in a
-future release?
+future release? <br />
+</p>
+
+<p class="footpara">
+<br />
 </p>
 
 <p class="footpara">
@@ -342,20 +380,40 @@ OOP notions of &ldquo;persistent objects&rdquo;.)
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
-I mean the prefix &ldquo;in-&rdquo; here in the sense of &ldquo;lacking&rdquo; or &ldquo;without&rdquo;. &ldquo;Inabstract&rdquo; = &ldquo;Lacking abstraction&rdquo;.
+I mean the prefix &ldquo;in-&rdquo; here in the sense of &ldquo;lacking&rdquo; or &ldquo;without&rdquo;. &ldquo;Inabstract&rdquo; = &ldquo;Lacking abstraction&rdquo;. <br />
+</p>
+
+<p class="footpara">
+<br />
+</p>
+
+<p class="footpara">
 Wiktionary can me all it wants that this is &ldquo;not a real word&rdquo;, Google books has a whole <i>several</i> hits for &ldquo;inabstract&rdquo;
-&#x2013; at least <b>four</b> of them aren&rsquo;t even OCR errors! We&rsquo;ve got one paper from 1975, two English translations from Latin
-texts, and a no-name dictionary from 1861 that lists &ldquo;inabstracted&rdquo; and I <i>think</i> implies &ldquo;inabstract&rdquo; as well. (It
-would be omitted to save space, the poor guy already had to chop out parts of his introduction just to cram it into a
-thousand pages) There&rsquo;s also an entry for &ldquo;inabstracted&rdquo; (but not &ldquo;inabstract&rdquo;) in the online version of the 1913
-Webster&rsquo;s Dictionary.
+&#x2013; at least <b>four</b> of them aren&rsquo;t even OCR errors! We&rsquo;ve got one paper from 1975, two English translations of Latin
+texts, and a no-name dictionary from 1861 that lists just lists &ldquo;inabstracted&rdquo;. I <i>think</i> it implies &ldquo;inabstract&rdquo; as
+well, omitting it only to save space (the poor guy already had to chop out parts of his introduction just to cram it
+into a thousand pages, after filling his dictionary up with footnote references to said introduction) but I admit I
+<i>could</i> be misreading this. <br />
+</p>
+
+<p class="footpara">
+<br />
+</p>
+
+<p class="footpara">
+(There&rsquo;s also an entry for &ldquo;inabstracted&rdquo; but not &ldquo;inabstract&rdquo; in the online version of the 1913 Webster&rsquo;s Dictionary.)
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+See: <a href="https://openjdk.org/projects/jigsaw/spec/">https://openjdk.org/projects/jigsaw/spec/</a>
 </p></div></div>
 
 
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Created: 2025-10-25 Sat 02:03</p>
+<p class="author">Author: Joseph Burke</p>
+<p class="date">Created: 2025-11-06 Thu 09:04</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

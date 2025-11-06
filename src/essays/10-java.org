@@ -65,6 +65,14 @@ Project structure? Don't make me laugh.
 
 Portability? Runtime polymorphism? Dependency injection? Instrumentation? Done better by better languages.
 
+Backwards compatibility? In a post-JSR 376 world?[fn:5] People don't get stuck on Java 8 because they "feel like it".
+Oracle has never had any problems hard-locking you and your dependencies to specific runtime versions -- and because
+"only dynamic linking ever for any reason", that means the JDK and toolchain, too. Bring in a single critical dependency
+using a removed feature, and the trap swings shut. You can't move up, you can't move down. Oh, does your
+mission-critical third party HAL need CORBA? Sorry, I guess that means you can't use multi-line string literals. Oh,
+does your legacy codebase need to derive base classes from Java EE? Guess you can't migrate the rest of it to Jakarta
+EE, the /namespace/ is different. *What?*
+
 Reflection? Exceptions? Aspect-oriented programming? Runtime inheritance? Come on. Done better by better languages,
 /and/ anti-patterns -- inheritance in particular. ~Dog~ extends ~Animal~ is all well and good, James, but it turns out
 that we need to model our application, too. ~Dog~ extends ~Animal~ extends ~AbstractLivingThingBean~ which implements
@@ -73,20 +81,35 @@ that we need to model our application, too. ~Dog~ extends ~Animal~ extends ~Abst
 ~java.awt.Component~ which implements ~java.awt.iamge.ImageObserver~ and ~java.awt.MenuContainer~ and
 ~java.io.Serializable~ and extends ~java.lang.Object~? I think even the evangelists have admitted this doesn't work.
 
-Even ~.class~ files themselves have been done better by better languages! Kotlin, Scala, Groovy, Clojure -- turns out
-developers want to be able to translate the high-level things they write into a portable low-level representation,
-rather than just write portable low-level representations (but with words instead of numbers). Who knew?
+Java provides nothing make programming easier, or maintenance easier, or release packaging easier, or customer support
+easier. The ecosystem tooling that does exist, exists /in spite/ of how ill-suited the language is to them. Or perhaps
+because. Good luck trying to manage a JavaFX dependency without Spring Boot...
+
+It doesn't have to be this way. If runtime reflection is so important to you, why not take advantage of the fact that
+this is a container for /code?/ Give each class a synthetic "aboutMe" method that the JVM and other classes can use to
+ask for information! Or take the CLR route and use an explicit metadata table. Something!
+
+Moreover, even if we still want to target ~.class~ files in their current form, we can still allow syntax sugar! Kotlin,
+Scala, Groovy, Clojure -- turns out developers want to be able to translate the high-level things they write into a
+portable low-level representation, rather than just write portable low-level representations (but with words instead of
+numbers). Who knew?
 
 I'll /use/ Java, of course. If demanded. There are worse things to be single-minded about than classes. The Eclipse LSP
-goes a long way to make complicated ideas easier to express.
+goes a long way to make complicated ideas easier to express. (In much the same way that any system of higher-level
+abstractions makes writing code easier to express.)
 
 But you'll never see me advocate for Java. Especially not within education, especially not for starting new projects,
 especially not if interop with another JVM language is an option. /Please/ use something which respects that your needs
 are different from ~javac~'s needs.
+
+{{{license-footer(2025)}}}
 * Footnotes
+
 [fn:1] I'll fucking "illegal reflective access" your /dick/, how about that? While the ~ProtectionManager~ watches? Gonna
 warn me about THAT? Gonna go running to the maintainers of ~javassist.util.proxy.SecurityActions~? Gonna deny it in a
-future release?
+future release? \\
+
+\\
 
 ...sorry.
 
@@ -95,10 +118,19 @@ future release?
 [fn:3] As in an https://en.wikipedia.org/wiki/Object_file, not the OOP meaning of "object". (Or, for that matter, any
 OOP notions of "persistent objects".)
 
-[fn:4] I mean the prefix "in-" here in the sense of "lacking" or "without". "Inabstract" = "Lacking abstraction".
+[fn:4] I mean the prefix "in-" here in the sense of "lacking" or "without". "Inabstract" = "Lacking abstraction". \\
+
+\\
+
 Wiktionary can me all it wants that this is "not a real word", Google books has a whole /several/ hits for "inabstract"
--- at least *four* of them aren't even OCR errors! We've got one paper from 1975, two English translations from Latin
-texts, and a no-name dictionary from 1861 that lists "inabstracted" and I /think/ implies "inabstract" as well. (It
-would be omitted to save space, the poor guy already had to chop out parts of his introduction just to cram it into a
-thousand pages) There's also an entry for "inabstracted" (but not "inabstract") in the online version of the 1913
-Webster's Dictionary.
+-- at least *four* of them aren't even OCR errors! We've got one paper from 1975, two English translations of Latin
+texts, and a no-name dictionary from 1861 that lists just lists "inabstracted". I /think/ it implies "inabstract" as
+well, omitting it only to save space (the poor guy already had to chop out parts of his introduction just to cram it
+into a thousand pages, after filling his dictionary up with footnote references to said introduction) but I admit I
+/could/ be misreading this. \\
+
+\\
+
+(There's also an entry for "inabstracted" but not "inabstract" in the online version of the 1913 Webster's Dictionary.)
+
+[fn:5] See: [[https://openjdk.org/projects/jigsaw/spec/]]

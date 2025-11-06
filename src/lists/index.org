@@ -5,3 +5,5 @@ Short thoughts on broad topics.
 1. [[file:00-taking-sides.org][Taking Sides!: Opinions On Some Trivial Debates]]
 * Technical
 1. [[file:10-programming-projects.org][My Major Programming Projects]]
+
+{{{license-footer(2025)}}}

@@ -2,25 +2,45 @@
 ;;; For more information see (info "(emacs) Directory Variables")
 
 ((nil . ((fill-column . 120)))
- (org-mode . ((eval . (require 'yt-embed (concat (project-root (project-current)) ".emacs/yt-embed.el")))))
- (org-mode
-  .
-  ((eval .
-         (setq-local
-          org-publish-project-alist
-          `(("metroidisprettycool.github.io"
-             :base-directory ,(concat (project-root (project-current)) "src/")
+ (org-mode . ((eval . (require 'yt-embed (concat (project-root (project-current)) ".emacs/yt-embed.el")))
+              (org-export-global-macros . (("citation-footer" . "(eval (format \"* Citations:
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
 
-             :recursive t
+#+CITE_EXPORT: csl %ssrc/3rdparty/apa.csl
+#+PRINT_BIBLIOGRAPHY:
 
-             :publishing-function org-html-publish-to-html
+-----
 
-             :publishing-directory ,(concat (project-root (project-current)) "docs/")
+These formatted citations were generated with the [[https://github.com/citation-style-language/styles/blob/master/apa.csl][APA CSL style]] from the Citation Style Language Project, licensed under
+the [[https://creativecommons.org/licenses/by-sa/3.0/][Creative Commons Attribution-ShareAlike 3.0 Unported license]] 🅭🅯🄎.
 
-             :html-link-home "/index.html"
+Learn more about the CSL project at their home page: [[https://citationstyles.org/]].
+\" (project-root (project-current))))")
+                                           ("license-footer" . "* License:
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+Copyright $1 [[https://github.com/MetroidIsPrettyCool][Joseph Burke]]. All original content published to this website is licensed under a [[https://creativecommons.org/licenses/by-sa/4.0/][CC BY-SA 4.0]] 🅭🅯🄎
+license, unless explicitly stated otherwise.
+")))
+              (eval .
+                    (setq-local
+                     org-publish-project-alist
+                     `(("metroidisprettycool.github.io"
+                        :base-directory ,(concat (project-root (project-current)) "src/")
 
-             :html-link-up "./index.html"
+                        :recursive t
 
-             :html-doctype "xhtml-frameset"
+                        :publishing-function org-html-publish-to-html
 
-             :html-head-extra "<link rel=\"icon\" type=\"image/png\" href=\"/favicon.ico\" />")))))))
+                        :publishing-directory ,(concat (project-root (project-current)) "docs/")
+
+                        :html-link-home "/index.html"
+
+                        :html-link-up "./index.html"
+
+                        :html-doctype "xhtml-frameset"
+
+                        :html-head-extra "<link rel=\"icon\" type=\"image/png\" href=\"/favicon.ico\" />")))))))

@@ -1,0 +1,135 @@
+#+TITLE: You're Probably Wrong About Mars Climate Orbiter
+#+SUBTITLE: It's Not About Inches Vs. Centimeters
+#+BIBLIOGRAPHY: 30-mco.bib
+
+#+begin_center
+(This one is more of a response.)
+#+end_center
+
+See, a while ago I came across this talk, "Programming’s Greatest Mistakes", from one Mark Rendle:
+
+#+ATTR_HTML: :align middle
+[[yt:qC_ioJQpv4E]]
+
+I have no problem with its overall /message/ (manage your projects well, stay organized, make sure you know what you're
+doing, etc.) but I was a little irked seeing him bring up Mars Climate Orbiter. I'm sick and tired of seeing it
+misrepresented again and again by supposedly reputable sources as just a mere units mix-up. Y'know, "oh those stupid
+Americans and their inches and feet, don't they know that'll get them in trouble when they try doing real science?" and
+so forth.
+
+*That's not what /happened./*
+
+I mean, first off: it wasn't a mix-up of inches and centimeters, it was a mix-up of /pound-force-seconds and
+newton-seconds;/ and it didn't /crash/ into Mars, it was simply too low when they went in for an aerobrake pass (we
+don't know where it ended up); and it *definitely* didn't leave "a scar that you can see from the other orbiters". Mark
+is probably either thinking of Beagle 2 or Mars Polar Lander, or perhaps one of the more recent unmanned lunar landers.
+(Beresheet?)
+
+But, more to the point: the MCO phase I and phase II mishap reports are just PDFs you can find online. You
+can /read/ them -- they're really not that unapproachable -- and find the takeaways that NASA Safety and Mission
+Assurance thought everyone else needed to learn. You don't have to just guess what the problem was from internet rumors,
+like Mark did!
+
+The important bits for us right now are these ones:
+
+#+begin_quote
+Root Cause:
+
+Failure to use metric units in the coding of a ground software file, “Small Forces,” used in trajectory models
+
+Contributing Causes:
+
+1. Undetected mismodeling of spacecraft velocity changes
+2. Navigation Team unfamiliar with spacecraft
+3. Trajectory correction maneuver number 5 not performed
+4. System engineering process did not adequately address transition from development to operations
+5. Inadequate communications between project elements
+6. Inadequate operations Navigation Team staffing
+7. Inadequate training
+8. Verification and validation process did not adequately address ground software
+#+end_quote
+
+[cite:@MCOIB1999 p. 7]
+
+#+begin_quote
+The Mars Climate Orbiter mission was conducted under NASA's "Faster, Better, Cheaper" philosophy, developed in recent
+years to enhance innovation, productivity and cost-effectiveness of America's space program. [...] The success of
+"Faster, Better, Cheaper" is tempered by the fact that some projects and programs have put too much emphasis on cost and
+schedule reduction (the "Faster" and "Cheaper" elements of the paradigm). At the same time, they have failed to instill
+sufficient rigor in risk management throughout the mission lifecycle. These actions have increased risk to an
+unacceptable level on these projects.
+
+The Mishap Investigation Board conducted a series of meetings over several months with the Jet Propulsion Laboratory and
+Lockheed Martin Astronautics to better understand the issues that led to the failure of the Mars Climate Orbiter. [...]
+More importantly, the project failed to introduce sufficient discipline in the processes used to develop, validate and
+operate the spacecraft; nor did it adequately instill a mission success culture that would shore up the risk introduced
+by these cuts. These process and project leadership deficiencies introduced sufficient risk to compromise mission
+success to the point of mission failure.
+
+...
+
+...the Board found that a significant infrastructure of processes and requirements already is in place to enable
+robust program and project management. However, these processes are not being adequately implemented within the context
+of "Faster, Better, Cheaper." To move toward the ideal vision of *Mission Success First*, the Board makes a series of
+observations and recommendations that are grouped into four categories, providing a guide by which to measure progress.
+#+end_quote
+
+[cite:@MCOIB2000 p. 6]
+
+Does that sound like they just needed to standardize on metric units? Let's be serious here. Professionals do not make
+mistakes this big for no reason. NASA are not complete idiots. They already /know/ how to run million dollar programs
+and get it right, /if/ they have the time, margins and money to do it properly. The MCO team did not have any of these.
+They took the gamble anyway, and they lost.
+
+In fact, they lost pretty abysmally. Something like a third of the MCO Phase I report is recommendations for how to
+avoid something similar on the contemporaneous Mars Polar Lander (MPL) mission, and then that failed too, shortly before
+touchdown, just less than a month later; and then /both/ of the ride-along /Deep Space 2/ impactor probes failed before
+they could carry out /their/ mission; and Mars Surveyor '98 was 0 for 4 and out of spacecraft. Some three hundred and
+fifty million dollars down the drain. That's when the technical reports really started coming in. [cite:e.g.
+@Young2000]
+
+Why? Because this wasn't an isolated incident. These were the 90s at NASA! Dan Goldin was administrator! "Faster,
+Better, Cheaper" (pick three) was the paradigm for the whole space program!
+
+Of the ten missions launched between 1998 and 1999[fn:1], five of them conclusively failed (MCO, DS2, MPL, WIRE,
+TERRIERS), one of them partially failed before being recovered to "partial success" with great effort (DS1), and four
+were successes (/Lunar Prospector/, /Stardust/, SWAS and TRACE).
+
+Expand our view to Goldin's /whole administratorship,/ and we find several more examples: the failures of Lewis and
+CONTOUR, the near-failure of the /Genesis/ sample return, the failures of /Clementine/ and /NEAR Shoemaker/ during their
+extended missions, the constant issues with the Wake Shield Facility, the STS-51 Transfer Orbit Stage cradle explosion,
+the near-disaster of STS-93, the worrying normalization of deviance on STS-95 -- I could go on and on.
+
+Actually, I /will/ go on, because this is a problem bigger than just Dan Goldin -- easy to make fun of though he is.
+Similar numbers of accidents surround the NASA throughout the 80s, 90s and 2000s, regardless of administrator.
+
+The problem was then, and is now, /Congress./
+
+Reducing costs to make risks more worthwhile is not ipso facto a bad idea, if you still have the time, budget and
+margins to get it done. Likewise: a broader scope, conservative planning and a bigger budget is also not a bad idea, if
+you still have the time, budget and margins to get it done.
+
+NASA has struggled so much with project management since the 60s because, honestly, it can't /do/ effective project
+management. There are intractable upfront costs there that cannot be reconciled with what the legislature demands. Every
+year another report comes out with the same conclusions and the same recommendations and /every/ year those
+recommendations slip or get dropped or ignored or forgotten, because there's no safety regulation you can pass that lets
+you do a $20 job for $15.
+
+That's the real lesson. Put up for your team, or they're going to have do what you're /asking/ for. Not what you want,
+not what works, not what you need.
+
+Let's hope you're not putting lives on the line.
+{{{citation-footer}}}
+{{{license-footer(2025)}}}
+* Footnotes
+[fn:1] That's these:
+1. /Lunar Prospector/
+2. /Deep Space 1/
+3. Mars Climate Orbiter
+4. SWAS
+5. TRACE
+6. /Stardust/
+7. /Deep Space 2/
+8. Mars Polar Lander
+9. WIRE
+10. TERRIERS

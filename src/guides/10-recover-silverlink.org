@@ -135,9 +135,11 @@ simply rejects all of it. Nothing is signaled to the PC besides "an error occurr
 If we wrote our /own/ firmware, however, all the low-level details are fully exposed and interpretable. There's no
 special hardware support we'd need. Just have the cable enumerate as a generic USB keyboard, translate PLT-KBD scancodes
 into USB scancodes, and Bob's your uncle! That'd be a neat project. Sometime...
+{{{license-footer(2025)}}}
 * Footnotes
 [fn:2] This functionality was never deployed in any actual calculator or keyboard model, as far as I'm aware. IIRC some
 early models of the PLT-KBD had a blanked-out section of their motherboards for a second daisy-chained I/O port?
 
-[fn:1] Not to be confused with the XDG protocol of the same name. See
-[[https://debrouxl.github.io/tilp-linkguide/hardware.html]] for more.
+[fn:1] Not to be confused with the XDG protocol of the same name. \\
+
+See [[https://debrouxl.github.io/tilp-linkguide/hardware.html]] for more.

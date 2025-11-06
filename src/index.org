@@ -37,6 +37,8 @@ I've divided this site up into sections, based on "article kind". See those sub-
   dedicated.
 - [[file:guides/index.org][Guides]] :: Non-opinionated guides for how do things that /I/ myself couldn't find any information on. (I'm not going to
   waste your time with "how to install a C compiler" or "how to log in to YouTube".)
+
+{{{license-footer(2025)}}}
 * Footnotes
 [fn:1] https://letterboxd.com/metroidipc/
 

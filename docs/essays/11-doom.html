@@ -6,7 +6,7 @@
 <!-- 2025-11-06 Thu 09:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Essay Index</title>
+<title>Can't Pray the Oscillator Frequency Away</title>
 <meta name="author" content="Joseph Burke" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
@@ -197,63 +197,107 @@
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href="../index.html"> UP </a>
+ <a accesskey="h" href="./index.html"> UP </a>
  |
  <a accesskey="H" href="/index.html"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Essay Index</h1>
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org91de293">1. General-Topic</a></li>
-<li><a href="#org668e9d1">2. Technical</a></li>
-<li><a href="#org9e507b8">3. Art and Media</a></li>
-<li><a href="#orgd5f2e88">4. Space and Spaceflight</a></li>
-</ul>
-</div>
-</div>
+<h1 class="title">Can&rsquo;t Pray the Oscillator Frequency Away
+<br />
+<span class="subtitle">Doom is Probably More Demanding Than You Thought it Was</span>
+</h1>
 <p>
-Miscellaneous long-form opinions.
+It&rsquo;s a pet peeve of mine that <i>Doom</i> (1993) gets sooooo much focus in the popular conception of the hacking<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> scene
+(&ldquo;can it run Doom tho?&rdquo;), because I honestly don&rsquo;t think most people have a good grasp of what its hardware requirements
+actually <i>are.</i>
 </p>
-<div id="outline-container-org91de293" class="outline-2">
-<h2 id="org91de293"><span class="section-number-2">1.</span> General-Topic</h2>
-<div class="outline-text-2" id="text-1">
-<ol class="org-ol">
-<li><a href="00-more-right.html">Better Wheels Forever: An Observation</a></li>
-</ol>
-</div>
-</div>
-<div id="outline-container-org668e9d1" class="outline-2">
-<h2 id="org668e9d1"><span class="section-number-2">2.</span> Technical</h2>
-<div class="outline-text-2" id="text-2">
-<ol class="org-ol">
-<li><a href="10-java.html">On Java</a></li>
-<li><a href="11-doom.html">Can&rsquo;t Pray the Oscillator Frequency Away: Doom is Probably More Demanding Than You Thought it Was</a></li>
-</ol>
-</div>
-</div>
-<div id="outline-container-org9e507b8" class="outline-2">
-<h2 id="org9e507b8"><span class="section-number-2">3.</span> Art and Media</h2>
-</div>
-<div id="outline-container-orgd5f2e88" class="outline-2">
-<h2 id="orgd5f2e88"><span class="section-number-2">4.</span> Space and Spaceflight</h2>
-<div class="outline-text-2" id="text-4">
-<ol class="org-ol">
-<li><a href="30-mco.html">You&rsquo;re Probably Wrong About Mars Climate Orbiter: It&rsquo;s Not About Inches Vs. Centimeters</a></li>
-</ol>
-</div>
-</div>
-<div id="outline-container-org26e14f3" class="outline-2">
-<h2 id="org26e14f3">License:</h2>
-<div class="outline-text-2" id="text-org26e14f3">
+
+<p>
+See, <i>Doom</i> is a complicated program, but more importantly it&rsquo;s also a complicated <b>game,</b> i.e. interactive software. it
+doesn&rsquo;t just have to <i>run,</i> it has to run within a set of real-world constraints, too. Stuff like &ldquo;don&rsquo;t take several
+hours to draw a single frame.&rdquo;
+</p>
+
+<p>
+Id did not set out to make the most portable game ever. They set out to show off the cutting edge of PC gaming in 1993.
+That meant a 32-bit CPU (80386 or better [you&rsquo;d want better]), 4 MB of RAM <i>minimum,</i> and graphics hardware that could
+keep up (VGA or better). Plenty of contemporary devices couldn&rsquo;t handle that, e.g. the Amiga. Plenty of devices <i>still</i>
+can&rsquo;t handle that.
+</p>
+
+<p>
+It&rsquo;s not a question of optimization, or of clever workarounds, or of the author&rsquo;s technical ability. There is no way
+optimize &ldquo;the game needs to draw the level to the screen&rdquo; faster than the physical limits of the drawing hardware, no
+workaround for &ldquo;keep track of the enemies in a level&rdquo; that does not involve keeping track of the enemies in a level, and
+no level of technical ability which will let you do more with the system than the silicon is capable of. You cannot pray
+the oscillator frequency away and just &ldquo;do it anyway&rdquo; It&rsquo;d be like trying to play mail chess on a 4x4 board with no
+pieces in a country with no mail service. The complexity of the system <i>is</i> the complexity of the system.
+</p>
+
+<p>
+Take that headline that was circling around a couple years ago: &ldquo;This Programmer Figured Out How to Play <i>Doom</i> on a
+Pregnancy Test&rdquo;.<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> Not true! Foone Turing did not get <i>Doom</i> running on a pregnancy test microcontroller, because
+that is not physically possible. What <i>did</i> they do? They got <i>Doom</i> running on a 32-bit ARM devkit &#x2013; think &ldquo;Game Boy
+Advance&rdquo; power levels, both have roughly similar CPUs &#x2013; that was wired up to the <i>display</i> of a pregnancy test. No shit
+you can get <i>Doom</i> to run on something with the specs of a GBA, right? There was an official port of <i>Doom</i> the Game Boy
+Advance!
+</p>
+
+<p>
+So why is <i>Doom</i> here? Because after Id open-sourced the engine, it has become a common answer to the question &ldquo;what
+interactive graphical application has the most modular codebase?&rdquo; The actual demo is the <i>LCD driver.</i> <i>Doom</i>&rsquo;s role
+here could just as well be filled by a screensaver, or one of those trippy C64 fastload graphics, or an e-book reader.
+</p>
+
+<p>
+It&rsquo;s like watching someone demonstrate a new ACE<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup> exploit they found, and seeing people come away coming away with
+the conclusion that the impressive part was &ldquo;This Programmer Managed to Open The Windows Calculator on Windows 11&rdquo;. No!
+That&rsquo;s not where the effort went!
+</p>
+
+<p>
+*​sigh​*.
+</p>
+
+<p>
+I guess &ldquo;Programmer Writes Driver&rdquo; doesn&rsquo;t get as many clicks.
+</p>
+
+<p>
+<i>Oh well&#x2026;</i>
+</p>
+<div id="outline-container-org430ef2e" class="outline-2">
+<h2 id="org430ef2e">License:</h2>
+<div class="outline-text-2" id="text-org430ef2e">
 <p>
 Copyright 2025 <a href="https://github.com/MetroidIsPrettyCool">Joseph Burke</a>. All original content published to this website is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> 🅭🅯🄎
 license, unless explicitly stated otherwise.
 </p>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+That&rsquo;s the &ldquo;understand systems and get them to do unexpected things&rdquo; sense of &ldquo;hacker&rdquo;, as opposed to &ldquo;cracker&rdquo;. <br />
+</p>
+
+<p class="footpara">
+See: <a href="https://en.wiktionary.org/wiki/hacker#Noun">https://en.wiktionary.org/wiki/hacker#Noun</a>, definition 1.4; and <a href="https://en.wiktionary.org/wiki/cracker#Noun">https://en.wiktionary.org/wiki/cracker#Noun</a>,
+definition 8.3.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+<a href="https://www.popularmechanics.com/science/a33957256/this-programmer-figured-out-how-to-play-doom-on-a-pregnancy-test/">https://www.popularmechanics.com/science/a33957256/this-programmer-figured-out-how-to-play-doom-on-a-pregnancy-test/</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+Arbitrary Code Execution. See: <a href="https://en.wikipedia.org/wiki/Arbitrary_code_execution">https://en.wikipedia.org/wiki/Arbitrary_code_execution</a>
+</p></div></div>
+
+
 </div>
+</div></div>
 <div id="postamble" class="status">
 <p class="author">Author: Joseph Burke</p>
 <p class="date">Created: 2025-11-06 Thu 09:04</p>

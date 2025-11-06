@@ -329,6 +329,8 @@ Science A was teaching.
 
    Probably won't ever come back to FXML /specifically,/ unless I have to, however. My memories are foggy but I recall
    it as a mostly frustrating experience. Probably didn't help that I *clearly* had no idea what I was doing...
+
+{{{license-footer(2025)}}}
 * Footnotes
 [fn:1] As far as the "gamer" public seems to care, anyway.
 
