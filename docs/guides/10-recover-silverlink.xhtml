@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Linux version 5.7.45" />
+  <!-- 2025-11-06 Thu 12:19 -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1" />
+  <title>How to Recover a Bricked SilverLink Cable</title>
+  <meta name="author" content="Joseph Burke" />
+  <meta name="generator" content="Org Mode" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+  /*]]>*/
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+</head>
+<body>
+  <div id="org-div-home-and-up">
+    <a accesskey="h" href="./index.xhtml">UP</a> | <a accesskey="H"
+    href="/index.xhtml">HOME</a>
+  </div>
+  <div id="content" class="content">
+    <h1 class="title">How to Recover a Bricked SilverLink
+    Cable<br />
+    <span class="subtitle"><i>Actually</i> Troubleshooting the
+    “Unknown Device” and “TUSB3410 Boot Device” Error Message when
+    Using TI Connect™ Software for Windows®.</span></h1>
+    <div id="table-of-contents" role="doc-toc">
+      <h2>Table of Contents</h2>
+      <div id="text-table-of-contents" role="doc-toc">
+        <ul>
+          <li>
+            <a href="#orgf4ba91c">1. The Context</a>
+          </li>
+          <li>
+            <a href="#orgbabc901">2. The Problem</a>
+          </li>
+          <li>
+            <a href="#orgd8bd77a">3. The Fix</a>
+          </li>
+          <li>
+            <a href="#orgd4d1144">4. Further Troubleshooting</a>
+            <ul>
+              <li>
+                <a href="#org143734b">4.1. I Don’t See “TUSB3410
+                EEPROM Burner Instance (1.00)” in the EEPROM
+                Burner</a>
+              </li>
+              <li>
+                <a href="#org1362b26">4.2. SilverLink Stops
+                Enumerating</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#orgc6c6ce9">5. Closing Thoughts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="outline-container-orgf4ba91c" class="outline-2">
+      <h2 id="orgf4ba91c"><span class="section-number-2">1.</span>
+      The Context</h2>
+      <div class="outline-text-2" id="text-1">
+        <p>(This is a revised version of a post I made on my Tumblr
+        blog, then revised and posted to the Cemetech forum,
+        because here I can do all the editing I want without
+        getting in trouble for bumping.)</p>
+        <p>This is a TI-GRAPH LINK USB cable, commonly referred to
+        as a “SilverLink”:</p>
+        <div class="org-center">
+          <div id="org138f85b" class="figure">
+            <p><img src="../images/SilverLink.jpg" alt=
+            "SilverLink.jpg" style=
+            "width:50%;margin-left:auto;margin-right:auto" /></p>
+          </div>
+        </div>
+        <p>to distinguish it from earlier models of communication
+        cable, which were colored black or gray and used the
+        classic PC serial port for their host interface.</p>
+        <p>For graphing calculators without built-in (“direct”)
+        USB, such as the pre-CE TI-83 Plus, the SilverLink is the
+        best option for getting files onto and off of your
+        calculator.</p>
+        <p>The SilverLink is a funny device with a funny job. The
+        classic TI 2.5mm TRS link port uses a proprietary hardware
+        communication protocol called “D-Bus”<sup><a id="fnr.1"
+        class="footref" href="#fn.1" role=
+        "doc-backlink">1</a></sup> (sometimes “DBus”) that’s
+        <i>wholly</i> incompatible with USB. I mean, it’s
+        <i>clockless,</i> for starters. The serial cables models
+        which proceeded it could get away with a few resistors and
+        a bit-banging driver, but USB doesn’t allow that kind of
+        granular pin-level control over hardware.</p>
+        <p>That’s what the circuit board in the middle is for. In
+        revision B models (the most commonly-produced revision, as
+        far as I can tell) it’s a simple setup based around an
+        off-the-shelf TI microcontroller called the TUSB3410, an
+        I<sup>2</sup>​C EEPROM for storing firmware, and a few
+        support components (oscillator, etc.).</p>
+      </div>
+    </div>
+    <div id="outline-container-orgbabc901" class="outline-2">
+      <h2 id="orgbabc901"><span class="section-number-2">2.</span>
+      The Problem</h2>
+      <div class="outline-text-2" id="text-2">
+        <p>The TUSB3410 boot process (run on cable insertion, as
+        the SilverLink draws power from the USB rail) always
+        involves checking to see if it’s attached to an
+        I<sup>2</sup>​C EEPROM with firmware code to execute. If it
+        finds one, and its contents are properly formatted, it’ll
+        copy that code into internal RAM and start executing
+        it.</p>
+        <p>If it <i>can’t</i> find an EEPROM, or if it can but the
+        contents therein aren’t properly formatted, it’ll fall back
+        to looking for boot code over USB. If one day your
+        SilverLink starts showing up to your computer as a
+        “TUSB3410 Boot Device” (VID 0x0451, PID 0x3410) instead of
+        a “TI-GRAPH LINK USB” (VID 0x0451, PID 0xE001), the latter
+        has happened to it. Your cable can’t read its own firmware
+        and assumes it must therefore be a development kit.</p>
+        <p>You can try to follow TI’s support guide for what to
+        do:</p>
+        <ul class="org-ul">
+          <li>
+            <a href=
+            "https://education.ti.com/en/customer-support/knowledge-base/ti-83-84-plus-family/troubleshooting-messages-unexpected-results/27430">
+            https://education.ti.com/en/customer-support/knowledge-base/ti-83-84-plus-family/troubleshooting-messages-unexpected-results/27430</a>
+          </li>
+          <li>
+            <a href=
+            "https://education.ti.com/en/customer-support/knowledge-base/ti-83-84-plus-family/troubleshooting-messages-unexpected-results/14060">
+            https://education.ti.com/en/customer-support/knowledge-base/ti-83-84-plus-family/troubleshooting-messages-unexpected-results/14060</a>
+          </li>
+        </ul>
+        <p>but their suggestions probably won’t help. Here’s how to
+        <i>actually</i> fix the problem:</p>
+      </div>
+    </div>
+    <div id="outline-container-orgd8bd77a" class="outline-2">
+      <h2 id="orgd8bd77a"><span class="section-number-2">3.</span>
+      The Fix</h2>
+      <div class="outline-text-2" id="text-3">
+        <ol class="org-ol">
+          <li>
+            <p>Download the TUSB3x10 EEPROM Burner from here:
+            <a href=
+            "https://www.ti.com/tool/download/SLLC443/01.00.00.0C">https://www.ti.com/tool/download/SLLC443/01.00.00.0C</a>.</p>
+            <p>This is a Windows-only program, but to my knowledge
+            will work on basically any windows machine from XP on –
+            so long as it’s got USB ports. No clue if it’ll work in
+            a VM.</p>
+            <p>You might want to consult the user’s manual while
+            you’re at it, you can find it here: <a href=
+            "https://www.ti.com/lit/ug/sllu205/sllu205.pdf">https://www.ti.com/lit/ug/sllu205/sllu205.pdf</a>.</p>
+          </li>
+          <li>
+            <p>Download the SilverLink firmware. I re-assembled it
+            from this disassembly: <a href=
+            "https://github.com/queueRAM/ti_graph_link">https://github.com/queueRAM/ti_graph_link</a>.</p>
+            <p>It’s just a standard ’make’ to build. The output
+            file you’re looking for is called
+            <code>ti_graph_link_silver.eep</code>.</p>
+          </li>
+          <li>Rename <code>ti_graph_link_silver.eep</code> to
+          <code>ti_graph_link_silver.bin</code>.</li>
+          <li>Open the TUSB3x10 EEPROM Burner, click on the options
+          dropdown and click “Show the ‘Program Full Binary Image’
+          button”. (See page 7 of the manual).</li>
+          <li>Select the entry under “Computer” labeled “TUSB3410
+          EEPROM Burner Instance (1.00)”.</li>
+          <li>Set EEPROM size to “64Kb”.</li>
+          <li>Set “File Path” to point to
+          <code>ti_graph_link_silver.bin</code>. (The renamed .eep,
+          not the original .bin)</li>
+          <li>You do not need to specify the <code>VID</code>,
+          <code>PID</code>, <code>Manufacturer string</code>,
+          <code>Product string</code> or <code>Serial #</code>.
+          This information is contained within
+          <code>ti_graph_link_silver.bin</code>.</li>
+          <li>Likewise, the default page-write buffer size (32
+          bytes) and I2C bus speed (400 KHz) in the burner app are
+          already correct for this EEPROM, so there’s no need to
+          change them.</li>
+          <li>Click the “Program Full Binary Image” button (yellow
+          triangle with the exclamation point), and proceed with
+          the write.</li>
+          <li>Unplug and re-plug your cable, and it should show up
+          as a SilverLink again!</li>
+        </ol>
+      </div>
+    </div>
+    <div id="outline-container-orgd4d1144" class="outline-2">
+      <h2 id="orgd4d1144"><span class="section-number-2">4.</span>
+      Further Troubleshooting</h2>
+      <div class="outline-text-2" id="text-4"></div>
+      <div id="outline-container-org143734b" class="outline-3">
+        <h3 id="org143734b"><span class=
+        "section-number-3">4.1.</span> I Don’t See “TUSB3410 EEPROM
+        Burner Instance (1.00)” in the EEPROM Burner</h3>
+        <div class="outline-text-3" id="text-4-1">
+          <p>You’ll need to reinstall the TUSB3410 driver. Check
+          page 16 of the manual (<a href=
+          "https://www.ti.com/lit/ug/sllu205/sllu205.pdf">https://www.ti.com/lit/ug/sllu205/sllu205.pdf</a>)
+          and follow the steps it describes.</p>
+        </div>
+      </div>
+      <div id="outline-container-org1362b26" class="outline-3">
+        <h3 id="org1362b26"><span class=
+        "section-number-3">4.2.</span> SilverLink Stops
+        Enumerating</h3>
+        <div class="outline-text-3" id="text-4-2">
+          <p>If your SilverLink stops showing up <i>at all</i>
+          after flashing the firmware, this might be because you
+          pressed “Program” instead of “Program Full Binary Image”.
+          Your SilverLink has been tricked into a state where it
+          <i>thinks</i> the EEPROM contains valid code, but that
+          code is all garbage so it’s sorta bricked.</p>
+          <p>Fortunately, there <i>is</i> a way to get it back into
+          “Boot Device” mode – we only need to either corrupt the
+          EEPROM, or convince the TUSB3410 that the EEPROM is
+          corrupt. I’ve managed to accomplish this, but I’m NOT an
+          electrical engineer – or even all that informed about
+          basic EE concepts – so I’d love some feedback from an
+          actual expert. Leave a comment or open an issue or
+          whatever on my GitHub :)</p>
+          <p>Here’s the procedure:</p>
+          <ol class="org-ol">
+            <li>Unplug the SilverLink, if you haven’t already.</li>
+            <li>Disassemble the SilverLink (it’s just one T6 torx
+            screw under the sticker and a bunch of plastic snaps)
+            and remove the circuit board.</li>
+            <li>
+              <p>Grab a jumper wire and short the <code>Vss</code>
+              (bottom rightmost) and <code>SDA</code> (top
+              rightmost) or <code>SCL</code> (top, one in from
+              rightmost) pins together while at the same time
+              plugging the USB connector into your computer.</p>
+              <p>I recommend referencing the EEPROM datasheet while
+              you do this: <a href=
+              "https://ww1.microchip.com/downloads/en/DeviceDoc/21189f.pdf">
+              https://ww1.microchip.com/downloads/en/DeviceDoc/21189f.pdf</a></p>
+            </li>
+            <li>Repeat step 3 until it enumerates again. If you’re
+            lucky, this should only take a couple tries at
+            most.</li>
+          </ol>
+          <p>Again, I have no idea how reliable or safe this
+          procedure might be – perform at your own risk! All I know
+          is that it worked for me the once.</p>
+        </div>
+      </div>
+    </div>
+    <div id="outline-container-orgc6c6ce9" class="outline-2">
+      <h2 id="orgc6c6ce9"><span class="section-number-2">5.</span>
+      Closing Thoughts</h2>
+      <div class="outline-text-2" id="text-5">
+        <p>No clue what causes the corruption in the first place,
+        or how long this fix will last. It might be because the
+        EEPROM’s write protect pin is set to “write enable”? It
+        could also just be degrading hardware, for all I know.</p>
+        <p>All I <i>do</i> know is that, eight months after
+        performing this procedure myself, it’s still working.</p>
+        <p>It’s very funny to see that a mass-produced product like
+        the SilverLink, niche though it may be, could have a
+        failure mode where it more-or-less just turns back into a
+        development board. That’s the sort of behavior you’d expect
+        from a bespoke arduino-based automatic cat door you bought
+        from a guy who builds them in his garage and sells them for
+        cash under the table, not <i>Texas</i> fucking
+        <i>Instruments.</i></p>
+        <p>Who ships consumer products with the default “waiting
+        for firmware” fallback mode still enabled? Furthermore, who
+        ships consumer products with the default “waiting for
+        firmware” fallback mode still enabled, and then doesn’t
+        include the option to re-flash that firmware in any of
+        their products?</p>
+        <p>Insane.</p>
+        <p>It does give me some ideas, though. The TUSB3410 is
+        decently well-documented, we have disassembled firmware to
+        work from, and we have a demonstrated procedure to upload
+        arbitrary firmware to a rev. B cable. I wonder what I could
+        do by writing my own?</p>
+        <p>The TI Keyboard (PLT-KBD), for example. It uses an
+        incompatible modification of the D-Bus hardware protocol to
+        synchronize during the “send key code” routine, ostensibly
+        to allow a calculator to communicate with the keyboard and
+        another calculator at the same time,<sup><a id="fnr.2"
+        class="footref" href="#fn.2" role=
+        "doc-backlink">2</a></sup> and the default SilverLink
+        firmware has no idea how to interpret them, and simply
+        rejects all of it. Nothing is signaled to the PC besides
+        “an error occurred”.</p>
+        <p>If we wrote our <i>own</i> firmware, however, all the
+        low-level details are fully exposed and interpretable.
+        There’s no special hardware support we’d need. Just have
+        the cable enumerate as a generic USB keyboard, translate
+        PLT-KBD scancodes into USB scancodes, and Bob’s your uncle!
+        That’d be a neat project. Sometime…</p>
+      </div>
+    </div>
+    <div id="outline-container-org15b841a" class="outline-2">
+      <h2 id="org15b841a">License:</h2>
+      <div class="outline-text-2" id="text-org15b841a">
+        <p>Copyright 2025 <a href=
+        "https://github.com/MetroidIsPrettyCool">Joseph Burke</a>.
+        All original content published to this website is licensed
+        under a <a href=
+        "https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
+        4.0</a> 🅭🅯🄎 license, unless explicitly stated
+        otherwise.</p>
+      </div>
+    </div>
+    <div id="footnotes">
+      <h2 class="footnotes">Footnotes:</h2>
+      <div id="text-footnotes">
+        <div class="footdef">
+          <sup><a id="fn.1" class="footnum" href="#fnr.1" role=
+          "doc-backlink">1</a></sup>
+          <div class="footpara" role="doc-footnote">
+            <p class="footpara">Not to be confused with the XDG
+            protocol of the same name.<br /></p>
+            <p class="footpara">See <a href=
+            "https://debrouxl.github.io/tilp-linkguide/hardware.html">
+            https://debrouxl.github.io/tilp-linkguide/hardware.html</a>
+            for more.</p>
+          </div>
+        </div>
+        <div class="footdef">
+          <sup><a id="fn.2" class="footnum" href="#fnr.2" role=
+          "doc-backlink">2</a></sup>
+          <div class="footpara" role="doc-footnote">
+            <p class="footpara">This functionality was never
+            deployed in any actual calculator or keyboard model, as
+            far as I’m aware. IIRC some early models of the PLT-KBD
+            had a blanked-out section of their motherboards for a
+            second daisy-chained I/O port?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="postamble" class="status">
+    <p class="author">Author: Joseph Burke</p>
+    <p class="date">Created: 2025-11-06 Thu 12:19</p>
+    <p class="validation"><a href=
+    "https://validator.w3.org/check?uri=referer">Validate</a></p>
+  </div>
+</body>
+</html>

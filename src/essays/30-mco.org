@@ -8,8 +8,9 @@
 
 See, a while ago I came across this talk, "Programming’s Greatest Mistakes", from one Mark Rendle:
 
-#+ATTR_HTML: :align middle
+#+begin_center
 [[yt:qC_ioJQpv4E]]
+#+end_center
 
 I have no problem with its overall /message/ (manage your projects well, stay organized, make sure you know what you're
 doing, etc.) but I was a little irked seeing him bring up Mars Climate Orbiter. I'm sick and tired of seeing it

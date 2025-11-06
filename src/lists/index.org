@@ -1,5 +1,5 @@
 #+TITLE: List Index
-#+HTML_LINK_UP: ../index.html
+#+HTML_LINK_UP: ../index.xhtml
 Short thoughts on broad topics.
 * General-Topic
 1. [[file:00-taking-sides.org][Taking Sides!: Opinions On Some Trivial Debates]]

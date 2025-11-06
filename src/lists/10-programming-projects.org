@@ -153,8 +153,10 @@ Or "Water Air Lava Lava Air" + "Air Water Water Lava Water" = "Water Water Lava 
 ** The Pitch
 This also needs some context. This monster:
 
-#+ATTR_HTML: :width 50% :align middle
+#+begin_center
+#+ATTR_HTML: :style width:50%;margin-left:auto;margin-right:auto
 [[file:../images/TI-92_Plus.jpg]]
+#+end_center
 
 is the TI-92+ graphing calculator. It's a neat little gadget, really stretches the line between "graphing calculator"
 and "low-spec portable general-purpose computer". Sporting a QWERTY keyboard, an MC68000SEC processor, a proprietary

@@ -7,8 +7,10 @@ here I can do all the editing I want without getting in trouble for bumping.)
 
 This is a TI-GRAPH LINK USB cable, commonly referred to as a "SilverLink":
 
-#+ATTR_HTML: :width 50% :align middle
+#+begin_center
+#+ATTR_HTML: :style width:50%;margin-left:auto;margin-right:auto
 [[../images/SilverLink.jpg]]
+#+end_center
 
 to distinguish it from earlier models of communication cable, which were colored black or gray and used the classic PC
 serial port for their host interface.

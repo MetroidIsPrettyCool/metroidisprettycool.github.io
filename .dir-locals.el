@@ -3,6 +3,9 @@
 
 ((nil . ((fill-column . 120)))
  (org-mode . ((eval . (require 'yt-embed (concat (project-root (project-current)) ".emacs/yt-embed.el")))
+              (eval . (require 'tidy-hook (concat (project-root (project-current)) ".emacs/tidy-hook.el")))
+              (org-html-extension . "xhtml")
+              (org-export-filter-final-output-functions . (tidy-hook-do-it))
               (org-export-global-macros . (("citation-footer" . "(eval (format \"* Citations:
 :PROPERTIES:
 :UNNUMBERED: notoc
@@ -37,10 +40,10 @@ license, unless explicitly stated otherwise.
 
                         :publishing-directory ,(concat (project-root (project-current)) "docs/")
 
-                        :html-link-home "/index.html"
+                        :html-link-home "/index.xhtml"
 
-                        :html-link-up "./index.html"
+                        :html-link-up "./index.xhtml"
 
-                        :html-doctype "xhtml-frameset"
+                        :html-doctype "xhtml5"
 
                         :html-head-extra "<link rel=\"icon\" type=\"image/png\" href=\"/favicon.ico\" />")))))))

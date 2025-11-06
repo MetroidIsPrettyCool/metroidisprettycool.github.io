@@ -76,16 +76,18 @@ The /dishwasher/ rinses your dishes before the dishwasher. That's what pre-wash 
 
 It's also why you should use pre-wash detergent. See:
 
-#+ATTR_HTML: :align middle
+#+begin_center
 [[yt:jHP942Livy0]]
+#+end_center
 *** Is the Ship of Theseus Still the Same Ship?
 Are we still calling it the Ship of Theseus? The /name/ remains. The history remains. The people's relationship to the
 symbol remains. It's still as much the same the ship as anything ever could be what it used to be.
 * Technical
 ** Editors
 *** Editor War?
-#+ATTR_HTML: :align middle
+#+begin_center
 [[yt:V3QF1uAvbkU]]
+#+end_center
 
 Emacs forever! ~(while (and (rules 'emacs) (drools 'vi)) (message "you already know it"))~
 
@@ -329,8 +331,9 @@ Who woulda guessed! Just because /you/ don't know how to hack on them doesn't me
 
 Also: not everything is a file. Your pants are down and your embarrassing ~ioctl~-themed underwear is showing. See:
 
-#+ATTR_HTML: :align middle
+#+begin_center
 [[yt:9-IWMbJXoLM]]
+#+end_center
 *** GPL vs MIT?
 FOSS is dead. Open source is dead. Free software is dead.[fn:6]
 
@@ -364,8 +367,9 @@ https://solrad.co/let-the-art-stand-for-itself-a-conversation-with-peter-gallagh
 
 or this talk he did:
 
-#+ATTR_HTML: :align middle
+#+begin_center
 [[yt:o8_8En04p08]]
+#+end_center
 * Space and Such
 ** Is Pluto Still a Planet?
 All models are wrong, but some are irrationally defended by people who wish they were still in the third grade -- when
@@ -389,13 +393,13 @@ It's easy to paint the USSR as an unambiguous winner if we just look at the "fir
 we've all seen that meme that goes something like "first satellite in space, first animal in space, first man in space,
 first woman in space, first space walk, first space station -- USSR. First man on the moon, USA. Winner? USA!?"
 
-Well, here's something to note: Between April 12th, 1961 (first human spaceflight) and December 26th,
-1991 (collapse of the USSR) the USSR flew 2[fn:9] women on 3[fn:9] person-flights, out of 94[fn:9][fn:10] flying
-cosmonauts and 142[fn:9][fn:10] person-flights. If we include /Interkosmos/ cosmonauts, these numbers rise to 3 women, on
-4 person-flights, out of 101 flying cosmonauts and 150 person-flights.
+Well, here's something to note: Between April 12th, 1961 (first human spaceflight) and December 26th, 1991 (collapse of
+the USSR) the USSR flew 2[fn:9] women on 3[fn:9] person-flights, out of 94[fn:10] flying cosmonauts and 142[fn:10]
+person-flights. If we include /Interkosmos/ cosmonauts, these numbers rise to 3 women, on 4 person-flights, out of 101
+flying cosmonauts and 150 person-flights.
 
-In that same time, the USA flew 13 women[fn:11] on 19[fn:11] person-flights, out of 154[fn:11][fn:12] flying astronauts
-and 285[fn:11][fn:12] person-flights. If we include payload specialists (whose selection is (was?) more complicated than
+In that same time, the USA flew 13 women[fn:11] on 19[fn:11] person-flights, out of 154[fn:12] flying astronauts and
+285[fn:12] person-flights. If we include payload specialists (whose selection is (was?) more complicated than
 traditional astronauts) these numbers rise to 15 women on 22 person-flights, out of 154 astronauts and 312
 person-missions.
 
@@ -481,9 +485,10 @@ of extra config, and you need to have the source code installed somewhere. Can s
 
 [fn:9] Not including unflown cosmonauts or /Interkosmos/ cosmonauts.
 
-[fn:10] Including Soyuz 1, 11, 7K-T No.39, 7K-ST No.16L, and TM-13.
+[fn:10] Including Soyuz 1, 11, 7K-T No.39, 7K-ST No.16L, and TM-13; not including unflown cosmonauts or /Interkosmos/
+cosmonauts.
 
 [fn:11] Including /Challenger/ STS-51L, not including unflown astronauts or payload specialists.
 
-[fn:12] Including X-15 flights over 50 miles, even X-15 flight 191, and Apollo 1, and Gemini 6; not including Gemini 9,
-ALT 1-16, or unflown astronauts.
+[fn:12] Including /Challenger/ STS-51L, X-15 flights over 50 miles, even X-15 flight 191, and Apollo 1, and Gemini 6;
+not including Gemini 9, ALT 1-16, unflown astronauts or payload specialists.

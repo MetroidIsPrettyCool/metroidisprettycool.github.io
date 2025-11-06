@@ -13,7 +13,7 @@
         "<iframe width=\"600\""
         " height=\"338\""
         " src=\"https://www.youtube.com/embed/%s\""
-        " frameborder=\"0\""
+        " style=\"margin-left:auto; margin-right:auto\""
         ">%s</iframe>")))
   (org-link-set-parameters
    "yt"

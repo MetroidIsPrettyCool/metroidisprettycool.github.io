@@ -1,5 +1,5 @@
 #+TITLE: Non-Opinionated Guide Index
-#+HTML_LINK_UP: ../index.html
+#+HTML_LINK_UP: ../index.xhtml
 Non-opinionated guides on how to do various things.
 * General-Topic
 * Technical
