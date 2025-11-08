@@ -4,7 +4,6 @@
 ((nil . ((fill-column . 120)))
  (org-mode . ((eval . (require 'metroidisprettycool-github-io
                                (expand-file-name "metroidisprettycool-github-io.el" (project-root (project-current)))))
-              (org-html-extension . "xhtml")
               (org-export-global-macros . (("citation-footer" . "(eval (format \"* Citations:
 :PROPERTIES:
 :UNNUMBERED: notoc

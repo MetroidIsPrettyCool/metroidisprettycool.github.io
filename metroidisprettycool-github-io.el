@@ -137,9 +137,7 @@ from our library calls."
                                            "--gnu-emacs"              "yes"
                                            "--show-filename"          "yes"
                                            "-language"                "en"
-                                           "--add-meta-charset"       "no"
                                            "--add-xml-decl"           "yes"
-                                           "--add-xml-space"          "yes"
                                            "--output-xhtml"           "yes"
                                            "--char-encoding"          "utf8"
                                            "--output-bom"             "no"
@@ -191,6 +189,7 @@ from our library calls."
 
                  :recursive t
 
+                 :with-entities     t
                  :with-smart-quotes t
 
                  :publishing-function org-html-publish-to-html
@@ -205,12 +204,13 @@ from our library calls."
 
                  :html-doctype "xhtml5"
 
+                 :html-extension "xhtml"
+
                  :html-head-extra ,(concat
                                     "<link rel=\"icon\" type=\"image/png\" href=\"/favicon.ico\" />"
                                     "<style type=\"text/css\">"
                                     "/*<![CDATA[*/"
                                     "pre.src { background-color: black; color: white; }"
-                                    "pre.src-rust:before { content: 'Rust'; }"
                                     "/*]]>*/"
                                     "</style>"))))
 
