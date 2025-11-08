@@ -207,11 +207,13 @@ from our library calls."
                  :html-extension "xhtml"
 
                  :html-head-extra ,(concat
-                                    "<link rel=\"icon\" type=\"image/png\" href=\"/favicon.ico\" />"
-                                    "<style type=\"text/css\">"
-                                    "/*<![CDATA[*/"
-                                    "pre.src { background-color: black; color: white; }"
-                                    "/*]]>*/"
+                                    "<link rel=\"icon\" type=\"image/png\" href=\"/favicon.ico\" />\n"
+                                    "<style type=\"text/css\">\n"
+                                    "/*<![CDATA[*/\n"
+                                    "pre.src { background-color: black; color: white; }\n"
+                                    "pre.src-rustic:before { content: 'Rust'; }\n"
+                                    "pre.src-rust:before { content: 'Rust'; }\n"
+                                    "/*]]>*/\n"
                                     "</style>"))))
 
 (provide 'metroidisprettycool-github-io)
