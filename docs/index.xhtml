@@ -1,38 +1,41 @@
+<?xml version="1.0"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-  <meta name="generator" content=
-  "HTML Tidy for HTML5 for Linux version 5.7.45" />
-  <!-- 2025-11-06 Thu 12:19 -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1" />
-  <title>My Wabsite</title>
-  <meta name="author" content="Joseph Burke" />
-  <meta name="generator" content="Org Mode" />
-  <style type="text/css">
-  /*<![CDATA[*/
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 for Linux version 5.7.45" />
+    <!-- 2025-11-08 Sat 11:32 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1" />
+    <title>
+      My Wabsite
+    </title>
+    <meta name="author" content="Joseph Burke" />
+    <meta name="generator" content="Org Mode" />
+    <style type="text/css" xml:space="preserve">
+    /*<![CDATA[*/
+    #content { max-width: 60em; margin: auto; }
+    .title  { text-align: center;
              margin-bottom: .2em; }
-  .subtitle { text-align: center;
+    .subtitle { text-align: center;
               font-size: medium;
               font-weight: bold;
               margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
+    .todo   { font-family: monospace; color: red; }
+    .done   { font-family: monospace; color: green; }
+    .priority { font-family: monospace; color: orange; }
+    .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
+    .timestamp { color: #bebebe; }
+    .timestamp-kwd { color: #5f9ea0; }
+    .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+    .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+    .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+    .underline { text-decoration: underline; }
+    #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+    p.verse { margin-left: 3%; }
+    pre {
     border: 1px solid #e6e6e6;
     border-radius: 3px;
     background-color: #f2f2f2;
@@ -40,12 +43,12 @@
     font-family: monospace;
     overflow: auto;
     margin: 1.2em;
-  }
-  pre.src {
+    }
+    pre.src {
     position: relative;
     overflow: auto;
-  }
-  pre.src:before {
+    }
+    pre.src:before {
     display: none;
     position: absolute;
     top: -8px;
@@ -53,315 +56,370 @@
     padding: 3px;
     color: #555;
     background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
+    }
+    pre.src:hover:before { display: inline; margin-top: 14px;}
+    /* Languages per Org manual */
+    pre.src-asymptote:before { content: 'Asymptote'; }
+    pre.src-awk:before { content: 'Awk'; }
+    pre.src-authinfo::before { content: 'Authinfo'; }
+    pre.src-C:before { content: 'C'; }
+    /* pre.src-C++ doesn't work in CSS */
+    pre.src-clojure:before { content: 'Clojure'; }
+    pre.src-css:before { content: 'CSS'; }
+    pre.src-D:before { content: 'D'; }
+    pre.src-ditaa:before { content: 'ditaa'; }
+    pre.src-dot:before { content: 'Graphviz'; }
+    pre.src-calc:before { content: 'Emacs Calc'; }
+    pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+    pre.src-fortran:before { content: 'Fortran'; }
+    pre.src-gnuplot:before { content: 'gnuplot'; }
+    pre.src-haskell:before { content: 'Haskell'; }
+    pre.src-hledger:before { content: 'hledger'; }
+    pre.src-java:before { content: 'Java'; }
+    pre.src-js:before { content: 'Javascript'; }
+    pre.src-latex:before { content: 'LaTeX'; }
+    pre.src-ledger:before { content: 'Ledger'; }
+    pre.src-lisp:before { content: 'Lisp'; }
+    pre.src-lilypond:before { content: 'Lilypond'; }
+    pre.src-lua:before { content: 'Lua'; }
+    pre.src-matlab:before { content: 'MATLAB'; }
+    pre.src-mscgen:before { content: 'Mscgen'; }
+    pre.src-ocaml:before { content: 'Objective Caml'; }
+    pre.src-octave:before { content: 'Octave'; }
+    pre.src-org:before { content: 'Org mode'; }
+    pre.src-oz:before { content: 'OZ'; }
+    pre.src-plantuml:before { content: 'Plantuml'; }
+    pre.src-processing:before { content: 'Processing.js'; }
+    pre.src-python:before { content: 'Python'; }
+    pre.src-R:before { content: 'R'; }
+    pre.src-ruby:before { content: 'Ruby'; }
+    pre.src-sass:before { content: 'Sass'; }
+    pre.src-scheme:before { content: 'Scheme'; }
+    pre.src-screen:before { content: 'Gnu Screen'; }
+    pre.src-sed:before { content: 'Sed'; }
+    pre.src-sh:before { content: 'shell'; }
+    pre.src-sql:before { content: 'SQL'; }
+    pre.src-sqlite:before { content: 'SQLite'; }
+    /* additional languages in org.el's org-babel-load-languages alist */
+    pre.src-forth:before { content: 'Forth'; }
+    pre.src-io:before { content: 'IO'; }
+    pre.src-J:before { content: 'J'; }
+    pre.src-makefile:before { content: 'Makefile'; }
+    pre.src-maxima:before { content: 'Maxima'; }
+    pre.src-perl:before { content: 'Perl'; }
+    pre.src-picolisp:before { content: 'Pico Lisp'; }
+    pre.src-scala:before { content: 'Scala'; }
+    pre.src-shell:before { content: 'Shell Script'; }
+    pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+    /* additional language identifiers per "defun org-babel-execute"
        in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
+    pre.src-cpp:before  { content: 'C++'; }
+    pre.src-abc:before  { content: 'ABC'; }
+    pre.src-coq:before  { content: 'Coq'; }
+    pre.src-groovy:before  { content: 'Groovy'; }
+    /* additional language identifiers from org-babel-shell-names in
      ob-shell.el: ob-shell is the only babel language using a lambda to put
      the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
+    pre.src-bash:before  { content: 'bash'; }
+    pre.src-csh:before  { content: 'csh'; }
+    pre.src-ash:before  { content: 'ash'; }
+    pre.src-dash:before  { content: 'dash'; }
+    pre.src-ksh:before  { content: 'ksh'; }
+    pre.src-mksh:before  { content: 'mksh'; }
+    pre.src-posh:before  { content: 'posh'; }
+    /* Additional Emacs modes also supported by the LaTeX listings package */
+    pre.src-ada:before { content: 'Ada'; }
+    pre.src-asm:before { content: 'Assembler'; }
+    pre.src-caml:before { content: 'Caml'; }
+    pre.src-delphi:before { content: 'Delphi'; }
+    pre.src-html:before { content: 'HTML'; }
+    pre.src-idl:before { content: 'IDL'; }
+    pre.src-mercury:before { content: 'Mercury'; }
+    pre.src-metapost:before { content: 'MetaPost'; }
+    pre.src-modula-2:before { content: 'Modula-2'; }
+    pre.src-pascal:before { content: 'Pascal'; }
+    pre.src-ps:before { content: 'PostScript'; }
+    pre.src-prolog:before { content: 'Prolog'; }
+    pre.src-simula:before { content: 'Simula'; }
+    pre.src-tcl:before { content: 'tcl'; }
+    pre.src-tex:before { content: 'TeX'; }
+    pre.src-plain-tex:before { content: 'Plain TeX'; }
+    pre.src-verilog:before { content: 'Verilog'; }
+    pre.src-vhdl:before { content: 'VHDL'; }
+    pre.src-xml:before { content: 'XML'; }
+    pre.src-nxml:before { content: 'XML'; }
+    /* add a generic configuration mode; LaTeX export needs an additional
      (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
+    pre.src-conf:before { content: 'Configuration File'; }
 
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
+    table { border-collapse:collapse; }
+    caption.t-above { caption-side: top; }
+    caption.t-bottom { caption-side: bottom; }
+    td, th { vertical-align:top;  }
+    th.org-right  { text-align: center;  }
+    th.org-left   { text-align: center;   }
+    th.org-center { text-align: center; }
+    td.org-right  { text-align: right;  }
+    td.org-left   { text-align: left;   }
+    td.org-center { text-align: center; }
+    dt { font-weight: bold; }
+    .footpara { display: inline; }
+    .footdef  { margin-bottom: 1em; }
+    .figure { padding: 1em; }
+    .figure p { text-align: center; }
+    .equation-container {
     display: table;
     text-align: center;
     width: 100%;
-  }
-  .equation {
+    }
+    .equation {
     vertical-align: middle;
-  }
-  .equation-label {
+    }
+    .equation-label {
     display: table-cell;
     text-align: right;
     vertical-align: middle;
-  }
-  .inlinetask {
+    }
+    .inlinetask {
     padding: 10px;
     border: 2px solid gray;
     margin: 10px;
     background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
+    }
+    #org-div-home-and-up
+    { text-align: right; font-size: 70%; white-space: nowrap; }
+    textarea { overflow-x: auto; }
+    .linenr { font-size: smaller }
+    .code-highlighted { background-color: #ffff00; }
+    .org-info-js_info-navigation { border-style: none; }
+    #org-info-js_console-label
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
+    .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-  /*]]>*/
-  </style>
-  <link rel="icon" type="image/png" href="/favicon.ico" />
-</head>
-<body>
-  <div id="org-div-home-and-up">
-    <a accesskey="h" href="">UP</a> | <a accesskey="H" href=
-    "/index.xhtml">HOME</a>
-  </div>
-  <div id="content" class="content">
-    <h1 class="title">My Wabsite</h1>
-    <div id="table-of-contents" role="doc-toc">
-      <h2>Table of Contents</h2>
-      <div id="text-table-of-contents" role="doc-toc">
-        <ul>
-          <li>
-            <a href="#org152dd23">1. Introduction</a>
-            <ul>
-              <li>
-                <a href="#org24a525e">1.1. Introduction
-                Introduction Introduction</a>
-              </li>
-              <li>
-                <a href="#org995dc6f">1.2. What’s Your Deal?</a>
-              </li>
-              <li>
-                <a href="#org9e0f2b5">1.3. Whatcha Make?</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#org7a84db0">2. Sub-Indices</a>
-          </li>
-        </ul>
-      </div>
+    .org-svg { }
+    /*]]>*/
+    </style>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <style type="text/css" xml:space="preserve">
+    /*<![CDATA[*/pre.src { background-color: black; color: white; }pre.src-rust:before { content: 'Rust'; }/*]]>*/
+    </style>
+  </head>
+  <body>
+    <div id="org-div-home-and-up">
+      <a accesskey="h" href="/index.xhtml">UP</a> | <a accesskey=
+      "H" href="/index.xhtml">HOME</a>
     </div>
-    <div id="outline-container-org152dd23" class="outline-2">
-      <h2 id="org152dd23"><span class="section-number-2">1.</span>
-      Introduction</h2>
-      <div class="outline-text-2" id="text-1"></div>
-      <div id="outline-container-org24a525e" class="outline-3">
-        <h3 id="org24a525e"><span class=
-        "section-number-3">1.1.</span> Introduction Introduction
-        Introduction</h3>
-        <div class="outline-text-3" id="text-1-1">
-          <p>Hi! Welcome to my <code>#webpresence</code>.</p>
-          <p>There’s not much here, which is sort of deliberate.
-          Just wanted to replace the nonsense that was here
-          previously wit something that isn’t <i>obviously
-          unfinished.</i> Maybe I’ll expand later, maybe I won’t.
-          At the moment I have no current plans to do besides
-          GitHub Pages-squat.</p>
-          <p>You can find me most places under the username
-          “metroidisprettycool”, “metroidipc”, “mipc”, or some
-          variation thereof. It’s unprofessional, clearly, but I
-          made my first real “social media” account (Reddit, since
-          deleted) under that name and I value consistency more
-          than I value being professional.</p>
+    <div id="content" class="content">
+      <h1 class="title">
+        My Wabsite
+      </h1>
+      <div id="table-of-contents" role="doc-toc">
+        <h2>
+          Table of Contents
+        </h2>
+        <div id="text-table-of-contents" role="doc-toc">
+          <ul>
+            <li>
+              <a href="#orgb10bf18">1. Introduction</a>
+              <ul>
+                <li>
+                  <a href="#org61ab2d4">1.1. Introduction
+                  Introduction Introduction</a>
+                </li>
+                <li>
+                  <a href="#org143025d">1.2. What’s Your Deal?</a>
+                </li>
+                <li>
+                  <a href="#org8282a9c">1.3. Whatcha Make?</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#orgfb60230">2. Sub-Indices</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div id="outline-container-org995dc6f" class="outline-3">
-        <h3 id="org995dc6f"><span class=
-        "section-number-3">1.2.</span> What’s Your Deal?</h3>
-        <div class="outline-text-3" id="text-1-2">
-          <p><a href="lists/00-taking-sides.xhtml">Here’s a
-          collation of all my stances on the usual trivial
-          debates.</a></p>
-          <p>I tend to pendulum around between “computer nerd
-          stuff”, “aerospace nerd stuff”, and watching lots of
-          movies while I fantasize about bombing the Map-Territory
-          distinction.</p>
-          <p>As a computer nerd, I like most of the usual computer
-          nerd things. Programming, maintaining my franken-Arch
-          Linux installation, arguing, video games, PC-building,
-          arguing, reading Douglas Hofstadter books and stroking my
-          chin very thoughtful-like,<sup><a id="fnr.1" class=
-          "footref" href="#fn.1" role="doc-backlink">1</a></sup>
-          arguing…</p>
-          <p>As a space nerd, I have a big soft spot for the space
-          shuttle. So, very, very, very flawed. But at that time,
-          under those governments, knowing then only what we knew
-          then? I think we’d have been hard-pressed to do
-          better.</p>
-          <p>As a fan of the arts, you’ll find my movie opinions on
-          Letterboxd.<sup><a id="fnr.2" class="footref" href=
-          "#fn.2" role="doc-backlink">2</a></sup> I like bold
-          stuff. The unapologetic and hard-to-swallow. Big ideas.
-          Meta-commentary. That sort of thing.</p>
-        </div>
-      </div>
-      <div id="outline-container-org9e0f2b5" class="outline-3">
-        <h3 id="org9e0f2b5"><span class=
-        "section-number-3">1.3.</span> Whatcha Make?</h3>
-        <div class="outline-text-3" id="text-1-3">
-          <p><a href="lists/10-programming-projects.xhtml">Here’s a
-          list of some of the big(ish) hobby programming projects
-          I’ve done, alongside my post-mortem thoughts on
-          them.</a></p>
-        </div>
-      </div>
-    </div>
-    <div id="outline-container-org7a84db0" class="outline-2">
-      <h2 id="org7a84db0"><span class="section-number-2">2.</span>
-      Sub-Indices</h2>
-      <div class="outline-text-2" id="text-2">
-        <p>I’ve divided this site up into sections, based on
-        “article kind”. See those sub-index for lists of what I’ve
-        written:</p>
-        <dl class="org-dl">
-          <dt>
-            <a href="essays/index.xhtml">Essays</a>
-          </dt>
-          <dd>Various long-form opinions on various topics.</dd>
-          <dt>
-            <a href="lists/index.xhtml">Lists</a>
-          </dt>
-          <dd>Lists of various kinds, mix of fact and opinion, all
-          entries otherwise too short for something more
-          dedicated.</dd>
-          <dt>
-            <a href="guides/index.xhtml">Guides</a>
-          </dt>
-          <dd>Non-opinionated guides for how do things that
-          <i>I</i> myself couldn’t find any information on. (I’m
-          not going to waste your time with “how to install a C
-          compiler” or “how to log in to YouTube”.)</dd>
-        </dl>
-      </div>
-    </div>
-    <div id="outline-container-org167ef19" class="outline-2">
-      <h2 id="org167ef19">License:</h2>
-      <div class="outline-text-2" id="text-org167ef19">
-        <p>Copyright 2025 <a href=
-        "https://github.com/MetroidIsPrettyCool">Joseph Burke</a>.
-        All original content published to this website is licensed
-        under a <a href=
-        "https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
-        4.0</a> 🅭🅯🄎 license, unless explicitly stated
-        otherwise.</p>
-      </div>
-    </div>
-    <div id="footnotes">
-      <h2 class="footnotes">Footnotes:</h2>
-      <div id="text-footnotes">
-        <div class="footdef">
-          <sup><a id="fn.1" class="footnum" href="#fnr.1" role=
-          "doc-backlink">1</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara">I’ve only actually read G.E.B.
-            though…</p>
+      <div id="outline-container-orgb10bf18" class="outline-2">
+        <h2 id="orgb10bf18">
+          <span class="section-number-2">1.</span> Introduction
+        </h2>
+        <div class="outline-text-2" id="text-1"></div>
+        <div id="outline-container-org61ab2d4" class="outline-3">
+          <h3 id="org61ab2d4">
+            <span class="section-number-3">1.1.</span> Introduction
+            Introduction Introduction
+          </h3>
+          <div class="outline-text-3" id="text-1-1">
+            <p>
+              Hi! Welcome to my <code>#webpresence</code>.
+            </p>
+            <p>
+              There’s not much here, which is sort of deliberate.
+              Just wanted to replace the nonsense that was here
+              previously wit something that isn’t <i>obviously
+              unfinished.</i> Maybe I’ll expand later, maybe I
+              won’t. At the moment I have no current plans to do
+              besides GitHub Pages-squat.
+            </p>
+            <p>
+              You can find me most places under the username
+              “metroidisprettycool”, “metroidipc”, “mipc”, or some
+              variation thereof. It’s unprofessional, clearly, but
+              I made my first real “social media” account (Reddit,
+              since deleted) under that name and I value
+              consistency more than I value being professional.
+            </p>
           </div>
         </div>
-        <div class="footdef">
-          <sup><a id="fn.2" class="footnum" href="#fnr.2" role=
-          "doc-backlink">2</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara"><a href=
-            "https://letterboxd.com/metroidipc/">https://letterboxd.com/metroidipc/</a></p>
+        <div id="outline-container-org143025d" class="outline-3">
+          <h3 id="org143025d">
+            <span class="section-number-3">1.2.</span> What’s Your
+            Deal?
+          </h3>
+          <div class="outline-text-3" id="text-1-2">
+            <p>
+              <a href="/lists/00-taking-sides.xhtml">Here’s a
+              collation of all my stances on the usual trivial
+              debates.</a>
+            </p>
+            <p>
+              I tend to pendulum around between “computer nerd
+              stuff”, “aerospace nerd stuff”, and watching lots of
+              movies while I fantasize about bombing the
+              Map-Territory distinction.
+            </p>
+            <p>
+              As a computer nerd, I like most of the usual computer
+              nerd things. Programming, maintaining my franken-Arch
+              Linux installation, arguing, video games,
+              PC-building, arguing, reading Douglas Hofstadter
+              books and stroking my chin very
+              thoughtful-like,<sup><a id="fnr.1" class="footref"
+              href="#fn.1" role="doc-backlink">1</a></sup> arguing…
+            </p>
+            <p>
+              As a space nerd, I have a big soft spot for the space
+              shuttle. So, very, very, very flawed. But at that
+              time, under those governments, knowing then only what
+              we knew then? I think we’d have been hard-pressed to
+              do better.
+            </p>
+            <p>
+              As a fan of the arts, you’ll find my movie opinions
+              on Letterboxd.<sup><a id="fnr.2" class="footref"
+              href="#fn.2" role="doc-backlink">2</a></sup> I like
+              bold stuff. The unapologetic and hard-to-swallow. Big
+              ideas. Meta-commentary. That sort of thing.
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org8282a9c" class="outline-3">
+          <h3 id="org8282a9c">
+            <span class="section-number-3">1.3.</span> Whatcha
+            Make?
+          </h3>
+          <div class="outline-text-3" id="text-1-3">
+            <p>
+              <a href="/lists/10-programming-projects.xhtml">Here’s
+              a list of some of the big(ish) hobby programming
+              projects I’ve done, alongside my post-mortem thoughts
+              on them.</a>
+            </p>
           </div>
         </div>
       </div>
+      <div id="outline-container-orgfb60230" class="outline-2">
+        <h2 id="orgfb60230">
+          <span class="section-number-2">2.</span> Sub-Indices
+        </h2>
+        <div class="outline-text-2" id="text-2">
+          <p>
+            I’ve divided this site up into sections, based on
+            “article kind”. See those sub-index for lists of what
+            I’ve written:
+          </p>
+          <dl class="org-dl">
+            <dt>
+              <a href="/essays/index.xhtml">Essays</a>
+            </dt>
+            <dd>
+              Various long-form opinions on various topics.
+            </dd>
+            <dt>
+              <a href="/lists/index.xhtml">Lists</a>
+            </dt>
+            <dd>
+              Lists of various kinds, mix of fact and opinion, all
+              entries otherwise too short for something more
+              dedicated.
+            </dd>
+            <dt>
+              <a href="/guides/index.xhtml">Guides</a>
+            </dt>
+            <dd>
+              Non-opinionated guides for how do things that
+              <i>I</i> myself couldn’t find any information on.
+              (I’m not going to waste your time with “how to
+              install a C compiler” or “how to log in to YouTube”.)
+            </dd>
+          </dl>
+        </div>
+      </div>
+      <div id="outline-container-orgaf230e8" class="outline-2">
+        <h2 id="orgaf230e8">
+          License:
+        </h2>
+        <div class="outline-text-2" id="text-orgaf230e8">
+          <p>
+            Copyright 2025 <a href=
+            "https://github.com/MetroidIsPrettyCool">Joseph
+            Burke</a>. All original content published to this
+            website is licensed under a <a href=
+            "https://creativecommons.org/licenses/by-sa/4.0/">CC
+            BY-SA 4.0</a> 🅭🅯🄎 license, unless explicitly stated
+            otherwise.
+          </p>
+        </div>
+      </div>
+      <div id="footnotes">
+        <h2 class="footnotes">
+          Footnotes:
+        </h2>
+        <div id="text-footnotes">
+          <div class="footdef">
+            <sup><a id="fn.1" class="footnum" href="#fnr.1" role=
+            "doc-backlink">1</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                I’ve only actually read G.E.B. though…
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.2" class="footnum" href="#fnr.2" role=
+            "doc-backlink">2</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                <a href=
+                "https://letterboxd.com/metroidipc/">https://letterboxd.com/metroidipc/</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div id="postamble" class="status">
-    <p class="author">Author: Joseph Burke</p>
-    <p class="date">Created: 2025-11-06 Thu 12:19</p>
-    <p class="validation"><a href=
-    "https://validator.w3.org/check?uri=referer">Validate</a></p>
-  </div>
-</body>
+    <div id="postamble" class="status">
+      <p class="author">
+        Author: Joseph Burke
+      </p>
+      <p class="date">
+        Created: 2025-11-08 Sat 11:32
+      </p>
+      <p class="validation">
+        <a href=
+        "https://validator.w3.org/check?uri=referer">Validate</a>
+      </p>
+    </div>
+  </body>
 </html>

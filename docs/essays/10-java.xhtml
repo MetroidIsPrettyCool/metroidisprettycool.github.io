@@ -1,38 +1,41 @@
+<?xml version="1.0"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-  <meta name="generator" content=
-  "HTML Tidy for HTML5 for Linux version 5.7.45" />
-  <!-- 2025-11-06 Thu 12:19 -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1" />
-  <title>On Java</title>
-  <meta name="author" content="Joseph Burke" />
-  <meta name="generator" content="Org Mode" />
-  <style type="text/css">
-  /*<![CDATA[*/
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 for Linux version 5.7.45" />
+    <!-- 2025-11-08 Sat 11:32 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1" />
+    <title>
+      On Java
+    </title>
+    <meta name="author" content="Joseph Burke" />
+    <meta name="generator" content="Org Mode" />
+    <style type="text/css" xml:space="preserve">
+    /*<![CDATA[*/
+    #content { max-width: 60em; margin: auto; }
+    .title  { text-align: center;
              margin-bottom: .2em; }
-  .subtitle { text-align: center;
+    .subtitle { text-align: center;
               font-size: medium;
               font-weight: bold;
               margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
+    .todo   { font-family: monospace; color: red; }
+    .done   { font-family: monospace; color: green; }
+    .priority { font-family: monospace; color: orange; }
+    .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
+    .timestamp { color: #bebebe; }
+    .timestamp-kwd { color: #5f9ea0; }
+    .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+    .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+    .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+    .underline { text-decoration: underline; }
+    #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+    p.verse { margin-left: 3%; }
+    pre {
     border: 1px solid #e6e6e6;
     border-radius: 3px;
     background-color: #f2f2f2;
@@ -40,12 +43,12 @@
     font-family: monospace;
     overflow: auto;
     margin: 1.2em;
-  }
-  pre.src {
+    }
+    pre.src {
     position: relative;
     overflow: auto;
-  }
-  pre.src:before {
+    }
+    pre.src:before {
     display: none;
     position: absolute;
     top: -8px;
@@ -53,416 +56,503 @@
     padding: 3px;
     color: #555;
     background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
+    }
+    pre.src:hover:before { display: inline; margin-top: 14px;}
+    /* Languages per Org manual */
+    pre.src-asymptote:before { content: 'Asymptote'; }
+    pre.src-awk:before { content: 'Awk'; }
+    pre.src-authinfo::before { content: 'Authinfo'; }
+    pre.src-C:before { content: 'C'; }
+    /* pre.src-C++ doesn't work in CSS */
+    pre.src-clojure:before { content: 'Clojure'; }
+    pre.src-css:before { content: 'CSS'; }
+    pre.src-D:before { content: 'D'; }
+    pre.src-ditaa:before { content: 'ditaa'; }
+    pre.src-dot:before { content: 'Graphviz'; }
+    pre.src-calc:before { content: 'Emacs Calc'; }
+    pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+    pre.src-fortran:before { content: 'Fortran'; }
+    pre.src-gnuplot:before { content: 'gnuplot'; }
+    pre.src-haskell:before { content: 'Haskell'; }
+    pre.src-hledger:before { content: 'hledger'; }
+    pre.src-java:before { content: 'Java'; }
+    pre.src-js:before { content: 'Javascript'; }
+    pre.src-latex:before { content: 'LaTeX'; }
+    pre.src-ledger:before { content: 'Ledger'; }
+    pre.src-lisp:before { content: 'Lisp'; }
+    pre.src-lilypond:before { content: 'Lilypond'; }
+    pre.src-lua:before { content: 'Lua'; }
+    pre.src-matlab:before { content: 'MATLAB'; }
+    pre.src-mscgen:before { content: 'Mscgen'; }
+    pre.src-ocaml:before { content: 'Objective Caml'; }
+    pre.src-octave:before { content: 'Octave'; }
+    pre.src-org:before { content: 'Org mode'; }
+    pre.src-oz:before { content: 'OZ'; }
+    pre.src-plantuml:before { content: 'Plantuml'; }
+    pre.src-processing:before { content: 'Processing.js'; }
+    pre.src-python:before { content: 'Python'; }
+    pre.src-R:before { content: 'R'; }
+    pre.src-ruby:before { content: 'Ruby'; }
+    pre.src-sass:before { content: 'Sass'; }
+    pre.src-scheme:before { content: 'Scheme'; }
+    pre.src-screen:before { content: 'Gnu Screen'; }
+    pre.src-sed:before { content: 'Sed'; }
+    pre.src-sh:before { content: 'shell'; }
+    pre.src-sql:before { content: 'SQL'; }
+    pre.src-sqlite:before { content: 'SQLite'; }
+    /* additional languages in org.el's org-babel-load-languages alist */
+    pre.src-forth:before { content: 'Forth'; }
+    pre.src-io:before { content: 'IO'; }
+    pre.src-J:before { content: 'J'; }
+    pre.src-makefile:before { content: 'Makefile'; }
+    pre.src-maxima:before { content: 'Maxima'; }
+    pre.src-perl:before { content: 'Perl'; }
+    pre.src-picolisp:before { content: 'Pico Lisp'; }
+    pre.src-scala:before { content: 'Scala'; }
+    pre.src-shell:before { content: 'Shell Script'; }
+    pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+    /* additional language identifiers per "defun org-babel-execute"
        in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
+    pre.src-cpp:before  { content: 'C++'; }
+    pre.src-abc:before  { content: 'ABC'; }
+    pre.src-coq:before  { content: 'Coq'; }
+    pre.src-groovy:before  { content: 'Groovy'; }
+    /* additional language identifiers from org-babel-shell-names in
      ob-shell.el: ob-shell is the only babel language using a lambda to put
      the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
+    pre.src-bash:before  { content: 'bash'; }
+    pre.src-csh:before  { content: 'csh'; }
+    pre.src-ash:before  { content: 'ash'; }
+    pre.src-dash:before  { content: 'dash'; }
+    pre.src-ksh:before  { content: 'ksh'; }
+    pre.src-mksh:before  { content: 'mksh'; }
+    pre.src-posh:before  { content: 'posh'; }
+    /* Additional Emacs modes also supported by the LaTeX listings package */
+    pre.src-ada:before { content: 'Ada'; }
+    pre.src-asm:before { content: 'Assembler'; }
+    pre.src-caml:before { content: 'Caml'; }
+    pre.src-delphi:before { content: 'Delphi'; }
+    pre.src-html:before { content: 'HTML'; }
+    pre.src-idl:before { content: 'IDL'; }
+    pre.src-mercury:before { content: 'Mercury'; }
+    pre.src-metapost:before { content: 'MetaPost'; }
+    pre.src-modula-2:before { content: 'Modula-2'; }
+    pre.src-pascal:before { content: 'Pascal'; }
+    pre.src-ps:before { content: 'PostScript'; }
+    pre.src-prolog:before { content: 'Prolog'; }
+    pre.src-simula:before { content: 'Simula'; }
+    pre.src-tcl:before { content: 'tcl'; }
+    pre.src-tex:before { content: 'TeX'; }
+    pre.src-plain-tex:before { content: 'Plain TeX'; }
+    pre.src-verilog:before { content: 'Verilog'; }
+    pre.src-vhdl:before { content: 'VHDL'; }
+    pre.src-xml:before { content: 'XML'; }
+    pre.src-nxml:before { content: 'XML'; }
+    /* add a generic configuration mode; LaTeX export needs an additional
      (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
+    pre.src-conf:before { content: 'Configuration File'; }
 
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
+    table { border-collapse:collapse; }
+    caption.t-above { caption-side: top; }
+    caption.t-bottom { caption-side: bottom; }
+    td, th { vertical-align:top;  }
+    th.org-right  { text-align: center;  }
+    th.org-left   { text-align: center;   }
+    th.org-center { text-align: center; }
+    td.org-right  { text-align: right;  }
+    td.org-left   { text-align: left;   }
+    td.org-center { text-align: center; }
+    dt { font-weight: bold; }
+    .footpara { display: inline; }
+    .footdef  { margin-bottom: 1em; }
+    .figure { padding: 1em; }
+    .figure p { text-align: center; }
+    .equation-container {
     display: table;
     text-align: center;
     width: 100%;
-  }
-  .equation {
+    }
+    .equation {
     vertical-align: middle;
-  }
-  .equation-label {
+    }
+    .equation-label {
     display: table-cell;
     text-align: right;
     vertical-align: middle;
-  }
-  .inlinetask {
+    }
+    .inlinetask {
     padding: 10px;
     border: 2px solid gray;
     margin: 10px;
     background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
+    }
+    #org-div-home-and-up
+    { text-align: right; font-size: 70%; white-space: nowrap; }
+    textarea { overflow-x: auto; }
+    .linenr { font-size: smaller }
+    .code-highlighted { background-color: #ffff00; }
+    .org-info-js_info-navigation { border-style: none; }
+    #org-info-js_console-label
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
+    .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-  /*]]>*/
-  </style>
-  <link rel="icon" type="image/png" href="/favicon.ico" />
-</head>
-<body>
-  <div id="org-div-home-and-up">
-    <a accesskey="h" href="./index.xhtml">UP</a> | <a accesskey="H"
-    href="/index.xhtml">HOME</a>
-  </div>
-  <div id="content" class="content">
-    <h1 class="title">On Java</h1>
-    <p>There were object oriented languages before Java, and there
-    have been object oriented languages since Java. But I think we
-    can all agree that, in the minds of the public (certainly
-    within education), the role of the “OOP holotype” has been
-    abstorted by Sun Microsystems’ little anti-christ. Sorry,
-    Alan.</p>
-    <p>I do not like Java.</p>
-    <p>It is not my <i>most</i> hated language – by a long shot –
-    but it has one of the highest
-    problems-I-have-with-it-to-TIOBE-popularity ratios. Java is
-    <i>brutally</i> single-minded in its drive to solve problems
-    <b>backwards.</b> Where other languages structure programs as
-    collections of things and things to do, Java enforces a model
-    where all programs are structured as lists of things to do
-    stuff to. Where other languages provide more ways to pattern
-    data than I can count, Java provides only <code>Objects</code>
-    (and a <i>bare</i> minimum of primitives), which it has to cram
-    into the mold of other, more proper types. Where other
-    languages give developers the means to organize code into
-    files, Java gives developers the means to organize files into
-    code. Where other languages offer a variety of application
-    packaging solutions (even other bytecode ecosystems, like CLI),
-    Java enforces a wholly unique “lazy dynamic linking” scheme
-    that obliterates security<sup><a id="fnr.1" class="footref"
-    href="#fn.1" role="doc-backlink">1</a></sup>, compatibility, VM
-    portability, other people’s libraries, and its own standard
-    library (<code>javax</code> lmao); all for no <i>actual</i>
-    benefit to programmers.</p>
-    <p>Why? Because Java is not a high-level language. It is not
-    interested in making it easy to write good programs, it is
-    interested in making it easy to write <code>.class</code>
-    files. Or, rather, easy for <code>javac</code> to
-    <i>produce</i> <code>.class</code> files, and for the JVM to
-    <i>comprehend</i> <code>.class</code> files. Ever read chapter
-    4 of the JVM spec<sup><a id="fnr.2" class="footref" href=
-    "#fn.2" role="doc-backlink">2</a></sup>, or poked around with
-    <code>javap</code>? Or even just tried a Java decompiler? It’s
-    immediately obvious that <code>.class</code> files are not a
-    serious object<sup><a id="fnr.3" class="footref" href="#fn.3"
-    role="doc-backlink">3</a></sup> format. They’re a serialization
-    scheme for Java source code, that happens to translate method
-    implementations into stack machine instructions.</p>
-    <p>Want to mix code and data without classes? No can do, we’re
-    here to serialize class files. Want to put two top-level
-    classes in one file? No can do, we want a 1:1 mapping between
-    source files and bytecode files. Want code inlining? No can do,
-    we’re not a compiler. Want generics? Sorry, not in the schema,
-    but we <i>do</i> have type erasure. Is that what you wanted?
-    Want inheritance? We’ve got that actually, because the
-    superclass relationship is encoded in the <code>.class</code>
-    file. There’s a little field, right there in the header, where
-    you stick a UTF-8 string with the name of your superclass.
-    (Actually: it’s a reference to a UTF-8 string in the
-    <i>constant pool,</i> but I digress.) Inheritance is
-    compulsory, it’s <i>structurally impossible</i> to opt out
-    of.</p>
-    <p>Consider record classes, for example: what do they provide
-    the programmer? Default implementations of
-    <code>toString:()Ljava/lang/String;</code>,
-    <code>hashCode:()I</code>, and
-    <code>equals:(Ljava/lang/Object;)Z</code>, some automatic
-    access flags, some getter methods – in other words: things we
-    could already write by hand (or IDE auto-complete) and things
-    <code>javac</code> could already emit, but now that they’re
-    codified, it’s easier to reason about.</p>
-    <p>That’s why Oracle, upon deciding to introduce records for
-    Java 14, Oracle decided that they should require brand-new
-    hardcoded information in their headers. What’s the point in a
-    new language feature if we don’t make it
-    backwards-incompatible? That’s not befitting of a serialization
-    scheme!</p>
-    <p>By insisting on this inabstract<sup><a id="fnr.4" class=
-    "footref" href="#fn.4" role="doc-backlink">4</a></sup> coupling
-    between language version and class file version (neither may
-    contain any more or less information than the other, no
-    exceptions!) we necessarily also couple language version to
-    <i>JVM version</i>, and thus also <i>JRE</i> version, and thus
-    also your <i>dependencies’</i> versions. We’ve managed to
-    invent a compiled language that requires polyfills for
-    <i>syntax sugar!</i></p>
-    <p>Want vararg methods? They’re encoded with special facilities
-    in the class file, force a minimum language version, a minimum
-    target version, and minimum dependency versions. Want generics
-    or bridge methods? They’re encoded with special facilities in
-    the class file, force a minimum language version, a minimum
-    target version, and minimum dependency versions. Want enums?
-    They’re encoded with special facilities in the class file,
-    force a minimum language version, a minimum target version, and
-    minimum dependency versions. Ditto dynamic method calls (read:
-    closures), annotations, inner classes, records (as we
-    discussed), modules, and the entirety of the standard library.
-    Among other things. Perhaps within a generation or two we’ll
-    see a class attribute that stores its author’s social security
-    number…</p>
-    <p>So, what exactly do we <i>gain</i> from gritting our teeth,
-    eschewing our ivory tower ideals like “use the right tool for
-    the job”, “you should probably know the type of your variables”
-    or “splitting a single procedure across thirty files is
-    confusing”, and obliterating our programs into the ten thousand
-    little self-contained macro-assembler DLLs that
-    <code>javac</code> expects?</p>
-    <p>Nothing. We gain nothing!</p>
-    <p>Project structure? Don’t make me laugh.</p>
-    <p>Portability? Runtime polymorphism? Dependency injection?
-    Instrumentation? Done better by better languages.</p>
-    <p>Backwards compatibility? In a post-JSR 376 world?<sup><a id=
-    "fnr.5" class="footref" href="#fn.5" role=
-    "doc-backlink">5</a></sup> People don’t get stuck on Java 8
-    because they “feel like it”. Oracle has never had any problems
-    hard-locking you and your dependencies to specific runtime
-    versions – and because “only dynamic linking ever for any
-    reason”, that means the JDK and toolchain, too. Bring in a
-    single critical dependency using a removed feature, and the
-    trap swings shut. You can’t move up, you can’t move down. Oh,
-    does your mission-critical third party HAL need CORBA? Sorry, I
-    guess that means you can’t use multi-line string literals. Oh,
-    does your legacy codebase need to derive base classes from Java
-    EE? Guess you can’t migrate the rest of it to Jakarta EE, the
-    <i>namespace</i> is different. <b>What?</b></p>
-    <p>Reflection? Exceptions? Aspect-oriented programming? Runtime
-    inheritance? Come on. Done better by better languages,
-    <i>and</i> anti-patterns – inheritance in particular.
-    <code>Dog</code> extends <code>Animal</code> is all well and
-    good, James, but it turns out that we need to model our
-    application, too. <code>Dog</code> extends <code>Animal</code>
-    extends <code>AbstractLivingThingBean</code> which implements
-    <code>java.io.Serializable</code> and extends
-    <code>java.awt.Canvas</code> which implements
-    <code>java.awt.iamge.ImageObserver</code> and
-    <code>java.awt.MenuContainer</code> and
-    <code>java.io.Serializable</code> and
-    <code>javax.accessibility.Accessible</code> and extends
-    <code>java.awt.Component</code> which implements
-    <code>java.awt.iamge.ImageObserver</code> and
-    <code>java.awt.MenuContainer</code> and
-    <code>java.io.Serializable</code> and extends
-    <code>java.lang.Object</code>? I think even the evangelists
-    have admitted this doesn’t work.</p>
-    <p>Java provides nothing make programming easier, or
-    maintenance easier, or release packaging easier, or customer
-    support easier. The ecosystem tooling that does exist, exists
-    <i>in spite</i> of how ill-suited the language is to them. Or
-    perhaps because. Good luck trying to manage a JavaFX dependency
-    without Spring Boot…</p>
-    <p>It doesn’t have to be this way. If runtime reflection is so
-    important to you, why not take advantage of the fact that this
-    is a container for <i>code?</i> Give each class a synthetic
-    “aboutMe” method that the JVM and other classes can use to ask
-    for information! Or take the CLR route and use an explicit
-    metadata table. Something!</p>
-    <p>Moreover, even if we still want to target
-    <code>.class</code> files in their current form, we can still
-    allow syntax sugar! Kotlin, Scala, Groovy, Clojure – turns out
-    developers want to be able to translate the high-level things
-    they write into a portable low-level representation, rather
-    than just write portable low-level representations (but with
-    words instead of numbers). Who knew?</p>
-    <p>I’ll <i>use</i> Java, of course. If demanded. There are
-    worse things to be single-minded about than classes. The
-    Eclipse LSP goes a long way to make complicated ideas easier to
-    express. (In much the same way that any system of higher-level
-    abstractions makes writing code easier to express.)</p>
-    <p>But you’ll never see me advocate for Java. Especially not
-    within education, especially not for starting new projects,
-    especially not if interop with another JVM language is an
-    option. <i>Please</i> use something which respects that your
-    needs are different from <code>javac</code>’s needs.</p>
-    <div id="outline-container-org509afa5" class="outline-2">
-      <h2 id="org509afa5">License:</h2>
-      <div class="outline-text-2" id="text-org509afa5">
-        <p>Copyright 2025 <a href=
-        "https://github.com/MetroidIsPrettyCool">Joseph Burke</a>.
-        All original content published to this website is licensed
-        under a <a href=
-        "https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
-        4.0</a> 🅭🅯🄎 license, unless explicitly stated
-        otherwise.</p>
-      </div>
+    .org-svg { }
+    /*]]>*/
+    </style>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <style type="text/css" xml:space="preserve">
+    /*<![CDATA[*/pre.src { background-color: black; color: white; }pre.src-rust:before { content: 'Rust'; }/*]]>*/
+    </style>
+  </head>
+  <body>
+    <div id="org-div-home-and-up">
+      <a accesskey="h" href="/essays/index.xhtml">UP</a> |
+      <a accesskey="H" href="/index.xhtml">HOME</a>
     </div>
-    <div id="footnotes">
-      <h2 class="footnotes">Footnotes:</h2>
-      <div id="text-footnotes">
-        <div class="footdef">
-          <sup><a id="fn.1" class="footnum" href="#fnr.1" role=
-          "doc-backlink">1</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara">I’ll fucking “illegal reflective
-            access” your <i>dick</i>, how about that? While the
-            <code>ProtectionManager</code> watches? Gonna warn me
-            about THAT? Gonna go running to the maintainers of
-            <code>javassist.util.proxy.SecurityActions</code>?
-            Gonna deny it in a future release?<br /></p>
-            <p class="footpara"><br /></p>
-            <p class="footpara">…sorry.</p>
-          </div>
-        </div>
-        <div class="footdef">
-          <sup><a id="fn.2" class="footnum" href="#fnr.2" role=
-          "doc-backlink">2</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara"><a href=
-            "https://docs.oracle.com/javase/specs/jvms/se25/html/jvms-4.html">
-            https://docs.oracle.com/javase/specs/jvms/se25/html/jvms-4.html</a></p>
-          </div>
-        </div>
-        <div class="footdef">
-          <sup><a id="fn.3" class="footnum" href="#fnr.3" role=
-          "doc-backlink">3</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara">As in an <a href=
-            "https://en.wikipedia.org/wiki/Object_file">https://en.wikipedia.org/wiki/Object_file</a>,
-            not the OOP meaning of “object”. (Or, for that matter,
-            any OOP notions of “persistent objects”.)</p>
-          </div>
-        </div>
-        <div class="footdef">
-          <sup><a id="fn.4" class="footnum" href="#fnr.4" role=
-          "doc-backlink">4</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara">I mean the prefix “in-” here in the
-            sense of “lacking” or “without”. “Inabstract” =
-            “Lacking abstraction”.<br /></p>
-            <p class="footpara"><br /></p>
-            <p class="footpara">Wiktionary can me all it wants that
-            this is “not a real word”, Google books has a whole
-            <i>several</i> hits for “inabstract” – at least
-            <b>four</b> of them aren’t even OCR errors! We’ve got
-            one paper from 1975, two English translations of Latin
-            texts, and a no-name dictionary from 1861 that lists
-            just lists “inabstracted”. I <i>think</i> it implies
-            “inabstract” as well, omitting it only to save space
-            (the poor guy already had to chop out parts of his
-            introduction just to cram it into a thousand pages,
-            after filling his dictionary up with footnote
-            references to said introduction) but I admit I
-            <i>could</i> be misreading this.<br /></p>
-            <p class="footpara"><br /></p>
-            <p class="footpara">(There’s also an entry for
-            “inabstracted” but not “inabstract” in the online
-            version of the 1913 Webster’s Dictionary.)</p>
-          </div>
-        </div>
-        <div class="footdef">
-          <sup><a id="fn.5" class="footnum" href="#fnr.5" role=
-          "doc-backlink">5</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara">See: <a href=
-            "https://openjdk.org/projects/jigsaw/spec/">https://openjdk.org/projects/jigsaw/spec/</a></p>
-          </div>
+    <div id="content" class="content">
+      <h1 class="title">
+        On Java
+      </h1>
+      <p>
+        There were object oriented languages before Java, and there
+        have been object oriented languages since Java. But I think
+        we can all agree that, in the minds of the public
+        (certainly within education), the role of the “OOP
+        holotype” has been abstorted by Sun Microsystems’ little
+        anti-christ. Sorry, Alan.
+      </p>
+      <p>
+        I do not like Java.
+      </p>
+      <p>
+        It is not my <i>most</i> hated language – by a long shot –
+        but it has one of the highest
+        problems-I-have-with-it-to-TIOBE-popularity ratios. Java is
+        <i>brutally</i> single-minded in its drive to solve
+        problems <b>backwards.</b> Where other languages structure
+        programs as collections of things and things to do, Java
+        enforces a model where all programs are structured as lists
+        of things to do stuff to. Where other languages provide
+        more ways to pattern data than I can count, Java provides
+        only <code>Objects</code> (and a <i>bare</i> minimum of
+        primitives), which it has to cram into the mold of other,
+        more proper types. Where other languages give developers
+        the means to organize code into files, Java gives
+        developers the means to organize files into code. Where
+        other languages offer a variety of application packaging
+        solutions (even other bytecode ecosystems, like CLI), Java
+        enforces a wholly unique “lazy dynamic linking” scheme that
+        obliterates security<sup><a id="fnr.1" class="footref"
+        href="#fn.1" role="doc-backlink">1</a></sup>,
+        compatibility, VM portability, other people’s libraries,
+        and its own standard library (<code>javax</code> lmao); all
+        for no <i>actual</i> benefit to programmers.
+      </p>
+      <p>
+        Why? Because Java is not a high-level language. It is not
+        interested in making it easy to write good programs, it is
+        interested in making it easy to write <code>.class</code>
+        files. Or, rather, easy for <code>javac</code> to
+        <i>produce</i> <code>.class</code> files, and for the JVM
+        to <i>comprehend</i> <code>.class</code> files. Ever read
+        chapter 4 of the JVM spec<sup><a id="fnr.2" class="footref"
+        href="#fn.2" role="doc-backlink">2</a></sup>, or poked
+        around with <code>javap</code>? Or even just tried a Java
+        decompiler? It’s immediately obvious that
+        <code>.class</code> files are not a serious
+        object<sup><a id="fnr.3" class="footref" href="#fn.3" role=
+        "doc-backlink">3</a></sup> format. They’re a serialization
+        scheme for Java source code, that happens to translate
+        method implementations into stack machine instructions.
+      </p>
+      <p>
+        Want to mix code and data without classes? No can do, we’re
+        here to serialize class files. Want to put two top-level
+        classes in one file? No can do, we want a 1:1 mapping
+        between source files and bytecode files. Want code
+        inlining? No can do, we’re not a compiler. Want generics?
+        Sorry, not in the schema, but we <i>do</i> have type
+        erasure. Is that what you wanted? Want inheritance? We’ve
+        got that actually, because the superclass relationship is
+        encoded in the <code>.class</code> file. There’s a little
+        field, right there in the header, where you stick a UTF-8
+        string with the name of your superclass. (Actually: it’s a
+        reference to a UTF-8 string in the <i>constant pool,</i>
+        but I digress.) Inheritance is compulsory, it’s
+        <i>structurally impossible</i> to opt out of.
+      </p>
+      <p>
+        Consider record classes, for example: what do they provide
+        the programmer? Default implementations of
+        <code>toString:()Ljava/lang/String;</code>,
+        <code>hashCode:()I</code>, and
+        <code>equals:(Ljava/lang/Object;)Z</code>, some automatic
+        access flags, some getter methods – in other words: things
+        we could already write by hand (or IDE auto-complete) and
+        things <code>javac</code> could already emit, but now that
+        they’re codified, it’s easier to reason about.
+      </p>
+      <p>
+        That’s why Oracle, upon deciding to introduce records for
+        Java 14, Oracle decided that they should require brand-new
+        hardcoded information in their headers. What’s the point in
+        a new language feature if we don’t make it
+        backwards-incompatible? That’s not befitting of a
+        serialization scheme!
+      </p>
+      <p>
+        By insisting on this inabstract<sup><a id="fnr.4" class=
+        "footref" href="#fn.4" role="doc-backlink">4</a></sup>
+        coupling between language version and class file version
+        (neither may contain any more or less information than the
+        other, no exceptions!) we necessarily also couple language
+        version to <i>JVM version</i>, and thus also <i>JRE</i>
+        version, and thus also your <i>dependencies’</i> versions.
+        We’ve managed to invent a compiled language that requires
+        polyfills for <i>syntax sugar!</i>
+      </p>
+      <p>
+        Want vararg methods? They’re encoded with special
+        facilities in the class file, force a minimum language
+        version, a minimum target version, and minimum dependency
+        versions. Want generics or bridge methods? They’re encoded
+        with special facilities in the class file, force a minimum
+        language version, a minimum target version, and minimum
+        dependency versions. Want enums? They’re encoded with
+        special facilities in the class file, force a minimum
+        language version, a minimum target version, and minimum
+        dependency versions. Ditto dynamic method calls (read:
+        closures), annotations, inner classes, records (as we
+        discussed), modules, and the entirety of the standard
+        library. Among other things. Perhaps within a generation or
+        two we’ll see a class attribute that stores its author’s
+        social security number…
+      </p>
+      <p>
+        So, what exactly do we <i>gain</i> from gritting our teeth,
+        eschewing our ivory tower ideals like “use the right tool
+        for the job”, “you should probably know the type of your
+        variables” or “splitting a single procedure across thirty
+        files is confusing”, and obliterating our programs into the
+        ten thousand little self-contained macro-assembler DLLs
+        that <code>javac</code> expects?
+      </p>
+      <p>
+        Nothing. We gain nothing!
+      </p>
+      <p>
+        Project structure? Don’t make me laugh.
+      </p>
+      <p>
+        Portability? Runtime polymorphism? Dependency injection?
+        Instrumentation? Done better by better languages.
+      </p>
+      <p>
+        Backwards compatibility? In a post-JSR 376
+        world?<sup><a id="fnr.5" class="footref" href="#fn.5" role=
+        "doc-backlink">5</a></sup> People don’t get stuck on Java 8
+        because they “feel like it”. Oracle has never had any
+        problems hard-locking you and your dependencies to specific
+        runtime versions – and because “only dynamic linking ever
+        for any reason”, that means the JDK and toolchain, too.
+        Bring in a single critical dependency using a removed
+        feature, and the trap swings shut. You can’t move up, you
+        can’t move down. Oh, does your mission-critical third party
+        HAL need CORBA? Sorry, I guess that means you can’t use
+        multi-line string literals. Oh, does your legacy codebase
+        need to derive base classes from Java EE? Guess you can’t
+        migrate the rest of it to Jakarta EE, the <i>namespace</i>
+        is different. <b>What?</b>
+      </p>
+      <p>
+        Reflection? Exceptions? Aspect-oriented programming?
+        Runtime inheritance? Come on. Done better by better
+        languages, <i>and</i> anti-patterns – inheritance in
+        particular. <code>Dog</code> extends <code>Animal</code> is
+        all well and good, James, but it turns out that we need to
+        model our application, too. <code>Dog</code> extends
+        <code>Animal</code> extends
+        <code>AbstractLivingThingBean</code> which implements
+        <code>java.io.Serializable</code> and extends
+        <code>java.awt.Canvas</code> which implements
+        <code>java.awt.iamge.ImageObserver</code> and
+        <code>java.awt.MenuContainer</code> and
+        <code>java.io.Serializable</code> and
+        <code>javax.accessibility.Accessible</code> and extends
+        <code>java.awt.Component</code> which implements
+        <code>java.awt.iamge.ImageObserver</code> and
+        <code>java.awt.MenuContainer</code> and
+        <code>java.io.Serializable</code> and extends
+        <code>java.lang.Object</code>? I think even the evangelists
+        have admitted this doesn’t work.
+      </p>
+      <p>
+        Java provides nothing make programming easier, or
+        maintenance easier, or release packaging easier, or
+        customer support easier. The ecosystem tooling that does
+        exist, exists <i>in spite</i> of how ill-suited the
+        language is to them. Or perhaps because. Good luck trying
+        to manage a JavaFX dependency without Spring Boot…
+      </p>
+      <p>
+        It doesn’t have to be this way. If runtime reflection is so
+        important to you, why not take advantage of the fact that
+        this is a container for <i>code?</i> Give each class a
+        synthetic “aboutMe” method that the JVM and other classes
+        can use to ask for information! Or take the CLR route and
+        use an explicit metadata table. Something!
+      </p>
+      <p>
+        Moreover, even if we still want to target
+        <code>.class</code> files in their current form, we can
+        still allow syntax sugar! Kotlin, Scala, Groovy, Clojure –
+        turns out developers want to be able to translate the
+        high-level things they write into a portable low-level
+        representation, rather than just write portable low-level
+        representations (but with words instead of numbers). Who
+        knew?
+      </p>
+      <p>
+        I’ll <i>use</i> Java, of course. If demanded. There are
+        worse things to be single-minded about than classes. The
+        Eclipse LSP goes a long way to make complicated ideas
+        easier to express. (In much the same way that any system of
+        higher-level abstractions makes writing code easier to
+        express.)
+      </p>
+      <p>
+        But you’ll never see me advocate for Java. Especially not
+        within education, especially not for starting new projects,
+        especially not if interop with another JVM language is an
+        option. <i>Please</i> use something which respects that
+        your needs are different from <code>javac</code>’s needs.
+      </p>
+      <div id="outline-container-org509afa5" class="outline-2">
+        <h2 id="org509afa5">
+          License:
+        </h2>
+        <div class="outline-text-2" id="text-org509afa5">
+          <p>
+            Copyright 2025 <a href=
+            "https://github.com/MetroidIsPrettyCool">Joseph
+            Burke</a>. All original content published to this
+            website is licensed under a <a href=
+            "https://creativecommons.org/licenses/by-sa/4.0/">CC
+            BY-SA 4.0</a> 🅭🅯🄎 license, unless explicitly stated
+            otherwise.
+          </p>
         </div>
       </div>
+      <div id="footnotes">
+        <h2 class="footnotes">
+          Footnotes:
+        </h2>
+        <div id="text-footnotes">
+          <div class="footdef">
+            <sup><a id="fn.1" class="footnum" href="#fnr.1" role=
+            "doc-backlink">1</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                I’ll fucking “illegal reflective access” your
+                <i>dick</i>, how about that? While the
+                <code>ProtectionManager</code> watches? Gonna warn
+                me about THAT? Gonna go running to the maintainers
+                of
+                <code>javassist.util.proxy.SecurityActions</code>?
+                Gonna deny it in a future release?<br />
+              </p>
+              <p class="footpara">
+                <br />
+              </p>
+              <p class="footpara">
+                …sorry.
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.2" class="footnum" href="#fnr.2" role=
+            "doc-backlink">2</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                <a href=
+                "https://docs.oracle.com/javase/specs/jvms/se25/html/jvms-4.html">
+                https://docs.oracle.com/javase/specs/jvms/se25/html/jvms-4.html</a>
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.3" class="footnum" href="#fnr.3" role=
+            "doc-backlink">3</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                As in an <a href=
+                "https://en.wikipedia.org/wiki/Object_file">https://en.wikipedia.org/wiki/Object_file</a>,
+                not the OOP meaning of “object”. (Or, for that
+                matter, any OOP notions of “persistent objects”.)
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.4" class="footnum" href="#fnr.4" role=
+            "doc-backlink">4</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                I mean the prefix “in-” here in the sense of
+                “lacking” or “without”. “Inabstract” = “Lacking
+                abstraction”.<br />
+              </p>
+              <p class="footpara">
+                <br />
+              </p>
+              <p class="footpara">
+                Wiktionary can me all it wants that this is “not a
+                real word”, Google books has a whole <i>several</i>
+                hits for “inabstract” – at least <b>four</b> of
+                them aren’t even OCR errors! We’ve got one paper
+                from 1975, two English translations of Latin texts,
+                and a no-name dictionary from 1861 that lists just
+                lists “inabstracted”. I <i>think</i> it implies
+                “inabstract” as well, omitting it only to save
+                space (the poor guy already had to chop out parts
+                of his introduction just to cram it into a thousand
+                pages, after filling his dictionary up with
+                footnote references to said introduction) but I
+                admit I <i>could</i> be misreading this.<br />
+              </p>
+              <p class="footpara">
+                <br />
+              </p>
+              <p class="footpara">
+                (There’s also an entry for “inabstracted” but not
+                “inabstract” in the online version of the 1913
+                Webster’s Dictionary.)
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.5" class="footnum" href="#fnr.5" role=
+            "doc-backlink">5</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                See: <a href=
+                "https://openjdk.org/projects/jigsaw/spec/">https://openjdk.org/projects/jigsaw/spec/</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div id="postamble" class="status">
-    <p class="author">Author: Joseph Burke</p>
-    <p class="date">Created: 2025-11-06 Thu 12:19</p>
-    <p class="validation"><a href=
-    "https://validator.w3.org/check?uri=referer">Validate</a></p>
-  </div>
-</body>
+    <div id="postamble" class="status">
+      <p class="author">
+        Author: Joseph Burke
+      </p>
+      <p class="date">
+        Created: 2025-11-08 Sat 11:32
+      </p>
+      <p class="validation">
+        <a href=
+        "https://validator.w3.org/check?uri=referer">Validate</a>
+      </p>
+    </div>
+  </body>
 </html>

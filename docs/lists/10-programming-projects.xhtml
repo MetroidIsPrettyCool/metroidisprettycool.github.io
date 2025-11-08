@@ -1,38 +1,41 @@
+<?xml version="1.0"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-  <meta name="generator" content=
-  "HTML Tidy for HTML5 for Linux version 5.7.45" />
-  <!-- 2025-11-06 Thu 12:19 -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1" />
-  <title>My Wabsite</title>
-  <meta name="author" content="Joseph Burke" />
-  <meta name="generator" content="Org Mode" />
-  <style type="text/css">
-  /*<![CDATA[*/
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 for Linux version 5.7.45" />
+    <!-- 2025-11-08 Sat 11:32 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1" />
+    <title>
+      My Wabsite
+    </title>
+    <meta name="author" content="Joseph Burke" />
+    <meta name="generator" content="Org Mode" />
+    <style type="text/css" xml:space="preserve">
+    /*<![CDATA[*/
+    #content { max-width: 60em; margin: auto; }
+    .title  { text-align: center;
              margin-bottom: .2em; }
-  .subtitle { text-align: center;
+    .subtitle { text-align: center;
               font-size: medium;
               font-weight: bold;
               margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
+    .todo   { font-family: monospace; color: red; }
+    .done   { font-family: monospace; color: green; }
+    .priority { font-family: monospace; color: orange; }
+    .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
+    .timestamp { color: #bebebe; }
+    .timestamp-kwd { color: #5f9ea0; }
+    .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+    .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+    .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+    .underline { text-decoration: underline; }
+    #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+    p.verse { margin-left: 3%; }
+    pre {
     border: 1px solid #e6e6e6;
     border-radius: 3px;
     background-color: #f2f2f2;
@@ -40,12 +43,12 @@
     font-family: monospace;
     overflow: auto;
     margin: 1.2em;
-  }
-  pre.src {
+    }
+    pre.src {
     position: relative;
     overflow: auto;
-  }
-  pre.src:before {
+    }
+    pre.src:before {
     display: none;
     position: absolute;
     top: -8px;
@@ -53,153 +56,156 @@
     padding: 3px;
     color: #555;
     background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
+    }
+    pre.src:hover:before { display: inline; margin-top: 14px;}
+    /* Languages per Org manual */
+    pre.src-asymptote:before { content: 'Asymptote'; }
+    pre.src-awk:before { content: 'Awk'; }
+    pre.src-authinfo::before { content: 'Authinfo'; }
+    pre.src-C:before { content: 'C'; }
+    /* pre.src-C++ doesn't work in CSS */
+    pre.src-clojure:before { content: 'Clojure'; }
+    pre.src-css:before { content: 'CSS'; }
+    pre.src-D:before { content: 'D'; }
+    pre.src-ditaa:before { content: 'ditaa'; }
+    pre.src-dot:before { content: 'Graphviz'; }
+    pre.src-calc:before { content: 'Emacs Calc'; }
+    pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+    pre.src-fortran:before { content: 'Fortran'; }
+    pre.src-gnuplot:before { content: 'gnuplot'; }
+    pre.src-haskell:before { content: 'Haskell'; }
+    pre.src-hledger:before { content: 'hledger'; }
+    pre.src-java:before { content: 'Java'; }
+    pre.src-js:before { content: 'Javascript'; }
+    pre.src-latex:before { content: 'LaTeX'; }
+    pre.src-ledger:before { content: 'Ledger'; }
+    pre.src-lisp:before { content: 'Lisp'; }
+    pre.src-lilypond:before { content: 'Lilypond'; }
+    pre.src-lua:before { content: 'Lua'; }
+    pre.src-matlab:before { content: 'MATLAB'; }
+    pre.src-mscgen:before { content: 'Mscgen'; }
+    pre.src-ocaml:before { content: 'Objective Caml'; }
+    pre.src-octave:before { content: 'Octave'; }
+    pre.src-org:before { content: 'Org mode'; }
+    pre.src-oz:before { content: 'OZ'; }
+    pre.src-plantuml:before { content: 'Plantuml'; }
+    pre.src-processing:before { content: 'Processing.js'; }
+    pre.src-python:before { content: 'Python'; }
+    pre.src-R:before { content: 'R'; }
+    pre.src-ruby:before { content: 'Ruby'; }
+    pre.src-sass:before { content: 'Sass'; }
+    pre.src-scheme:before { content: 'Scheme'; }
+    pre.src-screen:before { content: 'Gnu Screen'; }
+    pre.src-sed:before { content: 'Sed'; }
+    pre.src-sh:before { content: 'shell'; }
+    pre.src-sql:before { content: 'SQL'; }
+    pre.src-sqlite:before { content: 'SQLite'; }
+    /* additional languages in org.el's org-babel-load-languages alist */
+    pre.src-forth:before { content: 'Forth'; }
+    pre.src-io:before { content: 'IO'; }
+    pre.src-J:before { content: 'J'; }
+    pre.src-makefile:before { content: 'Makefile'; }
+    pre.src-maxima:before { content: 'Maxima'; }
+    pre.src-perl:before { content: 'Perl'; }
+    pre.src-picolisp:before { content: 'Pico Lisp'; }
+    pre.src-scala:before { content: 'Scala'; }
+    pre.src-shell:before { content: 'Shell Script'; }
+    pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+    /* additional language identifiers per "defun org-babel-execute"
        in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
+    pre.src-cpp:before  { content: 'C++'; }
+    pre.src-abc:before  { content: 'ABC'; }
+    pre.src-coq:before  { content: 'Coq'; }
+    pre.src-groovy:before  { content: 'Groovy'; }
+    /* additional language identifiers from org-babel-shell-names in
      ob-shell.el: ob-shell is the only babel language using a lambda to put
      the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
+    pre.src-bash:before  { content: 'bash'; }
+    pre.src-csh:before  { content: 'csh'; }
+    pre.src-ash:before  { content: 'ash'; }
+    pre.src-dash:before  { content: 'dash'; }
+    pre.src-ksh:before  { content: 'ksh'; }
+    pre.src-mksh:before  { content: 'mksh'; }
+    pre.src-posh:before  { content: 'posh'; }
+    /* Additional Emacs modes also supported by the LaTeX listings package */
+    pre.src-ada:before { content: 'Ada'; }
+    pre.src-asm:before { content: 'Assembler'; }
+    pre.src-caml:before { content: 'Caml'; }
+    pre.src-delphi:before { content: 'Delphi'; }
+    pre.src-html:before { content: 'HTML'; }
+    pre.src-idl:before { content: 'IDL'; }
+    pre.src-mercury:before { content: 'Mercury'; }
+    pre.src-metapost:before { content: 'MetaPost'; }
+    pre.src-modula-2:before { content: 'Modula-2'; }
+    pre.src-pascal:before { content: 'Pascal'; }
+    pre.src-ps:before { content: 'PostScript'; }
+    pre.src-prolog:before { content: 'Prolog'; }
+    pre.src-simula:before { content: 'Simula'; }
+    pre.src-tcl:before { content: 'tcl'; }
+    pre.src-tex:before { content: 'TeX'; }
+    pre.src-plain-tex:before { content: 'Plain TeX'; }
+    pre.src-verilog:before { content: 'Verilog'; }
+    pre.src-vhdl:before { content: 'VHDL'; }
+    pre.src-xml:before { content: 'XML'; }
+    pre.src-nxml:before { content: 'XML'; }
+    /* add a generic configuration mode; LaTeX export needs an additional
      (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
+    pre.src-conf:before { content: 'Configuration File'; }
 
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
+    table { border-collapse:collapse; }
+    caption.t-above { caption-side: top; }
+    caption.t-bottom { caption-side: bottom; }
+    td, th { vertical-align:top;  }
+    th.org-right  { text-align: center;  }
+    th.org-left   { text-align: center;   }
+    th.org-center { text-align: center; }
+    td.org-right  { text-align: right;  }
+    td.org-left   { text-align: left;   }
+    td.org-center { text-align: center; }
+    dt { font-weight: bold; }
+    .footpara { display: inline; }
+    .footdef  { margin-bottom: 1em; }
+    .figure { padding: 1em; }
+    .figure p { text-align: center; }
+    .equation-container {
     display: table;
     text-align: center;
     width: 100%;
-  }
-  .equation {
+    }
+    .equation {
     vertical-align: middle;
-  }
-  .equation-label {
+    }
+    .equation-label {
     display: table-cell;
     text-align: right;
     vertical-align: middle;
-  }
-  .inlinetask {
+    }
+    .inlinetask {
     padding: 10px;
     border: 2px solid gray;
     margin: 10px;
     background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
+    }
+    #org-div-home-and-up
+    { text-align: right; font-size: 70%; white-space: nowrap; }
+    textarea { overflow-x: auto; }
+    .linenr { font-size: smaller }
+    .code-highlighted { background-color: #ffff00; }
+    .org-info-js_info-navigation { border-style: none; }
+    #org-info-js_console-label
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
+    .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-  /*]]>*/
-  </style>
-  <link rel="icon" type="image/png" href="/favicon.ico" />
-  <script>
-  <![CDATA[
-  window.MathJax = {
+    .org-svg { }
+    /*]]>*/
+    </style>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <style type="text/css" xml:space="preserve">
+    /*<![CDATA[*/pre.src { background-color: black; color: white; }pre.src-rust:before { content: 'Rust'; }/*]]>*/
+    </style>
+    <script xml:space="preserve">
+    <![CDATA[
+    window.MathJax = {
     tex: {
       ams: {
         multlineWidth: '85%'
@@ -222,973 +228,1266 @@
       font: 'mathjax-modern',
       displayOverflow: 'overflow'
     }
-  };
-  ]]>
-  </script>
-  <script id="MathJax-script" async="async" src=
-  "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<body>
-  <div id="org-div-home-and-up">
-    <a accesskey="h" href="./index.xhtml">UP</a> | <a accesskey="H"
-    href="/index.xhtml">HOME</a>
-  </div>
-  <div id="content" class="content">
-    <h1 class="title">My Wabsite</h1>
-    <div id="table-of-contents" role="doc-toc">
-      <h2>Table of Contents</h2>
-      <div id="text-table-of-contents" role="doc-toc">
-        <ul>
-          <li>
-            <a href="#org32db1d6">1. Branchless FizzBuzz 2</a>
-            <ul>
-              <li>
-                <a href="#orgc1453d2">1.1. Key Technologies</a>
-              </li>
-              <li>
-                <a href="#org02b6087">1.2. The Pitch</a>
-              </li>
-              <li>
-                <a href="#org78d3809">1.3. Post-Mortem</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#org5818125">2. Balanced Ternary in
-            <i>Minecraft</i></a>
-            <ul>
-              <li>
-                <a href="#org472c6fb">2.1. Key Technologies</a>
-              </li>
-              <li>
-                <a href="#org398da9f">2.2. The Pitch</a>
-              </li>
-              <li>
-                <a href="#org993ca3b">2.3. Post-Mortem</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#org720a98c">3. i68</a>
-            <ul>
-              <li>
-                <a href="#orga83403e">3.1. Key Technologies</a>
-              </li>
-              <li>
-                <a href="#orgf062c1d">3.2. The Pitch</a>
-              </li>
-              <li>
-                <a href="#orgae99366">3.3. Post-Mortem</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#org41e2352">4. Breakout</a>
-            <ul>
-              <li>
-                <a href="#org4af9343">4.1. Key Technologies</a>
-              </li>
-              <li>
-                <a href="#orga1f1e00">4.2. Pitch</a>
-              </li>
-              <li>
-                <a href="#org11dbbd4">4.3. Post-Mortem</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#org120ab9f">5. Flap</a>
-            <ul>
-              <li>
-                <a href="#org0e2f012">5.1. Key Technologies</a>
-              </li>
-              <li>
-                <a href="#org555a2fc">5.2. Pitch</a>
-              </li>
-              <li>
-                <a href="#orgbe69a65">5.3. Post-Mortem</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#orgf19d4c8">6. Chess 2</a>
-            <ul>
-              <li>
-                <a href="#org4bbd56b">6.1. Key Technologies</a>
-              </li>
-              <li>
-                <a href="#orgfeb2aee">6.2. Pitch</a>
-              </li>
-              <li>
-                <a href="#orgd9c5938">6.3. Post-Mortem</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+    };
+    ]]>
+    </script>
+    <script id="MathJax-script" async="async" src=
+    "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    xml:space="preserve"></script>
+    <style type="text/css" xml:space="preserve">
+    /*<![CDATA[*/
+    img.c13 {width:50%;margin-left:auto;margin-right:auto}
+    dt.c12 {font-style: italic}
+    iframe.c11 {margin-left:auto; margin-right:auto}
+    /*]]>*/
+    </style>
+  </head>
+  <body>
+    <div id="org-div-home-and-up">
+      <a accesskey="h" href="/lists/index.xhtml">UP</a> |
+      <a accesskey="H" href="/index.xhtml">HOME</a>
     </div>
-    <p>Hrrrrrng. Always embarrassing to talk about the things you
-    made. It’s the <a href="../essays/00-more-right.xhtml">Wheels
-    Problem</a>.</p>
-    <p>All of these projects – and especially the ones I’m
-    <i>not</i> showing you – took up days and weeks and months of
-    my life, and by the end of it the number one lesson I’d learned
-    was “oops, that was the wrong way to do it”. Very valuable!
-    Also a hit to the ego. Why can’t I just be effortlessly and
-    intuitively good at everything? Unfair!</p>
-    <p>Here, in reverse chronological order, is the subset of stuff
-    I hate it less than I don’t. I hope it at least demonstrates a
-    progression in skill and not a <i>re</i>​gression.</p>
-    <p>All of ’em toys of varying shades, and most are first tries
-    at new libraries or new patterns or new technologies or new
-    somethings-or-others. One day I’d like to go back to all of
-    them and do ’em right. <i>More</i> right, anyway…</p>
-    <div id="outline-container-org32db1d6" class="outline-2">
-      <h2 id="org32db1d6"><span class="section-number-2">1.</span>
-      Branchless FizzBuzz 2</h2>
-      <div class="outline-text-2" id="text-1">
-        <p><a href=
-        "https://github.com/MetroidIsPrettyCool/branchless-fizzbuzz-2">
-        https://github.com/MetroidIsPrettyCool/branchless-fizzbuzz-2</a></p>
-      </div>
-      <div id="outline-container-orgc1453d2" class="outline-3">
-        <h3 id="orgc1453d2"><span class=
-        "section-number-3">1.1.</span> Key Technologies</h3>
-        <div class="outline-text-3" id="text-1-1">
-          <dl class="org-dl">
-            <dt>Org Mode</dt>
-            <dd>
-              <a href=
-              "https://orgmode.org/">https://orgmode.org/</a>
-            </dd>
-            <dt>x64 assembly, via YASM</dt>
-            <dd>
-              <a href=
-              "https://github.com/yasm/yasm">https://github.com/yasm/yasm</a>
-            </dd>
-            <dt>C programming language, via gcc</dt>
-            <dd>
-              <a href=
-              "https://gcc.gnu.org/">https://gcc.gnu.org/</a>
-            </dd>
-            <dt>GNU Make</dt>
-            <dd>
-              <a href=
-              "https://www.gnu.org/software/make/">https://www.gnu.org/software/make/</a>
-            </dd>
-          </dl>
-          <p>and the “Euler’s FizzBuzz” function described here:
-          <a href=
-          "http://philcrissman.net/posts/eulers-fizzbuzz/">http://philcrissman.net/posts/eulers-fizzbuzz/</a>.</p>
-        </div>
-      </div>
-      <div id="outline-container-org02b6087" class="outline-3">
-        <h3 id="org02b6087"><span class=
-        "section-number-3">1.2.</span> The Pitch</h3>
-        <div class="outline-text-3" id="text-1-2">
-          <p>This is an implementation of the classic “FizzBuzz”
-          interview problem in a combination of x64 assembly and C
-          that uses absolutely no conditional logic to implement
-          the actual “What do we print for this number
-          <code>i</code>?” logic, inspired by <a href=
-          "http://philcrissman.net/posts/eulers-fizzbuzz/">this
-          blog post</a>. Doing so in assembly was not
-          <i>strictly</i> necessary, of course, but I wanted full
-          control of the executable’s content. (Can’t trust an
-          optimizing compiler to follow my silly rules.)</p>
-          <p>This is also an attempt to explore so-called “literate
-          programming” with Emacs <code>org-mode</code>. The README
-          is the README, and also the source code, and also the
-          comments, and also the documentation; all of it
-          interleaved together.</p>
-        </div>
-      </div>
-      <div id="outline-container-org78d3809" class="outline-3">
-        <h3 id="org78d3809"><span class=
-        "section-number-3">1.3.</span> Post-Mortem</h3>
-        <div class="outline-text-3" id="text-1-3">
-          <ol class="org-ol">
+    <div id="content" class="content">
+      <h1 class="title">
+        My Wabsite
+      </h1>
+      <div id="table-of-contents" role="doc-toc">
+        <h2>
+          Table of Contents
+        </h2>
+        <div id="text-table-of-contents" role="doc-toc">
+          <ul>
             <li>
-              <p>This one is misnamed, which I only realized too
-              late. It should be something like “No-Conditional
-              Logic FizzBuzz”.</p>
-              <p>See, my <i>original attempt</i> was called
-              “Branchless FizzBuzz”, and “Branchless” was a lot
-              more accurate to that project. (It relied on lookup
-              tables as substitutes for <code>Jcc</code>
-              instructions. Cheating!)</p>
-              <p>Now I can’t rename the repository without breaking
-              links to it. Oh well.</p>
+              <a href="#org32db1d6">1. Branchless FizzBuzz 2</a>
+              <ul>
+                <li>
+                  <a href="#orgeb365f4">1.1. Key Technologies</a>
+                </li>
+                <li>
+                  <a href="#org3728dec">1.2. The Pitch</a>
+                </li>
+                <li>
+                  <a href="#orgc2e3f1a">1.3. Post-Mortem</a>
+                </li>
+              </ul>
             </li>
-            <li>Intel’s Software Developer’s Manual(s) are
-            <i>admirably</i> comprehensive, but a bad place to
-            start if you’re a beginner. I should have gone with
-            AMD’s from the start; they’re simpler reads, organized
-            far better for learning than pure reference, and don’t
-            bother with a lot of the legacy details that aren’t
-            important to me (yet).</li>
             <li>
-              <p>Discriminating between inputs and composing result
-              characters are both shockingly easy with bitwise
-              operations, once you’ve derived the theory. A little
-              disappointingly easy. Perhaps I’ll try a v3 where I
-              also ban bitwise instructions? I’m unsure how well
-              that would work – would it just devolve into
-              re-deriving bitwise math from other instructions?</p>
-              <p>I suppose I might just have to see for myself…</p>
+              <a href="#org5818125">2. Balanced Ternary in
+              <i>Minecraft</i></a>
+              <ul>
+                <li>
+                  <a href="#orge0df309">2.1. Key Technologies</a>
+                </li>
+                <li>
+                  <a href="#org85b4e75">2.2. The Pitch</a>
+                </li>
+                <li>
+                  <a href="#orga3f8d95">2.3. Post-Mortem</a>
+                </li>
+              </ul>
             </li>
-            <li>The “literate” workflow is a joy on <b>small</b>
-            projects. Every language should have the ability to
-            embed spreadsheets into non-code! Or to do these kinds
-            of polyglot code and data generation!</li>
             <li>
-              <p>However, I have some reservations about applying
-              it to anything bigger (tenish files, say):</p>
-              <p><code>org</code> just doesn’t integrate with
-              modern toolchains well enough. How am I supposed to
-              use LSP when all my source is in these discretized
-              chunks all interleaved with text, other files, other
-              languages, etc? <code>org-babel-detangle</code> and
-              then jumping back and forth between representations?
-              Sounds pretty error-prone. Indirect buffers? Ewwwww.
-              <code>multi-mode</code>? Noope. Not unless they put
-              enough work into it to rival Skynet.</p>
-              <p>Doc comments are less powerful but they’ll never
-              give you such a hassle. Even better, they don’t lead
-              to editor lock-in. Emacs is brilliant, but also bad
-              marketing. “Join our project, it requires you to
-              spend five years learning an editor from the 70s to
-              get comfortable!”</p>
-              <p>Nonetheless, I still find myself wanting to do
-              this again. For scripts, configuration files, small
-              personal projects, little corners of big projects,
-              perhaps documentation, stuff you were already using
-              Emacs for… I can see a home for
-              <code>org-babel</code> here.</p>
+              <a href="#org720a98c">3. i68</a>
+              <ul>
+                <li>
+                  <a href="#orgf335f7c">3.1. Key Technologies</a>
+                </li>
+                <li>
+                  <a href="#org76d6058">3.2. The Pitch</a>
+                </li>
+                <li>
+                  <a href="#org7c5e19e">3.3. Post-Mortem</a>
+                </li>
+              </ul>
             </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-    <div id="outline-container-org5818125" class="outline-2">
-      <h2 id="org5818125"><span class="section-number-2">2.</span>
-      Balanced Ternary in <i>Minecraft</i></h2>
-      <div class="outline-text-2" id="text-2">
-        <p>No repository, sorry, but here’s a short video I
-        made:</p>
-        <div class="org-center">
-          <p><iframe width="600" height="338" src=
-          "https://www.youtube.com/embed/bKLdSUhCEEE" style=
-          "margin-left:auto; margin-right:auto"></iframe></p>
-        </div>
-      </div>
-      <div id="outline-container-org472c6fb" class="outline-3">
-        <h3 id="org472c6fb"><span class=
-        "section-number-3">2.1.</span> Key Technologies</h3>
-        <div class="outline-text-3" id="text-2-1">
-          <dl class="org-dl">
-            <dt><i>Minecraft: Java Edition</i></dt>
-            <dd>
-              <a href=
-              "https://minecraft.wiki/w/Minecraft_Wiki">https://minecraft.wiki/w/Minecraft_Wiki</a>
-            </dd>
-            <dt>Balanced ternary</dt>
-            <dd>
-              <a href=
-              "https://en.wikipedia.org/wiki/Balanced_ternary">https://en.wikipedia.org/wiki/Balanced_ternary</a>
-            </dd>
-          </dl>
-        </div>
-      </div>
-      <div id="outline-container-org398da9f" class="outline-3">
-        <h3 id="org398da9f"><span class=
-        "section-number-3">2.2.</span> The Pitch</h3>
-        <div class="outline-text-3" id="text-2-2">
-          <p>Okay, so, a bit of context is needed here.</p>
-          <p><i>Minecraft</i> is a very popular video game, famous
-          for many things. It’s a voxel sandbox survival game. It’s
-          a 3-d paint program. It’s a cross-platform scriptable
-          multiplayer minigame client. It’s the only<sup><a id=
-          "fnr.1" class="footref" href="#fn.1" role=
-          "doc-backlink">1</a></sup> Java video game.</p>
-          <p>What unifies these identities is the promise
-          <i>Minecraft</i> makes to the player: “let go of
-          fidelity, and we’ll let you do whatever you want.”</p>
-          <p>One of the things you might want to do is build a
-          computer. For this purpose, the game provides its
-          so-called “redstone” system, whereby players can use
-          in-game resources and a few rudimentary binary logic
-          elements (NOT gates, diodes, etc.) to construct complex
-          circuits from first principles.</p>
-          <p>Another thing that <i>Minecraft</i> is famous for is
-          its “emergent complexity”. With over fifteen years of
-          constant development, systems start to pile up. They
-          interact in inobvious ways. We find that, with the right
-          conditions, at the right intersections of rules, there
-          are new games to play within the metaphysics of the
-          old.</p>
-          <p>Case in point, the game’s only two fluids – water and
-          lava – have <a href="https://minecraft.wiki/w/Fluid">a
-          surprisingly detailed behavior and interaction model</a>.
-          They “choose” where to flow based on the conditions of
-          their environment (“What’s the quickest path to go ‘down’
-          a unit?”), and when they flow into each other, they
-          change their environment (create a solid block of some
-          kind).</p>
-          <p>By creating a network of careful shaped channels, we
-          can create circuits which discriminate between possible
-          inputs and selectively create blockages throughout the
-          network. These blockages then halt, redirect, split,
-          combine, or otherwise influence <i>more</i> flows; which
-          <i>themselves</i> can be discriminated and used to
-          selectively create <i>new</i> blockages; and so on, and
-          so on.</p>
-          <p>This is, in a sense, a kind of transistor or relay. A
-          switch than can toggle other switches. That’s enough to
-          build a digital computer!</p>
-          <p>Not a <i>binary</i> computer, however. Our circuits
-          have <b>three</b> possible outputs: water, lava, and
-          <i>air.</i> This maps neatly on the obscure “balanced
-          ternary” number system, where water represents a digit
-          value of <code>1</code>, air represents a digit value of
-          <code>0</code>, and lava represents a digit value of
-          <code>-1</code>.</p>
-          <p>The embedded video is a sped-up demonstration of a
-          full adder I built using these principles (and a few
-          others, like sand towers which communicate information
-          “uphill”), solving this problem:</p>\begin{align*} 69 +
-          34 = 103 = \\ (1 \cdot 3^4 + 0 \cdot 3^3 + -1 \cdot 3^2 +
-          -1 \cdot 3^1 + 0 \cdot 3^0) \\ + (0 \cdot 3^4 + 1 \cdot
-          3^3 + 1 \cdot 3^2 + -1 \cdot 3^1 + 1 \cdot 3^0) \\ = (1
-          \cdot 3^4 + 1 \cdot 3^3 + -1 \cdot 3^2 + 1 \cdot 3^1 + 1
-          \cdot 3^0) \end{align*}
-          <p>Or “Water Air Lava Lava Air” + “Air Water Water Lava
-          Water” = “Water Water Lava Water Water”.</p>
-        </div>
-      </div>
-      <div id="outline-container-org993ca3b" class="outline-3">
-        <h3 id="org993ca3b"><span class=
-        "section-number-3">2.3.</span> Post-Mortem</h3>
-        <div class="outline-text-3" id="text-2-3">
-          <ol class="org-ol">
             <li>
-              <p>That video is just… not very good. It’s sped up by
-              a weird coefficient, it’s impossible to tell what’s
-              going on, I feel like I’m always pointing the camera
-              at the wrong part of the circuit, I didn’t bother to
-              disable the speed-up effect for the “outro”…</p>
-              <p>I’m a pretty poor video editor, but I know I can
-              do better than this.</p>
+              <a href="#org41e2352">4. Breakout</a>
+              <ul>
+                <li>
+                  <a href="#org40b3d80">4.1. Key Technologies</a>
+                </li>
+                <li>
+                  <a href="#org6c26786">4.2. Pitch</a>
+                </li>
+                <li>
+                  <a href="#org2cf6d21">4.3. Post-Mortem</a>
+                </li>
+              </ul>
             </li>
-            <li>It’s shame I never got around to writing up a
-            decent guide to the theories of operation here. Or made
-            a central repository of circuit designs. There aren’t a
-            lot of people out there to whom this is all “background
-            knowledge”, so having somewhere <i>comprehensive</i> to
-            point for resources would be a big help.</li>
             <li>
-              <p>I’ve never been satisfied with my decision to use
-              sand towers<sup><a id="fnr.2" class="footref" href=
-              "#fn.2" role="doc-backlink">2</a></sup>. It was a
-              concession to practicality<sup><a id="fnr.3" class=
-              "footref" href="#fn.3" role=
-              "doc-backlink">3</a></sup> on a project otherwise so
-              unconcerned with practically, and it always gave such
-              uninteresting solutions to my design problems.</p>
-              <p>Synchronization, for example. I needed a circuit
-              which would accept a flow of some kind, and then only
-              release it when a second “sync” signal arrived. The
-              difference in complexity between the “pure” solution
-              and the “sand” solution was <i>staggering,</i> and I
-              mean that as an insult to the sand solution. What’s
-              impressive about a glorified sluice gate?</p>
-              <p>If I revisit this topic, I’d like to eschew
-              sand-based techniques where possible.</p>
+              <a href="#org120ab9f">5. Flap</a>
+              <ul>
+                <li>
+                  <a href="#org715fd84">5.1. Key Technologies</a>
+                </li>
+                <li>
+                  <a href="#org917ba76">5.2. Pitch</a>
+                </li>
+                <li>
+                  <a href="#org7f14cae">5.3. Post-Mortem</a>
+                </li>
+              </ul>
             </li>
-          </ol>
+            <li>
+              <a href="#orgf19d4c8">6. Chess 2</a>
+              <ul>
+                <li>
+                  <a href="#orgc516ecd">6.1. Key Technologies</a>
+                </li>
+                <li>
+                  <a href="#org89fd944">6.2. Pitch</a>
+                </li>
+                <li>
+                  <a href="#org0a665ec">6.3. Post-Mortem</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div id="outline-container-org720a98c" class="outline-2">
-      <h2 id="org720a98c"><span class="section-number-2">3.</span>
-      i68</h2>
-      <div class="outline-text-2" id="text-3">
-        <dl class="org-dl">
-          <dt>i68apollo</dt>
-          <dd>
+      <p>
+        Hrrrrrng. Always embarrassing to talk about the things you
+        made. It’s the <a href="/essays/00-more-right.xhtml">Wheels
+        Problem</a>.
+      </p>
+      <p>
+        All of these projects – and especially the ones I’m
+        <i>not</i> showing you – took up days and weeks and months
+        of my life, and by the end of it the number one lesson I’d
+        learned was “oops, that was the wrong way to do it”. Very
+        valuable! Also a hit to the ego. Why can’t I just be
+        effortlessly and intuitively good at everything? Unfair!
+      </p>
+      <p>
+        Here, in reverse chronological order, is the subset of
+        stuff I hate it less than I don’t. I hope it at least
+        demonstrates a progression in skill and not a
+        <i>re</i>​gression.
+      </p>
+      <p>
+        All of ’em toys of varying shades, and most are first tries
+        at new libraries or new patterns or new technologies or new
+        somethings-or-others. One day I’d like to go back to all of
+        them and do ’em right. <i>More</i> right, anyway…
+      </p>
+      <div id="outline-container-org32db1d6" class="outline-2">
+        <h2 id="org32db1d6">
+          <span class="section-number-2">1.</span> Branchless
+          FizzBuzz 2
+        </h2>
+        <div class="outline-text-2" id="text-1">
+          <p>
             <a href=
-            "https://github.com/MetroidIsPrettyCool/i68apollo">https://github.com/MetroidIsPrettyCool/i68apollo</a>
-          </dd>
-          <dt>i68soyuz</dt>
-          <dd>
-            <a href=
-            "https://github.com/MetroidIsPrettyCool/i68soyuz">https://github.com/MetroidIsPrettyCool/i68soyuz</a>
-          </dd>
-        </dl>
-      </div>
-      <div id="outline-container-orga83403e" class="outline-3">
-        <h3 id="orga83403e"><span class=
-        "section-number-3">3.1.</span> Key Technologies</h3>
-        <div class="outline-text-3" id="text-3-1"></div>
-        <div id="outline-container-org82414d9" class="outline-4">
-          <h4 id="org82414d9"><span class=
-          "section-number-4">3.1.1.</span> “Apollo”</h4>
-          <div class="outline-text-4" id="text-3-1-1">
-            <dl class="org-dl">
-              <dt>Rust programming language &amp; toolchain</dt>
-              <dd>
-                <a href=
-                "https://rust-lang.org/">https://rust-lang.org/</a>
-              </dd>
-              <dt>libusb (via rusb crate)</dt>
-              <dd>
-                <a href=
-                "https://libusb.info/">https://libusb.info/</a>
-                (<a href=
-                "https://crates.io/crates/rusb">https://crates.io/crates/rusb</a>)
-              </dd>
-              <dt>uinput (via uinput crate)</dt>
-              <dd>
-                <a href=
-                "https://www.kernel.org/doc/html/v4.12/input/uinput.html">
-                https://www.kernel.org/doc/html/v4.12/input/uinput.html</a>
-                (<a href=
-                "https://docs.rs/uinput/latest/uinput/">https://docs.rs/uinput/latest/uinput/</a>)
-              </dd>
-            </dl>
-          </div>
+            "https://github.com/MetroidIsPrettyCool/branchless-fizzbuzz-2">
+            https://github.com/MetroidIsPrettyCool/branchless-fizzbuzz-2</a>
+          </p>
         </div>
-        <div id="outline-container-orge879f70" class="outline-4">
-          <h4 id="orge879f70"><span class=
-          "section-number-4">3.1.2.</span> “Soyuz”</h4>
-          <div class="outline-text-4" id="text-3-1-2">
+        <div id="outline-container-orgeb365f4" class="outline-3">
+          <h3 id="orgeb365f4">
+            <span class="section-number-3">1.1.</span> Key
+            Technologies
+          </h3>
+          <div class="outline-text-3" id="text-1-1">
             <dl class="org-dl">
-              <dt>TI-92 Plus, TI-89, TI-83 Plus graphing
-              calculators</dt>
+              <dt>
+                Org Mode
+              </dt>
               <dd>
                 <a href=
-                "https://en.wikipedia.org/wiki/TI-92_series">https://en.wikipedia.org/wiki/TI-92_series</a>,
-                <a href=
-                "https://en.wikipedia.org/wiki/TI-89_series">https://en.wikipedia.org/wiki/TI-89_series</a>,
-                <a href=
-                "https://en.wikipedia.org/wiki/TI-83_series">https://en.wikipedia.org/wiki/TI-83_series</a>
+                "https://orgmode.org/">https://orgmode.org/</a>
               </dd>
-              <dt>C programming language, via TIGCC</dt>
+              <dt>
+                x64 assembly, via YASM
+              </dt>
               <dd>
                 <a href=
-                "http://tigcc.ticalc.org/">http://tigcc.ticalc.org/</a>
+                "https://github.com/yasm/yasm">https://github.com/yasm/yasm</a>
               </dd>
-              <dt>C programming language &amp; Z80 assembly, via
-              z88dk</dt>
+              <dt>
+                C programming language, via gcc
+              </dt>
               <dd>
                 <a href=
-                "https://github.com/z88dk/z88dk">https://github.com/z88dk/z88dk</a>
+                "https://gcc.gnu.org/">https://gcc.gnu.org/</a>
               </dd>
-              <dt>GNU Make</dt>
+              <dt>
+                GNU Make
+              </dt>
               <dd>
                 <a href=
                 "https://www.gnu.org/software/make/">https://www.gnu.org/software/make/</a>
               </dd>
             </dl>
+            <p>
+              and the “Euler’s FizzBuzz” function described here:
+              <a href=
+              "http://philcrissman.net/posts/eulers-fizzbuzz/">http://philcrissman.net/posts/eulers-fizzbuzz/</a>.
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org3728dec" class="outline-3">
+          <h3 id="org3728dec">
+            <span class="section-number-3">1.2.</span> The Pitch
+          </h3>
+          <div class="outline-text-3" id="text-1-2">
+            <p>
+              This is an implementation of the classic “FizzBuzz”
+              interview problem in a combination of x64 assembly
+              and C that uses absolutely no conditional logic to
+              implement the actual “What do we print for this
+              number <code>i</code>?” logic, inspired by <a href=
+              "http://philcrissman.net/posts/eulers-fizzbuzz/">this
+              blog post</a>. Doing so in assembly was not
+              <i>strictly</i> necessary, of course, but I wanted
+              full control of the executable’s content. (Can’t
+              trust an optimizing compiler to follow my silly
+              rules.)
+            </p>
+            <p>
+              This is also an attempt to explore so-called
+              “literate programming” with Emacs
+              <code>org-mode</code>. The README is the README, and
+              also the source code, and also the comments, and also
+              the documentation; all of it interleaved together.
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-orgc2e3f1a" class="outline-3">
+          <h3 id="orgc2e3f1a">
+            <span class="section-number-3">1.3.</span> Post-Mortem
+          </h3>
+          <div class="outline-text-3" id="text-1-3">
+            <ol class="org-ol">
+              <li>
+                <p>
+                  This one is misnamed, which I only realized too
+                  late. It should be something like “No-Conditional
+                  Logic FizzBuzz”.
+                </p>
+                <p>
+                  See, my <i>original attempt</i> was called
+                  “Branchless FizzBuzz”, and “Branchless” was a lot
+                  more accurate to that project. (It relied on
+                  lookup tables as substitutes for <code>Jcc</code>
+                  instructions. Cheating!)
+                </p>
+                <p>
+                  Now I can’t rename the repository without
+                  breaking links to it. Oh well.
+                </p>
+              </li>
+              <li>Intel’s Software Developer’s Manual(s) are
+              <i>admirably</i> comprehensive, but a bad place to
+              start if you’re a beginner. I should have gone with
+              AMD’s from the start; they’re simpler reads,
+              organized far better for learning than pure
+              reference, and don’t bother with a lot of the legacy
+              details that aren’t important to me (yet).
+              </li>
+              <li>
+                <p>
+                  Discriminating between inputs and composing
+                  result characters are both shockingly easy with
+                  bitwise operations, once you’ve derived the
+                  theory. A little disappointingly easy. Perhaps
+                  I’ll try a v3 where I also ban bitwise
+                  instructions? I’m unsure how well that would work
+                  – would it just devolve into re-deriving bitwise
+                  math from other instructions?
+                </p>
+                <p>
+                  I suppose I might just have to see for myself…
+                </p>
+              </li>
+              <li>The “literate” workflow is a joy on <b>small</b>
+              projects. Every language should have the ability to
+              embed spreadsheets into non-code! Or to do these
+              kinds of polyglot code and data generation!
+              </li>
+              <li>
+                <p>
+                  However, I have some reservations about applying
+                  it to anything bigger (tenish files, say):
+                </p>
+                <p>
+                  <code>org</code> just doesn’t integrate with
+                  modern toolchains well enough. How am I supposed
+                  to use LSP when all my source is in these
+                  discretized chunks all interleaved with text,
+                  other files, other languages, etc?
+                  <code>org-babel-detangle</code> and then jumping
+                  back and forth between representations? Sounds
+                  pretty error-prone. Indirect buffers? Ewwwww.
+                  <code>multi-mode</code>? Noope. Not unless they
+                  put enough work into it to rival Skynet.
+                </p>
+                <p>
+                  Doc comments are less powerful but they’ll never
+                  give you such a hassle. Even better, they don’t
+                  lead to editor lock-in. Emacs is brilliant, but
+                  also bad marketing. “Join our project, it
+                  requires you to spend five years learning an
+                  editor from the 70s to get comfortable!”
+                </p>
+                <p>
+                  Nonetheless, I still find myself wanting to do
+                  this again. For scripts, configuration files,
+                  small personal projects, little corners of big
+                  projects, perhaps documentation, stuff you were
+                  already using Emacs for… I can see a home for
+                  <code>org-babel</code> here.
+                </p>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
-      <div id="outline-container-orgf062c1d" class="outline-3">
-        <h3 id="orgf062c1d"><span class=
-        "section-number-3">3.2.</span> The Pitch</h3>
-        <div class="outline-text-3" id="text-3-2">
-          <p>This also needs some context. This monster:</p>
+      <div id="outline-container-org5818125" class="outline-2">
+        <h2 id="org5818125">
+          <span class="section-number-2">2.</span> Balanced Ternary
+          in <i>Minecraft</i>
+        </h2>
+        <div class="outline-text-2" id="text-2">
+          <p>
+            No repository, sorry, but here’s a short video I made:
+          </p>
           <div class="org-center">
-            <div id="orge204d8a" class="figure">
-              <p><img src="../images/TI-92_Plus.jpg" alt=
-              "TI-92_Plus.jpg" style=
-              "width:50%;margin-left:auto;margin-right:auto" /></p>
+            <p>
+              <iframe width="600" height="338" src=
+              "https://www.youtube.com/embed/bKLdSUhCEEE" class=
+              "c11"></iframe>
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-orge0df309" class="outline-3">
+          <h3 id="orge0df309">
+            <span class="section-number-3">2.1.</span> Key
+            Technologies
+          </h3>
+          <div class="outline-text-3" id="text-2-1">
+            <dl class="org-dl">
+              <dt class="c12">
+                Minecraft: Java Edition
+              </dt>
+              <dd>
+                <a href=
+                "https://minecraft.wiki/w/Minecraft_Wiki">https://minecraft.wiki/w/Minecraft_Wiki</a>
+              </dd>
+              <dt>
+                Balanced ternary
+              </dt>
+              <dd>
+                <a href=
+                "https://en.wikipedia.org/wiki/Balanced_ternary">https://en.wikipedia.org/wiki/Balanced_ternary</a>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div id="outline-container-org85b4e75" class="outline-3">
+          <h3 id="org85b4e75">
+            <span class="section-number-3">2.2.</span> The Pitch
+          </h3>
+          <div class="outline-text-3" id="text-2-2">
+            <p>
+              Okay, so, a bit of context is needed here.
+            </p>
+            <p>
+              <i>Minecraft</i> is a very popular video game, famous
+              for many things. It’s a voxel sandbox survival game.
+              It’s a 3-d paint program. It’s a cross-platform
+              scriptable multiplayer minigame client. It’s the
+              only<sup><a id="fnr.1" class="footref" href="#fn.1"
+              role="doc-backlink">1</a></sup> Java video game.
+            </p>
+            <p>
+              What unifies these identities is the promise
+              <i>Minecraft</i> makes to the player: “let go of
+              fidelity, and we’ll let you do whatever you want.”
+            </p>
+            <p>
+              One of the things you might want to do is build a
+              computer. For this purpose, the game provides its
+              so-called “redstone” system, whereby players can use
+              in-game resources and a few rudimentary binary logic
+              elements (NOT gates, diodes, etc.) to construct
+              complex circuits from first principles.
+            </p>
+            <p>
+              Another thing that <i>Minecraft</i> is famous for is
+              its “emergent complexity”. With over fifteen years of
+              constant development, systems start to pile up. They
+              interact in inobvious ways. We find that, with the
+              right conditions, at the right intersections of
+              rules, there are new games to play within the
+              metaphysics of the old.
+            </p>
+            <p>
+              Case in point, the game’s only two fluids – water and
+              lava – have <a href=
+              "https://minecraft.wiki/w/Fluid">a surprisingly
+              detailed behavior and interaction model</a>. They
+              “choose” where to flow based on the conditions of
+              their environment (“What’s the quickest path to go
+              ‘down’ a unit?”), and when they flow into each other,
+              they change their environment (create a solid block
+              of some kind).
+            </p>
+            <p>
+              By creating a network of careful shaped channels, we
+              can create circuits which discriminate between
+              possible inputs and selectively create blockages
+              throughout the network. These blockages then halt,
+              redirect, split, combine, or otherwise influence
+              <i>more</i> flows; which <i>themselves</i> can be
+              discriminated and used to selectively create
+              <i>new</i> blockages; and so on, and so on.
+            </p>
+            <p>
+              This is, in a sense, a kind of transistor or relay. A
+              switch than can toggle other switches. That’s enough
+              to build a digital computer!
+            </p>
+            <p>
+              Not a <i>binary</i> computer, however. Our circuits
+              have <b>three</b> possible outputs: water, lava, and
+              <i>air.</i> This maps neatly on the obscure “balanced
+              ternary” number system, where water represents a
+              digit value of <code>1</code>, air represents a digit
+              value of <code>0</code>, and lava represents a digit
+              value of <code>-1</code>.
+            </p>
+            <p>
+              The embedded video is a sped-up demonstration of a
+              full adder I built using these principles (and a few
+              others, like sand towers which communicate
+              information “uphill”), solving this problem:
+            </p>\begin{align*} 69 + 34 = 103 = \\ (1 \cdot 3^4 + 0
+            \cdot 3^3 + -1 \cdot 3^2 + -1 \cdot 3^1 + 0 \cdot 3^0)
+            \\ + (0 \cdot 3^4 + 1 \cdot 3^3 + 1 \cdot 3^2 + -1
+            \cdot 3^1 + 1 \cdot 3^0) \\ = (1 \cdot 3^4 + 1 \cdot
+            3^3 + -1 \cdot 3^2 + 1 \cdot 3^1 + 1 \cdot 3^0)
+            \end{align*}
+            <p>
+              Or “Water Air Lava Lava Air” + “Air Water Water Lava
+              Water” = “Water Water Lava Water Water”.
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-orga3f8d95" class="outline-3">
+          <h3 id="orga3f8d95">
+            <span class="section-number-3">2.3.</span> Post-Mortem
+          </h3>
+          <div class="outline-text-3" id="text-2-3">
+            <ol class="org-ol">
+              <li>
+                <p>
+                  That video is just… not very good. It’s sped up
+                  by a weird coefficient, it’s impossible to tell
+                  what’s going on, I feel like I’m always pointing
+                  the camera at the wrong part of the circuit, I
+                  didn’t bother to disable the speed-up effect for
+                  the “outro”…
+                </p>
+                <p>
+                  I’m a pretty poor video editor, but I know I can
+                  do better than this.
+                </p>
+              </li>
+              <li>It’s shame I never got around to writing up a
+              decent guide to the theories of operation here. Or
+              made a central repository of circuit designs. There
+              aren’t a lot of people out there to whom this is all
+              “background knowledge”, so having somewhere
+              <i>comprehensive</i> to point for resources would be
+              a big help.
+              </li>
+              <li>
+                <p>
+                  I’ve never been satisfied with my decision to use
+                  sand towers<sup><a id="fnr.2" class="footref"
+                  href="#fn.2" role="doc-backlink">2</a></sup>. It
+                  was a concession to practicality<sup><a id=
+                  "fnr.3" class="footref" href="#fn.3" role=
+                  "doc-backlink">3</a></sup> on a project otherwise
+                  so unconcerned with practically, and it always
+                  gave such uninteresting solutions to my design
+                  problems.
+                </p>
+                <p>
+                  Synchronization, for example. I needed a circuit
+                  which would accept a flow of some kind, and then
+                  only release it when a second “sync” signal
+                  arrived. The difference in complexity between the
+                  “pure” solution and the “sand” solution was
+                  <i>staggering,</i> and I mean that as an insult
+                  to the sand solution. What’s impressive about a
+                  glorified sluice gate?
+                </p>
+                <p>
+                  If I revisit this topic, I’d like to eschew
+                  sand-based techniques where possible.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div id="outline-container-org720a98c" class="outline-2">
+        <h2 id="org720a98c">
+          <span class="section-number-2">3.</span> i68
+        </h2>
+        <div class="outline-text-2" id="text-3">
+          <dl class="org-dl">
+            <dt>
+              i68apollo
+            </dt>
+            <dd>
+              <a href=
+              "https://github.com/MetroidIsPrettyCool/i68apollo">https://github.com/MetroidIsPrettyCool/i68apollo</a>
+            </dd>
+            <dt>
+              i68soyuz
+            </dt>
+            <dd>
+              <a href=
+              "https://github.com/MetroidIsPrettyCool/i68soyuz">https://github.com/MetroidIsPrettyCool/i68soyuz</a>
+            </dd>
+          </dl>
+        </div>
+        <div id="outline-container-orgf335f7c" class="outline-3">
+          <h3 id="orgf335f7c">
+            <span class="section-number-3">3.1.</span> Key
+            Technologies
+          </h3>
+          <div class="outline-text-3" id="text-3-1"></div>
+          <div id="outline-container-org82414d9" class="outline-4">
+            <h4 id="org82414d9">
+              <span class="section-number-4">3.1.1.</span> “Apollo”
+            </h4>
+            <div class="outline-text-4" id="text-3-1-1">
+              <dl class="org-dl">
+                <dt>
+                  Rust programming language &amp; toolchain
+                </dt>
+                <dd>
+                  <a href=
+                  "https://rust-lang.org/">https://rust-lang.org/</a>
+                </dd>
+                <dt>
+                  libusb (via rusb crate)
+                </dt>
+                <dd>
+                  <a href=
+                  "https://libusb.info/">https://libusb.info/</a>
+                  (<a href=
+                  "https://crates.io/crates/rusb">https://crates.io/crates/rusb</a>)
+                </dd>
+                <dt>
+                  uinput (via uinput crate)
+                </dt>
+                <dd>
+                  <a href=
+                  "https://www.kernel.org/doc/html/v4.12/input/uinput.html">
+                  https://www.kernel.org/doc/html/v4.12/input/uinput.html</a>
+                  (<a href=
+                  "https://docs.rs/uinput/latest/uinput/">https://docs.rs/uinput/latest/uinput/</a>)
+                </dd>
+              </dl>
             </div>
           </div>
-          <p>is the TI-92+ graphing calculator. It’s a neat little
-          gadget, really stretches the line between “graphing
-          calculator” and “low-spec portable general-purpose
-          computer”. Sporting a QWERTY keyboard, an MC68000SEC
-          processor, a proprietary (but fully reverse-engineered)
-          data I/O port for file transfer, explicit support for
-          running compiled (and actually native, too) programs, and
-          an OS that lets user programs touch <i>all</i> hardware,
-          it makes a pretty good platform for learning bare-metal
-          programming.</p>
-          <p>So I thought I’d give it a try. I also thought I might
-          try make something practical out of my calculator
-          collection while I was at it, and turn this guy into an
-          input device for my PC. (I don’t have any USB controllers
-          with good D-Pads!)</p>
-          <p>This required a two-part solution:</p>
-          <ol class="org-ol">
-            <li>a PC-side driver component, which talks to the
-            calculator over USB (via the official “SilverLink”
-            adapter cable, which supports raw byte reads and
-            writes) and converts the data it receives into
-            keystroke events;</li>
-            <li>and a calculator-side driver component, which talks
-            to the PC over the D-Bus I/O port and periodically
-            updates it on the state of its keyboard matrix.</li>
-          </ol>
-          <p>I decided to name them “Apollo” and “Soyuz”,
-          respectively, after the 1975 Apollo-Soyuz Test Project.
-          “Two ideologically-opposed machines coming together for
-          the sake of progress” and so on.</p>
-        </div>
-      </div>
-      <div id="outline-container-orgae99366" class="outline-3">
-        <h3 id="orgae99366"><span class=
-        "section-number-3">3.3.</span> Post-Mortem</h3>
-        <div class="outline-text-3" id="text-3-3">
-          <ol class="org-ol">
-            <li>I still like that logo I made. Probably the only
-            thing here I’m still fully happy with.</li>
-            <li>
-              <p>At one point during development, I decided to try
-              porting <code>i68soyuz</code> to the TI-89, which is
-              architecturally very similar to the 92 Plus. That
-              went pretty smoothly, just had to define some
-              different CPP<sup><a id="fnr.4" class="footref" href=
-              "#fn.4" role="doc-backlink">4</a></sup> symbols in my
-              Makefile and configure a second key map in
-              <code>i68apollo</code>, so I decided to <i>also</i>
-              try porting it to the <i>TI-83 Plus</i> – an
-              architecturally very <i>different</i> calculator –
-              while I was at it. This meant introducing another
-              toolchain (the 83+ is z80-based and not 68k, TIGCC
-              does not support it), re-working my build system, and
-              adding a new set of processor manuals and OS API
-              documentation to my reading list.</p>
-              <p>In hindsight, this was a big mistake. What I
-              <i>should have</i> done was define a common spec and
-              protocol for behavior, then implement it for both
-              architectures <b>separately.</b> I did not do this. I
-              tried to do it all in one codebase.</p>
-              <p>The first consequence of this decision was that it
-              immediately put me in Makefile hell.
-              <code>VPATH</code> and <code>include</code> and
-              sub-Makefiles everywhere! Took days to engineer, and
-              I still ended up having to put my Makefiles in
-              <code>build/</code> instead of <code>src/</code>.</p>
-              <p>The second consequence was that, since I was using
-              the TIGCC C compiler for my 68k targets, I was going
-              to need to find a C compiler for my z80 targets
-              <i>too.</i> I salute the z88dk developers for their
-              effort, I really do, but their tooling just didn’t
-              justify the effort of a unified codebase. None of
-              their backends supported the calling convention used
-              by TI’s OS routines, and their standard library
-              wasn’t any help either – it’s meant to be
-              cross-platform across different historical z80
-              machines, not just TI calculators – so half my time
-              writing was spent making these four-line “push,
-              exchange/move, call, pop” wrapper functions around OS
-              calls.</p>
-              <p>The third consequence is that it didn’t even save
-              me any time implementing shared logic! It turns out
-              there kinda <i>wasn’t any.</i> All
-              <code>i68soyuz</code> did was glue logic to plug some
-              system calls into each other, and they’re different
-              system calls on different platforms. They behave
-              differently, they take different arguments, they have
-              different invariants. The bulk of my target-specific
-              code ended up just being shims to keep the lie
-              alive.</p>
-              <p>Auto-sleep (“APD”) timers were the straw that
-              broke the camel’s back. They <i>worked,</i> but the
-              experience trying to mangle the code base into
-              working on all targets was frustrating enough to drop
-              the project. Haven’t been back since,
-              <code>apd-dev</code> is still unmerged into
-              <code>master</code>.</p>
-            </li>
-            <li>
-              <p>Splitting <code>i68apollo</code> and
-              <code>i68soyuz</code> into separate repositories was
-              <i>also</i> a mistake, monorepo would have been a
-              better fit for this project.</p>
-              <p>At <i>minimum,</i> the opportunity to
-              <code>include_bytes!()</code> Soyuz binaries into
-              Apollo for automated installation (as opposed to
-              writing up instructions for how to install it
-              manually, which is what I ended up doing) should not
-              be overlooked.</p>
-            </li>
-            <li>
-              <p>The actual implementation of
-              <code>i68apollo</code> is complete garbage, and if I
-              ever come back I’d like to throw it away and start
-              from scratch. It’s all hack on top of copy-paste on
-              top of copy-paste on top of “I don’t know half of
-              what’s in the standard library so I’m just going to
-              write my own (bad) implementation!”</p>
-              <p>In particular, those enormous match statements
-              make me feel a little ill. This is what
-              <code>phf_codegen</code> is for! AAAAHHH!</p>
-            </li>
-            <li>I regret my choice of <code>uinput</code> bindings,
-            the same-named <code>uinput</code> crate only ever got
-            in my way. I should have either gone up in abstraction
-            to something which is more featureful (and
-            cross-platform), or down to something lower-level like
-            <code>uinput-sys</code>. Centrism gives the downsides
-            of both and the benefits of neither.</li>
-            <li><code>rusb</code>, on the other hand, was a pretty
-            good choice. Not happy with how I used it, though. I’ve
-            learned a lot more about the USB spec since making i68,
-            and there’s a lot I’d like to refactor. (I’d also like
-            to make better use of the standard library’s I/O
-            routines to do it, while I’m at it.)</li>
-            <li>
-              <p>Binding the “special” keys (those without good
-              analogs among the traditional X keysym definitions)
-              to the “extra” function keys was a half-measure I
-              never got around to rectifying. What’s the point in
-              using a calculator as an input device if you can’t
-              type math symbols with it?</p>
-              <p>Ideally, this would be accomplished by writing
-              bona fide X or libinput (or whatever I need to
-              target) keyboard definitions for these devices that
-              map physical (well, emulated by my driver, but I
-              digress) scancodes to sequences of Unicode
-              characters, as well as the appropriate “shift”, “2nd”
-              and “diamond” layers. I want to be able to press
-              2nd+SIN and have it type “<code>sin⁻¹(</code>”!</p>
-              <p>The absolutely <i>horrible</i> state of the
-              relevant X.org documentation deterred me from trying
-              this, but I won’t let it deter me forever.</p>
-              <p>One day…</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-    <div id="outline-container-org41e2352" class="outline-2">
-      <h2 id="org41e2352"><span class="section-number-2">4.</span>
-      Breakout</h2>
-      <div class="outline-text-2" id="text-4">
-        <p><a href=
-        "https://github.com/MetroidIsPrettyCool/breakout">https://github.com/MetroidIsPrettyCool/breakout</a></p>
-      </div>
-      <div id="outline-container-org4af9343" class="outline-3">
-        <h3 id="org4af9343"><span class=
-        "section-number-3">4.1.</span> Key Technologies</h3>
-        <div class="outline-text-3" id="text-4-1">
-          <dl class="org-dl">
-            <dt>Rust programming language &amp; toolchain</dt>
-            <dd>
-              <a href=
-              "https://rust-lang.org/">https://rust-lang.org/</a>
-            </dd>
-            <dt>OpenGL (via glium crate)</dt>
-            <dd>
-              <a href=
-              "https://www.khronos.org/opengl/">https://www.khronos.org/opengl/</a>
-              (<a href=
-              "https://crates.io/crates/glium">https://crates.io/crates/glium</a>)
-            </dd>
-            <dt>OpenAL (via alto crate)</dt>
-            <dd>
-              <a href="https://openal.org/">https://openal.org/</a>
-              (<a href=
-              "https://docs.rs/alto/latest/alto/">https://docs.rs/alto/latest/alto/</a>)
-            </dd>
-          </dl>
-        </div>
-      </div>
-      <div id="outline-container-orga1f1e00" class="outline-3">
-        <h3 id="orga1f1e00"><span class=
-        "section-number-3">4.2.</span> Pitch</h3>
-        <div class="outline-text-3" id="text-4-2">
-          <p>This one’s old enough that I’ve forgotten most of the
-          details. An Atari’s Breakout-style game, yes. Another
-          crack at OpenGL, clearly. There’s also some really
-          half-baked OpenAL here, too. I think the goal was just to
-          keep adding features until it became a chore, then
-          regroup?</p>
-        </div>
-      </div>
-      <div id="outline-container-org11dbbd4" class="outline-3">
-        <h3 id="org11dbbd4"><span class=
-        "section-number-3">4.3.</span> Post-Mortem</h3>
-        <div class="outline-text-3" id="text-4-3">
-          <ol class="org-ol">
-            <li>There’s barely any actual OpenAL in this thing.
-            Clearly, an audio engine requires more work to
-            integrate elegantly into a program than “just slap in
-            some <code>if</code> statements”. I can see why someone
-            would prefer frameworks that do this kind of state
-            management for you.</li>
-            <li>Despite the lack of hands-on time, I think spent
-            enough time with the <code>alto</code> and OpenAL
-            documentation that I feel confident saying I’d like to
-            revisit both sometime. I particularly like how
-            <code>alto</code> wraps its API into a single
-            <code>struct</code>, that’s very elegant.</li>
-            <li>I’m still not happy with how I handled working with
-            <code>glium</code>, but at least it’s saner than
-            <code>flap</code>.</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-    <div id="outline-container-org120ab9f" class="outline-2">
-      <h2 id="org120ab9f"><span class="section-number-2">5.</span>
-      Flap</h2>
-      <div class="outline-text-2" id="text-5">
-        <p><a href=
-        "https://github.com/MetroidIsPrettyCool/flap">https://github.com/MetroidIsPrettyCool/flap</a></p>
-      </div>
-      <div id="outline-container-org0e2f012" class="outline-3">
-        <h3 id="org0e2f012"><span class=
-        "section-number-3">5.1.</span> Key Technologies</h3>
-        <div class="outline-text-3" id="text-5-1">
-          <dl class="org-dl">
-            <dt>Rust programming language &amp; toolchain</dt>
-            <dd>
-              <a href=
-              "https://rust-lang.org/">https://rust-lang.org/</a>
-            </dd>
-            <dt>OpenGL (via glium crate)</dt>
-            <dd>
-              <a href=
-              "https://www.khronos.org/opengl/">https://www.khronos.org/opengl/</a>
-              (<a href=
-              "https://crates.io/crates/glium">https://crates.io/crates/glium</a>)
-            </dd>
-            <dt>Font rendering, via the rusttype cate</dt>
-            <dd>
-              <a href=
-              "https://docs.rs/rusttype/latest/rusttype/">https://docs.rs/rusttype/latest/rusttype/</a>
-            </dd>
-          </dl>
-        </div>
-      </div>
-      <div id="outline-container-org555a2fc" class="outline-3">
-        <h3 id="org555a2fc"><span class=
-        "section-number-3">5.2.</span> Pitch</h3>
-        <div class="outline-text-3" id="text-5-2">
-          <p>An earlier attempt to get to grips with
-          <code>glium</code>, Rust’s biggest (?) OpenGL wrapper
-          crate. I’d used OpenGL before, in both C with
-          <code>glut</code> and in C# with OpenTK. Never got far
-          enough in either language to make something interesting,
-          unfortunately.</p>
-          <p>Also, an attempt at “simplicity” that mostly
-          backfired.</p>
-        </div>
-      </div>
-      <div id="outline-container-orgbe69a65" class="outline-3">
-        <h3 id="orgbe69a65"><span class=
-        "section-number-3">5.3.</span> Post-Mortem</h3>
-        <div class="outline-text-3" id="text-5-3">
-          <ol class="org-ol">
-            <li>I quite like <code>glium</code>, I think it
-            provides exactly the kinds of abstractions over OpenGL
-            that I want.</li>
-            <li>Notably, this is not a Flappy Bird clone, although,
-            if I recall correctly, that <i>was</i> my original
-            plan. When things got too difficult to keep extending,
-            I gave up trying to add features and tried to see if I
-            could make something fun out of what little
-            infrastructure I had.</li>
-            <li>
-              <p>No memory of exactly why I though that “variable
-              determines function” pattern was a good idea. It was
-              a pain to work with and (apparently) I eventually
-              just gave up trying to work with it. That’s a result
-              of some kind, I suppose.</p>
-              <p>With hindsight, I think this would be a lot easier
-              to adapt to a composition pattern than I’d realized.
-              Perhaps I’ll give that a try in the future.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-    <div id="outline-container-orgf19d4c8" class="outline-2">
-      <h2 id="orgf19d4c8"><span class="section-number-2">6.</span>
-      Chess 2</h2>
-      <div class="outline-text-2" id="text-6">
-        <p><a href=
-        "https://github.com/MetroidIsPrettyCool/Chess2">https://github.com/MetroidIsPrettyCool/Chess2</a></p>
-      </div>
-      <div id="outline-container-org4bbd56b" class="outline-3">
-        <h3 id="org4bbd56b"><span class=
-        "section-number-3">6.1.</span> Key Technologies</h3>
-        <div class="outline-text-3" id="text-6-1">
-          <dl class="org-dl">
-            <dt>Java programming language</dt>
-            <dd>
-              <a href=
-              "https://www.java.com/">https://www.java.com/</a>
-            </dd>
-            <dt>JavaFX</dt>
-            <dd>
-              <a href="https://openjfx.io/">https://openjfx.io/</a>
-            </dd>
-            <dt>FXML</dt>
-            <dd>
-              <a href=
-              "https://openjfx.io/javadoc/25/javafx.fxml/javafx/fxml/doc-files/introduction_to_fxml.html">
-              https://openjfx.io/javadoc/25/javafx.fxml/javafx/fxml/doc-files/introduction_to_fxml.html</a>
-            </dd>
-          </dl>
-        </div>
-      </div>
-      <div id="outline-container-orgfeb2aee" class="outline-3">
-        <h3 id="orgfeb2aee"><span class=
-        "section-number-3">6.2.</span> Pitch</h3>
-        <div class="outline-text-3" id="text-6-2">
-          <div class="org-center">
-            <p><b>Disclaimer:</b> until now, this list of projects
-            has covered a span of about three-ish years<sup><a id=
-            "fnr.5" class="footref" href="#fn.5" role=
-            "doc-backlink">5</a></sup>. This is <i>six</i> years
-            old, which is about as far as I’m willing to go back
-            publicly. <i>This</i> is embarrassing, but the stuff I
-            haven’t covered is <b>humiliating.</b></p>
-            <p>Maybe, with time, I’ll un-private “TOWCBL” and we
-            can all have a nice laugh.</p>
-          </div>
-          <p>This is a chess-like game I threw together partway
-          through High School, written in Java because that’s what
-          AP Computer Science A was teaching.</p>
-        </div>
-      </div>
-      <div id="outline-container-orgd9c5938" class="outline-3">
-        <h3 id="orgd9c5938"><span class=
-        "section-number-3">6.3.</span> Post-Mortem</h3>
-        <div class="outline-text-3" id="text-6-3">
-          <ol class="org-ol">
-            <li>Still hadn’t figured out how to get Emacs to stop
-            mixing tabs and spaces for indention, clearly.</li>
-            <li>I was going through a phase around this time where
-            I put two spaces between my close parens and my curly
-            braces. I have no idea where I picked it up, but I’m
-            glad I dropped it. It just looks weird.</li>
-            <li>
-              <p>This project layout is ridiculous. I mean,
-              <i>obviously,</i> but it’s worth saying.</p>
-              <p>I can’t remember how I was packaging and building
-              the thing, but I’m sure it was something like
-              <code>javac *.java</code>, and then a really long
-              <code>jar foo bar etc.</code> I’d have to copy and
-              paste. Bleagh.</p>
-              <p>Also, putting the license and README in the docs
-              folder was… well, GitHub doesn’t seem to have a
-              problem with it, so I’m sure it’s a convention
-              <i>somewhere…</i></p>
-              <p><i>I</i> never did it again.</p>
-            </li>
-            <li>I really dislike inheritance as pattern, or at
-            least the way Java does it, and I think that started
-            with this project. “<code>PoolPiece</code>” should not
-            extend <code>Piece</code>, no matter how tempting it
-            might be. Introducing an additional layer of
-            inheritance with an “<code>InPlayPiece</code>” might
-            help, but ehhhhh I just think the pattern is just
-            flawed from first principles.</li>
-            <li>
-              <p>Conversely, I strongly prefer DSLs for doing UI,
-              and I think that started here, too. The water-tight
-              separation of concerns (how is your business logic
-              going to sneak in to your UI if you can’t implement
-              logic in your UI?) is all-upside, as far as I’m
-              concerned.</p>
-              <p>Probably won’t ever come back to FXML
-              <i>specifically,</i> unless I have to, however. My
-              memories are foggy but I recall it as a mostly
-              frustrating experience. Probably didn’t help that I
-              <b>clearly</b> had no idea what I was doing…</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-    <div id="outline-container-org09e4f0c" class="outline-2">
-      <h2 id="org09e4f0c">License:</h2>
-      <div class="outline-text-2" id="text-org09e4f0c">
-        <p>Copyright 2025 <a href=
-        "https://github.com/MetroidIsPrettyCool">Joseph Burke</a>.
-        All original content published to this website is licensed
-        under a <a href=
-        "https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA
-        4.0</a> 🅭🅯🄎 license, unless explicitly stated
-        otherwise.</p>
-      </div>
-    </div>
-    <div id="footnotes">
-      <h2 class="footnotes">Footnotes:</h2>
-      <div id="text-footnotes">
-        <div class="footdef">
-          <sup><a id="fn.1" class="footnum" href="#fnr.1" role=
-          "doc-backlink">1</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara">As far as the “gamer” public seems
-            to care, anyway.</p>
+          <div id="outline-container-orge879f70" class="outline-4">
+            <h4 id="orge879f70">
+              <span class="section-number-4">3.1.2.</span> “Soyuz”
+            </h4>
+            <div class="outline-text-4" id="text-3-1-2">
+              <dl class="org-dl">
+                <dt>
+                  TI-92 Plus, TI-89, TI-83 Plus graphing
+                  calculators
+                </dt>
+                <dd>
+                  <a href=
+                  "https://en.wikipedia.org/wiki/TI-92_series">https://en.wikipedia.org/wiki/TI-92_series</a>,
+                  <a href=
+                  "https://en.wikipedia.org/wiki/TI-89_series">https://en.wikipedia.org/wiki/TI-89_series</a>,
+                  <a href=
+                  "https://en.wikipedia.org/wiki/TI-83_series">https://en.wikipedia.org/wiki/TI-83_series</a>
+                </dd>
+                <dt>
+                  C programming language, via TIGCC
+                </dt>
+                <dd>
+                  <a href=
+                  "http://tigcc.ticalc.org/">http://tigcc.ticalc.org/</a>
+                </dd>
+                <dt>
+                  C programming language &amp; Z80 assembly, via
+                  z88dk
+                </dt>
+                <dd>
+                  <a href=
+                  "https://github.com/z88dk/z88dk">https://github.com/z88dk/z88dk</a>
+                </dd>
+                <dt>
+                  GNU Make
+                </dt>
+                <dd>
+                  <a href=
+                  "https://www.gnu.org/software/make/">https://www.gnu.org/software/make/</a>
+                </dd>
+              </dl>
+            </div>
           </div>
         </div>
-        <div class="footdef">
-          <sup><a id="fn.2" class="footnum" href="#fnr.2" role=
-          "doc-backlink">2</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara">Sand is one of a handful of
-            “gravity blocks” in <i>Minecraft</i> which will fall if
-            unsupported. See <a href=
-            "https://minecraft.wiki/w/Falling_block">https://minecraft.wiki/w/Falling_block</a>.
-            By supporting a tower of such blocks with a
-            <i>different</i> kind of block, one that breaks upon
-            being flowed-into (e.g. torches), we can selectively
-            change the height of these towers by directing a flow
-            into them. This allows us to communicate information
-            “uphill”, and to create sluice gate-esque structures
-            that can release other fluids at our control.</p>
+        <div id="outline-container-org76d6058" class="outline-3">
+          <h3 id="org76d6058">
+            <span class="section-number-3">3.2.</span> The Pitch
+          </h3>
+          <div class="outline-text-3" id="text-3-2">
+            <p>
+              This also needs some context. This monster:
+            </p>
+            <div class="org-center figure">
+              <p>
+                <img src="/images/TI-92_Plus.webp" alt=
+                "TI-92_Plus.webp" class="c13" />
+              </p>
+            </div>
+            <p>
+              is the TI-92+ graphing calculator. It’s a neat little
+              gadget, really stretches the line between “graphing
+              calculator” and “low-spec portable general-purpose
+              computer”. Sporting a QWERTY keyboard, an MC68000SEC
+              processor, a proprietary (but fully
+              reverse-engineered) data I/O port for file transfer,
+              explicit support for running compiled (and actually
+              native, too) programs, and an OS that lets user
+              programs touch <i>all</i> hardware, it makes a pretty
+              good platform for learning bare-metal programming.
+            </p>
+            <p>
+              So I thought I’d give it a try. I also thought I
+              might try make something practical out of my
+              calculator collection while I was at it, and turn
+              this guy into an input device for my PC. (I don’t
+              have any USB controllers with good D-Pads!)
+            </p>
+            <p>
+              This required a two-part solution:
+            </p>
+            <ol class="org-ol">
+              <li>a PC-side driver component, which talks to the
+              calculator over USB (via the official “SilverLink”
+              adapter cable, which supports raw byte reads and
+              writes) and converts the data it receives into
+              keystroke events;
+              </li>
+              <li>and a calculator-side driver component, which
+              talks to the PC over the D-Bus I/O port and
+              periodically updates it on the state of its keyboard
+              matrix.
+              </li>
+            </ol>
+            <p>
+              I decided to name them “Apollo” and “Soyuz”,
+              respectively, after the 1975 Apollo-Soyuz Test
+              Project. “Two ideologically-opposed machines coming
+              together for the sake of progress” and so on.
+            </p>
           </div>
         </div>
-        <div class="footdef">
-          <sup><a id="fn.3" class="footnum" href="#fnr.3" role=
-          "doc-backlink">3</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara"><i>Minecraft</i> liquids cannot
-            flow uphill, and they also cannot flow horizontally
-            without the flow eventually terminating (12 blocks
-            horizontal for water, 4 for lava), so circuits end up
-            being very vertical. Unfortunately, “vertical” is the
-            only axis on which <i>Minecraft</i> worlds are not
-            effectively infinite – an unmodified game only allows
-            building between <code>Y=320</code> and
-            <code>Y=-64</code>.</p>
-          </div>
-        </div>
-        <div class="footdef">
-          <sup><a id="fn.4" class="footnum" href="#fnr.4" role=
-          "doc-backlink">4</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara">That’s CPP as in C Pre-Processor.
-            Not that other thing.</p>
-          </div>
-        </div>
-        <div class="footdef">
-          <sup><a id="fn.5" class="footnum" href="#fnr.5" role=
-          "doc-backlink">5</a></sup>
-          <div class="footpara" role="doc-footnote">
-            <p class="footpara">I can’t remember why exactly
-            there’s such a big gap here. I was doing hobby
-            programming, I’m sure of it, but I never uploaded any
-            of it anywhere. If I find something interesting, I’ll
-            update this page.</p>
+        <div id="outline-container-org7c5e19e" class="outline-3">
+          <h3 id="org7c5e19e">
+            <span class="section-number-3">3.3.</span> Post-Mortem
+          </h3>
+          <div class="outline-text-3" id="text-3-3">
+            <ol class="org-ol">
+              <li>I still like that logo I made. Probably the only
+              thing here I’m still fully happy with.
+              </li>
+              <li>
+                <p>
+                  At one point during development, I decided to try
+                  porting <code>i68soyuz</code> to the TI-89, which
+                  is architecturally very similar to the 92 Plus.
+                  That went pretty smoothly, just had to define
+                  some different CPP<sup><a id="fnr.4" class=
+                  "footref" href="#fn.4" role=
+                  "doc-backlink">4</a></sup> symbols in my Makefile
+                  and configure a second key map in
+                  <code>i68apollo</code>, so I decided to
+                  <i>also</i> try porting it to the <i>TI-83
+                  Plus</i> – an architecturally very
+                  <i>different</i> calculator – while I was at it.
+                  This meant introducing another toolchain (the 83+
+                  is z80-based and not 68k, TIGCC does not support
+                  it), re-working my build system, and adding a new
+                  set of processor manuals and OS API documentation
+                  to my reading list.
+                </p>
+                <p>
+                  In hindsight, this was a big mistake. What I
+                  <i>should have</i> done was define a common spec
+                  and protocol for behavior, then implement it for
+                  both architectures <b>separately.</b> I did not
+                  do this. I tried to do it all in one codebase.
+                </p>
+                <p>
+                  The first consequence of this decision was that
+                  it immediately put me in Makefile hell.
+                  <code>VPATH</code> and <code>include</code> and
+                  sub-Makefiles everywhere! Took days to engineer,
+                  and I still ended up having to put my Makefiles
+                  in <code>build/</code> instead of
+                  <code>src/</code>.
+                </p>
+                <p>
+                  The second consequence was that, since I was
+                  using the TIGCC C compiler for my 68k targets, I
+                  was going to need to find a C compiler for my z80
+                  targets <i>too.</i> I salute the z88dk developers
+                  for their effort, I really do, but their tooling
+                  just didn’t justify the effort of a unified
+                  codebase. None of their backends supported the
+                  calling convention used by TI’s OS routines, and
+                  their standard library wasn’t any help either –
+                  it’s meant to be cross-platform across different
+                  historical z80 machines, not just TI calculators
+                  – so half my time writing was spent making these
+                  four-line “push, exchange/move, call, pop”
+                  wrapper functions around OS calls.
+                </p>
+                <p>
+                  The third consequence is that it didn’t even save
+                  me any time implementing shared logic! It turns
+                  out there kinda <i>wasn’t any.</i> All
+                  <code>i68soyuz</code> did was glue logic to plug
+                  some system calls into each other, and they’re
+                  different system calls on different platforms.
+                  They behave differently, they take different
+                  arguments, they have different invariants. The
+                  bulk of my target-specific code ended up just
+                  being shims to keep the lie alive.
+                </p>
+                <p>
+                  Auto-sleep (“APD”) timers were the straw that
+                  broke the camel’s back. They <i>worked,</i> but
+                  the experience trying to mangle the code base
+                  into working on all targets was frustrating
+                  enough to drop the project. Haven’t been back
+                  since, <code>apd-dev</code> is still unmerged
+                  into <code>master</code>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Splitting <code>i68apollo</code> and
+                  <code>i68soyuz</code> into separate repositories
+                  was <i>also</i> a mistake, monorepo would have
+                  been a better fit for this project.
+                </p>
+                <p>
+                  At <i>minimum,</i> the opportunity to
+                  <code>include_bytes!()</code> Soyuz binaries into
+                  Apollo for automated installation (as opposed to
+                  writing up instructions for how to install it
+                  manually, which is what I ended up doing) should
+                  not be overlooked.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The actual implementation of
+                  <code>i68apollo</code> is complete garbage, and
+                  if I ever come back I’d like to throw it away and
+                  start from scratch. It’s all hack on top of
+                  copy-paste on top of copy-paste on top of “I
+                  don’t know half of what’s in the standard library
+                  so I’m just going to write my own (bad)
+                  implementation!”
+                </p>
+                <p>
+                  In particular, those enormous match statements
+                  make me feel a little ill. This is what
+                  <code>phf_codegen</code> is for! AAAAHHH!
+                </p>
+              </li>
+              <li>I regret my choice of <code>uinput</code>
+              bindings, the same-named <code>uinput</code> crate
+              only ever got in my way. I should have either gone up
+              in abstraction to something which is more featureful
+              (and cross-platform), or down to something
+              lower-level like <code>uinput-sys</code>. Centrism
+              gives the downsides of both and the benefits of
+              neither.
+              </li>
+              <li>
+                <code>rusb</code>, on the other hand, was a pretty
+                good choice. Not happy with how I used it, though.
+                I’ve learned a lot more about the USB spec since
+                making i68, and there’s a lot I’d like to refactor.
+                (I’d also like to make better use of the standard
+                library’s I/O routines to do it, while I’m at it.)
+              </li>
+              <li>
+                <p>
+                  Binding the “special” keys (those without good
+                  analogs among the traditional X keysym
+                  definitions) to the “extra” function keys was a
+                  half-measure I never got around to rectifying.
+                  What’s the point in using a calculator as an
+                  input device if you can’t type math symbols with
+                  it?
+                </p>
+                <p>
+                  Ideally, this would be accomplished by writing
+                  bona fide X or libinput (or whatever I need to
+                  target) keyboard definitions for these devices
+                  that map physical (well, emulated by my driver,
+                  but I digress) scancodes to sequences of Unicode
+                  characters, as well as the appropriate “shift”,
+                  “2nd” and “diamond” layers. I want to be able to
+                  press 2nd+SIN and have it type
+                  “<code>sin⁻¹(</code>”!
+                </p>
+                <p>
+                  The absolutely <i>horrible</i> state of the
+                  relevant X.org documentation deterred me from
+                  trying this, but I won’t let it deter me forever.
+                </p>
+                <p>
+                  One day…
+                </p>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
+      <div id="outline-container-org41e2352" class="outline-2">
+        <h2 id="org41e2352">
+          <span class="section-number-2">4.</span> Breakout
+        </h2>
+        <div class="outline-text-2" id="text-4">
+          <p>
+            <a href=
+            "https://github.com/MetroidIsPrettyCool/breakout">https://github.com/MetroidIsPrettyCool/breakout</a>
+          </p>
+        </div>
+        <div id="outline-container-org40b3d80" class="outline-3">
+          <h3 id="org40b3d80">
+            <span class="section-number-3">4.1.</span> Key
+            Technologies
+          </h3>
+          <div class="outline-text-3" id="text-4-1">
+            <dl class="org-dl">
+              <dt>
+                Rust programming language &amp; toolchain
+              </dt>
+              <dd>
+                <a href=
+                "https://rust-lang.org/">https://rust-lang.org/</a>
+              </dd>
+              <dt>
+                OpenGL (via glium crate)
+              </dt>
+              <dd>
+                <a href=
+                "https://www.khronos.org/opengl/">https://www.khronos.org/opengl/</a>
+                (<a href=
+                "https://crates.io/crates/glium">https://crates.io/crates/glium</a>)
+              </dd>
+              <dt>
+                OpenAL (via alto crate)
+              </dt>
+              <dd>
+                <a href=
+                "https://openal.org/">https://openal.org/</a>
+                (<a href=
+                "https://docs.rs/alto/latest/alto/">https://docs.rs/alto/latest/alto/</a>)
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div id="outline-container-org6c26786" class="outline-3">
+          <h3 id="org6c26786">
+            <span class="section-number-3">4.2.</span> Pitch
+          </h3>
+          <div class="outline-text-3" id="text-4-2">
+            <p>
+              This one’s old enough that I’ve forgotten most of the
+              details. An Atari’s Breakout-style game, yes. Another
+              crack at OpenGL, clearly. There’s also some really
+              half-baked OpenAL here, too. I think the goal was
+              just to keep adding features until it became a chore,
+              then regroup?
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org2cf6d21" class="outline-3">
+          <h3 id="org2cf6d21">
+            <span class="section-number-3">4.3.</span> Post-Mortem
+          </h3>
+          <div class="outline-text-3" id="text-4-3">
+            <ol class="org-ol">
+              <li>There’s barely any actual OpenAL in this thing.
+              Clearly, an audio engine requires more work to
+              integrate elegantly into a program than “just slap in
+              some <code>if</code> statements”. I can see why
+              someone would prefer frameworks that do this kind of
+              state management for you.
+              </li>
+              <li>Despite the lack of hands-on time, I think spent
+              enough time with the <code>alto</code> and OpenAL
+              documentation that I feel confident saying I’d like
+              to revisit both sometime. I particularly like how
+              <code>alto</code> wraps its API into a single <code>
+                struct</code>, that’s very elegant.
+              </li>
+              <li>I’m still not happy with how I handled working
+              with <code>glium</code>, but at least it’s saner than
+              <code>flap</code>.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div id="outline-container-org120ab9f" class="outline-2">
+        <h2 id="org120ab9f">
+          <span class="section-number-2">5.</span> Flap
+        </h2>
+        <div class="outline-text-2" id="text-5">
+          <p>
+            <a href=
+            "https://github.com/MetroidIsPrettyCool/flap">https://github.com/MetroidIsPrettyCool/flap</a>
+          </p>
+        </div>
+        <div id="outline-container-org715fd84" class="outline-3">
+          <h3 id="org715fd84">
+            <span class="section-number-3">5.1.</span> Key
+            Technologies
+          </h3>
+          <div class="outline-text-3" id="text-5-1">
+            <dl class="org-dl">
+              <dt>
+                Rust programming language &amp; toolchain
+              </dt>
+              <dd>
+                <a href=
+                "https://rust-lang.org/">https://rust-lang.org/</a>
+              </dd>
+              <dt>
+                OpenGL (via glium crate)
+              </dt>
+              <dd>
+                <a href=
+                "https://www.khronos.org/opengl/">https://www.khronos.org/opengl/</a>
+                (<a href=
+                "https://crates.io/crates/glium">https://crates.io/crates/glium</a>)
+              </dd>
+              <dt>
+                Font rendering, via the rusttype cate
+              </dt>
+              <dd>
+                <a href=
+                "https://docs.rs/rusttype/latest/rusttype/">https://docs.rs/rusttype/latest/rusttype/</a>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div id="outline-container-org917ba76" class="outline-3">
+          <h3 id="org917ba76">
+            <span class="section-number-3">5.2.</span> Pitch
+          </h3>
+          <div class="outline-text-3" id="text-5-2">
+            <p>
+              An earlier attempt to get to grips with
+              <code>glium</code>, Rust’s biggest (?) OpenGL wrapper
+              crate. I’d used OpenGL before, in both C with
+              <code>glut</code> and in C# with OpenTK. Never got
+              far enough in either language to make something
+              interesting, unfortunately.
+            </p>
+            <p>
+              Also, an attempt at “simplicity” that mostly
+              backfired.
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org7f14cae" class="outline-3">
+          <h3 id="org7f14cae">
+            <span class="section-number-3">5.3.</span> Post-Mortem
+          </h3>
+          <div class="outline-text-3" id="text-5-3">
+            <ol class="org-ol">
+              <li>I quite like <code>glium</code>, I think it
+              provides exactly the kinds of abstractions over
+              OpenGL that I want.
+              </li>
+              <li>Notably, this is not a Flappy Bird clone,
+              although, if I recall correctly, that <i>was</i> my
+              original plan. When things got too difficult to keep
+              extending, I gave up trying to add features and tried
+              to see if I could make something fun out of what
+              little infrastructure I had.
+              </li>
+              <li>
+                <p>
+                  No memory of exactly why I though that “variable
+                  determines function” pattern was a good idea. It
+                  was a pain to work with and (apparently) I
+                  eventually just gave up trying to work with it.
+                  That’s a result of some kind, I suppose.
+                </p>
+                <p>
+                  With hindsight, I think this would be a lot
+                  easier to adapt to a composition pattern than I’d
+                  realized. Perhaps I’ll give that a try in the
+                  future.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div id="outline-container-orgf19d4c8" class="outline-2">
+        <h2 id="orgf19d4c8">
+          <span class="section-number-2">6.</span> Chess 2
+        </h2>
+        <div class="outline-text-2" id="text-6">
+          <p>
+            <a href=
+            "https://github.com/MetroidIsPrettyCool/Chess2">https://github.com/MetroidIsPrettyCool/Chess2</a>
+          </p>
+        </div>
+        <div id="outline-container-orgc516ecd" class="outline-3">
+          <h3 id="orgc516ecd">
+            <span class="section-number-3">6.1.</span> Key
+            Technologies
+          </h3>
+          <div class="outline-text-3" id="text-6-1">
+            <dl class="org-dl">
+              <dt>
+                Java programming language
+              </dt>
+              <dd>
+                <a href=
+                "https://www.java.com/">https://www.java.com/</a>
+              </dd>
+              <dt>
+                JavaFX
+              </dt>
+              <dd>
+                <a href=
+                "https://openjfx.io/">https://openjfx.io/</a>
+              </dd>
+              <dt>
+                FXML
+              </dt>
+              <dd>
+                <a href=
+                "https://openjfx.io/javadoc/25/javafx.fxml/javafx/fxml/doc-files/introduction_to_fxml.html">
+                https://openjfx.io/javadoc/25/javafx.fxml/javafx/fxml/doc-files/introduction_to_fxml.html</a>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div id="outline-container-org89fd944" class="outline-3">
+          <h3 id="org89fd944">
+            <span class="section-number-3">6.2.</span> Pitch
+          </h3>
+          <div class="outline-text-3" id="text-6-2">
+            <div class="org-center">
+              <p>
+                <b>Disclaimer:</b> until now, this list of projects
+                has covered a span of about three-ish
+                years<sup><a id="fnr.5" class="footref" href=
+                "#fn.5" role="doc-backlink">5</a></sup>. This is
+                <i>six</i> years old, which is about as far as I’m
+                willing to go back publicly. <i>This</i> is
+                embarrassing, but the stuff I haven’t covered is
+                <b>humiliating.</b>
+              </p>
+              <p>
+                Maybe, with time, I’ll un-private “TOWCBL” and we
+                can all have a nice laugh.
+              </p>
+            </div>
+            <p>
+              This is a chess-like game I threw together partway
+              through High School, written in Java because that’s
+              what AP Computer Science A was teaching.
+            </p>
+          </div>
+        </div>
+        <div id="outline-container-org0a665ec" class="outline-3">
+          <h3 id="org0a665ec">
+            <span class="section-number-3">6.3.</span> Post-Mortem
+          </h3>
+          <div class="outline-text-3" id="text-6-3">
+            <ol class="org-ol">
+              <li>Still hadn’t figured out how to get Emacs to stop
+              mixing tabs and spaces for indention, clearly.
+              </li>
+              <li>I was going through a phase around this time
+              where I put two spaces between my close parens and my
+              curly braces. I have no idea where I picked it up,
+              but I’m glad I dropped it. It just looks weird.
+              </li>
+              <li>
+                <p>
+                  This project layout is ridiculous. I mean,
+                  <i>obviously,</i> but it’s worth saying.
+                </p>
+                <p>
+                  I can’t remember how I was packaging and building
+                  the thing, but I’m sure it was something like
+                  <code>javac *.java</code>, and then a really long
+                  <code>jar foo bar etc.</code> I’d have to copy
+                  and paste. Bleagh.
+                </p>
+                <p>
+                  Also, putting the license and README in the docs
+                  folder was… well, GitHub doesn’t seem to have a
+                  problem with it, so I’m sure it’s a convention
+                  <i>somewhere…</i>
+                </p>
+                <p>
+                  <i>I</i> never did it again.
+                </p>
+              </li>
+              <li>I really dislike inheritance as pattern, or at
+              least the way Java does it, and I think that started
+              with this project. “<code>PoolPiece</code>” should
+              not extend <code>Piece</code>, no matter how tempting
+              it might be. Introducing an additional layer of
+              inheritance with an “<code>InPlayPiece</code>” might
+              help, but ehhhhh I just think the pattern is just
+              flawed from first principles.
+              </li>
+              <li>
+                <p>
+                  Conversely, I strongly prefer DSLs for doing UI,
+                  and I think that started here, too. The
+                  water-tight separation of concerns (how is your
+                  business logic going to sneak in to your UI if
+                  you can’t implement logic in your UI?) is
+                  all-upside, as far as I’m concerned.
+                </p>
+                <p>
+                  Probably won’t ever come back to FXML
+                  <i>specifically,</i> unless I have to, however.
+                  My memories are foggy but I recall it as a mostly
+                  frustrating experience. Probably didn’t help that
+                  I <b>clearly</b> had no idea what I was doing…
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div id="outline-container-org09e4f0c" class="outline-2">
+        <h2 id="org09e4f0c">
+          License:
+        </h2>
+        <div class="outline-text-2" id="text-org09e4f0c">
+          <p>
+            Copyright 2025 <a href=
+            "https://github.com/MetroidIsPrettyCool">Joseph
+            Burke</a>. All original content published to this
+            website is licensed under a <a href=
+            "https://creativecommons.org/licenses/by-sa/4.0/">CC
+            BY-SA 4.0</a> 🅭🅯🄎 license, unless explicitly stated
+            otherwise.
+          </p>
+        </div>
+      </div>
+      <div id="footnotes">
+        <h2 class="footnotes">
+          Footnotes:
+        </h2>
+        <div id="text-footnotes">
+          <div class="footdef">
+            <sup><a id="fn.1" class="footnum" href="#fnr.1" role=
+            "doc-backlink">1</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                As far as the “gamer” public seems to care, anyway.
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.2" class="footnum" href="#fnr.2" role=
+            "doc-backlink">2</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                Sand is one of a handful of “gravity blocks” in
+                <i>Minecraft</i> which will fall if unsupported.
+                See <a href=
+                "https://minecraft.wiki/w/Falling_block">https://minecraft.wiki/w/Falling_block</a>.
+                By supporting a tower of such blocks with a
+                <i>different</i> kind of block, one that breaks
+                upon being flowed-into (e.g. torches), we can
+                selectively change the height of these towers by
+                directing a flow into them. This allows us to
+                communicate information “uphill”, and to create
+                sluice gate-esque structures that can release other
+                fluids at our control.
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.3" class="footnum" href="#fnr.3" role=
+            "doc-backlink">3</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                <i>Minecraft</i> liquids cannot flow uphill, and
+                they also cannot flow horizontally without the flow
+                eventually terminating (12 blocks horizontal for
+                water, 4 for lava), so circuits end up being very
+                vertical. Unfortunately, “vertical” is the only
+                axis on which <i>Minecraft</i> worlds are not
+                effectively infinite – an unmodified game only
+                allows building between <code>Y=320</code> and
+                <code>Y=-64</code>.
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.4" class="footnum" href="#fnr.4" role=
+            "doc-backlink">4</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                That’s CPP as in C Pre-Processor. Not that other
+                thing.
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.5" class="footnum" href="#fnr.5" role=
+            "doc-backlink">5</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
+                I can’t remember why exactly there’s such a big gap
+                here. I was doing hobby programming, I’m sure of
+                it, but I never uploaded any of it anywhere. If I
+                find something interesting, I’ll update this page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div id="postamble" class="status">
-    <p class="author">Author: Joseph Burke</p>
-    <p class="date">Created: 2025-11-06 Thu 12:19</p>
-    <p class="validation"><a href=
-    "https://validator.w3.org/check?uri=referer">Validate</a></p>
-  </div>
-</body>
+    <div id="postamble" class="status">
+      <p class="author">
+        Author: Joseph Burke
+      </p>
+      <p class="date">
+        Created: 2025-11-08 Sat 11:32
+      </p>
+      <p class="validation">
+        <a href=
+        "https://validator.w3.org/check?uri=referer">Validate</a>
+      </p>
+    </div>
+  </body>
 </html>

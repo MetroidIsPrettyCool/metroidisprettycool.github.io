@@ -1,5 +1,5 @@
 #+TITLE: My Wabsite
-#+HTML_LINK_UP:
+#+HTML_LINK_UP: /index.xhtml
 #+OPTIONS: toc:nil
 #+TOC: headlines 2
 * Introduction

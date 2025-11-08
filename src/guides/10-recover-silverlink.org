@@ -9,7 +9,7 @@ This is a TI-GRAPH LINK USB cable, commonly referred to as a "SilverLink":
 
 #+begin_center
 #+ATTR_HTML: :style width:50%;margin-left:auto;margin-right:auto
-[[../images/SilverLink.jpg]]
+[[../images/SilverLink.webp]]
 #+end_center
 
 to distinguish it from earlier models of communication cable, which were colored black or gray and used the classic PC
