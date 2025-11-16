@@ -5,7 +5,7 @@
 * Introduction
 
 ** Introduction Introduction Introduction
-Hi! Welcome to my ~#webpresence~. Mostly just GitHub-pages squatting over here.
+Hi! Welcome to my ~#webpresence~. Mostly just GitHub pages-squatting over here.
 
 Figured I'd like somewhere to dump whatever I couldn't get to work as a regular Tumblr post. Maybe I'll eventually grow
 my ambitions, maybe I won't.
@@ -61,7 +61,7 @@ fix it.
 After a bit of work, I found that the XHTML5 doctype, paired with a post-publishing ~tidy~[fn:5] hook, seemed to clean
 up best. So that's what I stuck with.
 
-Will I /continue/ to stick with it? I dunno. The strictness is pretty helpful for scripting some naïve document
+Will I /continue/ to stick with it? I dunno. The strictness is pretty helpful for scripting some na\iuml​ve document
 transformations, like link-rewriting, so I probably won't switch to plain HTML. Maybe I'll try to put together an XHMTL
 1.0 + WAI-ARIA 1.0 + IFrames DTD at some point, as a bit of experimental archaeology? Or maybe I won't. This whole
 ordeal has given me a pretty dim view of document formatting in general -- $\LaTeX$, you're also part of the problem --
@@ -79,6 +79,6 @@ so maybe I'll just go back to hunting mammoths and living in caves instead. Prob
 \\
 
 Sure, they aren't recommended by W3C for real documents; but they /also/ haven't been touched since 2010, and the DTD
-traffic problem isn't exactly pertinent anymore. (Moreover: if you cared so much, you could also host them yourself.)
+traffic problem isn't exactly pertinent anymore. (Moreover: if you cared so much, you could also host them yourself!)
 
 [fn:5] [[https://www.html-tidy.org/]]
