@@ -1,13 +1,6 @@
-#+TITLE: Essay Index
-#+HTML_LINK_UP: ../index.xhtml
-Miscellaneous long-form opinions.
-* General-Topic
-1. [[file:00-more-right.org][Better Wheels Forever: An Observation]]
-* Technical
-1. [[file:10-java.org][On Java]]
-2. [[file:11-doom.org][Can't Pray the Oscillator Frequency Away: Doom is Probably More Demanding Than You Thought it Was]]
-* Art and Media
-* Space and Spaceflight
-1. [[file:30-mco.org][You're Probably Wrong About Mars Climate Orbiter: It's Not About Inches Vs. Centimeters]]
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
 
-{{{license-footer(2025)}}}
+{{{make_call_make_index(Miscellaneous long-form opinions.)}}}
+
+* {{{license_footer(2025)}}}

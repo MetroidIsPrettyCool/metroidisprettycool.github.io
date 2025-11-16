@@ -1,0 +1,52 @@
+#+NAME: make-index
+#+begin_src emacs-lisp :lexical t :var filename=(buffer-file-name) :var description=("An undescribed index.") :export results :results none
+  ;; This Source Code Form is subject to the terms of the Mozilla Public
+  ;; License, v. 2.0. If a copy of the MPL was not distributed with this
+  ;; file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+  (require 'titlecase)
+
+  (let ((basename (file-name-nondirectory filename)))
+    (when (string-equal basename "index.org")
+      (let* ((page-categories '("General-Topic" "Technical" "Art and Media" "Space and Spaceflight"))
+             (project (org-publish-get-project-from-filename filename))
+             (project-plist (cdr project))
+             (publish-base-dir (plist-get project-plist :base-directory))
+             (default-directory (directory-file-name (file-name-parent-directory filename)))
+             (default-directory-basename (file-name-nondirectory default-directory))
+             (neighbor-files (directory-files default-directory nil (rx (= 0 "index") ".org" eos) nil)))
+        (with-temp-buffer
+          (insert default-directory-basename " index\n\n")
+          (titlecase-region (point-min) (point-max))
+          (beginning-of-buffer)
+          (insert "#+TITLE: ")
+          (end-of-buffer)
+          (insert description "\n\n")
+
+          (cl-loop for i upfrom 0 below 4
+                   for category in page-categories
+                   do
+                   (insert (format "* %s\n" category))
+                   (cl-loop with j = 0
+                            while (string-prefix-p (number-to-string i) (car neighbor-files))
+                            do
+                            (let ((leaf-file (pop neighbor-files)))
+                              (insert (format "%d. [[file:%s][%s]]\n\n"
+                                              (setq j (1+ j))
+                                              leaf-file
+                                              (with-temp-buffer
+                                                (insert-file-contents (expand-file-name leaf-file))
+                                                (org-mode)
+                                                (let ((keywords (org-collect-keywords '("TITLE" "SUBTITLE")))
+                                                      (title    "")
+                                                      (subtitle ""))
+                                                  (dolist (elt keywords)
+                                                    (pcase (car elt)
+                                                      ("TITLE"
+                                                       (setq title    (string-join (cdr elt) " ")))
+                                                      ("SUBTITLE"
+                                                       (setq subtitle (concat ": " (string-join (cdr elt) " "))))))
+                                                  (concat title subtitle)))))))
+                   (insert (format "\n")))
+          (buffer-substring-no-properties (point-min) (point-max))))))
+#+end_src

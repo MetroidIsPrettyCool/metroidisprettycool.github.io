@@ -1,11 +1,14 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
 #+TITLE: Better Wheels Forever
 #+SUBTITLE: An Observation
 One of the things about programming is that it's not too hard to be right, but you can always be /more/ right. You could
 make it faster. Or purer. Or with more flexibily. Or more scalable. Or with less upfront work. Or more portably. Or less
 portably but with more ports. Or with a better API. Or in a better language. Or with fewer dependencies. Or just better
 dependencies. Or more comments. Or better documentation. Or with better test coverage. Or with a better toolchain. Or
-you could package your releases better. Or you could use a better license. Or you could make it more accessible to [[https://old.reddit.com/r/github/comments/1at9br4/i_am_new_to_github_and_i_have_lots_to_say/][this
-guy]]. Or you could--
+you could package your releases better. Or you could use a better license. Or you could make it more accessible to
+[[https://old.reddit.com/r/github/comments/1at9br4/i_am_new_to_github_and_i_have_lots_to_say/][this guy]]. Or you
+could--
 
 #+begin_center
 *​panting, out of breath, hunched over and holding up a single finger ☝️ to ask you to wait​*
@@ -52,7 +55,8 @@ whatever the ways we can. Learn to live with losing ground. Other platitudes.
 
 Anyway, back to editing my ~.emacs~...
 
-{{{license-footer(2025)}}}
+* {{{license_footer(2025)}}}
+
 * Footnotes
 [fn:1] /The Anxiety of Influence: A Theory of Poetry/ by Harold Bloom. I haven't read it myself; the man had a lot of
 really odious opinions. Great title though.

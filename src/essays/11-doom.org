@@ -1,5 +1,7 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
 #+TITLE: Can't Pray the Oscillator Frequency Away
-#+SUBTITLE: Doom is Probably More Demanding Than You Thought it Was
+#+SUBTITLE: Look, Doom is Probably More Demanding Than You Thought it Was
 
 It's a pet peeve of mine that /Doom/ (1993) gets sooooo much focus in the popular conception of the hacking[fn:1] scene
 ("can it run Doom tho?"), because I honestly don't think most people have a good grasp of what its hardware requirements
@@ -42,7 +44,8 @@ I guess "Programmer Writes Driver" doesn't get as many clicks.
 
 /Oh well.../
 
-{{{license-footer(2025)}}}
+* {{{license_footer(2025)}}}
+
 * Footnotes
 [fn:1] That's the "understand systems and get them to do unexpected things" sense of "hacker", as opposed to "cracker". \\
 

@@ -1,0 +1,204 @@
+[
+    {
+        "id": "MCOIB1999",
+        "type": "report",
+        "title": "Mars Climate Orbiter Mishap Investigation Board: Phase I Report",
+        "author": [
+            {"family": "Stephenson", "given": "Arthur G."},
+            {"family": "LaPiana", "given": "Lia S."},
+            {"family": "Mulville", "given": "Daniel R."},
+            {"family": "Rutledge", "given": "Peter J."},
+            {"family": "Bauer", "given": "Frank H."},
+            {"family": "Folta", "given": "David"},
+            {"family": "Dukeman", "given": "Greg A."},
+            {"family": "Sackheim", "given": "Robert"},
+            {"family": "Norvig", "given": "Peter"}
+        ],
+        "issued": { "date-parts": [[1999, 11, 10]] },
+        "genre": "Technical Report",
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://llis.nasa.gov/llis_lib/pdf/1009464main1_0641-mr.pdf",
+        "accessed": { "date-parts": [[2025, 11, 12]] },
+        "note": "Phase I Report, November 10, 1999"
+    },
+    {
+        "id": "MCOIB2000",
+        "type": "report",
+        "title": "Report on Project Management in NASA by the Mars Climate Orbiter Mishap Investigation Board",
+        "author": [
+            {"family": "Stephenson", "given": "Arthur G."},
+            {"family": "LaPiana", "given": "Lia S."},
+            {"family": "Mulville", "given": "Daniel R."},
+            {"family": "Rutledge", "given": "Peter J."},
+            {"family": "Bauer", "given": "Frank H."},
+            {"family": "Folta", "given": "David"},
+            {"family": "Dukeman", "given": "Greg A."},
+            {"family": "Sackheim", "given": "Robert"},
+            {"family": "Norvig", "given": "Peter"}
+        ],
+        "issued": { "date-parts": [[2000, 3, 13]] },
+        "genre": "Technical Report",
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://discovery.larc.nasa.gov/PDF_FILES/mars_climate_orbiter_phaseII.pdf",
+        "accessed": { "date-parts": [[2025, 11, 12]] },
+        "note": "Phase II Report, March 13, 2000"
+    },
+    {
+        "id": "Young2000",
+        "type": "report",
+        "title": "Mars Program Independent Assessment Team Report",
+        "author": [
+            {"family": "Young", "given": "Thomas"},
+            {"family": "Arnold", "given": "James"},
+            {"family": "Brackey", "given": "Thomas"},
+            {"family": "Carr", "given": "Michael"},
+            {"family": "Dwoyer", "given": "Douglas"},
+            {"family": "Fogleman", "given": "Ronald"},
+            {"family": "Jacobson", "given": "Ralph"},
+            {"family": "Kottler", "given": "Herbert"},
+            {"family": "Lyman", "given": "Peter"},
+            {"family": "Maguire", "given": "Joanne"}
+        ],
+        "issued": { "date-parts": [[2000, 3]] },
+        "genre": "Technical Report",
+        "publisher": "National Aeronautics and Space Administration",
+        "number": "20000032458",
+        "URL": "https://ntrs.nasa.gov/citations/20000032458",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaLunarProspector",
+        "type": "webpage",
+        "title": "Lunar Prospector",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://science.nasa.gov/mission/lunar-prospector/",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaDs1",
+        "type": "webpage",
+        "title": "Deep Space 1",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://science.nasa.gov/mission/deep-space-1/",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaMco",
+        "type": "webpage",
+        "title": "Mars Climate Orbiter",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaSwas",
+        "type": "webpage",
+        "title": "SWAS",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://science.nasa.gov/mission/swas/",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaSwasOther",
+        "type": "webpage",
+        "title": "SWAS",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "Internet Archive",
+        "URL": "https://web.archive.org/web/20250813101936/https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-071A",
+        "accessed": { "date-parts": [[2025, 11, 12]] },
+        "note": "Originally published at https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1998-071A"
+    },
+    {
+        "id": "NasaTrace",
+        "type": "webpage",
+        "title": "TRACE",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://science.nasa.gov/mission/trace/",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaStardust",
+        "type": "webpage",
+        "title": "Stardust / Stardust NExT",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://science.nasa.gov/mission/stardust/",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaMpl",
+        "type": "webpage",
+        "title": "Mars Polar Lander / Deep Space 2",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://science.nasa.gov/mission/mars-polar-lander-deep-space-2/",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaWire",
+        "type": "webpage",
+        "title": "WIRE",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://science.nasa.gov/mission/wire/",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaWireOther",
+        "type": "webpage",
+        "title": "WIRE",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "Internet Archive",
+        "URL": "https://web.archive.org/web/20250813131323/https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-011A",
+        "accessed": { "date-parts": [[2025, 11, 12]] },
+        "note": "Originally published at https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-011A"
+    },
+    {
+        "id": "NasaTerriers",
+        "type": "webpage",
+        "title": "Terriers",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "National Aeronautics and Space Administration",
+        "URL": "https://science.nasa.gov/mission/terriers/",
+        "accessed": { "date-parts": [[2025, 11, 12]] }
+    },
+    {
+        "id": "NasaTerriersOther",
+        "type": "webpage",
+        "title": "TERRIERS",
+        "author": [
+            {"literal": "NASA"}
+        ],
+        "publisher": "Internet Archive",
+        "URL": "https://web.archive.org/web/20250708110810/https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-026A",
+        "accessed": { "date-parts": [[2025, 11, 12]] },
+        "note": "Originally published at https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1999-026A"
+    }
+]

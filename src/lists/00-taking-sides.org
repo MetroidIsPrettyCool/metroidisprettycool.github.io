@@ -1,23 +1,32 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
 #+TITLE: Taking Sides!
 #+SUBTITLE: Opinions On Some Trivial Debates
-#+OPTIONS: toc:3
+#+OPTIONS: toc:2
+
 * General-Topic
+
 ** Systems of Measurement
+
 *** 12-Hour Time or 24-Hour Time?
-When I wake up from a nap, I want the least ambiguity possible about whether it's the afternoon or next morning. 24 hour
-time.
+When I wake up from a nap, I want as little ambiguity possible about whether it's the afternoon or next morning. 24 hour
+time!
+
 *** Best Date Format?
-ISO 8601 is basically the only one with an exclusive property: it makes lexicographic ordering and temporal ordering the
-same. For that it's sort of a no-brainer to standardize on, if you need to standardize on something.
+ISO 8601 is basically the only one that has a property the others don't: it makes lexicographic ordering and temporal
+ordering the same. If you need to standardize on something, then, it only makes sense to standardize on the one that's
+strictly more useful.
 
-I'm also a fan of the idea behind the "Holocene calendar" "human era calendar" -- take the current year, prefix a '1'.
-That gives you roughly (around 300 years off) the number of years since the start of the Holocene, without sacrificing
-your ability to easily parse the current Gregorian year. A nice little reminder of the dizzying depth of history. (Or
-the relative shortness of our dominance here. Only ten thousand years?)
+Relatedly, I'm a fan of the so-called "Holocene calendar" or "human era calendar". Just take the current year, prefix a
+'1', and that gives you roughly (around 300 years off) the number of years since the start of the Holocene, /without/
+sacrificing your ability to easily parse out the current Gregorian year. I think that's a nice little reminder of the
+dizzying depth of human history. (Or perhaps from a geologic perspective, its dizzying shallowness. Only ten thousand
+years?)
 
-So wherever I need a time format string, I usually default to ~1%Y-%m-%d %H:%M:%S.%N~ or ~1%Y-%m-%dT%H:%M:%S.%N~ -- just
-lop off any precision you don't need.
-*** Fahrenheit or Celsius?
+So: wherever I need a time format string, I pick ~1%Y-%m-%d %H:%M:%S.%N~ (or ~1%Y-%m-%dT%H:%M:%S.%N~) -- just lop off
+any precision you don't need.
+
+*** Fahrenheit Vs. Celsius?
 I am not a bowl of water. I am also not a 17th century thermometer-maker. A scale that is easy to calibrate with
 pre-industrial tools is not per se any more relevant to me than a scale which is /difficult/ to calibrate with those
 same tools.
@@ -32,7 +41,8 @@ degrees?
 
 (For "doing math with temperatures" purposes, neither Fahrenheit nor Celsius are the right tool. Absolute zero is a
 clearly more universal constant to fix your zero point to.)
-*** Daylight Savings Time or Standard Time?
+
+*** Daylight Savings Time Vs. Standard Time?
 People prefer to structure their lives around observable phenomena. (This much should be self-evident to anyone who was
 doing anything, for any reason, in mid-2020.) In particular, people prefer to be awake -- or at least to do their work
 -- when the sun is up. Do we all agree on this? I think we all agree on this.
@@ -52,57 +62,74 @@ the circadian cycle away.
 
 I guarantee you that we'd all just shift back to 10-6 (indicated), and then the fact that our clocks are misaligned with
 our neighbors would just end up being a stupid bit of trivia.
+
 ** Food
+
 *** Pineapple on Pizza?
 Delicious.
+
 *** Coke or Pepsi?
-Pepsi.
+Pepsi. The regular, high-fructose corn syrup kind. Never really liked aspertame. Real sugar would be better, obviously,
+but I don't care enough to pay the upcharge.
+
 *** Are Brussels Sprouts Good?
 Today's are! Can't speak for the older cultivars.
+
 ** Language
+
 *** How Many Spaces After a Period?
-One. Unless you're fighting for page count. We've got proportional fonts now.
+One. Unless you're fighting for page count. We can type with proportional fonts now, Grandpa. =:P=
+
 *** Oxford Comma?
 The utility should be obvious to anyone who's ever read one of those stupid lawsuits where its absence created a legal
 loophole.
+
 *** Order of Punctuation with Quotation Marks?
-#+begin_center
-(See the "Order of punctuation" section of the Wikipedia "Quotation marks in English" article:
-[[https://en.wikipedia.org/wiki/Quotation_marks_in_English#Order_of_punctuation]])
-#+end_center
+#+begin_aside
+See: the "Order of punctuation" section of the Wikipedia "Quotation marks in English" article:
+[[https://en.wikipedia.org/wiki/Quotation_marks_in_English#Order_of_punctuation]]
+#+end_aside
 
 British/logical style; punctuation not part of the original quote goes outside the quotation marks. Wikipedia uses it,
 and that's good enough for me -- it's just less ambiguous.
-*** Is it pronounced /​ɡɪf​/ or /​d͡ʒɪf​/?
+
+*** /​ɡɪf​/ Or /​d͡ʒɪf​/?
+
 *​groan​*
 
-I don't care how you pronounce it, so long as you don't try arguing with me that it's "graphics, not /jraphics/!" Do you
-also pronounce "LASER" /​læsɪɹ​/? "CONCACAF" /​kʌnsəkəf​/? "DARPA" /​dəɹpeɪ​/? "SONAR" /​sanæɹ​/?
+I don't care how you pronounce it, so long as you don't try to take the line with me that it's "graphics, not
+/jraphics/!" Do you also pronounce "LASER" /​læsɪɹ​/? "CONCACAF" /​kʌnsəkəf​/? "DARPA" /​dəɹpeɪ​/? "SONAR" /​sanæɹ​/?
 
-Initialisms are not simply pronounced by concatenating the initial phoneme of each constituent element, stupid. /They're
-words./
+Of course not. Initialisms are not simply pronounced by concatenating the initial phoneme of each constituent element,
+stupid. /They're words./
+
 ** Other
+
 *** Should You Rinse Dishes Before the Dishwasher?
-The /dishwasher/ rinses your dishes before the dishwasher. That's what pre-wash *means.*
+The /dishwasher/ rinses your dishes before the dishwasher. *That's what pre-wash means.*
 
 It's also why you should use pre-wash detergent. See:
 
 #+begin_center
-[[yt:jHP942Livy0]]
+[[yt:jHP942Livy0][YouTube Video: Your dishwasher is better than you think (tips, tricks, and how they work)]]
 #+end_center
+
 *** Is the Ship of Theseus Still the Same Ship?
 Are we still calling it the Ship of Theseus? The /name/ remains. The history remains. The people's relationship to the
-symbol remains. It's still as much the same the ship as anything ever could be what it used to be.
+symbol remains. It's still as much the same the ship as /anything/ ever could be what it used to be.
+
 * Technical
+
 ** Paradigms
-*** Functional vs. OOP?
+
+*** Functional Vs. Oop?
 1. Something something "true OOP has never been tried" something something "actually, I think you'll find it works
    really well in Smalltalk/Objective C before it got bad/my custom fork of the Common Lisp interpreter/some other
-   language that, conspicuously, nobody is using to ship real software."
+   language that, conspicuously, nobody is using to ship real software anymore."
 
-   Perhaps, among all the many languages which call themselves "object-oriented", there exists one example which makes
-   writing good software easy and bad software hard. Myself? I have not found such a language. The state of those
-   following Java's lead is particularly dire...[fn:1]
+   Perhaps, among all the many, many languages that call themselves "object-oriented", there is an example that makes
+   writing good software easy and bad software hard. Myself? I have not found such a language. The state of those that
+   followed /Java's/ lead is particularly dire...[fn:1]
 
    Why must we /only/ encapsulate on object boundaries? Why must we eschew structuring programs as "collections of
    things to do" for "collections of things we can do stuff /to/"? Does that not read as inside-out to people?
@@ -138,16 +165,19 @@ hope that, for those cases, this approach would still make it easier to write pr
 
 I suspect the answer lies somewhere between LISP, Ada, CUDA, Julia, perhaps OpenMP, functional programming; but I
 confess I'm too uninformed to say anything definitive. Call me back when I'm more experienced?
-*** Dynamic vs. Static Typing?
+
+*** Dynamic Vs. Static Typing?
 "Check it out guys: we managed to save a whole year building this new airliner by never checking if we bought the right
 materials!"
 
 I can accept dynamic typing for projects with less than a hundred SLOC. Two hundred is a perhaps, three hundred is
 really pushing it, and four hundred is /way/ too big to reason about. You're gonna start making type errors.
 
-If your language has types, I don't understand why you would want to wait as /long as possible/ to tell me I've used them
-wrong. You aren't saving me from errors, the error was there to begin with!
-*** Strong vs. Weak Typing?
+If your language has types, I don't understand why you would want to wait as /long as possible/ to tell me I've used
+them wrong. You aren't saving me from errors, the error was there to begin with! The language knew that, I didn't; why
+hide that?
+
+*** Strong Vs. Weak Typing?
 "Check it out guys: we managed to save a whole year building this new airliner by re-using all these old washing machine
 bolts! The thread pitches are different, but we just cranked 'em down anyways! They're almost flush, even!"
 
@@ -155,30 +185,38 @@ Weak typing does not reduce program complexity, it just makes it harder to under
 there. I do not /want/ to add a integer to a string. That is not a well-formed operation. I cannot predict its behavior.
 I can /guess,/ but I'll never know for sure, unless I read the standard.
 
-More to the point, if I /can/ read the standard and therein I see that ~String + Integer~ actually means "convert this
-integer to a string with ~.toString()~ and then ~.join()~ them", then what benefit does this ambiguous ~+~ operator
-/actually/ give me over an explicit ~String.join(Integer.toString())~? Golf cred? Screw golf cred. I want to write what
-I mean.
+Moreover, when I /do/ read the standard and find therein that ~String + Integer~ actually means "convert this integer to
+a string with ~.toString()~ and then ~.join()~ them", then at that point what benefit does this ambiguous ~+~ operator
+actually give me over an explicit ~String.join(Integer.toString())~? Golf cred? Screw golf cred. I want to write what I
+/mean./
+
 *** Is C Really "Low-Level"?
-No.[fn:2]
+No,[fn:2] and I think that's holding us back. I shouldn't have to know how to coerce the compiler into producing the
+right assembly, I should be able to just /say/ what I expect. Modern ISAs are shockingly expressive, why shouldn't we
+let users take advantage of that?
+
 ** Hardware
-*** AMD vs. Intel?
+
+*** AMD Vs. Intel?
 Intel are an amusing company. Their in-house architectures all suck, their CPUs implementing those architectures suck,
 their CPUs implementing other people's architectures suck, their attempts to innovate always crash and burn, and somehow
-they're still /number 1./ How does that even happen?
+they're /still/ number 1. How does that even happen?
 
 I'd like to see one of their wacky ideas finally pay off one day. 'Til then? Yeah, you should probably just buy AMD...
-*** RISC vs. CISC?
+
+*** RISC Vs. CISC?
 Any architecture that gives more avenues for static optimization gets my vote. RISC, VLIW -- NISC, even -- I find these
 very appealing.
 
-Unfortunately, nobody is really making new "the ISA /is/ the metal" processors these days. It's all compromised. Did you
-know that ARM has a instruction just for JavaScript? ~FJCVTZS~, AKA "Floating-point Javascript convert to signed
+Unfortunately, nobody is really making any new "the ISA /is/ the metal" processors these days. It's all compromised. Did
+you know that ARM has a instruction just for JavaScript? ~FJCVTZS~, AKA "Floating-point Javascript convert to signed
 fixed-point, rounding toward zero".[fn:3]
 
 I don't see the point comparing architectures when the only distinguishing factor is how long or short their microcode
-listings are. Use whatever gives you the best numbers.
+listings are. Use whatever gives you the better numbers.
+
 ** Ideology
+
 *** LLMs and "Vibe Coding"?
 The most important fact to internalize about large language models is that they're /profoundly/ stupid. They will lie,
 they will overstate, they will misunderstand, and they will be biased. There is no question you can ask that will never
@@ -217,7 +255,8 @@ conversation and go again. The less it knows about what you're doing, the more g
 more general its responses are, the easier it will be verify them.
 
 Eventually, you'll have a solution /and/ an understanding of the problem. That's what really matters.
-*** UNIX philosophy?
+
+*** UNIX Philosophy?
 Despite what I might have implied earlier, I don't really care about the UNIX philosophy.
 
 It's a decent set of principles for writing coreutils, but quickly grow inane when you try to apply them to anything
@@ -228,35 +267,42 @@ Look closer, and you'll find that most applications /are, in fact,/ collections 
 thing well.
 
 #+begin_example
-$ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
-  | grep -E '^[^ ]+ /usr/bin.*[^/$]' \
-  | wc -l
+$ pacman -Ql systemd systemd-resolvconf systemd-sysvcompat netctl \
+  | awk '$2 ~ /^(\/usr)?\/bin.*[^/]$/ { counter++ } END { print counter }'
 68
 #+end_example
 
-Who woulda guessed! Just because /you/ don't know how to hack on them doesn't mean "Q.E.D. they're monoliths".
+Who could have guessed: just because /you/ don't know how to hack on something, doesn't mean "Q.E.D. it's a monolith".
 
 -----
 
-Also: not everything is a file. Your pants are down and your embarrassing ~ioctl~-themed underwear is showing. See:
+Also: not everything is a file. Your pants are down, and your embarrassing ~ioctl~-themed underwear is showing. See:
 
 #+begin_center
-[[yt:9-IWMbJXoLM]]
+[[yt:9-IWMbJXoLM][YouTube video: "What UNIX Cost Us" - Benno Rice (LCA 2020)]]
 #+end_center
-*** GPL vs MIT?
+
+*** GPL Vs. MIT?
 FOSS is dead. Open source is dead. Free software is dead.[fn:4]
 
-When I /do/ want a license, I like the MPL, version 2.0.[fn:5]
+When I /do/ want a license, I like MPL v2.0.
+
+See: [[https://choosealicense.com/licenses/mpl-2.0/]] for the high level, [[https://www.mozilla.org/en-US/MPL/2.0/]] for
+the nicely-formatted text, and [[https://www.mozilla.org/en-US/MPL/2.0/FAQ/]] for some of the nitty-gritty.
+
 ** Formatting
+
 *** Tabs vs. Spaces?
 Doesn't matter. Manual indentation is for monkeys on typewriters. As long as you, the maintainer, are willing to put in
-five minutes to enforce your norms with an ~.editorconfig~,[fn:6] I'll use whatever you want. Otherwise, ~M-x tabify~,
+five minutes to enforce your norms with an ~.editorconfig~,[fn:5] I'll use whatever you want. Otherwise, ~M-x tabify~,
 ~M-x untabify~, and ~M-x indent-according-to-mode~ are my friends.
+
 *** Significant Whitespace?
 Significant whitespace is for idiots who /wish/ they were monkeys on typewriters. I don't trust a language that
 incentivizes 1.) never writing an expression longer than my fill-column minus the current indentation level or 2.)
 looking like Bourne Shell. Worse, it makes tabs vs. space a real nightmare. XML, god bless them, had at least this
 right: program structure should only ever be determined by the things you can /see./ Never the things you /can't/ see.
+
 *** Brace Style?
 Open brace on the same line for blocks where the declaration is a single line, next line /iff/ the declaration contains
 information that should itself be indented. (i.e. ~where~ clauses, ~throws~ clauses, other information that goes beyond
@@ -265,8 +311,7 @@ makes my head hurt.)
 
 #+begin_src C
   int main(int argc, char* argv[]) {
-      printf("Hello, world!\n");
-      return 0;
+      // do stuff...
   }
 #+end_src
 
@@ -277,7 +322,6 @@ makes my head hurt.)
       T: FnOnce(&TaskContext) -> Result<()>,
   {
       // do stuff...
-      Ok(())
   }
 #+end_src
 
@@ -292,6 +336,7 @@ makes my head hurt.)
 
 But in general I'd rather delegate to external tooling than make the decision myself. Configure a formatter hook in your
 flow orchestration! Or at least make a common configuration for your team's LSP.
+
 *** In C: ~int *foo;~ or ~int* foo;~?
 The latter. I understand the argument for the former, I /know/ that declaring multiple variables on a single line like
 e.g. ~int* i, j;~ means ~i~ is an ~int~ /pointer/ and ~j~ is an ~int~ /value/ -- I contend that this was a mistake on
@@ -299,10 +344,12 @@ Dennis Ritchie and ANSI and ISO's parts. The type is ~(int*)~! Perhaps it was an
 less disk space, like SGML omissible end tags? It's still an antiquated mechanism if so.
 
 I get around the problem by just never declaring multiple variables on the same line.
+
 ** Other
+
 *** Editor War?
 #+begin_center
-[[yt:V3QF1uAvbkU]]
+[[yt:V3QF1uAvbkU][YouTube video: Emacs or VI: The Definitive Answer.]]
 #+end_center
 
 Emacs forever! ~(while (and (rules 'emacs) (drools 'vi)) (message "you already know it"))~
@@ -313,9 +360,9 @@ do IPC, they gesture at extensibility. All in just one program. (Not what you we
 
 Emacs is an *environment.* It is a guest VM with host filesystem access (and remote filesystem access) and ten thousand
 preinstalled utilities for text manipulation. ~search-forward-regexp~, ~magit-status~, ~default-indent-new-line~,
-~eshell~, ~eww~ -- these are not commands.[fn:7] They're single purpose, well-made, filtering, plain text-acting,
+~eshell~, ~eww~ -- these are not commands.[fn:6] They're single purpose, well-made, filtering, plain text-acting,
 inter-operating /programs./ You can even go look up their source code, whenever you want! ~M-x find-function RET
-foo-bar RET~.[fn:8]
+foo-bar RET~.[fn:7]
 
 Who's the real UNIX philosophy exemplar here? ~ed~ with bolt-ons? Or the purpose-built, hackable, extensible, cohesive
 software distribution?
@@ -395,67 +442,163 @@ function a key binding runs? ~C-h k~, and then type the key binding, e.g. ~C-h k
 ~find-file~. It even works for mouse bindings, too!
 
 I could go on and on. What do Bash and Vi and tmux and a thousand little ncurses programs -- all of which are still
-complexity you need to learn, I might add -- give me that Emacs doesn't? Worse scripting languages? "Job control"?
+complexity you'll have to learn, I might add -- give me that Emacs doesn't? Worse scripting languages? "Job control"?
 
 No thanks.
-* Art and Media
-** Is 'Stupid Modern Art' (e.g. /Comedian/ [2019] by Maurizio Cattelan) Really Art?
-A Thing is Art if it's having a conversation with Art.
-** Foreign Language Audio: Dubbing or Subtitles?
-Subtitles are usually the way to go, for all the obvious reasons.
 
-On a re-watch/re-listen of a work you really like, it can be interesting to check out the dub just to see how they
-reinterpreted it. That's something I do occasionally.
-** Vinyl vs. Streaming?
-1. They're not called vinyls. They're records. Phonograph records. Some of them aren't made out of vinyl.
-2. I do most of my music listening on YouTube Music w/ adblocker 'cause I'm lazy. Lately, though, I've been trying to
-   build a CD collection. Good sound that works natively with my computer /and/ a physical thing? Sign me up!
-** Physical Movies or Streaming?
-I can watch my $2 thrift store DVDs whenever I want, /and/ they have deleted scenes + BTS content + directors
-commentary. Even most piracy sites only bother dealing in the movies themselves. Where's my short film bumper, Pixar?
-** Garfield or Heathcliff?
+* Art and Media
+
+** Philosophy
+
+*** Is 'Stupid Modern Art' (e.g. /Comedian/ [2019] by Maurizio Cattelan) Really Art?
+A Thing is Art if it's having a conversation with Art.
+
+** Specific Works
+
+*** Garfield or Heathcliff?
 Heathcliff and it's not even close. It's not even comparable. Garfield is nothing. He's a vacuum. An empty wrapper. An
 egg with no yolk. A shadow on the wall. The snake eating its tail eating its tail eating its tail eating its tail eating
 its tail eating its tail eating its tail. Around and around and around forever.
 
 Heathcliff, on the other hand, is /funny./
 
-Or at least interesting. You just gotta marinade it in a for a little while. Maybe check out this interview with Peter
-Gallagher:
+Or at least interesting. You just gotta... marinade it in a for a little while. Maybe check out this interview with
+Peter Gallagher:
 
 https://solrad.co/let-the-art-stand-for-itself-a-conversation-with-peter-gallagher
 
-or this talk he did:
+or this talk that he did:
 
 #+begin_center
-[[yt:o8_8En04p08]]
+[[yt:o8_8En04p08][YouTube video: CXC 2022: Heathcliff is Having a Moment with Peter Gallagher]]
 #+end_center
+
+*** So, like, What Is /Evangelion/ Even About?
+A lot of things. Human relationships. Losing. Winning. Growing up in a world too traumatized to look you in the eye.
+Child soldiers. Playing the cello. Sexuality. Greed. Suicide.
+
+Broadly, though? /Evangelion/ is about how when you don't understand yourself or the world around you, everything you
+touch starts to die. Uh-oh!
+
+*** Are the Star Wars Prequels / Sequels / Originals Actually Good?
+Possession of a legal right to continue a work does not confer the ability to say anything interesting about that work.
+Franchises are not /real./
+
+I don't give a damn about any of the shows besides Tartakovsky's /Clone Wars/, so here's just my thoughts on every
+movie, in in-universe chronological order:
+
+- TPM :: The best production design we see outside the OT, coupled with a plot that's a lot of boring dicking around in
+  a desert. Racist and boring and clumsy. Still, could be worse.
+
+- AotC :: Unwatchable nonsense. There are maybe two interesting plot threads here, and in a perfect world they would've
+  been merged into /TPM/ to make room for the clone wars on the big screen. Oops.
+
+- SW:TCW :: Uuuuuhghghhhhh. You can tell that this is a bunch of first season /TCW/ episodes edited together. Dave just
+  Filoni'ed all over them. Can I please watch the 2003 /Clone Wars/ instead?
+
+- RotS :: Fatally clumsy, but in its broadest strokes my favorite prequel. I like the conversations, but not much of the
+  dialogue. I like the fights, but not the choreography. I like the locations, but not the sets (using that term very
+  loosely.) This is the /Star Wars/ film I most want to read a novelization of.
+
+- S:ASWS :: Decent production design, decent performances, braindead concept. The L&M take /could have/ elevated this,
+  but my instincts tell me it'd probably still just be ehhhh but in a different way. There's a quality ceiling imparted
+  by the whole "Han Solo origin story" thing. I'd have preferred they just made a different movie about different
+  characters doing different things at a different time.
+
+- RO:ASWS :: Can you tell this film spent more time as concept art than as a script? Like /ANH/, I enjoy the production
+  design too much to really hate this film, weak performances notwithstanding, but it /is/ a pretty weak film.
+
+- ANH :: This film has a lot of charismatic characters but not a lot of /interesting/ characters. Joseph Campbell's
+  poison pill has already entered the bloodstream. Still, the production design is too much of a winner to make this a
+  /bad/ movie.
+
+- SWHS :: Demented cinema verite variety show Wookie bullshit. Feels like eight hours. That's so brazen it's almost
+  respectable, but for all its cult status, it's /still/ not worth watching. Really, honestly: *don't bother.* Don't
+  watch it. If you and your friends get together to watch it for some reason, spend the whole time on your phone or
+  knitting or doing a puzzle so you don't have to actually take it in.
+
+- TESB :: The good one!
+
+- RotJ :: The lack of strong character writing is catching up to us. The interesting ideas here are mostly retreads, and
+  the /uninteresting/ ideas dominate. I'd have liked to see the better bits of this movie moved backwards to ANH and
+  TESB or vice-versa. As is, this just feels like padding. It might be tolerable in a middle installment, but this is a
+  finale! That's no good.
+
+- CoC:AEA :: TODO!
+
+- E:TBfE :: TODO!
+
+- TFA :: A coward's movie, which introduces essentially nothing to the franchise but a new cast of charismatic
+  non-characters. Is this a commentary on the cyclical nature of war, or just a depiction of the same. (The latter.)
+  Only Kylo Ren is set up for an arc, but watching him is like putting on a pair of wet socks. I'm so tired of padding.
+
+- TLJ :: After the non-start of /TFA/, /TLJ/ stumbles hard trying to play catch up in some characteristically Rian
+  Johnson ways. Still more interesting than its successor or antecessor though.
+
+- TRoS :: Rushed, rude, compromised, and just an avalanche of nonsense. I like some of it -- as abstract ideas, at least
+  -- but the sum total feels like a film that's annoyed it even has to try. I'm so tired. I just want /Star Wars/ to
+  give up and die already. I guess at least it's a consolation that Colin Trevorrow didn't write it...
+
+** Medium
+
+*** Foreign Language Audio: Dubbing or Subtitles?
+Subtitles are usually the way to go, for all the obvious reasons.
+
+On a re-watch/re-listen of a work you really like, though, it can be interesting to check out the dub just to see how
+they reinterpreted it. I do that occasionally.
+
+*** Physical Vs. Streaming?
+
+**** Music
+I do most of my music listening on YouTube Music w/ adblocker, 'cause I'm lazy. Lately, though, I've been trying to
+build up a CD collection. Good sound that works natively with my computer /and/ it's a physical thing? Sign me up!
+
+**** Movies
+I can watch my $2 thrift store DVDs whenever I want, /and/ they have deleted scenes + BTS content + directors
+commentary. Even most piracy sites only bother dealing in the movies themselves. I want historical context!
+
+*** Is Adblock Piracy?
+Probably! But that's not a value judgment.
+
 * Space and Spaceflight
-** Is Pluto Still a Planet?
+
+** Astronomy
+
+*** Is Pluto Still a Planet?
 All models are wrong, but some are irrationally defended by people who wish they were still in the third grade -- when
 "knowing what a rhombus is" was enough to coast through life unalloyed.
 
 2006 was actually the /second/ time we reclassified some former planets, did you know that? That's "planets" plural; in
-1867 1 Ceres,[fn:9] 2 Pallas, 3 Juno, 4 Vesta, 5 Astraea, 6 Hebe and 7 Iris all got reclassified as asteroids (Ceres had been
+1867 1 Ceres, 2 Pallas, 3 Juno, 4 Vesta, 5 Astraea, 6 Hebe and 7 Iris all got reclassified as asteroids (Ceres had been
 a planet for over 65 years at that point!) and in 2006 134340 Pluto, 136199 Eris, and -- guess what -- 1 Ceres all got
 reclassified as dwarf planets. (And there are some other cases of things being called planets for a year or two before
 getting reclassified, see: [[https://en.wikipedia.org/wiki/List_of_former_planets]])
+
+#+begin_aside
+Ceres is /obviously/ the best dwarf planet, because it's literally number one!
+#+end_aside
 
 Not a lot of people arguing that /Vesta/ should be a planet again, right? I mean, maybe they /should,/ but what I mean
 is that if the argument for Pluto was tradition, you'd think the proponents would be a little choosy with that
 tradition...
 
-I don't care if Pluto and Earth are more geologically similar than Earth and Neptune. There are things to study in
-astronomy besides rock geology. The IAU definition of "planet" is very useful in ways that other definitions aren't. You
-aren't gonna get anything with your whining. Go home. Please.
-** Space Shuttle Vs. Buran (or) Energia?
+I don't care how many axes you can drum up that frame things as "rocky planets vs. gas giants" or "it's about
+hydrostatic equilibrium" or whatever contrived examples you want to come up with. Yes, there are ways that Pluto is more
+like some of the eight planets than those planets are like each other. Guess what? There are things to study in
+astronomy besides mineral geology. The IAU definition of "planet" is more useful in more ways than other definitions. We
+checked! That was the whole point of making a formal decision! So you aren't gonna get anywhere with whining. Besides
+peeving me, anyway.
+
+** Spaceflight History
+
+*** Space Shuttle Vs. Buran (or) Energia?
 It's easy to argue that Energia-Buran was more capable when it never had to demonstrate any of those proposed
 capabilities.
 
-It's... /meandering,/ but see this video:
+It's a bit... /meandering,/ but see this video:
 
 #+begin_center
-[[yt:ytmFLbPh7ss]]
+[[yt:ytmFLbPh7ss][YouTube video: The Buran is Overrated]]
 #+end_center
 
 I also take issue with the position that accepts Buran's failings but argues for Energia as a standalone heavy launcher.
@@ -471,20 +614,20 @@ Spacehab? The Long-Duration Exposure Facility? The Solar Maximum Mission rescue?
 ATLAS-1 or SEPAC?
 
 I don't think so.
-** Who Won the Space Race?
+
+*** Who Won the Space Race?
 It's easy to paint the USSR as an unambiguous winner if we just look at the "first to X milestone" numbers. I'm sure
 we've all seen that meme that goes something like "first satellite in space, first animal in space, first man in space,
 first woman in space, first space walk, first space station -- USSR. First man on the moon, USA. Winner? USA!?"
 
 Well, here's something to note: Between April 12th, 1961 (first human spaceflight) and December 26th, 1991 (collapse of
-the USSR) the USSR flew 2[fn:10] women on 3[fn:10] person-flights, out of 94[fn:11] flying cosmonauts and 142[fn:11]
-person-flights. If we include /Interkosmos/ cosmonauts, these numbers rise to 3 women, on 4 person-flights, out of 101
-flying cosmonauts and 150 person-flights.
+the USSR) the USSR flew 2 women on 3 person-flights,[fn:8] out of 94 flying cosmonauts and 142 person-flights.[fn:9] If
+we include /Interkosmos/ cosmonauts, these numbers rise to 3 women, on 4 person-flights, out of 101 flying cosmonauts
+and 150 person-flights.
 
-In that same time, the USA flew 13 women[fn:12] on 19[fn:12] person-flights, out of 154[fn:13] flying astronauts and
-285[fn:13] person-flights. If we include payload specialists (whose selection is (was?) more complicated than
-traditional astronauts) these numbers rise to 15 women on 22 person-flights, out of 154 astronauts and 312
-person-missions.
+In that same time, the USA flew 13 women on 19 person-flights,[fn:10] out of 154 flying astronauts and 285
+person-flights.[fn:11] If we include payload specialists (whose selection is (was?) more complicated than traditional
+astronauts) these numbers rise to 15 women on 22 person-flights, out of 154 astronauts and 312 person-missions.
 
 Now, 13 is obviously not half of 285. Even if we restrict ourselves just to the Space Shuttle program, 13 is still not
 half of 201. /Obviously/ inequitable. But 6.7% is a hell of a lot bigger than 2.1%.
@@ -544,9 +687,10 @@ make 41 spacewalks from 1975-1991, the US only 15. This brings totals up to 43 a
 back the other way going into the ISS, but at that point the USSR was no more and things get even more geopolitically
 complicated.
 
-{{{license-footer(2025)}}}
+* {{{license_footer(2025)}}}
 
 * Footnotes
+
 [fn:1] [[file:../essays/10-java.org]]
 
 [fn:2] [[https://queue.acm.org/detail.cfm?id=3212479]]
@@ -555,26 +699,20 @@ complicated.
 
 [fn:4] [[https://www.boringcactus.com/2020/08/13/post-open-source.html]]
 
-[fn:5] See [[https://choosealicense.com/licenses/mpl-2.0/]] for the high level,
-[[https://www.mozilla.org/en-US/MPL/2.0/]] for the nicely-formatted text, and
-[[https://www.mozilla.org/en-US/MPL/2.0/FAQ/]] for some of the nitty-gritty.
+[fn:5] [[https://editorconfig.org/]]
 
-[fn:6] [[https://editorconfig.org/]]
-
-[fn:7] I mean, they /are/ commands, because they have ~(interactive)~ declarations, but what I mean is that they aren't
+[fn:6] I mean, they /are/ commands, because they have ~(interactive)~ declarations, but what I mean is that they aren't
 built-ins. The thing you're commanding isn't /Emacs./ It's whatever package declared that function.
 
-[fn:8] Stuff that's in C source code (like ~car~ and ~cdr~ and ~self-insert-command~ and other primitives) require a bit
-of extra config, and you need to have the source code installed somewhere. Can still do it, though.
+[fn:7] Stuff that's in C source code (like ~car~ and ~cdr~ and ~self-insert-command~ and other primitives) require a bit
+of extra config, and you need to have the source code available on-disk somewhere. Can still do it, though.
 
-[fn:9] Ceres is obviously the best dwarf planet, because it's literally number one.
+[fn:8] Not including unflown cosmonauts or /Interkosmos/ cosmonauts.
 
-[fn:10] Not including unflown cosmonauts or /Interkosmos/ cosmonauts.
-
-[fn:11] Including Soyuz 1, 11, 7K-T No.39, 7K-ST No.16L, and TM-13; not including unflown cosmonauts or /Interkosmos/
+[fn:9] Including Soyuz 1, 11, 7K-T No.39, 7K-ST No.16L, and TM-13; not including unflown cosmonauts or /Interkosmos/
 cosmonauts.
 
-[fn:12] Including /Challenger/ STS-51L, not including unflown astronauts or payload specialists.
+[fn:10] Including /Challenger/ STS-51L, not including unflown astronauts or payload specialists.
 
-[fn:13] Including /Challenger/ STS-51L, X-15 flights over 50 miles, even X-15 flight 191, and Apollo 1, and Gemini 6;
-not including Gemini 9, ALT 1-16, unflown astronauts or payload specialists.
+[fn:11] Including /Challenger/ STS-51L, X-15 flights over 50 miles -- even X-15 flight 191 -- and Apollo 1, and Gemini
+6; not including Gemini 9, ALT 1-16, unflown astronauts or payload specialists.

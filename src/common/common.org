@@ -1,0 +1,35 @@
+# ==== BOILERPLATE ====
+
+#+MACRO: lf (eval "\n")
+
+#+LANGUAGE: en
+
+# ==== CITATIONS ====
+
+#+MACRO: make_cite_export (eval (concat "\n#+CITE_EXPORT: csl " (expand-file-name "src/common/3rdparty/apa.csl" (project-root (project-current nil))) "\n\n"))
+#+MACRO: make_print_bilography (eval "\n#+PRINT_BIBLIOGRAPHY:\n\n")
+
+# ==== HTML ====
+
+#+HTML_DOCTYPE: xhtml5
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" href="/favicon.ico" />
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="/stylesheet.css" />
+#+HTML_LINK_HOME: /index.xhtml
+#+OPTIONS: html5-fancy: t
+#+MACRO: make_html_link_up (eval (concat "\n#+HTML_LINK_UP: " (pcase (file-relative-name buffer-file-name (expand-file-name "src/" (project-root (project-current nil)))) ((rx bos (+ anything) "index.org" eos) "..") (_ ".")) "\n\n"))
+
+# ==== AUTOMATIC DOCUMENT STRUCTURE ====
+
+#+MACRO: make_call_make_index (eval (concat "\n#+CALL: " (expand-file-name "src/common/make-index-functions.org" (project-root (project-current nil))) ":make-index(description=\"" $1 "\") :eval yes :exports results :results value raw replace\n\n"))
+
+#+MACRO: license_footer (eval (concat "License:\n:PROPERTIES:\n:UNNUMBERED: notoc\n:END:\n\n#+HTML: Copyright &copy; " $1 " <a href=\"https://github.com/MetroidIsPrettyCool\">Joseph Burke</a>. All original content published to this website is licensed under a <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a><img src=\"https://mirrors.creativecommons.org/presskit/icons/cc.svg\" alt=\"Creative Commons Logo\" style=\"max-width: 1em;max-height:1em;margin-left: .2em;\" /><img src=\"https://mirrors.creativecommons.org/presskit/icons/by.svg\" alt=\"Creative Commons Attribution Logo\" style=\"max-width: 1em;max-height:1em;margin-left: .2em;\" /><img src=\"https://mirrors.creativecommons.org/presskit/icons/sa.svg\" alt=\"Creative Commons Share-Alike Logo\" style=\"max-width: 1em;max-height:1em;margin-left: .2em;\" /> license.\n\n"))
+#+MACRO: citation_footer (eval "Citations:\n:PROPERTIES:\n:UNNUMBERED: notoc\n:END:\n{{{make_print_bilography}}}-----\n\n#+HTML: These formatted citations were generated with the <a href=\"https://github.com/citation-style-language/styles/blob/master/apa.csl\">APA CSL style</a> from the Citation Style Language Project, licensed under a <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-ShareAlike 3.0 Unported</a><img src=\"https://mirrors.creativecommons.org/presskit/icons/cc.svg\" alt=\"Creative Commons Logo\" style=\"max-width: 1em;max-height:1em;margin-left: .2em;\" /><img src=\"https://mirrors.creativecommons.org/presskit/icons/by.svg\" alt=\"Creative Commons Attribution Logo\" style=\"max-width: 1em;max-height:1em;margin-left: .2em;\" /><img src=\"https://mirrors.creativecommons.org/presskit/icons/sa.svg\" alt=\"Creative Commons Share-Alike Logo\" style=\"max-width: 1em;max-height:1em;margin-left: .2em;\" /> license.\n\nLearn more about the CSL project at their home page: [[https://citationstyles.org/]].\n\n")
+
+# ==== EXPORT SCRIPTS ====
+
+#+MACRO: make_call_filter_functions (eval (concat "\n#+CALL: " (expand-file-name "src/common/filter-functions.org" (project-root (project-current nil))) ":filter-functions() :eval yes :exports results :results none\n\n"))
+
+# ==== PUT IT ALL TOGETHER ====
+
+#+MACRO: extra_config {{{make_cite_export}}}{{{make_html_link_up}}}{{{make_call_filter_functions}}}
+#+BIND: org-export-filter-final-output-functions (metroidisprettycool-github-io--normalize-urls-filter metroidisprettycool-github-io--tidy-filter)

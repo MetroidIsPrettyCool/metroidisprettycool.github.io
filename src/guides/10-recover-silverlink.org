@@ -1,3 +1,5 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
 #+TITLE: How to Recover a Bricked SilverLink Cable
 #+SUBTITLE: /Actually/ Troubleshooting the "Unknown Device" and "TUSB3410 Boot Device" Error Message when Using TI
 #+SUBTITLE: Connect™ Software for Windows®.
@@ -8,7 +10,7 @@ here I can do all the editing I want without getting in trouble for bumping.)
 This is a TI-GRAPH LINK USB cable, commonly referred to as a "SilverLink":
 
 #+begin_center
-#+ATTR_HTML: :style width:50%;margin-left:auto;margin-right:auto
+#+CAPTION: A silver-colored computer cable; with a USB plug on one end, a phone jack on the other, and a circuit board in the middle.
 [[../images/SilverLink.webp]]
 #+end_center
 
@@ -26,6 +28,7 @@ bit-banging driver, but USB doesn't allow that kind of granular pin-level contro
 That's what the circuit board in the middle is for. In revision B models (the most commonly-produced revision, as far as
 I can tell) it's a simple setup based around an off-the-shelf TI microcontroller called the TUSB3410, an I^2​C EEPROM for
 storing firmware, and a few support components (oscillator, etc.).
+
 * The Problem
 The TUSB3410 boot process (run on cable insertion, as the SilverLink draws power from the USB rail) always involves
 checking to see if it's attached to an I^2​C EEPROM with firmware code to execute. If it finds one, and its contents are
@@ -42,6 +45,7 @@ You can try to follow TI's support guide for what to do:
 - [[https://education.ti.com/en/customer-support/knowledge-base/ti-83-84-plus-family/troubleshooting-messages-unexpected-results/14060]]
 
 but their suggestions probably won't help. Here's how to /actually/ fix the problem:
+
 * The Fix
 1. Download the TUSB3x10 EEPROM Burner from here: [[https://www.ti.com/tool/download/SLLC443/01.00.00.0C]].
 
@@ -77,10 +81,13 @@ but their suggestions probably won't help. Here's how to /actually/ fix the prob
     write.
 
 11. Unplug and re-plug your cable, and it should show up as a SilverLink again!
+
 * Further Troubleshooting
+
 ** I Don't See "TUSB3410 EEPROM Burner Instance (1.00)" in the EEPROM Burner
 You'll need to reinstall the TUSB3410 driver. Check page 16 of the manual
 ([[https://www.ti.com/lit/ug/sllu205/sllu205.pdf]]) and follow the steps it describes.
+
 ** SilverLink Stops Enumerating
 If your SilverLink stops showing up /at all/ after flashing the firmware, this might be because you pressed "Program"
 instead of "Program Full Binary Image". Your SilverLink has been tricked into a state where it /thinks/ the EEPROM
@@ -108,6 +115,7 @@ Here's the procedure:
 
 Again, I have no idea how reliable or safe this procedure might be -- perform at your own risk! All I know is that it
 worked for me the once.
+
 * Closing Thoughts
 No clue what causes the corruption in the first place, or how long this fix will last. It might be because the EEPROM's
 write protect pin is set to "write enable"? It could also just be degrading hardware, for all I know.
@@ -137,11 +145,15 @@ simply rejects all of it. Nothing is signaled to the PC besides "an error occurr
 If we wrote our /own/ firmware, however, all the low-level details are fully exposed and interpretable. There's no
 special hardware support we'd need. Just have the cable enumerate as a generic USB keyboard, translate PLT-KBD scancodes
 into USB scancodes, and Bob's your uncle! That'd be a neat project. Sometime...
-{{{license-footer(2025)}}}
-* Footnotes
-[fn:2] This functionality was never deployed in any actual calculator or keyboard model, as far as I'm aware. IIRC some
-early models of the PLT-KBD had a blanked-out section of their motherboards for a second daisy-chained I/O port?
 
+* {{{license_footer(2025)}}}
+
+* Footnotes
 [fn:1] Not to be confused with the XDG protocol of the same name. \\
 
+\\
+
 See [[https://debrouxl.github.io/tilp-linkguide/hardware.html]] for more.
+
+[fn:2] This functionality was never deployed in any actual calculator or keyboard model, as far as I'm aware. IIRC some
+early models of the PLT-KBD had a blanked-out section of their motherboards for a second daisy-chained I/O port?

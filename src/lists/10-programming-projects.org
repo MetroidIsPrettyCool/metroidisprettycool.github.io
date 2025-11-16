@@ -1,6 +1,9 @@
-#+TITLE: My Wabsite
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
+#+TITLE: My Projects Thus Far
 #+OPTIONS: toc:2
-Hrrrrrng. Always embarrassing to talk about the things you made. It's the [[../essays/00-more-right.org][Wheels Problem]].
+Hrrrrrng. Always embarrassing to talk about the things you made. It's the [[../essays/00-more-right.org][Wheels
+Problem]], I think.
 
 All of these projects -- and especially the ones I'm /not/ showing you -- took up days and weeks and months of my life,
 and by the end of it the number one lesson I'd learned was "oops, that was the wrong way to do it". Very valuable! Also
@@ -11,8 +14,10 @@ demonstrates a progression in skill and not a /re/​gression.
 
 All of 'em toys of varying shades, and most are first tries at new libraries or new patterns or new technologies or new
 somethings-or-others. One day I'd like to go back to all of them and do 'em right. /More/ right, anyway...
+
 * Branchless FizzBuzz 2
 [[https://github.com/MetroidIsPrettyCool/branchless-fizzbuzz-2]]
+
 ** Key Technologies
 - Org Mode :: [[https://orgmode.org/]]
 - x64 assembly, via YASM :: [[https://github.com/yasm/yasm]]
@@ -20,14 +25,17 @@ somethings-or-others. One day I'd like to go back to all of them and do 'em righ
 - GNU Make :: [[https://www.gnu.org/software/make/]]
 
 and the "Euler's FizzBuzz" function described here: [[http://philcrissman.net/posts/eulers-fizzbuzz/]].
+
 ** The Pitch
 This is an implementation of the classic "FizzBuzz" interview problem in a combination of x64 assembly and C that uses
-absolutely no conditional logic to implement the actual "What do we print for this number ~i~?" logic, inspired by [[http://philcrissman.net/posts/eulers-fizzbuzz/][this
-blog post]]. Doing so in assembly was not /strictly/ necessary, of course, but I wanted full control of the executable's
-content. (Can't trust an optimizing compiler to follow my silly rules.)
+absolutely no conditional logic to implement the actual "What do we print for this number ~i~?" logic, inspired by
+[[http://philcrissman.net/posts/eulers-fizzbuzz/][this blog post]]. Doing so in assembly was not /strictly/ necessary,
+of course, but I wanted full control of the executable's content. (Can't trust an optimizing compiler to follow my silly
+rules.)
 
 This is also an attempt to explore so-called "literate programming" with Emacs ~org-mode~. The README is the README, and
 also the source code, and also the comments, and also the documentation; all of it interleaved together.
+
 ** Post-Mortem
 1. This one is misnamed, which I only realized too late. It should be something like "No-Conditional Logic FizzBuzz".
 
@@ -64,15 +72,18 @@ also the source code, and also the comments, and also the documentation; all of 
    Nonetheless, I still find myself wanting to do this again. For scripts, configuration files, small personal projects,
    little corners of big projects, perhaps documentation, stuff you were already using Emacs for... I can see a home for
    ~org-babel~ here.
+
 * Balanced Ternary in /Minecraft/
 No repository, sorry, but here's a short video I made:
 
 #+begin_center
-[[yt:bKLdSUhCEEE]]
+[[yt:bKLdSUhCEEE][YouTube video: ~2 Minutes of a Minecraft Five-Trit-Wide Full Adder Solving 69+34]]
 #+end_center
+
 ** Key Technologies
 - /Minecraft: Java Edition/ :: [[https://minecraft.wiki/w/Minecraft_Wiki]]
 - Balanced ternary :: [[https://en.wikipedia.org/wiki/Balanced_ternary]]
+
 ** The Pitch
 Okay, so, a bit of context is needed here.
 
@@ -90,9 +101,10 @@ Another thing that /Minecraft/ is famous for is its "emergent complexity". With 
 development, systems start to pile up. They interact in inobvious ways. We find that, with the right conditions, at the
 right intersections of rules, there are new games to play within the metaphysics of the old.
 
-Case in point, the game's only two fluids -- water and lava -- have [[https://minecraft.wiki/w/Fluid][a surprisingly detailed behavior and interaction
-model]]. They "choose" where to flow based on the conditions of their environment ("What's the quickest path to go 'down'
-a unit?"), and when they flow into each other, they change their environment (create a solid block of some kind).
+Case in point, the game's only two fluids -- water and lava -- have [[https://minecraft.wiki/w/Fluid][a surprisingly
+detailed behavior and interaction model]]. They "choose" where to flow based on the conditions of their environment
+("What's the quickest path to go 'down' a unit?"), and when they flow into each other, they change their environment
+(create a solid block of some kind).
 
 By creating a network of careful shaped channels, we can create circuits which discriminate between possible inputs and
 selectively create blockages throughout the network. These blockages then halt, redirect, split, combine, or otherwise
@@ -107,20 +119,43 @@ on the obscure "balanced ternary" number system, where water represents a digit 
 value of ~0~, and lava represents a digit value of ~-1~.
 
 The embedded video is a sped-up demonstration of a full adder I built using these principles (and a few others, like
-sand towers which communicate information "uphill"), solving this problem:
+sand towers, which communicate information "uphill"), solving /this/ addition problem:
 
-\begin{align*} 69 + 34 = 103 = \\
-(1 \cdot 3^4 + 0 \cdot 3^3 + -1 \cdot 3^2 + -1 \cdot 3^1 + 0 \cdot 3^0) \\
-+ (0 \cdot 3^4 + 1 \cdot 3^3 + 1 \cdot 3^2 + -1 \cdot 3^1 + 1 \cdot 3^0) \\
-= (1 \cdot 3^4 + 1 \cdot 3^3 + -1 \cdot 3^2 + 1 \cdot 3^1 + 1 \cdot 3^0) \end{align*}
+#+begin_center
+69 + 34 = 103
 
-Or "Water Air Lava Lava Air" + "Air Water Water Lava Water" = "Water Water Lava Water Water".
+/or.../
+
+\begin{array}{rrrrrrrr}
+  & 1\cdot 3^4 & + & 0\cdot 3^3 & + & -1\cdot 3^2 & + & -1\cdot 3^1 & + & 0\cdot 3^0 \\
+  + & 0\cdot 3^4 & + & 1\cdot 3^3 & + & 1\cdot 3^2 & + & -1\cdot 3^1 & + & 1\cdot 3^0 \\
+  \hline
+  = & 1\cdot 3^4 & + & 1\cdot 3^3 & + & -1\cdot 3^2 & + & 1\cdot 3^1 & + & 1\cdot 3^0
+\end{array}
+
+/or.../
+
+#+begin_export html
+<span class="water">Water</span> Air <span class="lava">Lava</span> <span class="lava">Lava</span> Air
++ Air <span class="water">Water Water</span> <span class="lava">Lava</span> <span class="water">Water</span>
+= <span class="water">Water Water</span> <span class="lava">Lava</span> <span class="water">Water Water</span>
+#+end_export
+
+/or.../
+
+#+begin_export html
+  10<span class="n1">11</span>0
++ 011<span class="n1">1</span>1
+= 11<span class="n1">1</span>11
+#+end_export
+#+end_center
+
 ** Post-Mortem
 1. That video is just... not very good. It's sped up by a weird coefficient, it's impossible to tell what's going on, I
    feel like I'm always pointing the camera at the wrong part of the circuit, I didn't bother to disable the speed-up
    effect for the "outro"...
 
-   I'm a pretty poor video editor, but I know I can do better than this.
+   I'm a pretty poor video editor, but I know I can do better than /this./
 
 2. It's shame I never got around to writing up a decent guide to the theories of operation here. Or made a central
    repository of circuit designs. There aren't a lot of people out there to whom this is all "background knowledge", so
@@ -135,26 +170,31 @@ Or "Water Air Lava Lava Air" + "Air Water Water Lava Water" = "Water Water Lava 
    was /staggering,/ and I mean that as an insult to the sand solution. What's impressive about a glorified sluice gate?
 
    If I revisit this topic, I'd like to eschew sand-based techniques where possible.
+
 * i68
 - i68apollo :: https://github.com/MetroidIsPrettyCool/i68apollo
 - i68soyuz :: https://github.com/MetroidIsPrettyCool/i68soyuz
+
 ** Key Technologies
+
 *** "Apollo"
 - Rust programming language & toolchain :: [[https://rust-lang.org/]]
 - libusb (via rusb crate) :: [[https://libusb.info/]] ([[https://crates.io/crates/rusb]])
 - uinput (via uinput crate) :: [[https://www.kernel.org/doc/html/v4.12/input/uinput.html]]
   ([[https://docs.rs/uinput/latest/uinput/]])
+
 *** "Soyuz"
 - TI-92 Plus, TI-89, TI-83 Plus graphing calculators :: [[https://en.wikipedia.org/wiki/TI-92_series]],
   [[https://en.wikipedia.org/wiki/TI-89_series]], [[https://en.wikipedia.org/wiki/TI-83_series]]
 - C programming language, via TIGCC :: [[http://tigcc.ticalc.org/]]
 - C programming language & Z80 assembly, via z88dk :: [[https://github.com/z88dk/z88dk]]
 - GNU Make :: [[https://www.gnu.org/software/make/]]
+
 ** The Pitch
 This also needs some context. This monster:
 
 #+begin_center
-#+ATTR_HTML: :style width:50%;margin-left:auto;margin-right:auto
+#+CAPTION: A large, 90s-styled graphing calculator with a landscape form factor.
 [[file:../images/TI-92_Plus.webp]]
 #+end_center
 
@@ -177,6 +217,7 @@ This required a two-part solution:
 
 I decided to name them "Apollo" and "Soyuz", respectively, after the 1975 Apollo-Soyuz Test Project. "Two
 ideologically-opposed machines coming together for the sake of progress" and so on.
+
 ** Post-Mortem
 1. I still like that logo I made. Probably the only thing here I'm still fully happy with.
 
@@ -243,16 +284,20 @@ ideologically-opposed machines coming together for the sake of progress" and so 
    deter me forever.
 
    One day...
+
 * Breakout
 [[https://github.com/MetroidIsPrettyCool/breakout]]
+
 ** Key Technologies
 - Rust programming language & toolchain :: [[https://rust-lang.org/]]
 - OpenGL (via glium crate) :: [[https://www.khronos.org/opengl/]] ([[https://crates.io/crates/glium]])
 - OpenAL (via alto crate) :: [[https://openal.org/]] ([[https://docs.rs/alto/latest/alto/]])
+
 ** Pitch
 This one's old enough that I've forgotten most of the details. An Atari's Breakout-style game, yes. Another crack at
 OpenGL, clearly. There's also some really half-baked OpenAL here, too. I think the goal was just to keep adding features
 until it became a chore, then regroup?
+
 ** Post-Mortem
 1. There's barely any actual OpenAL in this thing. Clearly, an audio engine requires more work to integrate elegantly
    into a program than "just slap in some ~if~ statements". I can see why someone would prefer frameworks that do this
@@ -263,18 +308,22 @@ until it became a chore, then regroup?
    ~struct~, that's very elegant.
 
 3. I'm still not happy with how I handled working with ~glium~, but at least it's saner than ~flap~.
+
 * Flap
 [[https://github.com/MetroidIsPrettyCool/flap]]
+
 ** Key Technologies
 - Rust programming language & toolchain :: [[https://rust-lang.org/]]
 - OpenGL (via glium crate) :: [[https://www.khronos.org/opengl/]] ([[https://crates.io/crates/glium]])
 - Font rendering, via the rusttype cate :: [[https://docs.rs/rusttype/latest/rusttype/]]
+
 ** Pitch
 An earlier attempt to get to grips with ~glium~, Rust's biggest (?) OpenGL wrapper crate. I'd used OpenGL before, in
 both C with ~glut~ and in C# with OpenTK. Never got far enough in either language to make something interesting,
 unfortunately.
 
 Also, an attempt at "simplicity" that mostly backfired.
+
 ** Post-Mortem
 1. I quite like ~glium~, I think it provides exactly the kinds of abstractions over OpenGL that I want.
 
@@ -287,12 +336,15 @@ Also, an attempt at "simplicity" that mostly backfired.
 
    With hindsight, I think this would be a lot easier to adapt to a composition pattern than I'd realized. Perhaps I'll
    give that a try in the future.
+
 * Chess 2
 [[https://github.com/MetroidIsPrettyCool/Chess2]]
+
 ** Key Technologies
 - Java programming language :: [[https://www.java.com/]]
 - JavaFX :: [[https://openjfx.io/]]
 - FXML :: [[https://openjfx.io/javadoc/25/javafx.fxml/javafx/fxml/doc-files/introduction_to_fxml.html]]
+
 ** Pitch
 #+begin_center
 *Disclaimer:* until now, this list of projects has covered a span of about three-ish years[fn:5]. This is /six/ years
@@ -304,6 +356,7 @@ Maybe, with time, I'll un-private "TOWCBL" and we can all have a nice laugh.
 
 This is a chess-like game I threw together partway through High School, written in Java because that's what AP Computer
 Science A was teaching.
+
 ** Post-Mortem
 1. Still hadn't figured out how to get Emacs to stop mixing tabs and spaces for indention, clearly.
 
@@ -332,8 +385,10 @@ Science A was teaching.
    Probably won't ever come back to FXML /specifically,/ unless I have to, however. My memories are foggy but I recall
    it as a mostly frustrating experience. Probably didn't help that I *clearly* had no idea what I was doing...
 
-{{{license-footer(2025)}}}
+* {{{license_footer(2025)}}}
+
 * Footnotes
+
 [fn:1] As far as the "gamer" public seems to care, anyway.
 
 [fn:2] Sand is one of a handful of "gravity blocks" in /Minecraft/ which will fall if unsupported. See

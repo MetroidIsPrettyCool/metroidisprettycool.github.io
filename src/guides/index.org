@@ -1,9 +1,6 @@
-#+TITLE: Non-Opinionated Guide Index
-#+HTML_LINK_UP: ../index.xhtml
-Non-opinionated guides on how to do various things.
-* General-Topic
-* Technical
-1. [[file:10-recover-silverlink.org][How to Recover a Bricked SilverLink Cable: /Actually/ Troubleshooting the "Unknown Device" and "TUSB3410 Boot Device"
-   Error Message when Using TI Connect™ Software for Windows®.]]
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
 
-{{{license-footer(2025)}}}
+{{{make_call_make_index(Non-opinionated guides on how to do various things.)}}}
+
+* {{{license_footer(2025)}}}

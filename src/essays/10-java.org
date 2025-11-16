@@ -1,3 +1,5 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
 #+TITLE: On Java
 
 There were object oriented languages before Java, and there have been object oriented languages since Java. But I think
@@ -69,14 +71,14 @@ Backwards compatibility? In a post-JSR 376 world?[fn:5] People don't get stuck o
 Oracle has never had any problems hard-locking you and your dependencies to specific runtime versions -- and because
 "only dynamic linking ever for any reason", that means the JDK and toolchain, too. Bring in a single critical dependency
 using a removed feature, and the trap swings shut. You can't move up, you can't move down. Oh, does your
-mission-critical third party HAL need CORBA? Sorry, I guess that means you can't use multi-line string literals. Oh,
-does your legacy codebase need to derive base classes from Java EE? Guess you can't migrate the rest of it to Jakarta
-EE, the /namespace/ is different. *What?*
+mission-critical third party HAL need Java Web Start for whatever reason? Sorry, I guess that means you can't use
+multi-line string literals. Oh, does your legacy codebase need to derive base classes from Java EE? Guess you can't
+migrate the rest of it to Jakarta EE, the /namespace/ is different. *What?*
 
-Reflection? Exceptions? Aspect-oriented programming? Runtime inheritance? Come on. Done better by better languages,
-/and/ anti-patterns -- inheritance in particular. ~Dog~ extends ~Animal~ is all well and good, James, but it turns out
-that we need to model our application, too. ~Dog~ extends ~Animal~ extends ~AbstractLivingThingBean~ which implements
-~java.io.Serializable~ and extends ~java.awt.Canvas~ which implements ~java.awt.iamge.ImageObserver~ and
+Reflection? Exceptions? Aspect-oriented programming? Runtime inheritance? /CORBA?/ Come on. Done better by better
+languages, /and/ anti-patterns -- inheritance in particular. ~Dog~ extends ~Animal~ is all well and good, James, but it
+turns out that we need to model our application, too. ~Dog~ extends ~Animal~ extends ~AbstractLivingThingBean~ which
+implements ~java.io.Serializable~ and extends ~java.awt.Canvas~ which implements ~java.awt.iamge.ImageObserver~ and
 ~java.awt.MenuContainer~ and ~java.io.Serializable~ and ~javax.accessibility.Accessible~ and extends
 ~java.awt.Component~ which implements ~java.awt.iamge.ImageObserver~ and ~java.awt.MenuContainer~ and
 ~java.io.Serializable~ and extends ~java.lang.Object~? I think even the evangelists have admitted this doesn't work.
@@ -102,7 +104,8 @@ But you'll never see me advocate for Java. Especially not within education, espe
 especially not if interop with another JVM language is an option. /Please/ use something which respects that your needs
 are different from ~javac~'s needs.
 
-{{{license-footer(2025)}}}
+* {{{license_footer(2025)}}}
+
 * Footnotes
 
 [fn:1] I'll fucking "illegal reflective access" your /dick/, how about that? While the ~ProtectionManager~ watches? Gonna

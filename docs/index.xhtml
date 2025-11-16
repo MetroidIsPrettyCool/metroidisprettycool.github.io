@@ -4,7 +4,7 @@
   <head>
     <meta name="generator" content=
     "HTML Tidy for HTML5 for Linux version 5.7.45" />
-    <!-- 2025-11-08 Sat 12:51 -->
+    <!-- 2025-11-16 Sun 01:09 -->
     <meta charset="utf-8" />
     <meta name="viewport" content=
     "width=device-width, initial-scale=1" />
@@ -200,11 +200,41 @@
     /*]]>*/
     </style>
     <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href=
+    "/stylesheet.css" />
+    <script>
+    <![CDATA[
+    window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+    };
+    ]]>
+    </script>
+    <script id="MathJax-script" async="async" src=
+    "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style type="text/css">
     /*<![CDATA[*/
-    pre.src { background-color: black; color: white; }
-    pre.src-rustic:before { content: 'Rust'; }
-    pre.src-rust:before { content: 'Rust'; }
+    img.c1 {max-width: 1em;max-height:1em;margin-left: .2em;}
     /*]]>*/
     </style>
   </head>
@@ -214,10 +244,12 @@
       "H" href="/index.xhtml">HOME</a>
     </div>
     <div id="content" class="content">
-      <h1 class="title">
-        My Wabsite
-      </h1>
-      <div id="table-of-contents" role="doc-toc">
+      <header>
+        <h1 class="title">
+          My Wabsite
+        </h1>
+      </header>
+      <nav id="table-of-contents" role="doc-toc">
         <h2>
           Table of Contents
         </h2>
@@ -240,10 +272,18 @@
             </li>
             <li>
               <a href="#orgfb60230">2. Sub-Indices</a>
+              <ul>
+                <li>
+                  <a href="#org3fdd02e">2.1. Writing</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#orgda09cc4">3. XHTML? In 2025?</a>
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
       <div id="outline-container-orgb10bf18" class="outline-2">
         <h2 id="orgb10bf18">
           <span class="section-number-2">1.</span> Introduction
@@ -256,24 +296,32 @@
           </h3>
           <div class="outline-text-3" id="text-1-1">
             <p>
-              Hi! Welcome to my <code>#webpresence</code>.
+              Hi! Welcome to my <code>#webpresence</code>. Mostly
+              just GitHub-pages squatting over here.
             </p>
             <p>
-              There’s not much here, which is sort of deliberate.
-              Just wanted to replace the nonsense that was here
-              previously wit something that isn’t <i>obviously
-              unfinished.</i> Maybe I’ll expand later, maybe I
-              won’t. At the moment I have no current plans to do
-              besides GitHub Pages-squat.
+              Figured I’d like somewhere to dump whatever I
+              couldn’t get to work as a regular Tumblr post. Maybe
+              I’ll eventually grow my ambitions, maybe I won’t.
             </p>
             <p>
-              You can find me most places under the username
+              You can find me most other places under the username
               “metroidisprettycool”, “metroidipc”, “mipc”, or some
-              variation thereof. It’s unprofessional, clearly, but
-              I made my first real “social media” account (Reddit,
-              since deleted) under that name and I value
-              consistency more than I value being professional.
+              variation thereof.
             </p>
+            <p>
+              It’s unprofessional, clearly, but I made my first
+              real “social media” account (Reddit, since deleted)
+              under that name, and I value consistency more than I
+              value being professional.
+            </p>
+            <aside id="org708c917">
+              <p>
+                Also, <i>Metroid</i> <b>is</b> pretty cool. Ever
+                try <i>Metroid Prime</i>?<br />
+                <b>Man.</b> That’s a good game.
+              </p>
+            </aside>
           </div>
         </div>
         <div id="outline-container-org143025d" class="outline-3">
@@ -291,30 +339,9 @@
               I tend to pendulum around between “computer nerd
               stuff”, “aerospace nerd stuff”, and watching lots of
               movies while I fantasize about bombing the
-              Map-Territory distinction.
-            </p>
-            <p>
-              As a computer nerd, I like most of the usual computer
-              nerd things. Programming, maintaining my franken-Arch
-              Linux installation, arguing, video games,
-              PC-building, arguing, reading Douglas Hofstadter
-              books and stroking my chin very
-              thoughtful-like,<sup><a id="fnr.1" class="footref"
-              href="#fn.1" role="doc-backlink">1</a></sup> arguing…
-            </p>
-            <p>
-              As a space nerd, I have a big soft spot for the space
-              shuttle. So, very, very, very flawed. But at that
-              time, under those governments, knowing then only what
-              we knew then? I think we’d have been hard-pressed to
-              do better.
-            </p>
-            <p>
-              As a fan of the arts, you’ll find my movie opinions
-              on Letterboxd.<sup><a id="fnr.2" class="footref"
-              href="#fn.2" role="doc-backlink">2</a></sup> I like
-              bold stuff. The unapologetic and hard-to-swallow. Big
-              ideas. Meta-commentary. That sort of thing.
+              Map-Territory distinction. Loops and recursion and
+              self-similarity fascinate me. Y’know, turbonerd
+              stuff.
             </p>
           </div>
         </div>
@@ -327,8 +354,8 @@
             <p>
               <a href="/lists/10-programming-projects.xhtml">Here’s
               a list of some of the big(ish) hobby programming
-              projects I’ve done, alongside my post-mortem thoughts
-              on them.</a>
+              projects I’ve done, and my post-mortem thoughts on
+              each.</a>
             </p>
           </div>
         </div>
@@ -337,53 +364,115 @@
         <h2 id="orgfb60230">
           <span class="section-number-2">2.</span> Sub-Indices
         </h2>
-        <div class="outline-text-2" id="text-2">
-          <p>
-            I’ve divided this site up into sections, based on
-            “article kind”. See those sub-index for lists of what
-            I’ve written:
-          </p>
-          <dl class="org-dl">
-            <dt>
-              <a href="/essays/index.xhtml">Essays</a>
-            </dt>
-            <dd>
-              Various long-form opinions on various topics.
-            </dd>
-            <dt>
-              <a href="/lists/index.xhtml">Lists</a>
-            </dt>
-            <dd>
-              Lists of various kinds, mix of fact and opinion, all
-              entries otherwise too short for something more
-              dedicated.
-            </dd>
-            <dt>
-              <a href="/guides/index.xhtml">Guides</a>
-            </dt>
-            <dd>
-              Non-opinionated guides for how do things that
-              <i>I</i> myself couldn’t find any information on.
-              (I’m not going to waste your time with “how to
-              install a C compiler” or “how to log in to YouTube”.)
-            </dd>
-          </dl>
+        <div class="outline-text-2" id="text-2"></div>
+        <div id="outline-container-org3fdd02e" class="outline-3">
+          <h3 id="org3fdd02e">
+            <span class="section-number-3">2.1.</span> Writing
+          </h3>
+          <div class="outline-text-3" id="text-2-1">
+            <dl class="org-dl">
+              <dt>
+                <a href="/essays/index.xhtml">Essays</a>
+              </dt>
+              <dd>
+                Long-form opinions on various topics.
+              </dd>
+              <dt>
+                <a href="/lists/index.xhtml">Lists</a>
+              </dt>
+              <dd>
+                Lists of several kinds, mix of fact and opinion,
+                all entries otherwise too short for something more
+                dedicated.
+              </dd>
+              <dt>
+                <a href="/guides/index.xhtml">Guides</a>
+              </dt>
+              <dd>
+                Guides for how do things, representing my own
+                original research.
+              </dd>
+            </dl>
+          </div>
         </div>
       </div>
-      <div id="outline-container-orgaf230e8" class="outline-2">
-        <h2 id="orgaf230e8">
+      <div id="outline-container-orgda09cc4" class="outline-2">
+        <h2 id="orgda09cc4">
+          <span class="section-number-2">3.</span> XHTML? In 2025?
+        </h2>
+        <div class="outline-text-2" id="text-3">
+          <p>
+            Pretty good gag, right? <code>:P</code>
+          </p>
+          <p>
+            <br />
+          </p>
+          <p>
+            I have no particular love for XML, it is an
+            embarrassing format. Does anything else epitomize that
+            <i>slavish</i> 90s devotion to bureaucracy quite like
+            DTDs?
+          </p>
+          <p>
+            But I had to pick <i>something,</i> and HTML is just
+            apocalyptic.
+          </p>
+          <p>
+            The Org mode<sup><a id="fnr.1" class="footref" href=
+            "#fn.1" role="doc-backlink">1</a></sup> team seems to
+            concur with my sentiment, given that XHML 1.0-strict is
+            its default doctype for HTML export; so that’s what I
+            started with. <i>Unfortunately</i> – despite proudly
+            embedding a W3C Validtor link at the bottom of every
+            page – they’re <i>also</i> content to do things like
+            spew out style tags in <code>&lt;body&gt;</code>,
+            hardcode DPUB-ARIA attributes without the right
+            doctype,<sup><a id="fnr.2" class="footref" href="#fn.2"
+            role="doc-backlink">2</a></sup> and emit all sorts of
+            illegal entities without exposing the configuration
+            options to fix it.
+          </p>
+          <p>
+            After a bit of work, I found that the XHTML5 doctype,
+            paired with a post-publishing
+            <code>tidy</code><sup><a id="fnr.3" class="footref"
+            href="#fn.3" role="doc-backlink">3</a></sup> hook,
+            seemed to clean up best. So that’s what I stuck with.
+          </p>
+          <p>
+            Will I <i>continue</i> to stick with it? I dunno. The
+            strictness is pretty helpful for scripting some naïve
+            document transformations, like link-rewriting, so I
+            probably won’t switch to plain HTML. Maybe I’ll try to
+            put together an XHMTL 1.0 + WAI-ARIA 1.0 + IFrames DTD
+            at some point, as a bit of experimental archaeology? Or
+            maybe I won’t. This whole ordeal has given me a pretty
+            dim view of document formatting in general –
+            \(\LaTeX\), you’re also part of the problem – so maybe
+            I’ll just go back to hunting mammoths and living in
+            caves instead. Probably a more satisfying lifestyle…
+          </p>
+        </div>
+      </div>
+      <div id="outline-container-org45979c2" class="outline-2">
+        <h2 id="org45979c2">
           License:
         </h2>
-        <div class="outline-text-2" id="text-orgaf230e8">
-          <p>
-            Copyright 2025 <a href=
-            "https://github.com/MetroidIsPrettyCool">Joseph
-            Burke</a>. All original content published to this
-            website is licensed under a <a href=
-            "https://creativecommons.org/licenses/by-sa/4.0/">CC
-            BY-SA 4.0</a> 🅭🅯🄎 license, unless explicitly stated
-            otherwise.
-          </p>
+        <div class="outline-text-2" id="text-org45979c2">
+          Copyright © 2025 <a href=
+          "https://github.com/MetroidIsPrettyCool">Joseph
+          Burke</a>. All original content published to this website
+          is licensed under a <a href=
+          "https://creativecommons.org/licenses/by-sa/4.0/">CC
+          BY-SA 4.0</a><img src=
+          "https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+          alt="Creative Commons Logo" class="c1" /><img src=
+          "https://mirrors.creativecommons.org/presskit/icons/by.svg"
+          alt="Creative Commons Attribution Logo" class=
+          "c1" /><img src=
+          "https://mirrors.creativecommons.org/presskit/icons/sa.svg"
+          alt="Creative Commons Share-Alike Logo" class="c1" />
+          license.
         </div>
       </div>
       <div id="footnotes">
@@ -396,7 +485,8 @@
             "doc-backlink">1</a></sup>
             <div class="footpara" role="doc-footnote">
               <p class="footpara">
-                I’ve only actually read G.E.B. though…
+                <a href=
+                "https://orgmode.org/">https://orgmode.org/</a>
               </p>
             </div>
           </div>
@@ -405,8 +495,33 @@
             "doc-backlink">2</a></sup>
             <div class="footpara" role="doc-footnote">
               <p class="footpara">
+                Prioritizing accessibility is admirable, don’t get
+                me wrong, but I don’t understand why you wouldn’t
+                just use <a href=
+                "https://www.w3.org/WAI/ARIA/Schemata/xhtml-aria-1.dtd">
+                https://www.w3.org/WAI/ARIA/Schemata/xhtml-aria-1.dtd</a>?
+                Or at <i>least</i> bring in the standalone
+                module?<br />
+              </p>
+              <p class="footpara">
+                <br />
+              </p>
+              <p class="footpara">
+                Sure, they aren’t recommended by W3C for real
+                documents; but they <i>also</i> haven’t been
+                touched since 2010, and the DTD traffic problem
+                isn’t exactly pertinent anymore. (Moreover: if you
+                cared so much, you could also host them yourself.)
+              </p>
+            </div>
+          </div>
+          <div class="footdef">
+            <sup><a id="fn.3" class="footnum" href="#fnr.3" role=
+            "doc-backlink">3</a></sup>
+            <div class="footpara" role="doc-footnote">
+              <p class="footpara">
                 <a href=
-                "https://letterboxd.com/metroidipc/">https://letterboxd.com/metroidipc/</a>
+                "https://www.html-tidy.org/">https://www.html-tidy.org/</a>
               </p>
             </div>
           </div>
@@ -418,7 +533,7 @@
         Author: Joseph Burke
       </p>
       <p class="date">
-        Created: 2025-11-08 Sat 12:51
+        Created: 2025-11-16 Sun 01:09
       </p>
       <p class="validation">
         <a href=

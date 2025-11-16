@@ -4,12 +4,12 @@
   <head>
     <meta name="generator" content=
     "HTML Tidy for HTML5 for Linux version 5.7.45" />
-    <!-- 2025-11-08 Sat 12:51 -->
+    <!-- 2025-11-16 Sun 01:09 -->
     <meta charset="utf-8" />
     <meta name="viewport" content=
     "width=device-width, initial-scale=1" />
     <title>
-      My Wabsite
+      My Projects Thus Far
     </title>
     <meta name="author" content="Joseph Burke" />
     <meta name="generator" content="Org Mode" />
@@ -200,13 +200,8 @@
     /*]]>*/
     </style>
     <link rel="icon" type="image/png" href="/favicon.ico" />
-    <style type="text/css">
-    /*<![CDATA[*/
-    pre.src { background-color: black; color: white; }
-    pre.src-rustic:before { content: 'Rust'; }
-    pre.src-rust:before { content: 'Rust'; }
-    /*]]>*/
-    </style>
+    <link rel="stylesheet" type="text/css" href=
+    "/stylesheet.css" />
     <script>
     <![CDATA[
     window.MathJax = {
@@ -239,9 +234,8 @@
     "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style type="text/css">
     /*<![CDATA[*/
-    img.c13 {width:50%;margin-left:auto;margin-right:auto}
-    dt.c12 {font-style: italic}
-    iframe.c11 {margin-left:auto; margin-right:auto}
+    img.c2 {max-width: 1em;max-height:1em;margin-left: .2em;}
+    dt.c1 {font-style: italic}
     /*]]>*/
     </style>
   </head>
@@ -251,10 +245,12 @@
       <a accesskey="H" href="/index.xhtml">HOME</a>
     </div>
     <div id="content" class="content">
-      <h1 class="title">
-        My Wabsite
-      </h1>
-      <div id="table-of-contents" role="doc-toc">
+      <header>
+        <h1 class="title">
+          My Projects Thus Far
+        </h1>
+      </header>
+      <nav id="table-of-contents" role="doc-toc">
         <h2>
           Table of Contents
         </h2>
@@ -264,13 +260,13 @@
               <a href="#org32db1d6">1. Branchless FizzBuzz 2</a>
               <ul>
                 <li>
-                  <a href="#orge31109b">1.1. Key Technologies</a>
+                  <a href="#org414a00f">1.1. Key Technologies</a>
                 </li>
                 <li>
-                  <a href="#orged41ea0">1.2. The Pitch</a>
+                  <a href="#org2012534">1.2. The Pitch</a>
                 </li>
                 <li>
-                  <a href="#orgdec2d1f">1.3. Post-Mortem</a>
+                  <a href="#orgd5a36bb">1.3. Post-Mortem</a>
                 </li>
               </ul>
             </li>
@@ -279,13 +275,13 @@
               <i>Minecraft</i></a>
               <ul>
                 <li>
-                  <a href="#orgd4857f1">2.1. Key Technologies</a>
+                  <a href="#orgc05ed3b">2.1. Key Technologies</a>
                 </li>
                 <li>
-                  <a href="#org950f981">2.2. The Pitch</a>
+                  <a href="#org3f416a9">2.2. The Pitch</a>
                 </li>
                 <li>
-                  <a href="#orged49f22">2.3. Post-Mortem</a>
+                  <a href="#org6e87f79">2.3. Post-Mortem</a>
                 </li>
               </ul>
             </li>
@@ -293,13 +289,13 @@
               <a href="#org720a98c">3. i68</a>
               <ul>
                 <li>
-                  <a href="#org7c11be0">3.1. Key Technologies</a>
+                  <a href="#orge24071e">3.1. Key Technologies</a>
                 </li>
                 <li>
-                  <a href="#orgfeb1d72">3.2. The Pitch</a>
+                  <a href="#org07ceba1">3.2. The Pitch</a>
                 </li>
                 <li>
-                  <a href="#orge840096">3.3. Post-Mortem</a>
+                  <a href="#org7faf2a0">3.3. Post-Mortem</a>
                 </li>
               </ul>
             </li>
@@ -307,13 +303,13 @@
               <a href="#org41e2352">4. Breakout</a>
               <ul>
                 <li>
-                  <a href="#org164c2d6">4.1. Key Technologies</a>
+                  <a href="#org5ca2694">4.1. Key Technologies</a>
                 </li>
                 <li>
-                  <a href="#org7902709">4.2. Pitch</a>
+                  <a href="#org81f9a21">4.2. Pitch</a>
                 </li>
                 <li>
-                  <a href="#orged88311">4.3. Post-Mortem</a>
+                  <a href="#org77735f8">4.3. Post-Mortem</a>
                 </li>
               </ul>
             </li>
@@ -321,13 +317,13 @@
               <a href="#org120ab9f">5. Flap</a>
               <ul>
                 <li>
-                  <a href="#org13859cb">5.1. Key Technologies</a>
+                  <a href="#org2c81fc2">5.1. Key Technologies</a>
                 </li>
                 <li>
-                  <a href="#org04d3cba">5.2. Pitch</a>
+                  <a href="#org37e5a85">5.2. Pitch</a>
                 </li>
                 <li>
-                  <a href="#org6387460">5.3. Post-Mortem</a>
+                  <a href="#org29aaadd">5.3. Post-Mortem</a>
                 </li>
               </ul>
             </li>
@@ -335,23 +331,23 @@
               <a href="#orgf19d4c8">6. Chess 2</a>
               <ul>
                 <li>
-                  <a href="#org9c46569">6.1. Key Technologies</a>
+                  <a href="#org6a94860">6.1. Key Technologies</a>
                 </li>
                 <li>
-                  <a href="#orgff5c7f5">6.2. Pitch</a>
+                  <a href="#org5075ad9">6.2. Pitch</a>
                 </li>
                 <li>
-                  <a href="#org58d8c30">6.3. Post-Mortem</a>
+                  <a href="#org77f53f9">6.3. Post-Mortem</a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
       <p>
         Hrrrrrng. Always embarrassing to talk about the things you
         made. It’s the <a href="/essays/00-more-right.xhtml">Wheels
-        Problem</a>.
+        Problem</a>, I think.
       </p>
       <p>
         All of these projects – and especially the ones I’m
@@ -385,8 +381,8 @@
             https://github.com/MetroidIsPrettyCool/branchless-fizzbuzz-2</a>
           </p>
         </div>
-        <div id="outline-container-orge31109b" class="outline-3">
-          <h3 id="orge31109b">
+        <div id="outline-container-org414a00f" class="outline-3">
+          <h3 id="org414a00f">
             <span class="section-number-3">1.1.</span> Key
             Technologies
           </h3>
@@ -428,8 +424,8 @@
             </p>
           </div>
         </div>
-        <div id="outline-container-orged41ea0" class="outline-3">
-          <h3 id="orged41ea0">
+        <div id="outline-container-org2012534" class="outline-3">
+          <h3 id="org2012534">
             <span class="section-number-3">1.2.</span> The Pitch
           </h3>
           <div class="outline-text-3" id="text-1-2">
@@ -455,8 +451,8 @@
             </p>
           </div>
         </div>
-        <div id="outline-container-orgdec2d1f" class="outline-3">
-          <h3 id="orgdec2d1f">
+        <div id="outline-container-orgd5a36bb" class="outline-3">
+          <h3 id="orgd5a36bb">
             <span class="section-number-3">1.3.</span> Post-Mortem
           </h3>
           <div class="outline-text-3" id="text-1-3">
@@ -556,20 +552,21 @@
           </p>
           <div class="org-center">
             <p>
-              <iframe width="600" height="338" src=
-              "https://www.youtube.com/embed/bKLdSUhCEEE" class=
-              "c11"></iframe>
+              <iframe class="metroidisprettycool-github-io-yt" src=
+              "https://www.youtube.com/embed/bKLdSUhCEEE" title=
+              "YouTube video: ~2 Minutes of a Minecraft Five-Trit-Wide Full Adder Solving 69+34">
+              </iframe>
             </p>
           </div>
         </div>
-        <div id="outline-container-orgd4857f1" class="outline-3">
-          <h3 id="orgd4857f1">
+        <div id="outline-container-orgc05ed3b" class="outline-3">
+          <h3 id="orgc05ed3b">
             <span class="section-number-3">2.1.</span> Key
             Technologies
           </h3>
           <div class="outline-text-3" id="text-2-1">
             <dl class="org-dl">
-              <dt class="c12">
+              <dt class="c1">
                 Minecraft: Java Edition
               </dt>
               <dd>
@@ -586,8 +583,8 @@
             </dl>
           </div>
         </div>
-        <div id="outline-container-org950f981" class="outline-3">
-          <h3 id="org950f981">
+        <div id="outline-container-org3f416a9" class="outline-3">
+          <h3 id="org3f416a9">
             <span class="section-number-3">2.2.</span> The Pitch
           </h3>
           <div class="outline-text-3" id="text-2-2">
@@ -662,22 +659,42 @@
             <p>
               The embedded video is a sped-up demonstration of a
               full adder I built using these principles (and a few
-              others, like sand towers which communicate
-              information “uphill”), solving this problem:
-            </p>\begin{align*} 69 + 34 = 103 = \\ (1 \cdot 3^4 + 0
-            \cdot 3^3 + -1 \cdot 3^2 + -1 \cdot 3^1 + 0 \cdot 3^0)
-            \\ + (0 \cdot 3^4 + 1 \cdot 3^3 + 1 \cdot 3^2 + -1
-            \cdot 3^1 + 1 \cdot 3^0) \\ = (1 \cdot 3^4 + 1 \cdot
-            3^3 + -1 \cdot 3^2 + 1 \cdot 3^1 + 1 \cdot 3^0)
-            \end{align*}
-            <p>
-              Or “Water Air Lava Lava Air” + “Air Water Water Lava
-              Water” = “Water Water Lava Water Water”.
+              others, like sand towers, which communicate
+              information “uphill”), solving <i>this</i> addition
+              problem:
             </p>
+            <div class="org-center">
+              <p>
+                69 + 34 = 103
+              </p>
+              <p>
+                <i>or…</i>
+              </p>\begin{array}{rrrrrrrr} &amp; 1\cdot 3^4 &amp; +
+              &amp; 0\cdot 3^3 &amp; + &amp; -1\cdot 3^2 &amp; +
+              &amp; -1\cdot 3^1 &amp; + &amp; 0\cdot 3^0 \\ + &amp;
+              0\cdot 3^4 &amp; + &amp; 1\cdot 3^3 &amp; + &amp;
+              1\cdot 3^2 &amp; + &amp; -1\cdot 3^1 &amp; + &amp;
+              1\cdot 3^0 \\ \hline = &amp; 1\cdot 3^4 &amp; + &amp;
+              1\cdot 3^3 &amp; + &amp; -1\cdot 3^2 &amp; + &amp;
+              1\cdot 3^1 &amp; + &amp; 1\cdot 3^0 \end{array}
+              <p>
+                <i>or…</i>
+              </p><span class="water">Water</span> Air <span class=
+              "lava">Lava</span> <span class="lava">Lava</span> Air
+              + Air <span class="water">Water Water</span>
+              <span class="lava">Lava</span> <span class=
+              "water">Water</span> = <span class="water">Water
+              Water</span> <span class="lava">Lava</span>
+              <span class="water">Water Water</span>
+              <p>
+                <i>or…</i>
+              </p>10<span class="n1">11</span>0 + 011<span class=
+              "n1">1</span>1 = 11<span class="n1">1</span>11
+            </div>
           </div>
         </div>
-        <div id="outline-container-orged49f22" class="outline-3">
-          <h3 id="orged49f22">
+        <div id="outline-container-org6e87f79" class="outline-3">
+          <h3 id="org6e87f79">
             <span class="section-number-3">2.3.</span> Post-Mortem
           </h3>
           <div class="outline-text-3" id="text-2-3">
@@ -693,7 +710,7 @@
                 </p>
                 <p>
                   I’m a pretty poor video editor, but I know I can
-                  do better than this.
+                  do better than <i>this.</i>
                 </p>
               </li>
               <li>It’s shame I never got around to writing up a
@@ -757,8 +774,8 @@
             </dd>
           </dl>
         </div>
-        <div id="outline-container-org7c11be0" class="outline-3">
-          <h3 id="org7c11be0">
+        <div id="outline-container-orge24071e" class="outline-3">
+          <h3 id="orge24071e">
             <span class="section-number-3">3.1.</span> Key
             Technologies
           </h3>
@@ -842,19 +859,24 @@
             </div>
           </div>
         </div>
-        <div id="outline-container-orgfeb1d72" class="outline-3">
-          <h3 id="orgfeb1d72">
+        <div id="outline-container-org07ceba1" class="outline-3">
+          <h3 id="org07ceba1">
             <span class="section-number-3">3.2.</span> The Pitch
           </h3>
           <div class="outline-text-3" id="text-3-2">
             <p>
               This also needs some context. This monster:
             </p>
-            <div class="org-center figure">
-              <p>
+            <div class="org-center">
+              <figure id="orgcbb63de">
                 <img src="/images/TI-92_Plus.webp" alt=
-                "TI-92_Plus.webp" class="c13" />
-              </p>
+                "TI-92_Plus.webp" />
+                <figcaption>
+                  <span class="figure-number">Figure 1:</span> A
+                  large, 90s-styled graphing calculator with a
+                  landscape form factor.
+                </figcaption>
+              </figure>
             </div>
             <p>
               is the TI-92+ graphing calculator. It’s a neat little
@@ -899,8 +921,8 @@
             </p>
           </div>
         </div>
-        <div id="outline-container-orge840096" class="outline-3">
-          <h3 id="orge840096">
+        <div id="outline-container-org7faf2a0" class="outline-3">
+          <h3 id="org7faf2a0">
             <span class="section-number-3">3.3.</span> Post-Mortem
           </h3>
           <div class="outline-text-3" id="text-3-3">
@@ -1076,8 +1098,8 @@
             "https://github.com/MetroidIsPrettyCool/breakout">https://github.com/MetroidIsPrettyCool/breakout</a>
           </p>
         </div>
-        <div id="outline-container-org164c2d6" class="outline-3">
-          <h3 id="org164c2d6">
+        <div id="outline-container-org5ca2694" class="outline-3">
+          <h3 id="org5ca2694">
             <span class="section-number-3">4.1.</span> Key
             Technologies
           </h3>
@@ -1111,8 +1133,8 @@
             </dl>
           </div>
         </div>
-        <div id="outline-container-org7902709" class="outline-3">
-          <h3 id="org7902709">
+        <div id="outline-container-org81f9a21" class="outline-3">
+          <h3 id="org81f9a21">
             <span class="section-number-3">4.2.</span> Pitch
           </h3>
           <div class="outline-text-3" id="text-4-2">
@@ -1126,8 +1148,8 @@
             </p>
           </div>
         </div>
-        <div id="outline-container-orged88311" class="outline-3">
-          <h3 id="orged88311">
+        <div id="outline-container-org77735f8" class="outline-3">
+          <h3 id="org77735f8">
             <span class="section-number-3">4.3.</span> Post-Mortem
           </h3>
           <div class="outline-text-3" id="text-4-3">
@@ -1164,8 +1186,8 @@
             "https://github.com/MetroidIsPrettyCool/flap">https://github.com/MetroidIsPrettyCool/flap</a>
           </p>
         </div>
-        <div id="outline-container-org13859cb" class="outline-3">
-          <h3 id="org13859cb">
+        <div id="outline-container-org2c81fc2" class="outline-3">
+          <h3 id="org2c81fc2">
             <span class="section-number-3">5.1.</span> Key
             Technologies
           </h3>
@@ -1197,8 +1219,8 @@
             </dl>
           </div>
         </div>
-        <div id="outline-container-org04d3cba" class="outline-3">
-          <h3 id="org04d3cba">
+        <div id="outline-container-org37e5a85" class="outline-3">
+          <h3 id="org37e5a85">
             <span class="section-number-3">5.2.</span> Pitch
           </h3>
           <div class="outline-text-3" id="text-5-2">
@@ -1216,8 +1238,8 @@
             </p>
           </div>
         </div>
-        <div id="outline-container-org6387460" class="outline-3">
-          <h3 id="org6387460">
+        <div id="outline-container-org29aaadd" class="outline-3">
+          <h3 id="org29aaadd">
             <span class="section-number-3">5.3.</span> Post-Mortem
           </h3>
           <div class="outline-text-3" id="text-5-3">
@@ -1262,8 +1284,8 @@
             "https://github.com/MetroidIsPrettyCool/Chess2">https://github.com/MetroidIsPrettyCool/Chess2</a>
           </p>
         </div>
-        <div id="outline-container-org9c46569" class="outline-3">
-          <h3 id="org9c46569">
+        <div id="outline-container-org6a94860" class="outline-3">
+          <h3 id="org6a94860">
             <span class="section-number-3">6.1.</span> Key
             Technologies
           </h3>
@@ -1294,8 +1316,8 @@
             </dl>
           </div>
         </div>
-        <div id="outline-container-orgff5c7f5" class="outline-3">
-          <h3 id="orgff5c7f5">
+        <div id="outline-container-org5075ad9" class="outline-3">
+          <h3 id="org5075ad9">
             <span class="section-number-3">6.2.</span> Pitch
           </h3>
           <div class="outline-text-3" id="text-6-2">
@@ -1322,8 +1344,8 @@
             </p>
           </div>
         </div>
-        <div id="outline-container-org58d8c30" class="outline-3">
-          <h3 id="org58d8c30">
+        <div id="outline-container-org77f53f9" class="outline-3">
+          <h3 id="org77f53f9">
             <span class="section-number-3">6.3.</span> Post-Mortem
           </h3>
           <div class="outline-text-3" id="text-6-3">
@@ -1388,20 +1410,25 @@
           </div>
         </div>
       </div>
-      <div id="outline-container-org09e4f0c" class="outline-2">
-        <h2 id="org09e4f0c">
+      <div id="outline-container-org8499b15" class="outline-2">
+        <h2 id="org8499b15">
           License:
         </h2>
-        <div class="outline-text-2" id="text-org09e4f0c">
-          <p>
-            Copyright 2025 <a href=
-            "https://github.com/MetroidIsPrettyCool">Joseph
-            Burke</a>. All original content published to this
-            website is licensed under a <a href=
-            "https://creativecommons.org/licenses/by-sa/4.0/">CC
-            BY-SA 4.0</a> 🅭🅯🄎 license, unless explicitly stated
-            otherwise.
-          </p>
+        <div class="outline-text-2" id="text-org8499b15">
+          Copyright © 2025 <a href=
+          "https://github.com/MetroidIsPrettyCool">Joseph
+          Burke</a>. All original content published to this website
+          is licensed under a <a href=
+          "https://creativecommons.org/licenses/by-sa/4.0/">CC
+          BY-SA 4.0</a><img src=
+          "https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+          alt="Creative Commons Logo" class="c2" /><img src=
+          "https://mirrors.creativecommons.org/presskit/icons/by.svg"
+          alt="Creative Commons Attribution Logo" class=
+          "c2" /><img src=
+          "https://mirrors.creativecommons.org/presskit/icons/sa.svg"
+          alt="Creative Commons Share-Alike Logo" class="c2" />
+          license.
         </div>
       </div>
       <div id="footnotes">
@@ -1485,7 +1512,7 @@
         Author: Joseph Burke
       </p>
       <p class="date">
-        Created: 2025-11-08 Sat 12:51
+        Created: 2025-11-16 Sun 01:09
       </p>
       <p class="validation">
         <a href=

@@ -4,7 +4,7 @@
   <head>
     <meta name="generator" content=
     "HTML Tidy for HTML5 for Linux version 5.7.45" />
-    <!-- 2025-11-08 Sat 12:51 -->
+    <!-- 2025-11-16 Sun 01:26 -->
     <meta charset="utf-8" />
     <meta name="viewport" content=
     "width=device-width, initial-scale=1" />
@@ -200,23 +200,18 @@
     /*]]>*/
     </style>
     <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href=
+    "/stylesheet.css" />
     <style type="text/css">
     /*<![CDATA[*/
-    pre.src { background-color: black; color: white; }
-    pre.src-rustic:before { content: 'Rust'; }
-    pre.src-rust:before { content: 'Rust'; }
-    /*]]>*/
-    </style>
-    <style type="text/css">
-    /*<![CDATA[*/
-    span.c10 {color: #c2fbfb;}
-    span.c9 {color: #d4b352;}
-    span.c8 {color: #fef9fe; background-color: #060418;}
-    span.c7 {color: #ffa754; font-weight: bold;}
-    span.c6 {color: #ebd89d;}
-    span.c5 {color: #dcb58e;}
-    span.c4 {color: #fb566b; font-weight: bold;}
-    iframe.c3 {margin-left:auto; margin-right:auto}
+    img.c8 {max-width: 1em;max-height:1em;margin-left: .2em;}
+    span.c7 {color: #c2fbfb;}
+    span.c6 {color: #fef9fe; background-color: #060418;}
+    span.c5 {color: #ffa754; font-weight: bold;}
+    span.c4 {color: #d4b352;}
+    span.c3 {color: #ebd89d;}
+    span.c2 {color: #dcb58e;}
+    span.c1 {color: #fb566b; font-weight: bold;}
     /*]]>*/
     </style>
   </head>
@@ -226,12 +221,15 @@
       <a accesskey="H" href="/index.xhtml">HOME</a>
     </div>
     <div id="content" class="content">
-      <h1 class="title">
-        Taking Sides!<br />
-        <span class="subtitle">Opinions On Some Trivial
-        Debates</span>
-      </h1>
-      <div id="table-of-contents" role="doc-toc">
+      <header>
+        <h1 class="title">
+          Taking Sides!
+        </h1>
+        <p class="subtitle" role="doc-subtitle">
+          Opinions On Some Trivial Debates
+        </p>
+      </header>
+      <nav id="table-of-contents" role="doc-toc">
         <h2>
           Table of Contents
         </h2>
@@ -243,75 +241,15 @@
                 <li>
                   <a href="#orgba109ef">1.1. Systems of
                   Measurement</a>
-                  <ul>
-                    <li>
-                      <a href="#org7acaab6">1.1.1. 12-Hour Time or
-                      24-Hour Time?</a>
-                    </li>
-                    <li>
-                      <a href="#orgc779bbf">1.1.2. Best Date
-                      Format?</a>
-                    </li>
-                    <li>
-                      <a href="#orge0e6497">1.1.3. Fahrenheit or
-                      Celsius?</a>
-                    </li>
-                    <li>
-                      <a href="#org05227bc">1.1.4. Daylight Savings
-                      Time or Standard Time?</a>
-                    </li>
-                  </ul>
                 </li>
                 <li>
                   <a href="#org4d8bb57">1.2. Food</a>
-                  <ul>
-                    <li>
-                      <a href="#orge234b00">1.2.1. Pineapple on
-                      Pizza?</a>
-                    </li>
-                    <li>
-                      <a href="#orgdcd2f4e">1.2.2. Coke or
-                      Pepsi?</a>
-                    </li>
-                    <li>
-                      <a href="#org59d81b9">1.2.3. Are Brussels
-                      Sprouts Good?</a>
-                    </li>
-                  </ul>
                 </li>
                 <li>
                   <a href="#org2fc476c">1.3. Language</a>
-                  <ul>
-                    <li>
-                      <a href="#org057eaf4">1.3.1. How Many Spaces
-                      After a Period?</a>
-                    </li>
-                    <li>
-                      <a href="#org17b74ff">1.3.2. Oxford
-                      Comma?</a>
-                    </li>
-                    <li>
-                      <a href="#orgaa0b0a1">1.3.3. Order of
-                      Punctuation with Quotation Marks?</a>
-                    </li>
-                    <li>
-                      <a href="#orgba433d7">1.3.4. Is it pronounced
-                      /​ɡɪf​/ or /​d͡ʒɪf​/?</a>
-                    </li>
-                  </ul>
                 </li>
                 <li>
-                  <a href="#org185b8ba">1.4. Other</a>
-                  <ul>
-                    <li>
-                      <a href="#org7153b9c">1.4.1. Should You Rinse
-                      Dishes Before the Dishwasher?</a>
-                    </li>
-                    <li>
-                      <a href="#orgf815670">1.4.2. Is the Ship of
-                      Theseus Still the Same Ship?</a>
-                    </li>
-                  </ul>
+                  <a href="#orgb54e8b9">1.4. Other</a>
                 </li>
               </ul>
             </li>
@@ -320,81 +258,18 @@
               <ul>
                 <li>
                   <a href="#org86549f9">2.1. Paradigms</a>
-                  <ul>
-                    <li>
-                      <a href="#org1cda84d">2.1.1. Functional vs.
-                      OOP?</a>
-                    </li>
-                    <li>
-                      <a href="#orgfbeecef">2.1.2. Dynamic vs.
-                      Static Typing?</a>
-                    </li>
-                    <li>
-                      <a href="#org8313124">2.1.3. Strong vs. Weak
-                      Typing?</a>
-                    </li>
-                    <li>
-                      <a href="#orgf566344">2.1.4. Is C Really
-                      “Low-Level”?</a>
-                    </li>
-                  </ul>
                 </li>
                 <li>
                   <a href="#org8ccffe2">2.2. Hardware</a>
-                  <ul>
-                    <li>
-                      <a href="#org6b6d51c">2.2.1. AMD vs.
-                      Intel?</a>
-                    </li>
-                    <li>
-                      <a href="#org2c7cd60">2.2.2. RISC vs.
-                      CISC?</a>
-                    </li>
-                  </ul>
                 </li>
                 <li>
                   <a href="#org3b17a3b">2.3. Ideology</a>
-                  <ul>
-                    <li>
-                      <a href="#org0251d1b">2.3.1. LLMs and “Vibe
-                      Coding”?</a>
-                    </li>
-                    <li>
-                      <a href="#org7b2c22a">2.3.2. UNIX
-                      philosophy?</a>
-                    </li>
-                    <li>
-                      <a href="#org02be15f">2.3.3. GPL vs MIT?</a>
-                    </li>
-                  </ul>
                 </li>
                 <li>
                   <a href="#orgd8ac256">2.4. Formatting</a>
-                  <ul>
-                    <li>
-                      <a href="#org7447d29">2.4.1. Tabs vs.
-                      Spaces?</a>
-                    </li>
-                    <li>
-                      <a href="#orgdec8a6d">2.4.2. Significant
-                      Whitespace?</a>
-                    </li>
-                    <li>
-                      <a href="#org81893cb">2.4.3. Brace Style?</a>
-                    </li>
-                    <li>
-                      <a href="#orgf30a69a">2.4.4. In C: <code>int
-                      *foo;</code> or <code>int* foo;</code>?</a>
-                    </li>
-                  </ul>
                 </li>
                 <li>
-                  <a href="#orgef3db47">2.5. Other</a>
-                  <ul>
-                    <li>
-                      <a href="#orgb4c556b">2.5.1. Editor War?</a>
-                    </li>
-                  </ul>
+                  <a href="#org1a42a1a">2.5. Other</a>
                 </li>
               </ul>
             </li>
@@ -402,25 +277,13 @@
               <a href="#orgb3c517d">3. Art and Media</a>
               <ul>
                 <li>
-                  <a href="#orgbab86bd">3.1. Is ’Stupid Modern Art’
-                  (e.g. <i>Comedian</i> [2019] by Maurizio
-                  Cattelan) Really Art?</a>
+                  <a href="#orge82f3b1">3.1. Philosophy</a>
                 </li>
                 <li>
-                  <a href="#org6385221">3.2. Foreign Language
-                  Audio: Dubbing or Subtitles?</a>
+                  <a href="#org85fcbc4">3.2. Specific Works</a>
                 </li>
                 <li>
-                  <a href="#org3046337">3.3. Vinyl vs.
-                  Streaming?</a>
-                </li>
-                <li>
-                  <a href="#org6b90740">3.4. Physical Movies or
-                  Streaming?</a>
-                </li>
-                <li>
-                  <a href="#org9568472">3.5. Garfield or
-                  Heathcliff?</a>
+                  <a href="#org83fc105">3.3. Medium</a>
                 </li>
               </ul>
             </li>
@@ -428,22 +291,17 @@
               <a href="#orgd8d40af">4. Space and Spaceflight</a>
               <ul>
                 <li>
-                  <a href="#orgfd01d50">4.1. Is Pluto Still a
-                  Planet?</a>
+                  <a href="#orga9629d9">4.1. Astronomy</a>
                 </li>
                 <li>
-                  <a href="#org3b98ff9">4.2. Space Shuttle Vs.
-                  Buran (or) Energia?</a>
-                </li>
-                <li>
-                  <a href="#org9901e7b">4.3. Who Won the Space
-                  Race?</a>
+                  <a href="#orgcd4d7eb">4.2. Spaceflight
+                  History</a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
       <div id="outline-container-orga314464" class="outline-2">
         <h2 id="orga314464">
           <span class="section-number-2">1.</span> General-Topic
@@ -462,9 +320,9 @@
             </h4>
             <div class="outline-text-4" id="text-1-1-1">
               <p>
-                When I wake up from a nap, I want the least
+                When I wake up from a nap, I want as little
                 ambiguity possible about whether it’s the afternoon
-                or next morning. 24 hour time.
+                or next morning. 24 hour time!
               </p>
             </div>
           </div>
@@ -475,35 +333,37 @@
             </h4>
             <div class="outline-text-4" id="text-1-1-2">
               <p>
-                ISO 8601 is basically the only one with an
-                exclusive property: it makes lexicographic ordering
-                and temporal ordering the same. For that it’s sort
-                of a no-brainer to standardize on, if you need to
-                standardize on something.
+                ISO 8601 is basically the only one that has a
+                property the others don’t: it makes lexicographic
+                ordering and temporal ordering the same. If you
+                need to standardize on something, then, it only
+                makes sense to standardize on the one that’s
+                strictly more useful.
               </p>
               <p>
-                I’m also a fan of the idea behind the “Holocene
-                calendar” “human era calendar” – take the current
-                year, prefix a ’1’. That gives you roughly (around
-                300 years off) the number of years since the start
-                of the Holocene, without sacrificing your ability
-                to easily parse the current Gregorian year. A nice
-                little reminder of the dizzying depth of history.
-                (Or the relative shortness of our dominance here.
-                Only ten thousand years?)
+                Relatedly, I’m a fan of the so-called “Holocene
+                calendar” or “human era calendar”. Just take the
+                current year, prefix a ’1’, and that gives you
+                roughly (around 300 years off) the number of years
+                since the start of the Holocene, <i>without</i>
+                sacrificing your ability to easily parse out the
+                current Gregorian year. I think that’s a nice
+                little reminder of the dizzying depth of human
+                history. (Or perhaps from a geologic perspective,
+                its dizzying shallowness. Only ten thousand years?)
               </p>
               <p>
-                So wherever I need a time format string, I usually
-                default to <code>1%Y-%m-%d %H:%M:%S.%N</code> or
-                <code>1%Y-%m-%dT%H:%M:%S.%N</code> – just lop off
+                So: wherever I need a time format string, I pick
+                <code>1%Y-%m-%d %H:%M:%S.%N</code> (or
+                <code>1%Y-%m-%dT%H:%M:%S.%N</code>) – just lop off
                 any precision you don’t need.
               </p>
             </div>
           </div>
-          <div id="outline-container-orge0e6497" class="outline-4">
-            <h4 id="orge0e6497">
+          <div id="outline-container-orgdc6a8cb" class="outline-4">
+            <h4 id="orgdc6a8cb">
               <span class="section-number-4">1.1.3.</span>
-              Fahrenheit or Celsius?
+              Fahrenheit Vs. Celsius?
             </h4>
             <div class="outline-text-4" id="text-1-1-3">
               <p>
@@ -540,10 +400,10 @@
               </p>
             </div>
           </div>
-          <div id="outline-container-org05227bc" class="outline-4">
-            <h4 id="org05227bc">
+          <div id="outline-container-orgaebae2d" class="outline-4">
+            <h4 id="orgaebae2d">
               <span class="section-number-4">1.1.4.</span> Daylight
-              Savings Time or Standard Time?
+              Savings Time Vs. Standard Time?
             </h4>
             <div class="outline-text-4" id="text-1-1-4">
               <p>
@@ -611,7 +471,10 @@
             </h4>
             <div class="outline-text-4" id="text-1-2-2">
               <p>
-                Pepsi.
+                Pepsi. The regular, high-fructose corn syrup kind.
+                Never really liked aspertame. Real sugar would be
+                better, obviously, but I don’t care enough to pay
+                the upcharge.
               </p>
             </div>
           </div>
@@ -639,8 +502,9 @@
             </h4>
             <div class="outline-text-4" id="text-1-3-1">
               <p>
-                One. Unless you’re fighting for page count. We’ve
-                got proportional fonts now.
+                One. Unless you’re fighting for page count. We can
+                type with proportional fonts now, Grandpa.
+                <code>:P</code>
               </p>
             </div>
           </div>
@@ -663,15 +527,15 @@
               Punctuation with Quotation Marks?
             </h4>
             <div class="outline-text-4" id="text-1-3-3">
-              <div class="org-center">
+              <aside id="orgdd593ec">
                 <p>
-                  (See the “Order of punctuation” section of the
+                  See: the “Order of punctuation” section of the
                   Wikipedia “Quotation marks in English” article:
                   <a href=
                   "https://en.wikipedia.org/wiki/Quotation_marks_in_English#Order_of_punctuation">
-                  https://en.wikipedia.org/wiki/Quotation_marks_in_English#Order_of_punctuation</a>)
+                  https://en.wikipedia.org/wiki/Quotation_marks_in_English#Order_of_punctuation</a>
                 </p>
-              </div>
+              </aside>
               <p>
                 British/logical style; punctuation not part of the
                 original quote goes outside the quotation marks.
@@ -680,10 +544,10 @@
               </p>
             </div>
           </div>
-          <div id="outline-container-orgba433d7" class="outline-4">
-            <h4 id="orgba433d7">
-              <span class="section-number-4">1.3.4.</span> Is it
-              pronounced /​ɡɪf​/ or /​d͡ʒɪf​/?
+          <div id="outline-container-org942c961" class="outline-4">
+            <h4 id="org942c961">
+              <span class="section-number-4">1.3.4.</span> /​ɡɪf​/
+              Or /​d͡ʒɪf​/?
             </h4>
             <div class="outline-text-4" id="text-1-3-4">
               <p>
@@ -691,21 +555,23 @@
               </p>
               <p>
                 I don’t care how you pronounce it, so long as you
-                don’t try arguing with me that it’s “graphics, not
-                <i>jraphics</i>!” Do you also pronounce “LASER”
-                /​læsɪɹ​/? “CONCACAF” /​kʌnsəkəf​/? “DARPA”
-                /​dəɹpeɪ​/? “SONAR” /​sanæɹ​/?
+                don’t try to take the line with me that it’s
+                “graphics, not <i>jraphics</i>!” Do you also
+                pronounce “LASER” /​læsɪɹ​/? “CONCACAF”
+                /​kʌnsəkəf​/? “DARPA” /​dəɹpeɪ​/? “SONAR”
+                /​sanæɹ​/?
               </p>
               <p>
-                Initialisms are not simply pronounced by
-                concatenating the initial phoneme of each
-                constituent element, stupid. <i>They’re words.</i>
+                Of course not. Initialisms are not simply
+                pronounced by concatenating the initial phoneme of
+                each constituent element, stupid. <i>They’re
+                words.</i>
               </p>
             </div>
           </div>
         </div>
-        <div id="outline-container-org185b8ba" class="outline-3">
-          <h3 id="org185b8ba">
+        <div id="outline-container-orgb54e8b9" class="outline-3">
+          <h3 id="orgb54e8b9">
             <span class="section-number-3">1.4.</span> Other
           </h3>
           <div class="outline-text-3" id="text-1-4"></div>
@@ -717,7 +583,7 @@
             <div class="outline-text-4" id="text-1-4-1">
               <p>
                 The <i>dishwasher</i> rinses your dishes before the
-                dishwasher. That’s what pre-wash <b>means.</b>
+                dishwasher. <b>That’s what pre-wash means.</b>
               </p>
               <p>
                 It’s also why you should use pre-wash detergent.
@@ -725,9 +591,11 @@
               </p>
               <div class="org-center">
                 <p>
-                  <iframe width="600" height="338" src=
-                  "https://www.youtube.com/embed/jHP942Livy0"
-                  class="c3"></iframe>
+                  <iframe class="metroidisprettycool-github-io-yt"
+                  src="https://www.youtube.com/embed/jHP942Livy0"
+                  title=
+                  "YouTube Video: Your dishwasher is better than you think (tips, tricks, and how they work)">
+                  </iframe>
                 </p>
               </div>
             </div>
@@ -742,8 +610,8 @@
                 Are we still calling it the Ship of Theseus? The
                 <i>name</i> remains. The history remains. The
                 people’s relationship to the symbol remains. It’s
-                still as much the same the ship as anything ever
-                could be what it used to be.
+                still as much the same the ship as <i>anything</i>
+                ever could be what it used to be.
               </p>
             </div>
           </div>
@@ -762,7 +630,7 @@
           <div id="outline-container-org1cda84d" class="outline-4">
             <h4 id="org1cda84d">
               <span class="section-number-4">2.1.1.</span>
-              Functional vs. OOP?
+              Functional Vs. Oop?
             </h4>
             <div class="outline-text-4" id="text-2-1-1">
               <ol class="org-ol">
@@ -774,15 +642,15 @@
                     Smalltalk/Objective C before it got bad/my
                     custom fork of the Common Lisp interpreter/some
                     other language that, conspicuously, nobody is
-                    using to ship real software.”
+                    using to ship real software anymore.”
                   </p>
                   <p>
-                    Perhaps, among all the many languages which
-                    call themselves “object-oriented”, there exists
-                    one example which makes writing good software
+                    Perhaps, among all the many, many languages
+                    that call themselves “object-oriented”, there
+                    is an example that makes writing good software
                     easy and bad software hard. Myself? I have not
-                    found such a language. The state of those
-                    following Java’s lead is particularly
+                    found such a language. The state of those that
+                    followed <i>Java’s</i> lead is particularly
                     dire…<sup><a id="fnr.1" class="footref" href=
                     "#fn.1" role="doc-backlink">1</a></sup>
                   </p>
@@ -873,7 +741,7 @@
           <div id="outline-container-orgfbeecef" class="outline-4">
             <h4 id="orgfbeecef">
               <span class="section-number-4">2.1.2.</span> Dynamic
-              vs. Static Typing?
+              Vs. Static Typing?
             </h4>
             <div class="outline-text-4" id="text-2-1-2">
               <p>
@@ -893,13 +761,14 @@
                 you would want to wait as <i>long as possible</i>
                 to tell me I’ve used them wrong. You aren’t saving
                 me from errors, the error was there to begin with!
+                The language knew that, I didn’t; why hide that?
               </p>
             </div>
           </div>
           <div id="outline-container-org8313124" class="outline-4">
             <h4 id="org8313124">
               <span class="section-number-4">2.1.3.</span> Strong
-              vs. Weak Typing?
+              Vs. Weak Typing?
             </h4>
             <div class="outline-text-4" id="text-2-1-3">
               <p>
@@ -919,15 +788,16 @@
                 I read the standard.
               </p>
               <p>
-                More to the point, if I <i>can</i> read the
-                standard and therein I see that <code>String +
-                Integer</code> actually means “convert this integer
-                to a string with <code>.toString()</code> and then
-                <code>.join()</code> them”, then what benefit does
-                this ambiguous <code>+</code> operator
-                <i>actually</i> give me over an explicit
+                Moreover, when I <i>do</i> read the standard and
+                find therein that <code>String + Integer</code>
+                actually means “convert this integer to a string
+                with <code>.toString()</code> and then
+                <code>.join()</code> them”, then at that point what
+                benefit does this ambiguous <code>+</code> operator
+                actually give me over an explicit
                 <code>String.join(Integer.toString())</code>? Golf
-                cred? Screw golf cred. I want to write what I mean.
+                cred? Screw golf cred. I want to write what I
+                <i>mean.</i>
               </p>
             </div>
           </div>
@@ -938,8 +808,13 @@
             </h4>
             <div class="outline-text-4" id="text-2-1-4">
               <p>
-                No.<sup><a id="fnr.2" class="footref" href="#fn.2"
-                role="doc-backlink">2</a></sup>
+                No,<sup><a id="fnr.2" class="footref" href="#fn.2"
+                role="doc-backlink">2</a></sup> and I think that’s
+                holding us back. I shouldn’t have to know how to
+                coerce the compiler into producing the right
+                assembly, I should be able to just <i>say</i> what
+                I expect. Modern ISAs are shockingly expressive,
+                why shouldn’t we let users take advantage of that?
               </p>
             </div>
           </div>
@@ -951,7 +826,7 @@
           <div class="outline-text-3" id="text-2-2"></div>
           <div id="outline-container-org6b6d51c" class="outline-4">
             <h4 id="org6b6d51c">
-              <span class="section-number-4">2.2.1.</span> AMD vs.
+              <span class="section-number-4">2.2.1.</span> AMD Vs.
               Intel?
             </h4>
             <div class="outline-text-4" id="text-2-2-1">
@@ -961,7 +836,7 @@
                 those architectures suck, their CPUs implementing
                 other people’s architectures suck, their attempts
                 to innovate always crash and burn, and somehow
-                they’re still <i>number 1.</i> How does that even
+                they’re <i>still</i> number 1. How does that even
                 happen?
               </p>
               <p>
@@ -973,7 +848,7 @@
           </div>
           <div id="outline-container-org2c7cd60" class="outline-4">
             <h4 id="org2c7cd60">
-              <span class="section-number-4">2.2.2.</span> RISC vs.
+              <span class="section-number-4">2.2.2.</span> RISC Vs.
               CISC?
             </h4>
             <div class="outline-text-4" id="text-2-2-2">
@@ -983,9 +858,9 @@
                 – I find these very appealing.
               </p>
               <p>
-                Unfortunately, nobody is really making new “the ISA
-                <i>is</i> the metal” processors these days. It’s
-                all compromised. Did you know that ARM has a
+                Unfortunately, nobody is really making any new “the
+                ISA <i>is</i> the metal” processors these days.
+                It’s all compromised. Did you know that ARM has a
                 instruction just for JavaScript?
                 <code>FJCVTZS</code>, AKA “Floating-point
                 Javascript convert to signed fixed-point, rounding
@@ -996,7 +871,7 @@
                 I don’t see the point comparing architectures when
                 the only distinguishing factor is how long or short
                 their microcode listings are. Use whatever gives
-                you the best numbers.
+                you the better numbers.
               </p>
             </div>
           </div>
@@ -1108,7 +983,7 @@
           <div id="outline-container-org7b2c22a" class="outline-4">
             <h4 id="org7b2c22a">
               <span class="section-number-4">2.3.2.</span> UNIX
-              philosophy?
+              Philosophy?
             </h4>
             <div class="outline-text-4" id="text-2-3-2">
               <p>
@@ -1128,35 +1003,37 @@
                 <i>are, in fact,</i> collections of smaller
                 programs that all do one thing well.
               </p>
-              <pre class="example" id="orgbcaaac1">
-$ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
-  | grep -E '^[^ ]+ /usr/bin.*[^/$]' \
-  | wc -l
+              <pre class="example" id="org252ad31">
+$ pacman -Ql systemd systemd-resolvconf systemd-sysvcompat netctl \
+  | awk '$2 ~ /^(\/usr)?\/bin.*[^/]$/ { counter++ } END { print counter }'
 68
 </pre>
               <p>
-                Who woulda guessed! Just because <i>you</i> don’t
-                know how to hack on them doesn’t mean “Q.E.D.
-                they’re monoliths”.
+                Who could have guessed: just because <i>you</i>
+                don’t know how to hack on something, doesn’t mean
+                “Q.E.D. it’s a monolith”.
               </p>
               <hr />
               <p>
-                Also: not everything is a file. Your pants are down
-                and your embarrassing <code>ioctl</code>-themed
-                underwear is showing. See:
+                Also: not everything is a file. Your pants are
+                down, and your embarrassing
+                <code>ioctl</code>-themed underwear is showing.
+                See:
               </p>
               <div class="org-center">
                 <p>
-                  <iframe width="600" height="338" src=
-                  "https://www.youtube.com/embed/9-IWMbJXoLM"
-                  class="c3"></iframe>
+                  <iframe class="metroidisprettycool-github-io-yt"
+                  src="https://www.youtube.com/embed/9-IWMbJXoLM"
+                  title=
+                  "YouTube video: “What UNIX Cost Us” - Benno Rice (LCA 2020)">
+                  </iframe>
                 </p>
               </div>
             </div>
           </div>
-          <div id="outline-container-org02be15f" class="outline-4">
-            <h4 id="org02be15f">
-              <span class="section-number-4">2.3.3.</span> GPL vs
+          <div id="outline-container-orga718dae" class="outline-4">
+            <h4 id="orga718dae">
+              <span class="section-number-4">2.3.3.</span> GPL Vs.
               MIT?
             </h4>
             <div class="outline-text-4" id="text-2-3-3">
@@ -1166,9 +1043,16 @@ $ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
                 "#fn.4" role="doc-backlink">4</a></sup>
               </p>
               <p>
-                When I <i>do</i> want a license, I like the MPL,
-                version 2.0.<sup><a id="fnr.5" class="footref"
-                href="#fn.5" role="doc-backlink">5</a></sup>
+                When I <i>do</i> want a license, I like MPL v2.0.
+              </p>
+              <p>
+                See: <a href=
+                "https://choosealicense.com/licenses/mpl-2.0/">https://choosealicense.com/licenses/mpl-2.0/</a>
+                for the high level, <a href=
+                "https://www.mozilla.org/en-US/MPL/2.0/">https://www.mozilla.org/en-US/MPL/2.0/</a>
+                for the nicely-formatted text, and <a href=
+                "https://www.mozilla.org/en-US/MPL/2.0/FAQ/">https://www.mozilla.org/en-US/MPL/2.0/FAQ/</a>
+                for some of the nitty-gritty.
               </p>
             </div>
           </div>
@@ -1189,9 +1073,9 @@ $ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
                 on typewriters. As long as you, the maintainer, are
                 willing to put in five minutes to enforce your
                 norms with an
-                <code>.editorconfig</code>,<sup><a id="fnr.6"
-                class="footref" href="#fn.6" role=
-                "doc-backlink">6</a></sup> I’ll use whatever you
+                <code>.editorconfig</code>,<sup><a id="fnr.5"
+                class="footref" href="#fn.5" role=
+                "doc-backlink">5</a></sup> I’ll use whatever you
                 want. Otherwise, <code>M-x tabify</code>, <code>M-x
                 untabify</code>, and <code>M-x
                 indent-according-to-mode</code> are my friends.
@@ -1237,57 +1121,55 @@ $ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
               </p>
               <div class="org-src-container">
                 <pre class="src src-C"><span class=
-                "c4">int</span> <span class=
-                "c5">main</span>(<span class=
-                "c4">int</span> <span class=
-                "c6">argc</span>, <span class=
-                "c4">char</span>* <span class="c6">argv</span>[]) {
-    printf(<span class="c6">"Hello, world!\n"</span>);
-    <span class="c7">return</span> 0;
-}
+                "c1">int</span> <span class=
+                "c2">main</span>(<span class=
+                "c1">int</span> <span class=
+                "c3">argc</span>, <span class=
+                "c1">char</span>* <span class="c3">argv</span>[]) {
+    <span class="c4">// </span><span class="c4">do stuff...
+</span>}
 </pre>
               </div>
               <div class="org-src-container">
                 <pre class="src src-rust"><span class=
-                "c7">pub</span> <span class=
-                "c7">fn</span> <span class=
-                "c5">flow_inner_wrapper</span>&lt;<span class=
-                "c4">I</span>, <span class=
-                "c4">T</span>&gt;(<span class=
-                "c6">task_context</span>: <span class=
-                "c8">&amp;</span><span class=
-                "c4">TaskContext</span>, <span class=
-                "c6">tasks</span>: <span class=
-                "c4">I</span>) -&gt; <span class=
-                "c4">Result</span>&lt;()&gt;
-<span class="c7">where</span>
-    <span class="c6">I</span>: <span class=
-"c4">IntoIterator</span>&lt;<span class=
-"c4">Item</span> = (<span class="c8">&amp;</span>'<span class=
-"c7">static</span> <span class="c4">str</span>, <span class=
-"c4">T</span>)&gt;,
-    <span class="c6">T</span>: <span class=
-"c4">FnOnce</span>(<span class="c8">&amp;</span><span class=
-"c4">TaskContext</span>) -&gt; <span class=
-"c4">Result</span>&lt;()&gt;,
+                "c5">pub</span> <span class=
+                "c5">fn</span> <span class=
+                "c2">flow_inner_wrapper</span>&lt;<span class=
+                "c1">I</span>, <span class=
+                "c1">T</span>&gt;(<span class=
+                "c3">task_context</span>: <span class=
+                "c6">&amp;</span><span class=
+                "c1">TaskContext</span>, <span class=
+                "c3">tasks</span>: <span class=
+                "c1">I</span>) -&gt; <span class=
+                "c1">Result</span>&lt;()&gt;
+<span class="c5">where</span>
+    <span class="c3">I</span>: <span class=
+"c1">IntoIterator</span>&lt;<span class=
+"c1">Item</span> = (<span class="c6">&amp;</span>'<span class=
+"c5">static</span> <span class="c1">str</span>, <span class=
+"c1">T</span>)&gt;,
+    <span class="c3">T</span>: <span class=
+"c1">FnOnce</span>(<span class="c6">&amp;</span><span class=
+"c1">TaskContext</span>) -&gt; <span class=
+"c1">Result</span>&lt;()&gt;,
 {
-    <span class="c9">// </span><span class="c9">do stuff...
-</span>    <span class="c4">Ok</span>(())
-}
+    <span class="c4">// </span><span class="c4">do stuff...
+</span>}
 </pre>
               </div>
               <div class="org-src-container">
                 <pre class="src src-java"><span class=
-                "c10">@Override</span>
-<span class="c7">public</span> <span class=
-"c4">void</span> <span class="c5">onLoad</span>(<span class=
-"c4">ClassPool</span> <span class="c6">pool</span>, <span class=
-"c4">String</span> <span class="c6">classname</span>)
-        <span class="c7">throws</span> <span class=
-"c4">NotFoundException</span>, <span class=
-"c4">CannotCompileException</span>
+                "c7">@Override</span>
+<span class="c5">public</span> <span class=
+"c1">void</span> <span class="c2">onLoad</span>(<span class=
+"c1">ClassPool</span> <span class="c3">pool</span>, <span class=
+"c1">String</span> <span class="c3">classname</span>)
+        <span class="c5">throws</span> <span class=
+"c1">NotFoundException</span>, <span class=
+"c1">CannotCompileException</span>
 {
-    <span class="c9">// </span><span class="c9">do stuff...
+    <span class="c4">// </span><span class="c4">do stuff...
 </span>}
 </pre>
               </div>
@@ -1326,8 +1208,8 @@ $ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
             </div>
           </div>
         </div>
-        <div id="outline-container-orgef3db47" class="outline-3">
-          <h3 id="orgef3db47">
+        <div id="outline-container-org1a42a1a" class="outline-3">
+          <h3 id="org1a42a1a">
             <span class="section-number-3">2.5.</span> Other
           </h3>
           <div class="outline-text-3" id="text-2-5"></div>
@@ -1339,9 +1221,11 @@ $ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
             <div class="outline-text-4" id="text-2-5-1">
               <div class="org-center">
                 <p>
-                  <iframe width="600" height="338" src=
-                  "https://www.youtube.com/embed/V3QF1uAvbkU"
-                  class="c3"></iframe>
+                  <iframe class="metroidisprettycool-github-io-yt"
+                  src="https://www.youtube.com/embed/V3QF1uAvbkU"
+                  title=
+                  "YouTube video: Emacs or VI: The Definitive Answer.">
+                  </iframe>
                 </p>
               </div>
               <p>
@@ -1367,14 +1251,14 @@ $ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
                 <code>magit-status</code>,
                 <code>default-indent-new-line</code>,
                 <code>eshell</code>, <code>eww</code> – these are
-                not commands.<sup><a id="fnr.7" class="footref"
-                href="#fn.7" role="doc-backlink">7</a></sup>
+                not commands.<sup><a id="fnr.6" class="footref"
+                href="#fn.6" role="doc-backlink">6</a></sup>
                 They’re single purpose, well-made, filtering, plain
                 text-acting, inter-operating <i>programs.</i> You
                 can even go look up their source code, whenever you
                 want! <code>M-x find-function RET foo-bar
-                RET</code>.<sup><a id="fnr.8" class="footref" href=
-                "#fn.8" role="doc-backlink">8</a></sup>
+                RET</code>.<sup><a id="fnr.7" class="footref" href=
+                "#fn.7" role="doc-backlink">7</a></sup>
               </p>
               <p>
                 Who’s the real UNIX philosophy exemplar here?
@@ -1386,7 +1270,7 @@ $ pacman -Ql systemd systemd-libs systemd-resolvconf systemd-sysvcompat netctl \
                 You can even use Elisp programs in your shell
                 scripts! (With pipes!) Some trivial examples:
               </p>
-              <pre class="example" id="org0dd6f13">
+              <pre class="example" id="org31e1541">
 $ emacs --batch --eval="(pp (car '(:foo :bar)))"
 :foo
 $ seq 10 | emacs --batch --eval='(with-temp-buffer
@@ -1538,7 +1422,7 @@ Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using 
               <p>
                 I could go on and on. What do Bash and Vi and tmux
                 and a thousand little ncurses programs – all of
-                which are still complexity you need to learn, I
+                which are still complexity you’ll have to learn, I
                 might add – give me that Emacs doesn’t? Worse
                 scripting languages? “Job control”?
               </p>
@@ -1554,108 +1438,337 @@ Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using 
           <span class="section-number-2">3.</span> Art and Media
         </h2>
         <div class="outline-text-2" id="text-3"></div>
-        <div id="outline-container-orgbab86bd" class="outline-3">
-          <h3 id="orgbab86bd">
-            <span class="section-number-3">3.1.</span> Is ’Stupid
-            Modern Art’ (e.g. <i>Comedian</i> [2019] by Maurizio
-            Cattelan) Really Art?
+        <div id="outline-container-orge82f3b1" class="outline-3">
+          <h3 id="orge82f3b1">
+            <span class="section-number-3">3.1.</span> Philosophy
           </h3>
-          <div class="outline-text-3" id="text-3-1">
-            <p>
-              A Thing is Art if it’s having a conversation with
-              Art.
-            </p>
+          <div class="outline-text-3" id="text-3-1"></div>
+          <div id="outline-container-orgbab86bd" class="outline-4">
+            <h4 id="orgbab86bd">
+              <span class="section-number-4">3.1.1.</span> Is
+              ’Stupid Modern Art’ (e.g. <i>Comedian</i> [2019] by
+              Maurizio Cattelan) Really Art?
+            </h4>
+            <div class="outline-text-4" id="text-3-1-1">
+              <p>
+                A Thing is Art if it’s having a conversation with
+                Art.
+              </p>
+            </div>
           </div>
         </div>
-        <div id="outline-container-org6385221" class="outline-3">
-          <h3 id="org6385221">
-            <span class="section-number-3">3.2.</span> Foreign
-            Language Audio: Dubbing or Subtitles?
+        <div id="outline-container-org85fcbc4" class="outline-3">
+          <h3 id="org85fcbc4">
+            <span class="section-number-3">3.2.</span> Specific
+            Works
           </h3>
-          <div class="outline-text-3" id="text-3-2">
-            <p>
-              Subtitles are usually the way to go, for all the
-              obvious reasons.
-            </p>
-            <p>
-              On a re-watch/re-listen of a work you really like, it
-              can be interesting to check out the dub just to see
-              how they reinterpreted it. That’s something I do
-              occasionally.
-            </p>
+          <div class="outline-text-3" id="text-3-2"></div>
+          <div id="outline-container-org9568472" class="outline-4">
+            <h4 id="org9568472">
+              <span class="section-number-4">3.2.1.</span> Garfield
+              or Heathcliff?
+            </h4>
+            <div class="outline-text-4" id="text-3-2-1">
+              <p>
+                Heathcliff and it’s not even close. It’s not even
+                comparable. Garfield is nothing. He’s a vacuum. An
+                empty wrapper. An egg with no yolk. A shadow on the
+                wall. The snake eating its tail eating its tail
+                eating its tail eating its tail eating its tail
+                eating its tail eating its tail. Around and around
+                and around forever.
+              </p>
+              <p>
+                Heathcliff, on the other hand, is <i>funny.</i>
+              </p>
+              <p>
+                Or at least interesting. You just gotta… marinade
+                it in a for a little while. Maybe check out this
+                interview with Peter Gallagher:
+              </p>
+              <p>
+                <a href=
+                "https://solrad.co/let-the-art-stand-for-itself-a-conversation-with-peter-gallagher">
+                https://solrad.co/let-the-art-stand-for-itself-a-conversation-with-peter-gallagher</a>
+              </p>
+              <p>
+                or this talk that he did:
+              </p>
+              <div class="org-center">
+                <p>
+                  <iframe class="metroidisprettycool-github-io-yt"
+                  src="https://www.youtube.com/embed/o8_8En04p08"
+                  title=
+                  "YouTube video: CXC 2022: Heathcliff is Having a Moment with Peter Gallagher">
+                  </iframe>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="outline-container-org34256fb" class="outline-4">
+            <h4 id="org34256fb">
+              <span class="section-number-4">3.2.2.</span> So,
+              like, What Is <i>Evangelion</i> Even About?
+            </h4>
+            <div class="outline-text-4" id="text-3-2-2">
+              <p>
+                A lot of things. Human relationships. Losing.
+                Winning. Growing up in a world too traumatized to
+                look you in the eye. Child soldiers. Playing the
+                cello. Sexuality. Greed. Suicide.
+              </p>
+              <p>
+                Broadly, though? <i>Evangelion</i> is about how
+                when you don’t understand yourself or the world
+                around you, everything you touch starts to die.
+                Uh-oh!
+              </p>
+            </div>
+          </div>
+          <div id="outline-container-orgd1e3fa0" class="outline-4">
+            <h4 id="orgd1e3fa0">
+              <span class="section-number-4">3.2.3.</span> Are the
+              Star Wars Prequels / Sequels / Originals Actually
+              Good?
+            </h4>
+            <div class="outline-text-4" id="text-3-2-3">
+              <p>
+                Possession of a legal right to continue a work does
+                not confer the ability to say anything interesting
+                about that work. Franchises are not <i>real.</i>
+              </p>
+              <p>
+                I don’t give a damn about any of the shows besides
+                Tartakovsky’s <i>Clone Wars</i>, so here’s just my
+                thoughts on every movie, in in-universe
+                chronological order:
+              </p>
+              <dl class="org-dl">
+                <dt>
+                  TPM
+                </dt>
+                <dd>
+                  The best production design we see outside the OT,
+                  coupled with a plot that’s a lot of boring
+                  dicking around in a desert. Racist and boring and
+                  clumsy. Still, could be worse.
+                </dd>
+                <dt>
+                  AotC
+                </dt>
+                <dd>
+                  Unwatchable nonsense. There are maybe two
+                  interesting plot threads here, and in a perfect
+                  world they would’ve been merged into <i>TPM</i>
+                  to make room for the clone wars on the big
+                  screen. Oops.
+                </dd>
+                <dt>
+                  SW:TCW
+                </dt>
+                <dd>
+                  Uuuuuhghghhhhh. You can tell that this is a bunch
+                  of first season <i>TCW</i> episodes edited
+                  together. Dave just Filoni’ed all over them. Can
+                  I please watch the 2003 <i>Clone Wars</i>
+                  instead?
+                </dd>
+                <dt>
+                  RotS
+                </dt>
+                <dd>
+                  Fatally clumsy, but in its broadest strokes my
+                  favorite prequel. I like the conversations, but
+                  not much of the dialogue. I like the fights, but
+                  not the choreography. I like the locations, but
+                  not the sets (using that term very loosely.) This
+                  is the <i>Star Wars</i> film I most want to read
+                  a novelization of.
+                </dd>
+                <dt>
+                  S:ASWS
+                </dt>
+                <dd>
+                  Decent production design, decent performances,
+                  braindead concept. The L&amp;M take <i>could
+                  have</i> elevated this, but my instincts tell me
+                  it’d probably still just be ehhhh but in a
+                  different way. There’s a quality ceiling imparted
+                  by the whole “Han Solo origin story” thing. I’d
+                  have preferred they just made a different movie
+                  about different characters doing different things
+                  at a different time.
+                </dd>
+                <dt>
+                  RO:ASWS
+                </dt>
+                <dd>
+                  Can you tell this film spent more time as concept
+                  art than as a script? Like <i>ANH</i>, I enjoy
+                  the production design too much to really hate
+                  this film, weak performances notwithstanding, but
+                  it <i>is</i> a pretty weak film.
+                </dd>
+                <dt>
+                  ANH
+                </dt>
+                <dd>
+                  This film has a lot of charismatic characters but
+                  not a lot of <i>interesting</i> characters.
+                  Joseph Campbell’s poison pill has already entered
+                  the bloodstream. Still, the production design is
+                  too much of a winner to make this a <i>bad</i>
+                  movie.
+                </dd>
+                <dt>
+                  SWHS
+                </dt>
+                <dd>
+                  Demented cinema verite variety show Wookie
+                  bullshit. Feels like eight hours. That’s so
+                  brazen it’s almost respectable, but for all its
+                  cult status, it’s <i>still</i> not worth
+                  watching. Really, honestly: <b>don’t bother.</b>
+                  Don’t watch it. If you and your friends get
+                  together to watch it for some reason, spend the
+                  whole time on your phone or knitting or doing a
+                  puzzle so you don’t have to actually take it in.
+                </dd>
+                <dt>
+                  TESB
+                </dt>
+                <dd>
+                  The good one!
+                </dd>
+                <dt>
+                  RotJ
+                </dt>
+                <dd>
+                  The lack of strong character writing is catching
+                  up to us. The interesting ideas here are mostly
+                  retreads, and the <i>uninteresting</i> ideas
+                  dominate. I’d have liked to see the better bits
+                  of this movie moved backwards to ANH and TESB or
+                  vice-versa. As is, this just feels like padding.
+                  It might be tolerable in a middle installment,
+                  but this is a finale! That’s no good.
+                </dd>
+                <dt>
+                  CoC:AEA
+                </dt>
+                <dd>
+                  TODO!
+                </dd>
+                <dt>
+                  E:TBfE
+                </dt>
+                <dd>
+                  TODO!
+                </dd>
+                <dt>
+                  TFA
+                </dt>
+                <dd>
+                  A coward’s movie, which introduces essentially
+                  nothing to the franchise but a new cast of
+                  charismatic non-characters. Is this a commentary
+                  on the cyclical nature of war, or just a
+                  depiction of the same. (The latter.) Only Kylo
+                  Ren is set up for an arc, but watching him is
+                  like putting on a pair of wet socks. I’m so tired
+                  of padding.
+                </dd>
+                <dt>
+                  TLJ
+                </dt>
+                <dd>
+                  After the non-start of <i>TFA</i>, <i>TLJ</i>
+                  stumbles hard trying to play catch up in some
+                  characteristically Rian Johnson ways. Still more
+                  interesting than its successor or antecessor
+                  though.
+                </dd>
+                <dt>
+                  TRoS
+                </dt>
+                <dd>
+                  Rushed, rude, compromised, and just an avalanche
+                  of nonsense. I like some of it – as abstract
+                  ideas, at least – but the sum total feels like a
+                  film that’s annoyed it even has to try. I’m so
+                  tired. I just want <i>Star Wars</i> to give up
+                  and die already. I guess at least it’s a
+                  consolation that Colin Trevorrow didn’t write it…
+                </dd>
+              </dl>
+            </div>
           </div>
         </div>
-        <div id="outline-container-org3046337" class="outline-3">
-          <h3 id="org3046337">
-            <span class="section-number-3">3.3.</span> Vinyl vs.
-            Streaming?
+        <div id="outline-container-org83fc105" class="outline-3">
+          <h3 id="org83fc105">
+            <span class="section-number-3">3.3.</span> Medium
           </h3>
-          <div class="outline-text-3" id="text-3-3">
+          <div class="outline-text-3" id="text-3-3"></div>
+          <div id="outline-container-org6385221" class="outline-4">
+            <h4 id="org6385221">
+              <span class="section-number-4">3.3.1.</span> Foreign
+              Language Audio: Dubbing or Subtitles?
+            </h4>
+            <div class="outline-text-4" id="text-3-3-1">
+              <p>
+                Subtitles are usually the way to go, for all the
+                obvious reasons.
+              </p>
+              <p>
+                On a re-watch/re-listen of a work you really like,
+                though, it can be interesting to check out the dub
+                just to see how they reinterpreted it. I do that
+                occasionally.
+              </p>
+            </div>
+          </div>
+          <div id="outline-container-orgf68e1a5" class="outline-4">
+            <h4 id="orgf68e1a5">
+              <span class="section-number-4">3.3.2.</span> Physical
+              Vs. Streaming?
+            </h4>
+            <div class="outline-text-4" id="text-3-3-2"></div>
             <ol class="org-ol">
-              <li>They’re not called vinyls. They’re records.
-              Phonograph records. Some of them aren’t made out of
-              vinyl.
+              <li>
+                <a id="orgdfa0739"></a>Music<br />
+                <div class="outline-text-5" id="text-3-3-2-1">
+                  <p>
+                    I do most of my music listening on YouTube
+                    Music w/ adblocker, ’cause I’m lazy. Lately,
+                    though, I’ve been trying to build up a CD
+                    collection. Good sound that works natively with
+                    my computer <i>and</i> it’s a physical thing?
+                    Sign me up!
+                  </p>
+                </div>
               </li>
-              <li>I do most of my music listening on YouTube Music
-              w/ adblocker ’cause I’m lazy. Lately, though, I’ve
-              been trying to build a CD collection. Good sound that
-              works natively with my computer <i>and</i> a physical
-              thing? Sign me up!
+              <li>
+                <a id="org4d1d652"></a>Movies<br />
+                <div class="outline-text-5" id="text-3-3-2-2">
+                  <p>
+                    I can watch my $2 thrift store DVDs whenever I
+                    want, <i>and</i> they have deleted scenes + BTS
+                    content + directors commentary. Even most
+                    piracy sites only bother dealing in the movies
+                    themselves. I want historical context!
+                  </p>
+                </div>
               </li>
             </ol>
           </div>
-        </div>
-        <div id="outline-container-org6b90740" class="outline-3">
-          <h3 id="org6b90740">
-            <span class="section-number-3">3.4.</span> Physical
-            Movies or Streaming?
-          </h3>
-          <div class="outline-text-3" id="text-3-4">
-            <p>
-              I can watch my $2 thrift store DVDs whenever I want,
-              <i>and</i> they have deleted scenes + BTS content +
-              directors commentary. Even most piracy sites only
-              bother dealing in the movies themselves. Where’s my
-              short film bumper, Pixar?
-            </p>
-          </div>
-        </div>
-        <div id="outline-container-org9568472" class="outline-3">
-          <h3 id="org9568472">
-            <span class="section-number-3">3.5.</span> Garfield or
-            Heathcliff?
-          </h3>
-          <div class="outline-text-3" id="text-3-5">
-            <p>
-              Heathcliff and it’s not even close. It’s not even
-              comparable. Garfield is nothing. He’s a vacuum. An
-              empty wrapper. An egg with no yolk. A shadow on the
-              wall. The snake eating its tail eating its tail
-              eating its tail eating its tail eating its tail
-              eating its tail eating its tail. Around and around
-              and around forever.
-            </p>
-            <p>
-              Heathcliff, on the other hand, is <i>funny.</i>
-            </p>
-            <p>
-              Or at least interesting. You just gotta marinade it
-              in a for a little while. Maybe check out this
-              interview with Peter Gallagher:
-            </p>
-            <p>
-              <a href=
-              "https://solrad.co/let-the-art-stand-for-itself-a-conversation-with-peter-gallagher">
-              https://solrad.co/let-the-art-stand-for-itself-a-conversation-with-peter-gallagher</a>
-            </p>
-            <p>
-              or this talk he did:
-            </p>
-            <div class="org-center">
+          <div id="outline-container-orgb90349f" class="outline-4">
+            <h4 id="orgb90349f">
+              <span class="section-number-4">3.3.3.</span> Is
+              Adblock Piracy?
+            </h4>
+            <div class="outline-text-4" id="text-3-3-3">
               <p>
-                <iframe width="600" height="338" src=
-                "https://www.youtube.com/embed/o8_8En04p08" class=
-                "c3"></iframe>
+                Probably! But that’s not a value judgment.
               </p>
             </div>
           </div>
@@ -1667,289 +1780,319 @@ Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using 
           Spaceflight
         </h2>
         <div class="outline-text-2" id="text-4"></div>
-        <div id="outline-container-orgfd01d50" class="outline-3">
-          <h3 id="orgfd01d50">
-            <span class="section-number-3">4.1.</span> Is Pluto
-            Still a Planet?
+        <div id="outline-container-orga9629d9" class="outline-3">
+          <h3 id="orga9629d9">
+            <span class="section-number-3">4.1.</span> Astronomy
           </h3>
-          <div class="outline-text-3" id="text-4-1">
-            <p>
-              All models are wrong, but some are irrationally
-              defended by people who wish they were still in the
-              third grade – when “knowing what a rhombus is” was
-              enough to coast through life unalloyed.
-            </p>
-            <p>
-              2006 was actually the <i>second</i> time we
-              reclassified some former planets, did you know that?
-              That’s “planets” plural; in 1867 1 Ceres,<sup><a id=
-              "fnr.9" class="footref" href="#fn.9" role=
-              "doc-backlink">9</a></sup> 2 Pallas, 3 Juno, 4 Vesta,
-              5 Astraea, 6 Hebe and 7 Iris all got reclassified as
-              asteroids (Ceres had been a planet for over 65 years
-              at that point!) and in 2006 134340 Pluto, 136199
-              Eris, and – guess what – 1 Ceres all got reclassified
-              as dwarf planets. (And there are some other cases of
-              things being called planets for a year or two before
-              getting reclassified, see: <a href=
-              "https://en.wikipedia.org/wiki/List_of_former_planets">
-              https://en.wikipedia.org/wiki/List_of_former_planets</a>)
-            </p>
-            <p>
-              Not a lot of people arguing that <i>Vesta</i> should
-              be a planet again, right? I mean, maybe they
-              <i>should,</i> but what I mean is that if the
-              argument for Pluto was tradition, you’d think the
-              proponents would be a little choosy with that
-              tradition…
-            </p>
-            <p>
-              I don’t care if Pluto and Earth are more geologically
-              similar than Earth and Neptune. There are things to
-              study in astronomy besides rock geology. The IAU
-              definition of “planet” is very useful in ways that
-              other definitions aren’t. You aren’t gonna get
-              anything with your whining. Go home. Please.
-            </p>
-          </div>
-        </div>
-        <div id="outline-container-org3b98ff9" class="outline-3">
-          <h3 id="org3b98ff9">
-            <span class="section-number-3">4.2.</span> Space
-            Shuttle Vs. Buran (or) Energia?
-          </h3>
-          <div class="outline-text-3" id="text-4-2">
-            <p>
-              It’s easy to argue that Energia-Buran was more
-              capable when it never had to demonstrate any of those
-              proposed capabilities.
-            </p>
-            <p>
-              It’s… <i>meandering,</i> but see this video:
-            </p>
-            <div class="org-center">
+          <div class="outline-text-3" id="text-4-1"></div>
+          <div id="outline-container-orgfd01d50" class="outline-4">
+            <h4 id="orgfd01d50">
+              <span class="section-number-4">4.1.1.</span> Is Pluto
+              Still a Planet?
+            </h4>
+            <div class="outline-text-4" id="text-4-1-1">
               <p>
-                <iframe width="600" height="338" src=
-                "https://www.youtube.com/embed/ytmFLbPh7ss" class=
-                "c3"></iframe>
+                All models are wrong, but some are irrationally
+                defended by people who wish they were still in the
+                third grade – when “knowing what a rhombus is” was
+                enough to coast through life unalloyed.
+              </p>
+              <p>
+                2006 was actually the <i>second</i> time we
+                reclassified some former planets, did you know
+                that? That’s “planets” plural; in 1867 1 Ceres, 2
+                Pallas, 3 Juno, 4 Vesta, 5 Astraea, 6 Hebe and 7
+                Iris all got reclassified as asteroids (Ceres had
+                been a planet for over 65 years at that point!) and
+                in 2006 134340 Pluto, 136199 Eris, and – guess what
+                – 1 Ceres all got reclassified as dwarf planets.
+                (And there are some other cases of things being
+                called planets for a year or two before getting
+                reclassified, see: <a href=
+                "https://en.wikipedia.org/wiki/List_of_former_planets">
+                https://en.wikipedia.org/wiki/List_of_former_planets</a>)
+              </p>
+              <aside id="org3b2fcb7">
+                <p>
+                  Ceres is <i>obviously</i> the best dwarf planet,
+                  because it’s literally number one!
+                </p>
+              </aside>
+              <p>
+                Not a lot of people arguing that <i>Vesta</i>
+                should be a planet again, right? I mean, maybe they
+                <i>should,</i> but what I mean is that if the
+                argument for Pluto was tradition, you’d think the
+                proponents would be a little choosy with that
+                tradition…
+              </p>
+              <p>
+                I don’t care how many axes you can drum up that
+                frame things as “rocky planets vs. gas giants” or
+                “it’s about hydrostatic equilibrium” or whatever
+                contrived examples you want to come up with. Yes,
+                there are ways that Pluto is more like some of the
+                eight planets than those planets are like each
+                other. Guess what? There are things to study in
+                astronomy besides mineral geology. The IAU
+                definition of “planet” is more useful in more ways
+                than other definitions. We checked! That was the
+                whole point of making a formal decision! So you
+                aren’t gonna get anywhere with whining. Besides
+                peeving me, anyway.
               </p>
             </div>
-            <p>
-              I also take issue with the position that accepts
-              Buran’s failings but argues for Energia as a
-              standalone heavy launcher. It smacks of apologetics
-              to me. Spacecraft and launch vehicle efficacy is
-              determined by more than just the easy numbers –
-              I<sub>sp</sub>, cost of propellants, time to prep for
-              launch, etc. It’s very telling that <i>Polyus</i> had
-              to be mounted with its engine upside-down to mate
-              with Energia 6SL. Does this strike confidence in
-              Energia as a general-purpose launch vehicle? That it
-              had such specific requirements for payloads that they
-              might have to be mounted upside-down? That those
-              payloads might have to do a <i>backflip</i> to reach
-              orbit?
-            </p>
-            <p>
-              STS sucked and killed a lot of people. But I don’t
-              think any other program could have delivered as much
-              as it did, with that budget. Could a next-gen capsule
-              have given us the Hubble Space Telescope? The ISS
-              International Segment? Spacelab? Spacehab? The
-              Long-Duration Exposure Facility? The Solar Maximum
-              Mission rescue? The Wake Shield Facility? EURECA?
-              ATLAS-1 or SEPAC?
-            </p>
-            <p>
-              I don’t think so.
-            </p>
           </div>
         </div>
-        <div id="outline-container-org9901e7b" class="outline-3">
-          <h3 id="org9901e7b">
-            <span class="section-number-3">4.3.</span> Who Won the
-            Space Race?
+        <div id="outline-container-orgcd4d7eb" class="outline-3">
+          <h3 id="orgcd4d7eb">
+            <span class="section-number-3">4.2.</span> Spaceflight
+            History
           </h3>
-          <div class="outline-text-3" id="text-4-3">
-            <p>
-              It’s easy to paint the USSR as an unambiguous winner
-              if we just look at the “first to X milestone”
-              numbers. I’m sure we’ve all seen that meme that goes
-              something like “first satellite in space, first
-              animal in space, first man in space, first woman in
-              space, first space walk, first space station – USSR.
-              First man on the moon, USA. Winner? USA!?”
-            </p>
-            <p>
-              Well, here’s something to note: Between April 12th,
-              1961 (first human spaceflight) and December 26th,
-              1991 (collapse of the USSR) the USSR flew
-              2<sup><a id="fnr.10" class="footref" href="#fn.10"
-              role="doc-backlink">10</a></sup> women on
-              3<sup><a id="fnr.10.10" class="footref" href="#fn.10"
-              role="doc-backlink">10</a></sup> person-flights, out
-              of 94<sup><a id="fnr.11" class="footref" href=
-              "#fn.11" role="doc-backlink">11</a></sup> flying
-              cosmonauts and 142<sup><a id="fnr.11.11" class=
-              "footref" href="#fn.11" role=
-              "doc-backlink">11</a></sup> person-flights. If we
-              include <i>Interkosmos</i> cosmonauts, these numbers
-              rise to 3 women, on 4 person-flights, out of 101
-              flying cosmonauts and 150 person-flights.
-            </p>
-            <p>
-              In that same time, the USA flew 13 women<sup><a id=
-              "fnr.12" class="footref" href="#fn.12" role=
-              "doc-backlink">12</a></sup> on 19<sup><a id=
-              "fnr.12.12" class="footref" href="#fn.12" role=
-              "doc-backlink">12</a></sup> person-flights, out of
-              154<sup><a id="fnr.13" class="footref" href="#fn.13"
-              role="doc-backlink">13</a></sup> flying astronauts
-              and 285<sup><a id="fnr.13.13" class="footref" href=
-              "#fn.13" role="doc-backlink">13</a></sup>
-              person-flights. If we include payload specialists
-              (whose selection is (was?) more complicated than
-              traditional astronauts) these numbers rise to 15
-              women on 22 person-flights, out of 154 astronauts and
-              312 person-missions.
-            </p>
-            <p>
-              Now, 13 is obviously not half of 285. Even if we
-              restrict ourselves just to the Space Shuttle program,
-              13 is still not half of 201. <i>Obviously</i>
-              inequitable. But 6.7% is a hell of a lot bigger than
-              2.1%.
-            </p>
-            <p>
-              Today the disparity is even wider – 20 women and 28
-              men are active members of the NASA astronaut corps, 1
-              woman and 22 men are active members of the Roscosmos
-              cosmonaut corps. Only four Russian women have flown
-              to space since 1991, three cosmonauts and an actress.
-              (Not actress-turned-cosmonaut, just actress. She went
-              to the International Space Station to film a movie
-              for state-owned TV broadcaster Channel One Russia.)
-              The US has put up another fifty or so. (exact figure
-              depends on how you want to consider private
-              spaceflights, payload specialists, space tourists,
-              etc.) No Russian woman has flown more than once since
-              Yelena Kondakova in 1997, who flew twice. No Russian
-              or Soviet woman has flown more than twice.
-            </p>
-            <p>
-              There are more American women who have flown to space
-              <i>exactly four times,</i> than there are Russian
-              women who have flown <i>ever.</i> No Russian woman
-              has ever commanded the ISS, or, for that matter, any
-              mission. (Arguably the Soviets had one, Valentina
-              Tereshkova “commanded” her single-occupant Vostok 6;
-              but given the technical nature of the Vostok capsule,
-              and the fact her flight was shorter than the three
-              flight preceding her, I’m more inclined to say she
-              was treated closer to a human life sciences payload.)
-            </p>
-            <p>
-              The Soviet Union flew the first woman into space
-              because they heard the US might be doing the same
-              (misconstruing the Mercury 13), and they wanted to be
-              first. Then, they didn’t fly a single woman for
-              another twenty years. None of the other four
-              candidates would ever fly. Then the Soviet Union did
-              the first female spacewalk, because they heard the
-              U.S. was going to be doing the same, and they wanted
-              to first. No Soviet or Russian woman has conducted a
-              spacewalk since.
-            </p>
-            <p>
-              Here’s another bit of trivia you might not know: from
-              1963 to 1975, the USSR made 7 successful robotic
-              landings on the Moon, including the very first with
-              Luna 9 in 1966. If we also consider 1976 – the last
-              year of first-gen lunar landings and only a year
-              beyond our 1975 ASTP cutoff date – that’s 8 landings.
-            </p>
-            <p>
-              8 landings out of <b>27 attempts</b>, that is.
-            </p>
-            <p>
-              In the same time-frame, the US made five robotic
-              landings and six manned landings – out of seven and
-              seven attempts, respectively.
-            </p>
-            <p>
-              This sort of parallels the respective Venus programs
-              of both countries a couple years later. The Soviet
-              Union made nine landings on Venus, out of twelve
-              attempts; the US made one landing on Venus out of
-              <b>no</b> attempts. Did you know that? Hughes
-              overbuilt the Day probe (intended only for
-              atmospheric data collection) so much that when it hit
-              the ground <i>without a parachute,</i> it just kept
-              transmitting! For over an hour! (The Night probe,
-              part of the same mission, <i>also</i> survived
-              impact, but only for two seconds. Still a laudable
-              accomplishment, but not really a “successful landing”
-              in my book.)
-            </p>
-            <p>
-              Here’s a third piece of trivia: while the USSR did
-              get the first ever EVA (“spacewalk”), it’s the US
-              that got the second and third. And fourth. And fifth.
-              And sixth and seventh. Also eight, ninth, and tenth.
-              Then the USSR got the eleventh, and the US got the
-              twelfth. And thirteenth, fourteenth, fifteenth,
-              sixteenth, seventeenth, eighteenth, nineteenth,
-              twentieth, and twenty-first (though you might not
-              count those, because they didn’t happen in Zero G.
-              Walking on the Moon is cheating!) then the
-              twenty-second EVA in deep space, before another six
-              moonwalks and two more deep-spacewalks. Oh, and also
-              the thirty-first, thirty-second, thirty-third,
-              thirty-fourth, thirty-fifth, thirty-sixth,
-              thirty-seventh, thirty-eighth, thirty-ninth, and
-              fortieth on Skylab.
-            </p>
-            <p>
-              Then we hit Apollo-Soyuz, and the space race is
-              officially over!
-            </p>
-            <p>
-              Isn’t it a little ridiculous to claim a milestone is
-              yours when you could barely replicate it? EVAs are
-              only valuable when you have a facility that requires
-              them – usually either a station, or a surface ops
-              site. The USSR did not develop such facilities or
-              mission profiles before the US did. Period.
-            </p>
-            <p>
-              I am aware that, unlike the number of women flown in
-              space, this statistic evens out a bit after 1975, as
-              both nations entered their respective 80s forever
-              programs – STS, and second and third generation DOS
-              space stations. The USSR would make 41 spacewalks
-              from 1975-1991, the US only 15. This brings totals up
-              to 43 and 55, respectively. Things would swing back
-              the other way going into the ISS, but at that point
-              the USSR was no more and things get even more
-              geopolitically complicated.
-            </p>
+          <div class="outline-text-3" id="text-4-2"></div>
+          <div id="outline-container-org3b98ff9" class="outline-4">
+            <h4 id="org3b98ff9">
+              <span class="section-number-4">4.2.1.</span> Space
+              Shuttle Vs. Buran (or) Energia?
+            </h4>
+            <div class="outline-text-4" id="text-4-2-1">
+              <p>
+                It’s easy to argue that Energia-Buran was more
+                capable when it never had to demonstrate any of
+                those proposed capabilities.
+              </p>
+              <p>
+                It’s a bit… <i>meandering,</i> but see this video:
+              </p>
+              <div class="org-center">
+                <p>
+                  <iframe class="metroidisprettycool-github-io-yt"
+                  src="https://www.youtube.com/embed/ytmFLbPh7ss"
+                  title=
+                  "YouTube video: The Buran is Overrated"></iframe>
+                </p>
+              </div>
+              <p>
+                I also take issue with the position that accepts
+                Buran’s failings but argues for Energia as a
+                standalone heavy launcher. It smacks of apologetics
+                to me. Spacecraft and launch vehicle efficacy is
+                determined by more than just the easy numbers –
+                I<sub>sp</sub>, cost of propellants, time to prep
+                for launch, etc. It’s very telling that
+                <i>Polyus</i> had to be mounted with its engine
+                upside-down to mate with Energia 6SL. Does this
+                strike confidence in Energia as a general-purpose
+                launch vehicle? That it had such specific
+                requirements for payloads that they might have to
+                be mounted upside-down? That those payloads might
+                have to do a <i>backflip</i> to reach orbit?
+              </p>
+              <p>
+                STS sucked and killed a lot of people. But I don’t
+                think any other program could have delivered as
+                much as it did, with that budget. Could a next-gen
+                capsule have given us the Hubble Space Telescope?
+                The ISS International Segment? Spacelab? Spacehab?
+                The Long-Duration Exposure Facility? The Solar
+                Maximum Mission rescue? The Wake Shield Facility?
+                EURECA? ATLAS-1 or SEPAC?
+              </p>
+              <p>
+                I don’t think so.
+              </p>
+            </div>
+          </div>
+          <div id="outline-container-org9901e7b" class="outline-4">
+            <h4 id="org9901e7b">
+              <span class="section-number-4">4.2.2.</span> Who Won
+              the Space Race?
+            </h4>
+            <div class="outline-text-4" id="text-4-2-2">
+              <p>
+                It’s easy to paint the USSR as an unambiguous
+                winner if we just look at the “first to X
+                milestone” numbers. I’m sure we’ve all seen that
+                meme that goes something like “first satellite in
+                space, first animal in space, first man in space,
+                first woman in space, first space walk, first space
+                station – USSR. First man on the moon, USA. Winner?
+                USA!?”
+              </p>
+              <p>
+                Well, here’s something to note: Between April 12th,
+                1961 (first human spaceflight) and December 26th,
+                1991 (collapse of the USSR) the USSR flew 2 women
+                on 3 person-flights,<sup><a id="fnr.8" class=
+                "footref" href="#fn.8" role=
+                "doc-backlink">8</a></sup> out of 94 flying
+                cosmonauts and 142 person-flights.<sup><a id=
+                "fnr.9" class="footref" href="#fn.9" role=
+                "doc-backlink">9</a></sup> If we include
+                <i>Interkosmos</i> cosmonauts, these numbers rise
+                to 3 women, on 4 person-flights, out of 101 flying
+                cosmonauts and 150 person-flights.
+              </p>
+              <p>
+                In that same time, the USA flew 13 women on 19
+                person-flights,<sup><a id="fnr.10" class="footref"
+                href="#fn.10" role="doc-backlink">10</a></sup> out
+                of 154 flying astronauts and 285
+                person-flights.<sup><a id="fnr.11" class="footref"
+                href="#fn.11" role="doc-backlink">11</a></sup> If
+                we include payload specialists (whose selection is
+                (was?) more complicated than traditional
+                astronauts) these numbers rise to 15 women on 22
+                person-flights, out of 154 astronauts and 312
+                person-missions.
+              </p>
+              <p>
+                Now, 13 is obviously not half of 285. Even if we
+                restrict ourselves just to the Space Shuttle
+                program, 13 is still not half of 201.
+                <i>Obviously</i> inequitable. But 6.7% is a hell of
+                a lot bigger than 2.1%.
+              </p>
+              <p>
+                Today the disparity is even wider – 20 women and 28
+                men are active members of the NASA astronaut corps,
+                1 woman and 22 men are active members of the
+                Roscosmos cosmonaut corps. Only four Russian women
+                have flown to space since 1991, three cosmonauts
+                and an actress. (Not actress-turned-cosmonaut, just
+                actress. She went to the International Space
+                Station to film a movie for state-owned TV
+                broadcaster Channel One Russia.) The US has put up
+                another fifty or so. (exact figure depends on how
+                you want to consider private spaceflights, payload
+                specialists, space tourists, etc.) No Russian woman
+                has flown more than once since Yelena Kondakova in
+                1997, who flew twice. No Russian or Soviet woman
+                has flown more than twice.
+              </p>
+              <p>
+                There are more American women who have flown to
+                space <i>exactly four times,</i> than there are
+                Russian women who have flown <i>ever.</i> No
+                Russian woman has ever commanded the ISS, or, for
+                that matter, any mission. (Arguably the Soviets had
+                one, Valentina Tereshkova “commanded” her
+                single-occupant Vostok 6; but given the technical
+                nature of the Vostok capsule, and the fact her
+                flight was shorter than the three flight preceding
+                her, I’m more inclined to say she was treated
+                closer to a human life sciences payload.)
+              </p>
+              <p>
+                The Soviet Union flew the first woman into space
+                because they heard the US might be doing the same
+                (misconstruing the Mercury 13), and they wanted to
+                be first. Then, they didn’t fly a single woman for
+                another twenty years. None of the other four
+                candidates would ever fly. Then the Soviet Union
+                did the first female spacewalk, because they heard
+                the U.S. was going to be doing the same, and they
+                wanted to first. No Soviet or Russian woman has
+                conducted a spacewalk since.
+              </p>
+              <p>
+                Here’s another bit of trivia you might not know:
+                from 1963 to 1975, the USSR made 7 successful
+                robotic landings on the Moon, including the very
+                first with Luna 9 in 1966. If we also consider 1976
+                – the last year of first-gen lunar landings and
+                only a year beyond our 1975 ASTP cutoff date –
+                that’s 8 landings.
+              </p>
+              <p>
+                8 landings out of <b>27 attempts</b>, that is.
+              </p>
+              <p>
+                In the same time-frame, the US made five robotic
+                landings and six manned landings – out of seven and
+                seven attempts, respectively.
+              </p>
+              <p>
+                This sort of parallels the respective Venus
+                programs of both countries a couple years later.
+                The Soviet Union made nine landings on Venus, out
+                of twelve attempts; the US made one landing on
+                Venus out of <b>no</b> attempts. Did you know that?
+                Hughes overbuilt the Day probe (intended only for
+                atmospheric data collection) so much that when it
+                hit the ground <i>without a parachute,</i> it just
+                kept transmitting! For over an hour! (The Night
+                probe, part of the same mission, <i>also</i>
+                survived impact, but only for two seconds. Still a
+                laudable accomplishment, but not really a
+                “successful landing” in my book.)
+              </p>
+              <p>
+                Here’s a third piece of trivia: while the USSR did
+                get the first ever EVA (“spacewalk”), it’s the US
+                that got the second and third. And fourth. And
+                fifth. And sixth and seventh. Also eight, ninth,
+                and tenth. Then the USSR got the eleventh, and the
+                US got the twelfth. And thirteenth, fourteenth,
+                fifteenth, sixteenth, seventeenth, eighteenth,
+                nineteenth, twentieth, and twenty-first (though you
+                might not count those, because they didn’t happen
+                in Zero G. Walking on the Moon is cheating!) then
+                the twenty-second EVA in deep space, before another
+                six moonwalks and two more deep-spacewalks. Oh, and
+                also the thirty-first, thirty-second, thirty-third,
+                thirty-fourth, thirty-fifth, thirty-sixth,
+                thirty-seventh, thirty-eighth, thirty-ninth, and
+                fortieth on Skylab.
+              </p>
+              <p>
+                Then we hit Apollo-Soyuz, and the space race is
+                officially over!
+              </p>
+              <p>
+                Isn’t it a little ridiculous to claim a milestone
+                is yours when you could barely replicate it? EVAs
+                are only valuable when you have a facility that
+                requires them – usually either a station, or a
+                surface ops site. The USSR did not develop such
+                facilities or mission profiles before the US did.
+                Period.
+              </p>
+              <p>
+                I am aware that, unlike the number of women flown
+                in space, this statistic evens out a bit after
+                1975, as both nations entered their respective 80s
+                forever programs – STS, and second and third
+                generation DOS space stations. The USSR would make
+                41 spacewalks from 1975-1991, the US only 15. This
+                brings totals up to 43 and 55, respectively. Things
+                would swing back the other way going into the ISS,
+                but at that point the USSR was no more and things
+                get even more geopolitically complicated.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div id="outline-container-org30031ef" class="outline-2">
-        <h2 id="org30031ef">
+      <div id="outline-container-org0e96122" class="outline-2">
+        <h2 id="org0e96122">
           License:
         </h2>
-        <div class="outline-text-2" id="text-org30031ef">
-          <p>
-            Copyright 2025 <a href=
-            "https://github.com/MetroidIsPrettyCool">Joseph
-            Burke</a>. All original content published to this
-            website is licensed under a <a href=
-            "https://creativecommons.org/licenses/by-sa/4.0/">CC
-            BY-SA 4.0</a> 🅭🅯🄎 license, unless explicitly stated
-            otherwise.
-          </p>
+        <div class="outline-text-2" id="text-org0e96122">
+          Copyright © 2025 <a href=
+          "https://github.com/MetroidIsPrettyCool">Joseph
+          Burke</a>. All original content published to this website
+          is licensed under a <a href=
+          "https://creativecommons.org/licenses/by-sa/4.0/">CC
+          BY-SA 4.0</a><img src=
+          "https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+          alt="Creative Commons Logo" class="c8" /><img src=
+          "https://mirrors.creativecommons.org/presskit/icons/by.svg"
+          alt="Creative Commons Attribution Logo" class=
+          "c8" /><img src=
+          "https://mirrors.creativecommons.org/presskit/icons/sa.svg"
+          alt="Creative Commons Share-Alike Logo" class="c8" />
+          license.
         </div>
       </div>
       <div id="footnotes">
@@ -2004,29 +2147,14 @@ Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using 
             "doc-backlink">5</a></sup>
             <div class="footpara" role="doc-footnote">
               <p class="footpara">
-                See <a href=
-                "https://choosealicense.com/licenses/mpl-2.0/">https://choosealicense.com/licenses/mpl-2.0/</a>
-                for the high level, <a href=
-                "https://www.mozilla.org/en-US/MPL/2.0/">https://www.mozilla.org/en-US/MPL/2.0/</a>
-                for the nicely-formatted text, and <a href=
-                "https://www.mozilla.org/en-US/MPL/2.0/FAQ/">https://www.mozilla.org/en-US/MPL/2.0/FAQ/</a>
-                for some of the nitty-gritty.
-              </p>
-            </div>
-          </div>
-          <div class="footdef">
-            <sup><a id="fn.6" class="footnum" href="#fnr.6" role=
-            "doc-backlink">6</a></sup>
-            <div class="footpara" role="doc-footnote">
-              <p class="footpara">
                 <a href=
                 "https://editorconfig.org/">https://editorconfig.org/</a>
               </p>
             </div>
           </div>
           <div class="footdef">
-            <sup><a id="fn.7" class="footnum" href="#fnr.7" role=
-            "doc-backlink">7</a></sup>
+            <sup><a id="fn.6" class="footnum" href="#fnr.6" role=
+            "doc-backlink">6</a></sup>
             <div class="footpara" role="doc-footnote">
               <p class="footpara">
                 I mean, they <i>are</i> commands, because they have
@@ -2038,32 +2166,22 @@ Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using 
             </div>
           </div>
           <div class="footdef">
-            <sup><a id="fn.8" class="footnum" href="#fnr.8" role=
-            "doc-backlink">8</a></sup>
+            <sup><a id="fn.7" class="footnum" href="#fnr.7" role=
+            "doc-backlink">7</a></sup>
             <div class="footpara" role="doc-footnote">
               <p class="footpara">
                 Stuff that’s in C source code (like
                 <code>car</code> and <code>cdr</code> and
                 <code>self-insert-command</code> and other
                 primitives) require a bit of extra config, and you
-                need to have the source code installed somewhere.
-                Can still do it, though.
+                need to have the source code available on-disk
+                somewhere. Can still do it, though.
               </p>
             </div>
           </div>
           <div class="footdef">
-            <sup><a id="fn.9" class="footnum" href="#fnr.9" role=
-            "doc-backlink">9</a></sup>
-            <div class="footpara" role="doc-footnote">
-              <p class="footpara">
-                Ceres is obviously the best dwarf planet, because
-                it’s literally number one.
-              </p>
-            </div>
-          </div>
-          <div class="footdef">
-            <sup><a id="fn.10" class="footnum" href="#fnr.10" role=
-            "doc-backlink">10</a></sup>
+            <sup><a id="fn.8" class="footnum" href="#fnr.8" role=
+            "doc-backlink">8</a></sup>
             <div class="footpara" role="doc-footnote">
               <p class="footpara">
                 Not including unflown cosmonauts or
@@ -2072,8 +2190,8 @@ Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using 
             </div>
           </div>
           <div class="footdef">
-            <sup><a id="fn.11" class="footnum" href="#fnr.11" role=
-            "doc-backlink">11</a></sup>
+            <sup><a id="fn.9" class="footnum" href="#fnr.9" role=
+            "doc-backlink">9</a></sup>
             <div class="footpara" role="doc-footnote">
               <p class="footpara">
                 Including Soyuz 1, 11, 7K-T No.39, 7K-ST No.16L,
@@ -2083,8 +2201,8 @@ Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using 
             </div>
           </div>
           <div class="footdef">
-            <sup><a id="fn.12" class="footnum" href="#fnr.12" role=
-            "doc-backlink">12</a></sup>
+            <sup><a id="fn.10" class="footnum" href="#fnr.10" role=
+            "doc-backlink">10</a></sup>
             <div class="footpara" role="doc-footnote">
               <p class="footpara">
                 Including <i>Challenger</i> STS-51L, not including
@@ -2093,13 +2211,13 @@ Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using 
             </div>
           </div>
           <div class="footdef">
-            <sup><a id="fn.13" class="footnum" href="#fnr.13" role=
-            "doc-backlink">13</a></sup>
+            <sup><a id="fn.11" class="footnum" href="#fnr.11" role=
+            "doc-backlink">11</a></sup>
             <div class="footpara" role="doc-footnote">
               <p class="footpara">
                 Including <i>Challenger</i> STS-51L, X-15 flights
-                over 50 miles, even X-15 flight 191, and Apollo 1,
-                and Gemini 6; not including Gemini 9, ALT 1-16,
+                over 50 miles – even X-15 flight 191 – and Apollo
+                1, and Gemini 6; not including Gemini 9, ALT 1-16,
                 unflown astronauts or payload specialists.
               </p>
             </div>
@@ -2112,7 +2230,7 @@ Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using 
         Author: Joseph Burke
       </p>
       <p class="date">
-        Created: 2025-11-08 Sat 12:51
+        Created: 2025-11-16 Sun 01:26
       </p>
       <p class="validation">
         <a href=

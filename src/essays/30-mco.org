@@ -1,35 +1,37 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
 #+TITLE: You're Probably Wrong About Mars Climate Orbiter
-#+SUBTITLE: It's Not About Inches Vs. Centimeters
-#+BIBLIOGRAPHY: 30-mco.bib
+#+SUBTITLE: It's Not About Inches Vs. Centimeters, You Guys
 
-#+begin_center
+#+BIBLIOGRAPHY: 30-mco.json
+
+#+begin_aside
 (This one is more of a response.)
-#+end_center
+#+end_aside
 
-See, a while ago I came across this talk, "Programming’s Greatest Mistakes", from one Mark Rendle:
+See, a while ago I came across this talk, "Programming’s Greatest Mistakes", from one Mark Rendle,
 
 #+begin_center
-[[yt:qC_ioJQpv4E]]
+[[yt:qC_ioJQpv4E][YouTube video: Programming’s Greatest Mistakes - Mark Rendle - NDC Copenhagen 2022]]
 #+end_center
 
-I have no problem with its overall /message/ (manage your projects well, stay organized, make sure you know what you're
-doing, etc.) but I was a little irked seeing him bring up Mars Climate Orbiter. I'm sick and tired of seeing it
+and though I have no problem with its overall /message/ (manage your projects well, stay organized, make sure you know
+what you're doing, etc.) I was a little irked seeing him bring up Mars Climate Orbiter. I'm sick and tired of seeing it
 misrepresented again and again by supposedly reputable sources as just a mere units mix-up. Y'know, "oh those stupid
 Americans and their inches and feet, don't they know that'll get them in trouble when they try doing real science?" and
 so forth.
 
 *That's not what /happened./*
 
-I mean, first off: it wasn't a mix-up of inches and centimeters, it was a mix-up of /pound-force-seconds and
+I mean, to start: it wasn't a mix-up of inches and centimeters, it was a mix-up of /pound-force-seconds and
 newton-seconds;/ and it didn't /crash/ into Mars, it was simply too low when they went in for an aerobrake pass (we
 don't know where it ended up); and it *definitely* didn't leave "a scar that you can see from the other orbiters". Mark
 is probably either thinking of Beagle 2 or Mars Polar Lander, or perhaps one of the more recent unmanned lunar landers.
-(Beresheet?)
+(Beresheet? I dunno.)
 
-But, more to the point: the MCO phase I and phase II mishap reports are just PDFs you can find online. You
-can /read/ them -- they're really not that unapproachable -- and find the takeaways that NASA Safety and Mission
-Assurance thought everyone else needed to learn. You don't have to just guess what the problem was from internet rumors,
-like Mark did!
+But, more to the point: the MCO phase I and phase II mishap reports are just freely-available PDFs. You can /read/ them.
+They're really not that unapproachable. And when you do, you'll find the takeaways that NASA Safety and Mission
+Assurance thought mattered. I don't understand how so many people -- looking at you, Mark -- don't bother doing this.
 
 The important bits for us right now are these ones:
 
@@ -65,9 +67,7 @@ Lockheed Martin Astronautics to better understand the issues that led to the fai
 More importantly, the project failed to introduce sufficient discipline in the processes used to develop, validate and
 operate the spacecraft; nor did it adequately instill a mission success culture that would shore up the risk introduced
 by these cuts. These process and project leadership deficiencies introduced sufficient risk to compromise mission
-success to the point of mission failure.
-
-...
+success to the point of mission failure...
 
 ...the Board found that a significant infrastructure of processes and requirements already is in place to enable
 robust program and project management. However, these processes are not being adequately implemented within the context
@@ -86,51 +86,67 @@ In fact, they lost pretty abysmally. Something like a third of the MCO Phase I r
 avoid something similar on the contemporaneous Mars Polar Lander (MPL) mission, and then that failed too, shortly before
 touchdown, just less than a month later; and then /both/ of the ride-along /Deep Space 2/ impactor probes failed before
 they could carry out /their/ mission; and Mars Surveyor '98 was 0 for 4 and out of spacecraft. Some three hundred and
-fifty million dollars down the drain. That's when the technical reports really started coming in. [cite:e.g.
-@Young2000]
+fifty million dollars down the drain. That's when the technical reports /really/ started coming in.[fn:1]
 
-Why? Because this wasn't an isolated incident. These were the 90s at NASA! Dan Goldin was administrator! "Faster,
-Better, Cheaper" (pick three) was the paradigm for the whole space program!
+It gets worse when we take a look at the statistics for /all/ the missions launched between 1998 and 1999:
 
-Of the ten missions launched between 1998 and 1999[fn:1], five of them conclusively failed (MCO, DS2, MPL, WIRE,
-TERRIERS), one of them partially failed before being recovered to "partial success" with great effort (DS1), and four
-were successes (/Lunar Prospector/, /Stardust/, SWAS and TRACE).
+#+begin_center
+#+ATTR_HTML: :class metroidisprettycool-github-io-success-fail-table
+| Mission              | Launch        |                                                              Outcome |
+| <l>                  | <l>           |                                                                  <r> |
+|----------------------+---------------+----------------------------------------------------------------------|
+| /Lunar Prospector/   | Jan. 8, 1998  |               @@html:<span class="success">@@Success@@html:</span>@@ |
+| TRACE                | April 2, 1998 |               @@html:<span class="success">@@Success@@html:</span>@@ |
+| /Deep Space 1/       | Oct. 24, 1998 | @@html:<span class="partial">@@Partial Success@@html:</span>@@[fn:2] |
+| SWAS                 | Dec. 6, 1998  |               @@html:<span class="success">@@Success@@html:</span>@@ |
+| Mars Climate Orbiter | Dec. 11, 1998 |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
+| /Deep Space 2/       | Jan. 3, 1999  |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
+| Mars Polar Lander    | Jan. 3, 1999  |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
+| /Stardust/           | Feb. 7, 1999  |               @@html:<span class="success">@@Success@@html:</span>@@ |
+| WIRE                 | March 5, 1999 |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
+| TERRIERS             | May 18, 1999  |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
+#+end_center
 
-Expand our view to Goldin's /whole administratorship,/ and we find several more examples: the failures of Lewis and
+[cite:@NasaLunarProspector], [cite:@NasaTrace], [cite:@NasaDs1], [cite:@NasaSwas], [cite:@NasaSwasOther],
+[cite:@NasaMco], [cite:@NasaMpl], [cite:@NasaMpl], [cite:@NasaStardust], [cite:@NasaWire], [cite:@NasaWireOther],
+[cite:@NasaTerriers], [cite:@NasaTerriersOther]
+
+Do those look like good numbers? 4/10 successes and 5/10 failures?
+
+Expand our view to Dan Goldin's /whole administratorship,/ and we find several more examples: the failures of Lewis and
 CONTOUR, the near-failure of the /Genesis/ sample return, the failures of /Clementine/ and /NEAR Shoemaker/ during their
 extended missions, the constant issues with the Wake Shield Facility, the STS-51 Transfer Orbit Stage cradle explosion,
 the near-disaster of STS-93, the worrying normalization of deviance on STS-95 -- I could go on and on.
 
-Actually, I /will/ go on, because this is a problem bigger than just Dan Goldin -- easy to make fun of though he is.
-Similar numbers of accidents surround the NASA throughout the 80s, 90s and 2000s, regardless of administrator.
+Expand yet further still, to the whole post-Apollo Applications era more broadly, and we find /plenty/ more. (I'm sure
+you can name two. Hint: they both start with a "C".)
 
-The problem was then, and is now, /Congress./
+Why? Because this is a problem bigger than just MCO, and bigger than just Dan Goldin -- easy to make fun of though his
+"faster, better, cheaper; just pick three LMAO it's not hard" ethos may have been. The problem was then, as it is now,
+/Congress./ Specifically, /Congress' budget./
 
-Reducing costs to make risks more worthwhile is not ipso facto a bad idea, if you still have the time, budget and
-margins to get it done. Likewise: a broader scope, conservative planning and a bigger budget is also not a bad idea, if
-you still have the time, budget and margins to get it done.
+Reducing costs to make risks more worthwhile is not /ipso facto/ a bad idea, *if you still have the time, budget and
+margins to get it done.* Likewise: a broader scope, conservative planning and a bigger budget is also not /ipso facto/ a
+bad idea, *if you still have the time, budget and margins to get it done.*
 
 NASA has struggled so much with project management since the 60s because, honestly, it can't /do/ effective project
-management. There are intractable upfront costs there that cannot be reconciled with what the legislature demands. Every
-year another report comes out with the same conclusions and the same recommendations and /every/ year those
-recommendations slip or get dropped or ignored or forgotten, because there's no safety regulation you can pass that lets
-you do a $20 job for $15.
+management. There are intractable upfront costs there that simply cannot be reconciled with what the legislature
+demands. Every year, another report comes out with the same conclusions and the same recommendations; and /every/ year,
+those recommendations slip or get dropped or ignored or forgotten, because there's no safety regulation you can pass
+that lets you do a $20 job for $15.
 
-That's the real lesson. Put up for your team, or they're going to have do what you're /asking/ for. Not what you want,
-not what works, not what you need.
+That's the real lesson. Your team needs real, intractable resources to do their jobs. Put up for them, or they're going
+to have start doing what you're /asking/ for. Not what's best, not what you want, not what works, not what you need.
 
-Let's hope you're not putting lives on the line.
-{{{citation-footer}}}
-{{{license-footer(2025)}}}
+Let's hope /you/ aren't putting lives on the line.
+
+* {{{citation_footer}}}
+
+* {{{license_footer(2025)}}}
+
 * Footnotes
-[fn:1] That's these:
-1. /Lunar Prospector/
-2. /Deep Space 1/
-3. Mars Climate Orbiter
-4. SWAS
-5. TRACE
-6. /Stardust/
-7. /Deep Space 2/
-8. Mars Polar Lander
-9. WIRE
-10. TERRIERS
+[fn:1] For example, the Mars Program Independent Assessment Team Report [cite:@Young2000], which sort of compiled all
+the other ones for the benefit of management.
+
+[fn:2] The spacecraft was eventually recovered, with great effort, however several important mission objectives were not
+completed. [cite:@NasaDs1]
