@@ -5,7 +5,7 @@
 * Introduction
 
 ** Introduction Introduction Introduction
-Hi! Welcome to my ~#webpresence~. Mostly just GitHub pages-squatting over here.
+Hi! Welcome to my ~#webpresence~.
 
 Figured I'd like somewhere to dump whatever I couldn't get to work as a regular Tumblr post. Maybe I'll eventually grow
 my ambitions, maybe I won't.
@@ -18,7 +18,7 @@ and I value consistency more than I value being professional.
 
 #+begin_aside
 Also, /Metroid/ *is* pretty cool. Ever try /Metroid Prime/? \\
-*Man.* That's a good game.
+*Man.* That is a good game.
 #+end_aside
 
 ** What's Your Deal?
@@ -45,40 +45,41 @@ and my post-mortem thoughts on each.]]
 * XHTML? In 2025?
 Pretty good gag, right? =:P=
 
-\\
+I'm not doing it for compatibility with old browsers (I'm totally fine with using ~&~ selectors in my CSS, for example)
+and I'm not doing it out of any love for XML (it's an embarrassing format). My reasoning here is totally nontechnical, I
+just like playing with touys.
 
-I have no particular love for XML, it is an embarrassing format. Does anything else epitomize that /slavish/ 90s
-devotion to bureaucracy quite like DTDs?
+1. HTML is even more embarrassing than XML is, and I want to take whatever tiny stand I can against it.
 
-But I had to pick /something,/ and HTML is just apocalyptic.
+2. Org mode[fn:1] automatically inserts a link to the W3C Markup Validator at the bottom of the page, and (after a bit
+   of work from me, like writing a post-publishing ~tidy~[fn:2] hook) XHTML5 was the easiest to get to /pass/ that
+   validation.[fn:3]
 
-The Org mode[fn:3] team seems to concur with my sentiment, given that XHML 1.0-strict is its default doctype for HTML
-export; so that's what I started with. /Unfortunately/ -- despite proudly embedding a W3C Validtor link at the bottom of
-every page -- they're /also/ content to do things like spew out style tags in ~<body>~, hardcode DPUB-ARIA attributes
-without the right doctype,[fn:4] and emit all sorts of illegal entities without exposing the configuration options to
-fix it.
+3. I like dumpster diving through the annals of technical history to get a better idea of why and how we got here.
 
-After a bit of work, I found that the XHTML5 doctype, paired with a post-publishing ~tidy~[fn:5] hook, seemed to clean
-up best. So that's what I stuck with.
+4. XHTML being so strict makes it substantially easier for me to na\iuml​vely script some basic transformations in my
+   export pipeline.
 
-Will I /continue/ to stick with it? I dunno. The strictness is pretty helpful for scripting some na\iuml​ve document
-transformations, like link-rewriting, so I probably won't switch to plain HTML. Maybe I'll try to put together an XHMTL
-1.0 + WAI-ARIA 1.0 + IFrames DTD at some point, as a bit of experimental archaeology? Or maybe I won't. This whole
-ordeal has given me a pretty dim view of document formatting in general -- $\LaTeX$, you're also part of the problem --
-so maybe I'll just go back to hunting mammoths and living in caves instead. Probably a more satisfying lifestyle...
+So going mainstream with HTML5 is never gonna happen, it doesn't meet any of those criteria. A manually assembled XHTML
+1.1 + WAI-ARIA 1.0 + IFrames DTD is on the table, though, as a bit of experimental archaeology. Or maybe I'll go even
+further back! HTML 3.2, anyone? 2.0? [[file:./other/htmlplus.html][HTML+]]? I /will/ do it if pushed, don't test me!
 
 * {{{license_footer(2025)}}}
 
 * Footnotes
 
-[fn:3] [[https://orgmode.org/]]
+[fn:1] [[https://orgmode.org/]]
 
-[fn:4] Prioritizing accessibility is admirable, don't get me wrong, but I don't understand why you wouldn't just use
-[[https://www.w3.org/WAI/ARIA/Schemata/xhtml-aria-1.dtd]]? Or at /least/ bring in the standalone module? \\
+[fn:2] [[https://www.html-tidy.org/]]
 
+[fn:3] The default Org mode export doctype, interestingly, is actually /XHTML 1.0-strict./ Boggles the mind they would
+pair /that/ with the validator link being on by default, when there's so much hardcoded invalid behavior for that
+doctype. Style tags in ~<body>~, DPUB-ARIA attributes without the right doctype, all sorts of illegal entities without
+exposing the configuration options to fix it, etc.
 \\
-
+The ARIA is particularly silly. Prioritizing accessibility is admirable, don't get me wrong, but I don't understand why
+you wouldn't just use [[https://www.w3.org/WAI/ARIA/Schemata/xhtml-aria-1.dtd]] if you're going to bring them in? Or at
+/least/ bring in the standalone module?
+\\
 Sure, they aren't recommended by W3C for real documents; but they /also/ haven't been touched since 2010, and the DTD
 traffic problem isn't exactly pertinent anymore. (Moreover: if you cared so much, you could also host them yourself!)
-
-[fn:5] [[https://www.html-tidy.org/]]

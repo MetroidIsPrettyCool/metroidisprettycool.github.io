@@ -91,25 +91,21 @@ fifty million dollars down the drain. That's when the technical reports /really/
 It gets worse when we take a look at the statistics for /all/ the missions launched between 1998 and 1999:
 
 #+begin_center
-#+ATTR_HTML: :class metroidisprettycool-github-io-success-fail-table
-| Mission              | Launch        |                                                              Outcome |
-| <l>                  | <l>           |                                                                  <r> |
-|----------------------+---------------+----------------------------------------------------------------------|
-| /Lunar Prospector/   | Jan. 8, 1998  |               @@html:<span class="success">@@Success@@html:</span>@@ |
-| TRACE                | April 2, 1998 |               @@html:<span class="success">@@Success@@html:</span>@@ |
-| /Deep Space 1/       | Oct. 24, 1998 | @@html:<span class="partial">@@Partial Success@@html:</span>@@[fn:2] |
-| SWAS                 | Dec. 6, 1998  |               @@html:<span class="success">@@Success@@html:</span>@@ |
-| Mars Climate Orbiter | Dec. 11, 1998 |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
-| /Deep Space 2/       | Jan. 3, 1999  |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
-| Mars Polar Lander    | Jan. 3, 1999  |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
-| /Stardust/           | Feb. 7, 1999  |               @@html:<span class="success">@@Success@@html:</span>@@ |
-| WIRE                 | March 5, 1999 |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
-| TERRIERS             | May 18, 1999  |               @@html:<span class="failure">@@Failure@@html:</span>@@ |
+#+ATTR_HTML: :class mipc-github-io-success-fail-table
+| Mission              | Launch                           |                                                                             Outcome |
+| <l>                  | <l>                              |                                                                                 <r> |
+|----------------------+----------------------------------+-------------------------------------------------------------------------------------|
+| /Lunar Prospector/   | Jan. 8, 1998                     |   @@html:<span class="success">@@Success@@html:</span>@@[cite:@NasaLunarProspector] |
+| TRACE                | April 2, 1998                    |             @@html:<span class="success">@@Success@@html:</span>@@[cite:@NasaTrace] |
+| /Deep Space 1/       | Oct. 24, 1998                    | @@html:<span class="partial">@@Partial Success@@html:</span>@@[cite:@NasaDs1][fn:2] |
+| SWAS                 | Dec. 6, 1998[cite:@NasaSwas]     |         @@html:<span class="success">@@Success@@html:</span>@@[cite:@NasaSwasOther] |
+| Mars Climate Orbiter | Dec. 11, 1998                    |               @@html:<span class="failure">@@Failure@@html:</span>@@[cite:@NasaMco] |
+| /Deep Space 2/       | Jan. 3, 1999                     |               @@html:<span class="failure">@@Failure@@html:</span>@@[cite:@NasaMpl] |
+| Mars Polar Lander    | Jan. 3, 1999                     |               @@html:<span class="failure">@@Failure@@html:</span>@@[cite:@NasaMpl] |
+| /Stardust/           | Feb. 7, 1999                     |          @@html:<span class="success">@@Success@@html:</span>@@[cite:@NasaStardust] |
+| WIRE                 | March 5, 1999[cite:@NasaWire]    |         @@html:<span class="failure">@@Failure@@html:</span>@@[cite:@NasaWireOther] |
+| TERRIERS             | May 18, 1999[cite:@NasaTerriers] |     @@html:<span class="failure">@@Failure@@html:</span>@@[cite:@NasaTerriersOther] |
 #+end_center
-
-[cite:@NasaLunarProspector], [cite:@NasaTrace], [cite:@NasaDs1], [cite:@NasaSwas], [cite:@NasaSwasOther],
-[cite:@NasaMco], [cite:@NasaMpl], [cite:@NasaMpl], [cite:@NasaStardust], [cite:@NasaWire], [cite:@NasaWireOther],
-[cite:@NasaTerriers], [cite:@NasaTerriersOther]
 
 Do those look like good numbers? 4/10 successes and 5/10 failures?
 

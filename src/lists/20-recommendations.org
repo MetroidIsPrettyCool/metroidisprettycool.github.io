@@ -1,0 +1,622 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
+#+OPTIONS: toc:2
+
+#+TITLE: Stuff I Think You Should Check Out
+Some hidden gems, some undisputed masterpieces, some things that definitely aren't either of those; but all works that
+/I/ think deserve as many eyes as possible.
+
+* Books / Literature
+
+** /17776/ (2017) and /20020/ (2020) by Jon Bois
+#+begin_aside
+Are these really "books"? I dunno. You /do/ do a lot of reading. Maybe I should add a "multimedia" category?
+#+end_aside
+
+/17776/ is transcendental. Many have debated the subject of the "Great American Novel", but this is undoubtedly the
+Great American Short Story. Its sequel is maybe even better?
+
+They're both not too long, and available online, so I'll keep it at that and leave the links to you.
+
+#+begin_center
+|                   17776 on SB Nation                    |
+|                           <c>                           |
+|---------------------------------------------------------|
+|   /17776: What football will look like in the future/   |
+|      [[https://www.sbnation.com/a/17776-football]]      |
+|---------------------------------------------------------|
+|         /20020: The Future of College Football/         |
+| [[https://www.sbnation.com/secret-base/21410129/20020]] |
+#+end_center
+
+** /Meanwhile/ (2010) by Jason Shiga
+This one is more of a recommendation for /you/ to give. /Meanwhile/ is aimed pretty solidly at a late elementary, middle
+school demographic -- that's not to say you can't read it as an adult, of course, but it's short and can only get so
+complex.
+
+/Meanwhile/ is... hmmm. How to describe it. /Meanwhile/ was and still is very influential on how I read and understand
+Art.
+
+It's a choose-your-own-adventure graphic novel /about/ choice, framed by the (fictionalized) many worlds interpretation
+of quantum mechanics. Panel flow is dictated by following these little noodle-y flowchart lines that connect panels,
+rather than typical page layout rules, and decisions for the reader are represented by forks in these paths. When you're
+asked if you want chocolate or vanilla ice cream, for example, you follow the line that connects to the panel of your
+choice. (The whole thing is printed on laminated paper, which can help younger children physically trace the path with
+their finger.) Everything unfolds from here in a sort of "/House of Leaves/ for ten-year-olds" kind of way.
+
+Diegetically, readers make use of a time machine, a mind reading machine (which can read the minds of dead people), and
+an "instantaneously kill everyone in the entire world except (optionally) yourself" machine to slowly unravel the
+mystery at the heart of the book; while at the same time, Shiga is deliberately interweaving panels from separate
+timelines together onto the same page, so that /nondiegetically/ you the reader are also constantly getting these little
+contextless flashes of what could be, what might be, what was, what wasn't -- everything happening in the /meanwhile./
+
+You have to read and re-read it over and over again, coming at it from different angles, "cheating" by just flipping
+through cover-to-cover, re-reading as a complete rules stickler, and really just thoroughly /exercise/ it to get full
+understanding.
+
+It's such a unique, beautiful little thing. If you don't want to take my word for it, why not Scott McCloud's? (Author
+of /Understanding Comics/, among others.)
+
+#+begin_quote
+This book is going to be so, so, cool!
+
+Many of us cartoonists already own Jason Shiga‘s original hand-printed version of this insane choose-own-adventure
+masterpiece (he even has a quote from me), but the idea of a full-out professionally printed version with tabs. Ah, be
+still my heart...
+
+Best of all is the absolute certainty that whenever we see the number "3,856" used to describe the many branching
+possibilities, it was Shiga himself that came up with the number and the number’s gonna be correct.
+#+end_quote
+---Scott McCloud, February 17^th, 2010 ([[https://www.scottmccloud.com/2010/02/17/3856-story-possibilities/]])
+
+Currently, it's available in digital form and physical hardcover. Also possibly from your local library. Check it out!
+
+#+begin_center
+|        /Meanwhile/ Main Page        |
+|                 <c>                 |
+|-------------------------------------|
+| [[https://zarfhome.com/meanwhile/]] |
+#+end_center
+
+** /Nausica\auml of the Valley of the Wind/ (1982) by Hayao Miyazaki
+The manga, not the movie. Though the movie is interesting in its own way, its a very different thing.
+
+See, the manga entered serialization in 1982, and the movie came out in 1984, but then the manga /kept going/
+until 1994. Those ten years of distance gave Miyazaki a /lot/ of time to rethink his message, and as a result the manga
+ending is a pretty direct refutation of the film ending that's less... pleasant, but more compelling.
+
+If you liked the darker direction of /Princess Mononoke/ (which, notably, started production immediately after
+/Nausica\auml/ ended) but thought it still didn't have quite enough of a biting edge, I really recommend you read
+/Nausica\auml/.
+
+#+begin_quote
+In short, you are a god. One of the many gods created a millennium ago.
+
+And over that millennium you have become covered with sarcoma and filth.
+
+I do not doubt that you were created out of idealism and a sense of purpose in an age of despair.
+
+Why didn't those men and women realize that both purity and corruption are the very stuff of life?
+
+Suffering and tragedy and folly will not disappear in a purified world. They are part of humanity. That is why, even in
+a world of suffering, there can also be joy and shining light.
+
+[...] Because you were created as an artifical god of purity, you have become the ugliest creature of all, never knowing
+what it means to be alive.
+#+end_quote
+--/Nausica\auml of the Valley of the Wind/, Volume II, pg. 510
+
+#+begin_quote
+If you are light, then we do not need light.
+#+end_quote
+--/Nausica\auml of the Valley of the Wind/, Volume II, pg. 518
+
+There's a few different versions floating around bookstores these days. A decent summary of all the differences can be
+found here: [[http://www.nausicaa.net/wiki/Nausica%C3%A4_(Manga_Availability)]]
+
+The easiest release to obtain is probably going to be the "deluxe" two-volume hardcover box set, which is in /most/
+respects the most definitive version, save for some typos in the English translation. (A summary of them can be found
+here [[https://nyaa.si/view/1213298]]) If you can't or don't want to go with the deluxe set, then I suggest you at least
+try to avoid the "flipped" RTL versions. Why oh why did localizers ever think /that/ was a good idea?
+
+#+begin_center
+|                        /Nausica\auml/ Deluxe Edition                        |
+|                                     <c>                                     |
+|-----------------------------------------------------------------------------|
+| [[https://shop.viz.com/products/nausica-of-the-valley-of-the-wind-box-set]] |
+|       (you should probably also check other retailers for any deals )       |
+#+end_center
+
+* Movies / Television
+
+** /28 Years Later/ (2025) dir. Danny Boyle
+Ouuuggghhh. The /tone/ in this film. Apparently the reviews were pretty split between critics and audiences? I have no
+idea how you could dislike /28 Years Later/. It's so bold, so visually inventive, so /overwhelmingly/ bittersweet. In an
+overwhelming world, that means a lot.
+
+If you liked /28 Days Later/, then -- actually, it doesn't matter if you've seen or care about /28 Days/. This is a
+spiritual sequel, not really a plot sequel.
+
+If you like films with strong themes and presentation to match, you gotta watch /28 Years Later/. You gotta.
+
+** /The Animatrix/ (2003) dir. Various
+Sort of a mixed bag, IMO, but which contents of the bag are which seems up to popular debate.
+
+I won't push you in any particular direction, then, but I will shout out my favorite short of the bunch: /Beyond/,
+written and directed by Koji Morimoto. It's got a really unique perspective on Life in Computer World, and I love its
+sense of /wonder./ Nothing comes close.
+
+#+begin_aside
+You might also know Morimoto from his work on /Magnetic Rose/ from the /Memories/ anthology, or /Franken's Gears/ from
+the /Robot Carnival/ anthology. He's real big on short films.
+#+end_aside
+
+** /The Black Hole/ (1979) dir. Gary Nelson
+Surprising good, given how bad it is. Or maybe it's surprising bad, given how good it is.
+
+The set (incl. miniatures + matte painting) design is as striking as it is /utterly/ unique, except for all the boring
+gray-brown metal corridors they spend half the runtime in. The performances are flat and boring 70s Disney nothing,
+except for Maximillian Schell, who spends the whole film behaving as though he's forgotten what a movie is and every
+scene is his first introduction to the concept -- totally electrifying. The robots characters range from "Slim Pickins
+as cuddly teddy bear trashcan" to "mute, hovering Swiss Army Knife possessed by Satan himself (more or less)". The
+ending is one of the most bizarre things I've ever seen in any film, /ever./
+
+You may not like it as a film, but there's a lot of stuff to pick through here that you won't find anywhere else.
+
+** /Cinderella III: A Twist in Time/ (2007) dir. Frank Nissen
+Frank Nissen set out to make the best film he could, circumstances be damned, and by god he succeeded.
+
+You should watch it. I swear it's not nearly as contrived or boring as you might expect. (Though it does suffer from
+some of the jank that's characteristic of direct-to-dvd sequels. Just not enough to really knock it down.)
+
+** /Crank 2: High Voltage/ (2009) dir. Mark Neveldine and Brian Taylor
+The /Freddy Got Fingered/ (2001) of action films. It's sort of hard to get across how much bullshit happens without just
+listing the plot summary. Here's one, though: wanna see a suitmation Kaiju fight with Jason Statham wearing a giant
+/Spitting Image/-esque helmet of his own face? If yes, and you can live with sitting through one of the most racist,
+sexist, homophobic movies to ever see a theatrical release, then I highly recommend you check this one out.
+
+** /Neon Genesis Evangelion/ (1995), /The End of Evangelion/ (1997), Episode 26\prime Live Action Cut (2003) dir. Hideaki Anno
+I'm not saying anything. I managed to go in totally blind, and the sense of getting knocked off my feet was
+indescribable. Watch it watch it watch it. /EoE/ isn't the second-highest rated animated film (and 26^th highest
+overall) film on Letterboxd[fn:1] for no reason.
+
+Both are currently on Netflix, and, as of the last couple of years, Blu-ray. If you've got the Blu-rays, then I really
+recommend the "#26\prime Live Action Part" as a companion piece for /The End of Evangelion/. It's a sort of short film
+composed of re-edited cut footage from the same, and it's really quite good.
+
+#+begin_center
+|              /Neon Genesis Evangelion/ on Blu-ray               |
+|                               <c>                               |
+|-----------------------------------------------------------------|
+|    [[https://store.gkids.com/pages/neon-genesis-evangelion]]    |
+| (you should probably also check other retailers for any deals ) |
+#+end_center
+
+** /Perfect Blue/ (1997) dir. Satoshi Kon, Anything Else by Satoshi Kon
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAA AAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAA
+
+Between this and /The End of Evangelion/, 1997 was a really great year for reality-obliterating anime films. You gotta
+watch /Perfect Blue/. You gotta. It's incredible. Really genuinely unreservedly incredible.
+
+Alternatively, check out /Paprika/ or /Millenium Actress/, both also by Kon, both maybe arguably better films, and also
+both free on YouTube (among other places) if you're willing to put up with that sort of thing.
+
+Then, go watch the rest of Kon's catalog. He was /such/ an incredible filmmaker.
+
+#+begin_center
+|             Satoshi Kon on YouTube              |
+|                       <c>                       |
+|-------------------------------------------------|
+|               /Millenium Actress/               |
+| [[https://www.youtube.com/watch?v=3KasqdsIaIs]] |
+|-------------------------------------------------|
+|                    /Paprika/                    |
+| [[https://www.youtube.com/watch?v=BCU7U5y6Yh0]] |
+#+end_center
+
+** /Sunshine/ (2007) dir. Danny Boyle
+The other movie where Cillian Murphy plays a tortured physicist that builds a giant bomb. That guy was made in a lab to
+play characters that look like they always kind of want to kill themselves, I swear.
+
+Everything you'd expect from Boyle and Garland working together, further bolstered by a retrospectively /bananas/ cast
+list. Chris Evans, Cillian Murphy, Michelle Yeoh, Hiroyuki Sanada, and Cliff Curtis? For 40 million dollars?
+Unbelievable.
+
+/Sunshine/ looks great, sounds great, and no matter what Tarantino might tell you, carries a strong narrative
+throughline all the way to the end. Like /28 Years Later/, this is a film that no one else could have ever made. At
+minimum I think you should see it just for the completely original space suit design. That, or the John
+Murphy/Underworld soundtrack -- take your pick.
+
+* Music
+Music is both easier and harder to recommend, because there's so much of it but it's so easy to casually listen to.
+Gonna try to dig a lot deeper here to avoid the obvious picks, you already know the stuff that's good and popular.
+
+** /Asuka Re(build)/ by Free Parking!
+This is the album that really made me fall in love with Free Parking!, the title tracks "Asuka" and "Asuka, continued"
+in particular. Brendan Steere -- whom you might know as the writer and director of the /The Velocipastor/, this is his
+high school band -- knows what he's talking about.
+
+#+begin_center
+|             Free Parking! on Bandcamp              |
+|                        <c>                         |
+|----------------------------------------------------|
+| [[https://looksomefreeparking.bandcamp.com/music]] |
+#+end_center
+
+** /Humanistic/ (2001) by Abandoned Pools
+Tommy Walter is /criminally/ underrated. Criminally!
+
+If you know him from anywhere, it's probably from his stint as the bass player for Eels' first album (more complicated
+than that, I digress), or the work he did for MTV's animated TV show /Clone High/. Most of the latter comes from this
+album, a great little indie electro-pop/alternative rock record. Special shout-out to "Start Over", my pick for the best
+song off the album.
+
+If you find you like /Humanistic/, the rest of Walter's discography is also worth a listen. He's got a few other one-off
+projects, plus fourish-fivish other albums as Abandoned Pools; /The Reverb EP/, /Armed to the Teeth/, /Somnambulist/
+(all as Abandoned Pools) and The Color by Number EP (as Glacier Hiking, with Ross Golan) are more rock-focused, and
+/Sublime Currency/, /The Haunted House/ (both as Abandoned Pools), /Button Pusher/ (as Oliver the Penguin, with Rie
+Sinclair) lean poppier. Supraliminal (as Tommy Walter) is kind of doing its own thing. Feels like an orchestral horror
+film score, all instrumental.
+
+#+begin_center
+|  Abandoned Pools Official Website  |
+|                <c>                 |
+|------------------------------------|
+| [[http://www.abandonedpools.com/]] |
+#+end_center
+
+** /Lost In Her Virtual Eyes/ by Cynthoni & Projekt Melody
+(Specifically for recommending for Cynthoni, I'm not very familiar with Projekt Melody.)
+
+FKA Sewerslvt, where you'll find the rest of her work. Masterful breakcore remixes. It was hard to pick an album or
+single to mention in particular, I went one that I really liked but apparently was controversial? -- if you don't gel
+with this, maybe try /Draining Love Story (In The Eyes Of Cynthoni)/.
+
+#+begin_center
+|                Cynthoni                 |
+|                   <c>                   |
+|-----------------------------------------|
+| [[https://cynthoni.bandcamp.com/music]] |
+#+end_center
+
+** /IN MY HEAD/ by vivivivivi
+"Credits Song for My Death" really blew up a while back -- I have some thoughts on that which I'll keep to myself -- but
+I think a lot of that failed to trickle back to the rest of the album, or indeed the artist herself.
+
+I'd shout-out her other work to try to combat that, but /IN MY HEAD/ is *such* a tour de force of indie chiptune that I
+feel I still kind of have to start there. (Definitely go listen to more once you're done, though! /Sisyphus/ and /Dead
+but Dreaming/ are both great second starting points.) Very, very few albums have affected me quite so emotionally. When
+"pretend im not breathing" finally comes on to give some respite... I cried the first time I heard it. It gets intense.
+So good...
+
+#+begin_center
+|                vivivivivi on Bandcamp                |
+|                         <c>                          |
+|------------------------------------------------------|
+| [[https://tech-noir1.bandcamp.com/album/in-my-head]] |
+#+end_center
+
+** /life changing moments seem minor in pictures/ by C418
+Okay okay maybe not the most hidden of hidden gems to be shouting-out the onetime only official composer for the
+best-selling video game ever made, but I think a lot of his solo work is criminally underappreciated.
+
+/life changing moments/ might not be his best, or his most emotional, or his most interesting; but it comes from a place
+that I relate to a lot. If it doesn't click with you, then maybe try looking through the rest of his discography, I'm
+certain you'll find something in there to enjoy. /72 Minutes of Fame/, maybe, or /one/, or /Excursions/, or /2 years of
+failure/, or even /zweitonegoismus/, or a /A Cobblers Tee Thug/ -- there will be something in there for you!
+
+#+begin_center
+| C418 Official Website |
+|          <c>          |
+|-----------------------|
+| [[https://c418.org/]] |
+#+end_center
+
+** /Probably Nothing, Possibly Everything/ by Pat the Bunny
+Uh-oh.
+
+#+begin_center
+|         Pat the Bunny on Bandcamp          |
+|                    <c>                     |
+|--------------------------------------------|
+| [[https://patthebunny.bandcamp.com/music]] |
+#+end_center
+
+** /t.i.a.p.f.y.h./ by Left at London
+Ouuuugggggh "The Ballad of Marion Zioncheck". Ouuugghghghghghhhh. oooouughhh.
+
+If you find that /t.i.a.p.f.y.h./ is to your taste, then you should definitely check out the rest of Nat's discography.
+/Transgender Street Legend, Vol. 2/ and /The Purple Heart/ are personal favorites.
+
+#+begin_center
+| Left at London Official Website |
+|               <c>               |
+|---------------------------------|
+|  [[https://leftatlondon.com/]]  |
+#+end_center
+
+** /The Unending Need For Perpetual Motion/ by Astrophysics
+His vocaloid covers and remixes are pretty good, but it's the original stuff that really got me hooked. (If you do want
+a cover recommendation, check out his take on "Ghost", originally by Motorama.)
+
+Picking a specific album here was a hard toss-up between /Perpetual Motion/ and either /HOPE LEFT ME/ or /Selected &
+Tragic/. They're all great. Ultimately the lead track on the former -- "a last look behind before the door closes
+forever" -- is what pushed it to number one. I'm a big fan.
+
+#+begin_center
+|             Astrophysics on Bandcamp              |
+|                        <c>                        |
+|---------------------------------------------------|
+| [[https://astrophysicsbrazil.bandcamp.com/music]] |
+#+end_center
+
+** /The Very Best of Stan Rogers/ by Stan Rogers
+Recommending a greatest hits album when talking music is kind of a cop-out move, but the poor guy died so young (in a
+fire aboard a grounded aircraft no less, really unspeakably tragic) that this really does represent most of his studio
+recorded songs. It's a goddamned shame.
+
+Anyways, if you like folk or sea shanties, it's hard to get much better than Stan Rogers. The guy was Canadian Maritime
+through and through. My personal favorites off this record are "Barrett's Privateers", "Forty-Five Years", "Lock-Keeper"
+and "The Mary Ellen Carter". (Also, if you're a programmer or technically inclined like I am, you should give "The White
+Collar Holler" from /Between the Breaks ... Live!/ a listen -- it's very funny. "And it's Ho, boys, can't you code it,
+and program it right / Nothing ever happens in the life of mine / I'm hauling up the data on the Xerox line")
+
+#+begin_center
+| Stan Rogers Official Website |
+|             <c>              |
+|------------------------------|
+| [[https://stanrogers.net/]]  |
+#+end_center
+
+** /Western Teleport/ by Emperor X
+Chad Matheny my GOAT. My GOAT! Sort of a lo-fi indie folk, filky thing on. One guy with strong politics, a talent for
+songwriting and an acoustic guitar. (Though that might be selling him a bit short.)
+
+He's got a lot of good albums, but /Western Teleport/ has the highest concentration of my favorites. Shout-outs to "Sig
+Alert", "A Violent Translation of the Concordia Headscarp", "The Magnetic Media Storage Practices of Rural Pakistan",
+and "Allahu Ackbar".
+
+#+begin_center
+|  Emperor X Official Website  |
+|             <c>              |
+|------------------------------|
+| [[http://www.emperorx.net/]] |
+#+end_center
+
+* Video Games
+
+** /Crystalis/ (1990)
+The NES one, not that cut-down Game Boy Color port.
+
+/Crystalis/ wears its influences pretty blatantly, but this a great thing, because /Crystalis/ is like if Zelda 1 was
+good. Most of the same mechanics, but deeper, with better graphics, better music, real writing (not a lot, but it's
+impressive for the NES!), and more content. You also use magic to disguise yourself as a girl in order to infiltrate a
+standoffish all-female society a full eight years before /Ocarina of Time/ did the same thing.
+
+You can play it right now on Nintendo Switch Online, or via the /SNK 40^th Anniversary Collection/. Or by getting a
+cartridge off eBay. Or... uh, /other means./
+
+#+begin_center
+|                  /SNK 40^th Anniversary Collection/ on Steam                   |
+|                                      <c>                                       |
+|--------------------------------------------------------------------------------|
+| [[https://store.steampowered.com/app/865940/SNK_40th_ANNIVERSARY_COLLECTION/]] |
+#+end_center
+
+** /Fallout: New Vegas/ (2010)
+Real in a way that Bethesda could never comprehend. C'mon Todd, is it really so hard to give us some verisimilar faction
+psychologies?
+
+I don't remember where I first heard it, so apologies for the lack of credit, but the best way I've seen it put is this:
+In /Fallout 4/, there's a guy who runs a baseball stand. He dresses like a 50s baseball player, talks like a 50s
+baseball player, makes up outlandish claims about the sport, and tries to sell you related paraphernalia. He is a
+one-note joke about how everyone in the future will be stupid because they don't know what baseball is. In /Fallout: New
+Vegas/, the Legion all wear football pads because it's the most plentiful source of light body armor they have. None of
+'em give a single shit about football.
+
+Or, more bluntly: Obsidian's Fallout is about the complicated relationship people have with the past -- old world or
+otherwise -- and Bethesda's Fallout is about how goofy the 1950s were, with some tech-themed sword and sorcery slop
+thrown in for a main quest.
+
+Maybe don't play the game vanilla, though. The Viva New Vegas modding guide is probably the canonical reference here, so
+make sure to check that out: [[https://vivanewvegas.moddinglinked.com/]]. Shouldn't be too painful on Windows. On Linux,
+well, all I can really say is that it /does/ work eventually. Eventually...
+
+#+begin_center
+|                  /Fallout: New Vegas/ on Steam                  |
+|                               <c>                               |
+|-----------------------------------------------------------------|
+| [[https://store.steampowered.com/app/22380/Fallout_New_Vegas/]] |
+#+end_center
+
+** /Handshakes/ (2023)
+A short, ridiculously simple spin on Sokoban so unbelievable obvious in retrospect that I'm /still/ mad that I never
+thought of it myself. Plus it's free!
+
+#+begin_center
+|                   /Handshakes/ on Steam                    |
+|                            <c>                             |
+|------------------------------------------------------------|
+| [[https://store.steampowered.com/app/2171690/Handshakes/]] |
+#+end_center
+
+** /Marathon/ (1994), /Marathon 2: Durandal/ (1995), /Marathon Infinity/ (1996)
+So it turns out, John,[fn:2] that video games can be good first person shooters /and/ have compelling writing at the
+same time. Duh!
+
+No we're not talking about modern Bungie's ill-conceived extraction shooter "reboot", we're talking about the 1994 OG.
+The first FPS with mouselook. The co-first FPS with dual-wielding. /Half-Life/ before /Half-Life/. The criminally
+underappreciated also-ran for the Macintosh. The /original/ Bungie philosophical Sci-Fi action title about a lone cyborg
+and his AI friend facing off against a coalition of evil aliens trying to destroy a human colony.
+
+/Marathon/ looks like /Doom,/ but plays a bit more like /Portal/ (the first one) or a level-based /Metroid Prime/. Lots
+of terminals to read, lore with great thematic cohesion, compelling characters, puzzles, lots of fun bugs to shoot. Even
+better, all three games are free on Steam!
+
+A suggestion for when you first play /Marathon/ 1: set "Rendering System" to "OpenGL" and turn on "3D perspective"
+(Graphics > Rendering Options), then set "HUD Plugin" to "Enhanced HUD" (Graphics) -- the old-school interface and
+renderer are... products of their time. Interesting on a technical level but sort of nauseating to actually play with.
+Even I, a massive authenticity snob, prefer to play with these ameliorations.
+
+#+begin_center
+Maybe check out one (or both) of these two videos if you want a longer summary:
+
+[[yt:_3ZCuXJ7-8s]]
+
+[[yt:H9rMu1XYB98]]
+
+|                             Marathon on Steam                             |
+|                                    <c>                                    |
+|---------------------------------------------------------------------------|
+|                                /Marathon/                                 |
+|     [[https://store.steampowered.com/app/2398450/Classic_Marathon/]]      |
+|---------------------------------------------------------------------------|
+|                          /Marathon 2: Durandal/                           |
+|    [[https://store.steampowered.com/app/2398490/Classic_Marathon_2/]]     |
+|---------------------------------------------------------------------------|
+|                            /Marathon Infinity/                            |
+| [[https://store.steampowered.com/app/2398520/Classic_Marathon_Infinity/]] |
+#+end_center
+
+** The Whole Dang /Metroid/ Franchise
+#+CAPTION: Thoughts on the /Metroid/ franchise, in in-fiction chronological order.
+#+ATTR_HTML: :class mipc-github-io-success-fail-table
+| Game                                                |                      Have I Played It?                      | Thoughts                                                                                                                                                                                                                                                |
+|                                                     |                             <c>                             |                                                                                                                                                                                                                                                         |
+|-----------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /Metroid/ (1986)                                    |  @@html:<span class="partial">@@Partially.@@html:</span>@@  | Historically interesting, but even from a "it's not poorly designed, it's avant-garde" (which I don't necessarily even disagree with!) perspective, it's got problems.                                                                                  |
+| /Metroid: Zero Mission/ (2004)                      | @@html:<span class="success">@@Yes, beaten.@@html:</span>@@ | Complete ground-up remake of Metroid 1 that's a better game all around. Very very fun, probably my third favorite of the games I've beaten.                                                                                                             |
+| /Metroid Prime/ (2002)                              | @@html:<span class="success">@@Yes, beaten.@@html:</span>@@ | My number 1 favorite no question. It might not be the best /game/ in the series, but it's got an unbelievable atmosphere. If you've ever been playing an open-world game and found yourself spending hours just walking around, this is a game for you. |
+| /Metroid Prime Pinball/ (2005)                      |     @@html:<span class="failure">@@No.@@html:</span>@@      | It's a common punchline in the community but I don't think I've ever heard anyone actually talk about the gameplay. IDK.                                                                                                                                |
+| /Metroid Prime: Hunters/ (2007)                     |     @@html:<span class="failure">@@No.@@html:</span>@@      | Nobody played it and apparently controversial among those who did; I don't think I can even give an informed impression about this one.                                                                                                                 |
+| /Metroid Prime 2: Echoes/ (2004)                    |  @@html:<span class="partial">@@Partially.@@html:</span>@@  | More of the previous, but a bigger greater focus on combat.                                                                                                                                                                                             |
+| /Metroid Prime 3: Corruption/ (2007)                |  @@html:<span class="partial">@@Partially.@@html:</span>@@  | The hour-long tutorial is so easy to bounce off. I hear good things once you're in it, but I can't say for sure.                                                                                                                                        |
+| /Metroid Prime: Federation Force/ (2007)            |     @@html:<span class="failure">@@No.@@html:</span>@@      | The hour-long tutorial is so easy to bounce off. I hear good things once you're in it, but I can't say for sure.                                                                                                                                        |
+| /Metroid II: The Return of Samus/ (1991)            |     @@html:<span class="failure">@@No.@@html:</span>@@      | Sort of underdiscussed as far as I can tell. Most people say it's better than the first, but that it still has problems. That scans to me.                                                                                                              |
+| /Metroid: Samus Returns/ (2017)                     |     @@html:<span class="failure">@@No.@@html:</span>@@      | Complete-ground up remake of /Metroid II/. I hear conflicting takes on this one all the time. It seems like a fun time but not a great /Metroid/ game.                                                                                                  |
+| /Super Metroid/ (1994)@@html:<br />@@AKA Metroid 3  |     @@html:<span class="failure">@@No.@@html:</span>@@      | I hear only good things.                                                                                                                                                                                                                                |
+| /Metroid: Other M/ (2010)                           |     @@html:<span class="failure">@@No.@@html:</span>@@      | I hear only bad things.                                                                                                                                                                                                                                 |
+| /Metroid Fusion/ (2002)@@html:<br />@@AKA Metroid 4 | @@html:<span class="success">@@Yes, beaten.@@html:</span>@@ | Sooo good. A departure from the usual formula, but it's on purpose and knows what it's doing. My number 2 of the games I've beaten.                                                                                                                     |
+| /Metroid Dread/ (2021)@@html:<br />@@AKA Metroid 5  | @@html:<span class="success">@@Yes, beaten.@@html:</span>@@ | Some would describe this like /Fusion/ ate /Samus Returns/, but I think it's other way around. Still a great game, but I don't gel with it quite as much. That's an unpopular opinion, though.                                                          |
+
+At time of writing, you can play /Metroid/, /Metroid II/, /Super Metroid/, /Fusion/, and /Zero Mission/ on Nintendo
+Switch Online; /Prime/ is available as a gorgeous remake both physically and digitally, and /Dread/ is likewise
+available physically and digitally. The rest are... unavailable from primary markets.
+
+#+begin_center
+|                             Metroid Physical Copies                             |
+|                                       <c>                                       |
+|---------------------------------------------------------------------------------|
+|                        /Metroid Dread/ (Demo Available)                         |
+|      [[https://www.nintendo.com/us/store/products/metroid-dread-switch/]]       |
+|---------------------------------------------------------------------------------|
+|                           /Metroid Prime Remastered/                            |
+| [[https://www.nintendo.com/us/store/products/metroid-prime-remastered-switch/]] |
+#+end_center
+
+** /Peggle Deluxe/ (2007), /Peggle Nights/ (2008)
+/Tetris/ for the 2000s. 'Nuff said.
+
+I've never played /Peggle 2/, because in their inane wisdom EA decided to make it console-exclusive, but I don't care.
+/Nights/ is the only /Peggle/ sequel that matters. More of the same, with a little more to do, and no goddamned
+microtransactions. (Steer clear of /Peggle Blast/, BTW.)
+
+Both /Peggle/ games go on sale for around a dollar relatively regularly, particularly if you buy them bundled together.
+If you still don't want to pay that, try /Peggle Extreme/, a short Valve-themed demo based on a stripped-down version of
+the first game; or perhaps try hunting down the original demo for the first game (just called /Peggle/, confusingly) --
+I'm sure it's online somewhere.
+
+#+begin_center
+|                       Peggle on Steam                        |
+|                             <c>                              |
+|--------------------------------------------------------------|
+|   Peggle Pack Bundle (/Peggle Deluxe/ and /Peggle Nights/)   |
+| [[https://store.steampowered.com/bundle/15495/Peggle_Pack/]] |
+|--------------------------------------------------------------|
+|                       /Peggle Deluxe/                        |
+|  [[https://store.steampowered.com/app/3480/Peggle_Deluxe/]]  |
+|--------------------------------------------------------------|
+|                       /Peggle Nights/                        |
+|  [[https://store.steampowered.com/app/3540/Peggle_Nights/]]  |
+|--------------------------------------------------------------|
+|                       /Peggle Extreme/                       |
+| [[https://store.steampowered.com/app/3483/Peggle_Extreme/]]  |
+#+end_center
+
+** /Portal/ (2007), /Portal 2/ (2011)
+I mean come on, it's /Portal/. You've heard of these two. They haven't had "Overwhelming Positive" ratings for 18 and 14
+years as just some kind of /joke./ We're talking about some staggering masterpieces here!
+
+They are pretty different, though. /Portal/ is short, understated, and a little horrifying; /Portal 2/ is overtly
+comedic and more character-driven. I can't say which you might prefer.
+
+For a long time I was personally more of a /Portal 2/ guy, but I've recently undergone a little reversal of favor. /2/
+is still great, of course, and I still have some quibbles with /1/, but MAN. The atmosphere in the original is second to
+none.
+
+I've seen people call it "sterile", but I have to disagree. /Portal 1/'s Aperture is a place that *used to be* sterile.
+Ever see that news crew footage of the Mexia Supermarket cleanup?
+
+Here, I'll link it:
+
+#+begin_center
+[[yt:mCBazrSuyWc]]
+#+end_center
+
+The structures we build to live in, to work in, to shape and shelter ourselves and our communities, degrade shockingly
+quickly into lethality. Benzene, acetone, lead, asbestos, gas leaks, mycotoxins. Rust and rot alike consume to the point
+of hypoxia. It's almost spiritual.
+
+Do you know what the deadliest neurotoxin ever discovered is? It's botox. Botulinum toxin. /Botulism./ You get it from
+spoiled food. GLaDOS can't even compete. Or perhaps she's only a symptom. Aperture has rotted through, and the building
+itself has learned to hurt you. To hate you.
+
+You can imagine how this place might smell. *It smells of your sins.*
+
+Anyway, go play /Portal/! Neither game is too expensive, there's a bundle with both, and /Portal 1/ has a demo if you're
+still unsure.
+
+#+begin_center
+|                       Portal on Steam                        |
+|                             <c>                              |
+|--------------------------------------------------------------|
+|                        Portal Bundle                         |
+| [[https://store.steampowered.com/bundle/234/Portal_Bundle/]] |
+|--------------------------------------------------------------|
+|          /Portal/ and /Portal: First Slice/ (Demo)           |
+|      [[https://store.steampowered.com/app/400/Portal/]]      |
+|--------------------------------------------------------------|
+|                          /Portal 2/                          |
+|     [[https://store.steampowered.com/app/620/Portal_2/]]     |
+#+end_center
+
+** /Shenzhen I/O/ (2016)
+Brutal Zachtronics programming-based puzzle solving, the best solitaire minigame of all time, and the option to compete
+for rankings with friends!
+
+/Shenzhen I/O/ opens by encouraging you to print out and three-hole punch its 47-page PDF manual. They aren't kidding.
+You should probably at /least/ have a second monitor.
+
+If that sounds like it would be up your alley, check it out on Steam!
+
+#+begin_center
+|                  /Shenzhen I/O/ on Steam                   |
+|                            <c>                             |
+|------------------------------------------------------------|
+| [[https://store.steampowered.com/app/504210/SHENZHEN_IO/]] |
+#+end_center
+
+* {{{license_footer(2025)}}}
+
+* Footnotes
+
+[fn:1] As of 2025-11-18.
+
+[fn:2] See: [[https://en.wikiquote.org/wiki/John_D._Carmack]]

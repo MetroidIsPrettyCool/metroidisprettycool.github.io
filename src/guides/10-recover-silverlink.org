@@ -11,7 +11,7 @@ This is a TI-GRAPH LINK USB cable, commonly referred to as a "SilverLink":
 
 #+begin_center
 #+CAPTION: A silver-colored computer cable; with a USB plug on one end, a phone jack on the other, and a circuit board in the middle.
-[[../images/SilverLink.webp]]
+[[file:../../docs/images/SilverLink.webp]]
 #+end_center
 
 to distinguish it from earlier models of communication cable, which were colored black or gray and used the classic PC

@@ -1,0 +1,92 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace "http://www.w3.org/1999/xhtml";
+
+/* ==== DEFINE PROPERTIES ==== */
+
+@property --primary-background         { syntax: "<color>"; inherits: false; initial-value: snow;               }
+@property --secondary-background       { syntax: "<color>"; inherits: false; initial-value: cornsilk;           }
+@property --dark-background            { syntax: "<color>"; inherits: false; initial-value: #060418;            }
+@property --success-background         { syntax: "<color>"; inherits: false; initial-value: lightgreen;         }
+@property --partial-success-background { syntax: "<color>"; inherits: false; initial-value: lightyellow;        }
+@property --failure-background         { syntax: "<color>"; inherits: false; initial-value: pink;               }
+@property --other-background           { syntax: "<color>"; inherits: false; initial-value: lightblue;          }
+
+@property --inset-border               { syntax: "*";       inherits: false; initial-value: inset medium gray; }
+@property --major-border               { syntax: "*";       inherits: false; initial-value: solid thin black;   }
+@property --minor-border               { syntax: "*";       inherits: false; initial-value: dashed thin gray;   }
+
+/* ==== BODY ==== */
+
+body { background: var(--primary-background); }
+
+/* ==== ALIGNMENT, PADDING ==== */
+
+aside { margin-left: 50%; text-align: right; }
+
+div.org-center { & iframe, & img, & table { margin-left: auto; margin-right: auto; }}
+div.left       { & iframe, & img, & table {                    margin-right: auto; }}
+div.right      { & iframe, & img, & table { margin-left: auto;                     }}
+
+th, td { padding-left: 6px; padding-right: 6px; }
+
+/* ==== DEFAULT WIDTHS, ASPECT RATIOS ==== */
+
+img { max-width: 100%; }
+
+/* single, centered images */
+div.org-center:has(> :only-child) { & > img, & > figure > img { max-width: 50%; }}
+
+iframe.mipc-github-io-yt { aspect-ratio: 16/9 auto; width: 67% }
+
+/* ==== ACROSS ==== */
+
+div.across {
+    display:inline-flex;
+    gap: 6px;
+
+    & figure { margin-left: 0px; margin-right: 0px; }
+}
+
+/* ==== BORDER FORMATTING ==== */
+
+iframe, pre, table { border: var(--inset-border); border-radius: 0; }
+
+table {
+    border-collapse: collapse;
+
+    & > colgroup                               { border-right: var(--major-border); }
+    & > colgroup > col:not(:first-child)       { border-left:  var(--minor-border); }
+    & > colgroup > col:not(:last-child)        { border-right: var(--minor-border); }
+
+    & > thead > tr                             { border-bottom: var(--major-border); }
+    & > tbody > tr:not(:last-child)            { border-bottom: var(--minor-border); }
+    & > tbody:not(:last-child) > tr:last-child { border-bottom: var(--major-border); }
+
+    &.mipc-github-io-success-fail-table > tbody > tr {
+        & > td:has(.success) { background: var(--success-background); }
+        & > td:has(.partial) { background: var(--partial-success-background); }
+        & > td:has(.failure) { background: var(--failure-background); }
+        & > td:has(.other)   { background: var(--other-background); }
+    }
+}
+
+/* ==== FONT SIZES ==== */
+
+aside { font-size: 0.8em; }
+
+/* ==== CODE AND EXAMPLE BLOCKS ==== */
+
+pre     { background-color: var(--secondary-background); }
+pre.src { background-color: var(--dark-background); color: var(--primary-background); }
+
+pre.src-C:before, pre.src-c:before         { content: 'C'; }
+pre.src-java:before                        { content: 'Java'; }
+pre.src-rust:before, pre.src-rustic:before { content: 'Rust'; }
+
+/* ==== BALANCED TERNARY FORMATTING STUFF ==== */
+
+.water { color: blue; }
+.lava  { color: #FF4000; }

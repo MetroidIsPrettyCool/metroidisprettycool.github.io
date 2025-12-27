@@ -1,0 +1,56 @@
+#+begin_src emacs-lisp :lexical t :tangle project.el
+  ;; -*- lexical-binding: t; -*-
+
+  ;; This Source Code Form is subject to the terms of the Mozilla Public
+  ;; License, v. 2.0. If a copy of the MPL was not distributed with this
+  ;; file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+  (defun metroidisprettycoolgithubio--set-project-alist ()
+    (setq-local
+     org-publish-project-alist
+     `(("metroidisprettycool.github.io"
+        :base-directory ,(expand-file-name "src/" (project-root (project-current)))
+        :recursive t
+        :exclude "common/"
+
+        :publishing-function org-html-publish-to-html
+        :publishing-directory ,(expand-file-name "docs/" (project-root (project-current)))
+
+        :with-entities     t
+        :with-smart-quotes t
+        :html-extension "xhtml"
+
+        :preparation-function
+        ,(lambda (project-plist)
+           "Copy non-org files from src to docs, touch indexes."
+           (let ((publishing-directory (plist-get project-plist :publishing-directory))
+                 (base-directory (plist-get project-plist :base-directory)))
+             ;; copy some files around
+             (dolist (file '("common/stylesheet.css" "other/htmlplus.html" "favicon.ico"))
+               (let ((src (expand-file-name file base-directory))
+                     (dest (expand-file-name file publishing-directory)))
+                 (make-directory (file-name-parent-directory dest) t)
+                 (copy-file src dest t)))
+             ;; just naively touch all indices, TODO: make this more intelligent
+             (dolist (file (directory-files-recursively base-directory (rx "index.org" eos)))
+               (set-file-times file))))
+
+        :completion-function
+        ,(lambda (project-plist)
+           "Check for errors in exported (X)HTML with tidy."
+           (run-at-time 0.1 nil
+                        (lambda ()
+                          (let* ((publishing-directory (plist-get project-plist :publishing-directory))
+                                 (extension (or (plist-get project-plist :html-extension) org-html-extension))
+                                 (published-files (if (plist-get project-plist :recursive)
+                                                      (directory-files-recursively publishing-directory
+                                                                                   (rx (literal extension) eos))
+                                                    (directory-files t publishing-directory
+                                                                     (rx (literal extension) eos))))
+                                 (tidy-args (append '("--gnu-emacs" "yes" "--markup" "no" "--show-filename" "yes")
+                                                    published-files))
+                                 (tidy-command (mapconcat #'shell-quote-argument (cons "tidy" tidy-args) " ")))
+                            (compilation-start tidy-command
+                                               nil
+                                               (lambda (mode-name) "*tidy-results*"))))))))))
+#+end_src

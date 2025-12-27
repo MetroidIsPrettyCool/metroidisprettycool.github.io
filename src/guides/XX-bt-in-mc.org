@@ -1,0 +1,121 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
+
+#+BIBLIOGRAPHY: XX-bt-in-mc.json
+
+#+TITLE: Balanced Ternary in /Minecraft/
+#+SUBTITLE: Theory, Techniques, and Guides
+
+* Disclaimers
+
+** Intended Audience
+This guide is mostly written for the benefit of people who already have a decent grasp on the fundamentals of binary
+numbers, digital logic gates, /Minecraft/ (2011), and some of its popular community history. If you aren't one of those
+people, I've put together some helpful resources under the [[*Background][Background]] subsection of "Further Reading".
+
+** Terminology
+Balanced ternary is an old subject but not a particularly well-documented subject. Not in English, anyway. Maybe if I
+tried the /sixth/ page of Yandex, I'd finally find the treasure trove of translated Setun research papers I've been
+yearning for... but I digress.
+
+Because of this lack of easily-available, canonical terminology, I've had to invent a lot of my own, in particular for
+logic gates. So, y'know, don't assume these are the "real" names for things.
+
+* Introduction
+/Minecraft/ has been famous for its computers for about as long as it has been famous. There's just something about the
+structure that's just particularly suited to them that goes beyond a mere "there's a NOT gate block". People were
+building full adders out of water and sand in /January 2010/ -- before even /infinite terrain/ had been added, much less
+redstone. [cite:@deadly2010]
+
+It's about more than that. It's the constrained building. It's the huge and impressive structures. It's about the logic
+puzzle solving. It's the automation. It's the careful exploitation of obscure and emergent mechanics. They all come
+together like peanut butter and chocolate. And banana. And vanilla ice cream. And waffle cone. And--
+
+...sorry.
+
+Anyway, y'know what /else/ is about constrained building, huge and impressive structures, logical puzzle solving,
+automation, and careful exploitation of obscure and emergent mechanics? Skyblock! Think we can try to combine 'em?
+
+Well, even vanilla Skyblock 2.1 has access to redstone dust through witches, and redstone torches through that and
+sticks from trees, so the answer is obviously "yes", but redstone is a Pain in the Butt to farm. Is there anything more
+readily available we can work with?
+
+It's been sitting in front of us this whole time: water and lava. Just like those guys from January 2010!
+
+How? Well, let's back up.
+
+* What Are Computers Made out Of?
+Like, what are they /really/ made of? On a parts level?
+
+Well, people have made real-world computers out of a million different things. Transistors, vacuum tubes, relays, gear
+trains, marble tracks -- what do these have in common?
+
+They're /switches./ Switches that can open and close other switches. /That's/ what computers are made out of. I think
+redstone sort of obscures that by focusing so hard on NOT gates.
+
+* Further Reading
+If you're a total beginner to any of these topics, I honestly do recommend you start with the Simple English Wikipedia
+pages. There's no shame in it! It's not the Idiot's English Wikipedia. I use it all the time, because unlike the English
+Wikipedia, it doesn't get bogged down in completely impenetrable technical details just to appease turbo-pedant editors.
+
+** Background
+
+*** Wikipedia
+#+begin_center
+|                            Simple English Wikipedia |       Topic        | English Wikipedia                               |
+|                                                 <r> |        <c>         | <l>                                             |
+|-----------------------------------------------------+--------------------+-------------------------------------------------|
+| [[https://simple.wikipedia.org/wiki/Binary_number]] |   Binary number    | [[https://en.wikipedia.org/wiki/Binary_number]] |
+|    [[https://simple.wikipedia.org/wiki/Logic_gate]] |     Logic Gate     | [[https://en.wikipedia.org/wiki/Logic_gate]]    |
+|     [[https://simple.wikipedia.org/wiki/Minecraft]] | /Minecraft/ (2011) | [[https://en.wikipedia.org/wiki/Minecraft]]     |
+#+end_center
+
+*** /Minecraft/ Wiki
+#+begin_center
+|       Topic        | /Minecraft/ Wiki                                |
+|        <c>         | <l>                                             |
+|--------------------+-------------------------------------------------|
+|  The Game Itself   | [[https://minecraft.wiki/w/Minecraft]]          |
+| Redstone Mechanics | [[https://minecraft.wiki/w/Redstone_mechanics]] |
+#+end_center
+
+** Fundamentals of Number Theory and Numeral Systems
+
+*** Wikipedia
+#+begin_center
+|                                 Simple English Wikipedia |            Topic             | English Wikipedia                                             |
+|                                                      <r> |             <c>              | <l>                                                           |
+|----------------------------------------------------------+------------------------------+---------------------------------------------------------------|
+|                                               No page :( |         Peano axioms         | [[https://en.wikipedia.org/wiki/Peano_axioms]]                |
+|                                               No page :( |       Church Numerals        | [[https://en.wikipedia.org/wiki/Church_encoding]]             |
+|    [[https://simple.wikipedia.org/wiki/Formal_language]] |       Formal Languages       | [[https://en.wikipedia.org/wiki/Formal_language]]             |
+|                                               No page :( | Alphabet in Formal Languages | [[https://en.wikipedia.org/wiki/Alphabet_(formal_languages)]] |
+|     [[https://simple.wikipedia.org/wiki/Numeral_system]] |        Numeral System        | [[https://en.wikipedia.org/wiki/Numeral_system]]              |
+|        [[https://simple.wikipedia.org/wiki/Place_value]] |     Positional Notation      | [[https://en.wikipedia.org/wiki/Positional_notation]]         |
+| [[https://simple.wikipedia.org/wiki/Base_(mathematics)]] |            Radix             | [[https://en.wikipedia.org/wiki/Radix]]                       |
+#+end_center
+
+** /Minecraft/ Mechanics Reference
+
+*** /Minecraft/ Wiki
+#+begin_center
+|         Topic         | /Minecraft/ Wiki                                          |
+|          <c>          | <l>                                                       |
+|-----------------------+-----------------------------------------------------------|
+|         Fluid         | [[https://minecraft.wiki/w/Fluid]]                        |
+|     Block Update      | [[https://minecraft.wiki/w/Block_update]]                 |
+| Cobblestone Generator | [[https://minecraft.wiki/w/Tutorial:Cobblestone_farming]] |
+#+end_center
+
+* {{{citation_footer}}}
+
+* {{{license_footer(2025)}}}
+
+** 3rd Party Content From /Minecraft/:
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*This page is not approved by or associated with Mojang or Microsoft.* Any Mojang assets -- or derivatives thereof --
+shown herein are copyright of Mojang Studios. I am using them only as permitted under the official usage guidelines:
+[[https://www.minecraft.net/en-us/usage-guidelines]].

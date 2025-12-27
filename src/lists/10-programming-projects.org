@@ -143,11 +143,7 @@ sand towers, which communicate information "uphill"), solving /this/ addition pr
 
 /or.../
 
-#+begin_export html
-  10<span class="n1">11</span>0
-+ 011<span class="n1">1</span>1
-= 11<span class="n1">1</span>11
-#+end_export
+10\turn​\turn​0 + 011\turn​1 = 11\turn​11
 #+end_center
 
 ** Post-Mortem
@@ -195,7 +191,7 @@ This also needs some context. This monster:
 
 #+begin_center
 #+CAPTION: A large, 90s-styled graphing calculator with a landscape form factor.
-[[file:../images/TI-92_Plus.webp]]
+[[file:../../docs/images/TI-92_Plus.webp]]
 #+end_center
 
 is the TI-92+ graphing calculator. It's a neat little gadget, really stretches the line between "graphing calculator"

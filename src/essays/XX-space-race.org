@@ -1,0 +1,89 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
+
+#+TITLE: Who /Really/ Won the Space Race?
+
+It's easy to paint the USSR as an unambiguous winner if we just look at the "first to X milestone" numbers. I'm sure
+we've all seen that meme that goes something like "first satellite in space, first animal in space, first man in space,
+first woman in space, first space walk, first space station -- USSR. First man on the moon, USA. Winner? USA!?"
+
+Well, here's something to note: Between April 12th, 1961 (first human spaceflight) and December 26th, 1991 (collapse of
+the USSR) the USSR flew 2 women on 3 person-flights,[fn:1] out of 94 flying cosmonauts and 142 person-flights.[fn:2] If
+we include /Interkosmos/ cosmonauts, these numbers rise to 3 women, on 4 person-flights, out of 101 flying cosmonauts
+and 150 person-flights.
+
+In that same time, the USA flew 13 women on 19 person-flights,[fn:3] out of 154 flying astronauts and 285
+person-flights.[fn:4] If we include payload specialists (whose selection is (was?) more complicated than traditional
+astronauts) these numbers rise to 15 women on 22 person-flights, out of 154 astronauts and 312 person-missions.
+
+Now, 13 is obviously not half of 285. Even if we restrict ourselves just to the Space Shuttle program, 13 is still not
+half of 201. /Obviously/ inequitable. But 6.7% is a hell of a lot bigger than 2.1%.
+
+Today the disparity is even wider -- 20 women and 28 men are active members of the NASA astronaut corps, 1 woman and 22
+men are active members of the Roscosmos cosmonaut corps. Only four Russian women have flown to space since 1991, three
+cosmonauts and an actress. (Not actress-turned-cosmonaut, just actress. She went to the International Space Station to
+film a movie for state-owned TV broadcaster Channel One Russia.) The US has put up another fifty or so. (exact figure
+depends on how you want to consider private spaceflights, payload specialists, space tourists, etc.) No Russian woman
+has flown more than once since Yelena Kondakova in 1997, who flew twice. No Russian or Soviet woman has flown more than
+twice.
+
+There are more American women who have flown to space /exactly four times,/ than there are Russian women who have flown
+/ever./ No Russian woman has ever commanded the ISS, or, for that matter, any mission. (Arguably the Soviets had one,
+Valentina Tereshkova "commanded" her single-occupant Vostok 6; but given the technical nature of the Vostok capsule, and
+the fact her flight was shorter than the three flight preceding her, I'm more inclined to say she was treated closer to
+a human life sciences payload.)
+
+The Soviet Union flew the first woman into space because they heard the US might be doing the same (misconstruing the
+Mercury 13), and they wanted to be first. Then, they didn't fly a single woman for another twenty years. None of the
+other four candidates would ever fly. Then the Soviet Union did the first female spacewalk, because they heard the U.S.
+was going to be doing the same, and they wanted to first. No Soviet or Russian woman has conducted a spacewalk since.
+
+Here's another bit of trivia you might not know: from 1963 to 1975, the USSR made 7 successful robotic landings on the
+Moon, including the very first with Luna 9 in 1966. If we also consider 1976 -- the last year of first-gen lunar
+landings and only a year beyond our 1975 ASTP cutoff date -- that's 8 landings.
+
+8 landings out of *27 attempts*, that is.
+
+In the same time-frame, the US made five robotic landings and six manned landings -- out of seven and seven attempts,
+respectively.
+
+This sort of parallels the respective Venus programs of both countries a couple years later. The Soviet Union made nine
+landings on Venus, out of twelve attempts; the US made one landing on Venus out of *no* attempts. Did you know that?
+Hughes overbuilt the Day probe (intended only for atmospheric data collection) so much that when it hit the ground
+/without a parachute,/ it just kept transmitting! For over an hour! (The Night probe, part of the same mission, /also/
+survived impact, but only for two seconds. Still a laudable accomplishment, but not really a "successful landing" in my
+book.)
+
+Here's a third piece of trivia: while the USSR did get the first ever EVA ("spacewalk"), it's the US that got the second
+and third. And fourth. And fifth. And sixth and seventh. Also eight, ninth, and tenth. Then the USSR got the eleventh,
+and the US got the twelfth. And thirteenth, fourteenth, fifteenth, sixteenth, seventeenth, eighteenth, nineteenth,
+twentieth, and twenty-first (though you might not count those, because they didn't happen in Zero G. Walking on the Moon
+is cheating!) then the twenty-second EVA in deep space, before another six moonwalks and two more deep-spacewalks. Oh,
+and also the thirty-first, thirty-second, thirty-third, thirty-fourth, thirty-fifth, thirty-sixth, thirty-seventh,
+thirty-eighth, thirty-ninth, and fortieth on Skylab.
+
+Then we hit Apollo-Soyuz, and the space race is officially over!
+
+Isn't it a little ridiculous to claim a milestone is yours when you could barely replicate it? EVAs are only valuable
+when you have a facility that requires them -- usually either a station, or a surface ops site. The USSR did not develop
+such facilities or mission profiles before the US did. Period.
+
+I am aware that, unlike the number of women flown in space, this statistic evens out a bit after 1975, as both nations
+entered their respective 80s forever programs -- STS, and second and third generation DOS space stations. The USSR would
+make 41 spacewalks from 1975-1991, the US only 15. This brings totals up to 43 and 55, respectively. Things would swing
+back the other way going into the ISS, but at that point the USSR was no more and things get even more geopolitically
+complicated.
+
+* {{{license_footer(2025)}}}
+
+* Footnotes
+
+[fn:1] Not including unflown cosmonauts or /Interkosmos/ cosmonauts.
+
+[fn:2] Including Soyuz 1, 11, 7K-T No.39, 7K-ST No.16L, and TM-13; not including unflown cosmonauts or /Interkosmos/
+cosmonauts.
+
+[fn:3] Including /Challenger/ STS-51L, not including unflown astronauts or payload specialists.
+
+[fn:4] Including /Challenger/ STS-51L, X-15 flights over 50 miles -- even X-15 flight 191 -- and Apollo 1, and Gemini
+6; not including Gemini 9, ALT 1-16, unflown astronauts or payload specialists.

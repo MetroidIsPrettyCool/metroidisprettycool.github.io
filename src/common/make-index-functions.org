@@ -14,12 +14,12 @@
              (publish-base-dir (plist-get project-plist :base-directory))
              (default-directory (directory-file-name (file-name-parent-directory filename)))
              (default-directory-basename (file-name-nondirectory default-directory))
-             (neighbor-files (directory-files default-directory nil (rx (= 0 "index") ".org" eos) nil)))
+             (leaf-files (directory-files default-directory nil (rx (= 2 num) ?- (* anything) ".org" eos) nil)))
         (with-temp-buffer
           (insert default-directory-basename " index\n\n")
           (titlecase-region (point-min) (point-max))
           (beginning-of-buffer)
-          (insert "#+TITLE: ")
+          (insert "#+OPTIONS: toc:nil\n#+TITLE: ")
           (end-of-buffer)
           (insert description "\n\n")
 
@@ -28,9 +28,9 @@
                    do
                    (insert (format "* %s\n" category))
                    (cl-loop with j = 0
-                            while (string-prefix-p (number-to-string i) (car neighbor-files))
+                            while (string-prefix-p (number-to-string i) (car leaf-files))
                             do
-                            (let ((leaf-file (pop neighbor-files)))
+                            (let ((leaf-file (pop leaf-files)))
                               (insert (format "%d. [[file:%s][%s]]\n\n"
                                               (setq j (1+ j))
                                               leaf-file

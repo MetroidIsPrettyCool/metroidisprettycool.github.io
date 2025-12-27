@@ -1,0 +1,84 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
+
+#+TITLE: Some Short Esoteric Programming Languages
+
+* Brainfuck: Floating-point Edition
+Brainfuck and IEEE floating point both have some structural problems. The former fails to properly define the program's
+memory model (how many cells should there be? What happens if the pointer goes left of cell 0? etc.), the latter suffers
+from precision loss the further you get from ~0~.
+
+Interestingly, these two problems sort of cancel each other out.
+
+See, Brainfuck has no means of manipulating the data pointer or a cell except by incrementation or decrementation. At
+the point where the exponent equals the number of digits in the mantissa, floating point becomes too imprecise to
+express a difference of ~1.0~ between two numbers. This can be demonstrated with a simple C program:
+
+#+begin_src C :libs -lm :exports both :results output verbatim :cache yes
+  #include <stdio.h>
+
+  #include <float.h>
+  #include <limits.h>
+
+  #include <math.h>
+
+  int main(int argc, char* argv[]) {
+      printf("float type bits        = %zu\n",   sizeof(float) * CHAR_BIT);
+      printf("float significand bits = %zu\n\n", FLT_MANT_DIG);
+
+      float x = FLT_EPSILON;
+
+      while (x + 1.0f != x) x *= 2.0f;
+
+      printf("x         = %+f\n",    x);
+      printf("x + 1.0   = %+f\n",    x + 1.0f);
+      printf("x + 2.0   = %+f\n",    x + 2.0f);
+      printf("log_2(x)  =  %lf\n\n", log2(x));
+
+      float y = -1.0 * FLT_EPSILON;
+
+      while (y - 1.0f != y) y *= 2.0f;
+
+      printf("y         = %+f\n",  y);
+      printf("y - 1.0   = %+f\n",  y - 1.0f);
+      printf("y - 2.0   = %+f\n",  y - 2.0f);
+      printf("log_2(-y) =  %lf\n", log2(-1.0 * y));
+  }
+#+end_src
+
+#+RESULTS[9d73450d7987d19d42f450e0402ef08cd0c4dcd1]:
+#+begin_example
+float type bits        = 32
+float significand bits = 24
+
+x         = +16777216.000000
+x + 1.0   = +16777216.000000
+x + 2.0   = +16777218.000000
+log_2(x)  =  24.000000
+
+y         = -16777216.000000
+y - 1.0   = -16777216.000000
+y - 2.0   = -16777218.000000
+log_2(-y) =  24.000000
+#+end_example
+
+So... if we use floating-point arithmetic on ~f32~​s for our cell values and the data pointer, we can constrain the possible
+values of both without having to do so explicitly. Isn't that neat?
+
+# Here's a simple compiler (targeting NASM assembly) written in Elisp for Floating-point Brainfuck. It just
+# pre-allocates the whole block of cells into the data segment, and only uses x87 instructions for arithmetic (besides
+# data pointer dereferencing) because I think they're funny.
+
+# #+begin_src emacs-lisp :lexical t
+#   ;;; -*- lexical-binding: t -*-
+
+#   ;; This Source Code Form is subject to the terms of the Mozilla Public
+#   ;; License, v. 2.0. If a copy of the MPL was not distributed with this
+#   ;; file, You can obtain one at <https://mozilla.org/MPL/2.0/>.
+
+#   ;; Copyright (c) 2025 Joseph Burke <burkejo@oregonstate.edu>
+
+
+# #+end_src
+
+* {{{license_footer(2025)}}}

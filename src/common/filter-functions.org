@@ -9,6 +9,19 @@
   (require 'url)
   (require 'xmltok)
 
+  ;;; Extra Entities
+
+  (add-to-list 'org-entities-user
+               '("turn"
+                 "\\rotatebox[origin=c]{180}{1}"
+                 nil
+                 "<span style=\"display:inline-block;rotate:0.5turn;\">1</span>"
+                 "T"
+                 "T"
+                 "T"))
+
+  ;;; Custom Link Types
+
   ;; YouTube embedding code adapted from
   ;; <https://endlessparentheses.com/embedding-youtube-videos-with-org-mode-links.html>
 
@@ -22,15 +35,33 @@
    (lambda (path desc backend _uarg)
      (pcase backend
        ('html (format
-               "<iframe class=\"metroidisprettycool-github-io-yt\" src=\"https://www.youtube.com/embed/%s\" title=\"%s\"></iframe>"
+               "<iframe class=\"mipc-github-io-yt\" src=\"https://www.youtube.com/embed/%s\" title=\"%s\"></iframe>"
                path (or desc "")))
        ('latex (let ((path (concat "https://www.youtube.com/watch?v=" path)))
                  (if desc (format "\\href{%s}{%s}" path desc) (format "\\url{%s}" path))))
        (_ path))))
 
-  (defun metroidisprettycool-github-io--tidy-filter (string backend comm-channel)
+  ;;; Common Helpers
+
+  (defun mipc-github-io--format-location (kind &optional line column filename)
+    "Format an error or warning message prefix with a location.
+
+  KIND should be \"Error\" or \"Warning\" (or equivalent). LINE and COLUMN
+  should be integers or nil. FILENAME should be a string or nil."
+    (let* ((kind (if (or line column filename) (concat "	" kind) kind))
+           (parts (list kind)))
+      (when column   (push (number-to-string column) parts))
+      (when line     (push (number-to-string line)   parts))
+      (when filename (push filename                  parts))
+      (string-join parts ":")))
+
+  ;;; Export Filters
+
+  ;;;; Tidy HTML
+
+  (defun mipc-github-io/tidy-filter (string backend comm-channel)
     (when (org-export-derived-backend-p backend 'html)
-      (when-let* ((stderr-tmp-file (make-temp-file "metroidisprettycool-github-io--tidy-filter"))
+      (when-let* ((stderr-tmp-file (make-temp-file "mipc-github-io--tidy-filter"))
                   (output-file (plist-get comm-channel :output-file))
                   (input-file (plist-get comm-channel :input-file))
                   (org-project (org-publish-get-project-from-filename input-file))
@@ -87,108 +118,210 @@
             (when (= exit-status 2) (error "Tidy exited with code indicating errors!")))
           (buffer-substring-no-properties (point-min) (point-max))))))
 
-  (defun metroidisprettycool-github-io--normalize-urls-in-buffer (file-in-dir normalize-to-dir extension)
-    "Normalizes URLs in an XHTML buffer to be relative to NORMALIZE-TO-DIR.
+  ;;;; Normalize HTML URLs
 
-    Simply replaces the value of any href or src attribute that isn't a
-    fully-qualified URL, doesn't have a URL scheme, doesn't have a URL path
-    that already starts with /, and isn't just a bare fragment.
+  (defun mipc-github-io/url--normalize-path
+      (path in-published-subdir in-base-subdir publishing-dir extension &optional line column published-filename)
+    "Normalize PATH for use in a static website.
 
-    Any rewritten paths that end in a / character will be suffixed
-    \"index.EXTENSION\".
+  If PATH is an empty string, no processing will occur.
 
-    In addition, when rewriting tags with href attributes, a check is
-    performed to see if the tag's only content is text equal to that href
-    attribute's value (e.g. <a href=\"./foo.txt\">./foo.txt</a>), optionally
-    surrounded on either side with arbitrary whitespace. If it is, the
-    content of the tag will be rewritten to match the href attribute value.
+  If PATH is already absolute, it will be suffixed index.EXTENSION if it
+  points to a directory.
 
-    Assumes buffer already contains well-formed XML; that all href and src
-    attributes are valid; that FILE-IN-DIR is equal to or a subdirectory of
-    NORMALIZE-TO-DIR, and that no relative path points to anything outside
-    NORMALIZE-TO-DIR.
+  If PATH is relative, we will first check if expanding it relative to the
+  source file points to somewhere in PUBLISHING-DIR. If it does, then
+  we'll go with that. Otherwise, we'll expand it relative to
 
-    (In other words, we're not really bothering with error-checking or
-    defensive programming, besides whatever error checking we got for free
-    from our library calls.)"
+  IN-PUBLISHED-SUBDIR is the directory we intend to place the exported
+  XHTML file that these paths are relative to. It must be either the same
+  directory as PUBLISHING-DIR, or a subdirectory of it.
+
+  IN-BASE-SUBDIR is the directory containing the source file we're using
+  to create the XHTML file. This can be the same as IN-PUBLISHED-SUBDIR.
+
+  PUBLISHING-DIR is the root of the publishing directory. We will
+  absolutize paths with this as \"/\".
+
+  EXTENSION is the default suffix for exported XHTML.
+
+  LINE, COLUMN, and PUBLISHED-FILENAME are all optional, and only used to
+  indicate the location of the path we're normalizing in error messages."
+
+    (let* ((root-filename (directory-file-name publishing-dir))
+           (root-dirname  (concat root-filename "/"))
+
+           (expanded-from-base      (expand-file-name path in-base-subdir))
+           (expanded-from-published (expand-file-name path in-published-subdir))
+           (expanded-from-root      (concat root-filename path))
+
+           (absolute-base-relative
+            (concat "/" (file-relative-name expanded-from-base root-dirname)))
+           (absolute-published-relative
+            (concat "/" (file-relative-name expanded-from-published root-dirname)))
+
+           (normalized-path)
+           (absolute-filename))
+
+      (cond
+       ;; is it empty?
+       ((string-empty-p path)
+        (setq normalized-path   "")
+        (setq absolute-filename nil))
+       ;; is it already an absolute path?
+       ((and (string-prefix-p "/" path))
+        (setq normalized-path   path)
+        (setq absolute-filename expanded-from-root))
+       ;; is it relative to the source file?
+       ((and (string-prefix-p root-filename expanded-from-base))
+        (setq normalized-path   absolute-base-relative)
+        (setq absolute-filename expanded-from-base))
+       ;; is it relative to the published file?
+       ((and (string-prefix-p root-filename expanded-from-published))
+        (setq normalized-path   absolute-published-relative)
+        (setq absolute-filename expanded-from-published))
+       ;; okay, we don't know what it's relative to.
+       (t (error
+           (concat "%s: could not normalize path %s, are you sure it's correct?\n"
+                   "Tried %s, %s, and %s")
+           (mipc-github-io--format-location
+            "Error" line column (file-relative-name published-filename root-dirname))
+           path
+           expanded-from-root
+           expanded-from-base
+           expanded-from-published)))
+
+      (unless (or (string-empty-p normalized-path) (file-exists-p absolute-filename))
+        (message "%s: normalized path %s does not exist!"
+                 (mipc-github-io--format-location
+                  "Warning" line column (file-relative-name published-filename root-dirname))
+                 normalized-path))
+
+      ;; Is a path to a directory? Then point it at an index file.
+      (if (and absolute-filename
+               (or (string-suffix-p "/" absolute-filename) (file-directory-p absolute-filename)))
+          (expand-file-name (concat "index." extension) normalized-path)
+        normalized-path)))
+
+  (defun mipc-github-io/url--internal-path-reference-p (url)
+    "Returns non-nil if URL is an absolute- or relative-path reference.
+
+  See RFC 3986, section 4.2 for the definition of \"relative reference\",
+  \"network-path reference\", \"absolute-path reference\", and
+  \"relative-path\" reference.
+
+  URL should be a string."
+    (let* ((parsed (url-generic-parse-url url))
+           (scheme (url-type parsed)))
+      (and (not (string-prefix-p "//" url))
+           (or (null scheme) (string-empty-p scheme)))))
+
+  (defun mipc-github-io/url--normalize-buffer
+      (in-published-dir in-base-dir root-dir extension &optional published-filename)
+    "Normalizes URLs in an XHTML buffer.
+
+  Fairly dumb. Just replaces the value of any href or src attribute that
+  meets `mipc-github-io/url--internal-path-reference-p', and the contents
+  of any tag where their innerText equals their href.
+
+  See `mipc-github-io/url--normalize-path' for details on the
+  normalization procedure.
+
+  If the optional argument PUBLISHED-FILENAME is provided, it will be
+  included in error and warning messages.
+
+  Assumes buffer already contains well-formed XML; that all href and src
+  attributes are valid; and that IN-PUBLISHED-DIR is equal to or a
+  subdirectory of ROOT-DIR."
     (goto-char (point-min))
     (xmltok-forward-prolog)
 
     (while (xmltok-forward)
-      (cl-loop for i upfrom 0 below (length xmltok-attributes) do
+      (cl-loop for i upfrom 0 below (length xmltok-attributes)
+               do
                (let* ((attr (nth i xmltok-attributes))
                       (name (xmltok-attribute-local-name attr)))
-                 (when (or (string-equal name "href") (string-equal name "src"))
-                   (let* ((attr-value (xmltok-attribute-value attr))
-                          (url (url-generic-parse-url attr-value))
-                          (filename (or (url-filename url) "")))
-                     (unless (or (url-fullness url)
-                                 (url-type url)
-                                 (string-match-p (rx bos ?/) filename)
-                                 (and (string-empty-p filename) (url-target url)))
-                       (let* ((attr-start (xmltok-attribute-value-start attr))
-                              (attr-end (xmltok-attribute-value-end attr))
-                              (attr-len (- attr-start attr-end))
-                              (expanded-filename (expand-file-name filename file-in-dir))
-                              (relative-filename (concat "/" (file-relative-name expanded-filename normalize-to-dir)))
-                              (new-filename (if (file-directory-p expanded-filename)
-                                                (expand-file-name (concat "index." extension) relative-filename)
-                                              relative-filename))
-                              (new-url (url-generic-parse-url attr-value)))
-                         (setf (url-filename new-url) new-filename)
-                         (goto-char attr-start)
-                         (delete-region attr-start attr-end)
-                         (insert new-filename)
-                         (goto-char xmltok-start)
-                         (xmltok-forward)
-                         (when (and (string-equal name "href") (eq xmltok-type 'start-tag))
-                           (save-excursion
-                             (xmltok-save
-                               (let* ((inner-type (xmltok-forward))
-                                      (inner-start xmltok-start)
-                                      (inner-end (point)))
-                                 (when (and (eq inner-type 'data) (eq (xmltok-forward) 'end-tag))
-                                   (let* ((inner-content
-                                           (buffer-substring-no-properties inner-start inner-end))
-                                          (inner-len
-                                           (length inner-content))
+                 (pcase name
+                   ((or "href" "src")
+                    (let ((url-string (xmltok-attribute-value attr)))
+                      (when (mipc-github-io/url--internal-path-reference-p url-string)
+                        (let* ((parsed-url (url-generic-parse-url url-string))
+                               (path (or (url-filename parsed-url) ""))
+                               (attr-start (xmltok-attribute-value-start attr))
+                               (attr-end (xmltok-attribute-value-end attr))
+                               (attr-len (- attr-start attr-end)))
+                          (goto-char attr-start)
+                          (delete-region attr-start attr-end)
+                          (setf (url-filename parsed-url)
+                                (mipc-github-io/url--normalize-path
+                                 path
+                                 in-published-dir
+                                 in-base-dir
+                                 root-dir
+                                 extension
+                                 (line-number-at-pos)
+                                 (current-column)
+                                 published-filename))
+                          (let ((new-url-string (url-recreate-url parsed-url)))
+                            (insert new-url-string)
+                            ;; re-parse the current element
+                            (goto-char xmltok-start)
+                            (xmltok-forward)
+                            ;; if we just replaced an href attribute, check to see if the content of the tag is the same
+                            ;; and if it is, replace it
+                            (when (and (string-equal name "href") (eq xmltok-type 'start-tag))
+                              (save-excursion
+                                (xmltok-save
+                                  (xmltok-forward)
+                                  (let* ((inner-type xmltok-type)
+                                         (inner-start xmltok-start)
+                                         (inner-end (point)))
+                                    (xmltok-forward)
+                                    (when (and (eq inner-type 'data) (eq xmltok-type 'end-tag))
+                                      (let* ((inner-content
+                                              (buffer-substring-no-properties inner-start inner-end))
+                                             (inner-len
+                                              (length inner-content))
 
-                                          (inner-content-tr-left
-                                           (string-trim-left inner-content))
-                                          (inner-content-tr-left-len
-                                           (length inner-content-tr-left))
-                                          (inner-content-left-whitespace
-                                           (- inner-len inner-content-tr-left-len))
+                                             (inner-content-tr-left
+                                              (string-trim-left inner-content))
+                                             (inner-content-tr-left-len
+                                              (length inner-content-tr-left))
+                                             (inner-content-left-whitespace
+                                              (- inner-len inner-content-tr-left-len))
 
-                                          (inner-content-tr-both
-                                           (string-trim-right inner-content-tr-left))
-                                          (inner-content-tr-both-len
-                                           (length inner-content-tr-both))
-                                          (inner-content-right-whitespace
-                                           (- inner-content-tr-left-len inner-content-tr-both-len))
+                                             (inner-content-tr-both
+                                              (string-trim-right inner-content-tr-left))
+                                             (inner-content-tr-both-len
+                                              (length inner-content-tr-both))
+                                             (inner-content-right-whitespace
+                                              (- inner-content-tr-left-len inner-content-tr-both-len))
 
-                                          (inner-text-start (+ inner-start inner-content-left-whitespace))
-                                          (inner-text-end   (- inner-end   inner-content-right-whitespace)))
+                                             (inner-text-start (+ inner-start inner-content-left-whitespace))
+                                             (inner-text-end   (- inner-end   inner-content-right-whitespace)))
 
-                                     (when (string-equal attr-value inner-content-tr-both)
-                                       (goto-char     inner-text-start)
-                                       (delete-region inner-text-start inner-text-end)
-                                       (insert (url-recreate-url new-url)))))))))))))))))
+                                        (when (string-equal url-string inner-content-tr-both)
+                                          (goto-char     inner-text-start)
+                                          (delete-region inner-text-start inner-text-end)
+                                          (insert new-url-string))))))))))))))))))
 
-  (defun metroidisprettycool-github-io--normalize-urls-filter (string backend comm-channel)
+  (defun mipc-github-io/url-filter (string backend comm-channel)
     (when (org-export-derived-backend-p backend 'html)
       (when-let* ((input-file (plist-get comm-channel :input-file))
                   (output-file (plist-get comm-channel :output-file))
                   (org-project (org-publish-get-project-from-filename input-file))
                   (project-plist (cdr org-project))
                   (publishing-directory (plist-get project-plist :publishing-directory))
+                  (input-file-in-dir (file-name-directory input-file))
                   (output-file-in-dir (file-name-directory output-file))
                   (extension (file-name-extension output-file)))
         (with-temp-buffer
           (insert string)
-          (metroidisprettycool-github-io--normalize-urls-in-buffer output-file-in-dir
-                                                                   publishing-directory
-                                                                   extension)
+          (mipc-github-io/url--normalize-buffer output-file-in-dir
+                                                input-file-in-dir
+                                                publishing-directory
+                                                extension
+                                                output-file)
           (buffer-substring-no-properties (point-min) (point-max))))))
 
   nil

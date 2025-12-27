@@ -1,0 +1,77 @@
+#+SETUPFILE: ../common/common.org
+{{{extra_config}}}
+
+#+TITLE: Interpreting /End of Evangelion/
+
+1. The sequence where Shinji chokes Asuka and lifts her off the floor just before starting Third Impact is metaphorical,
+   or at least isn't a real interaction between their "souls".
+
+   It's instead a representation of him struggling with his /idea/ of Asuka, before succumbing to "I don't think she (or
+   anyone) will ever help me, I guess everyone really should die". He's playing out both sides of the interaction,
+   consciously or unconsciously.
+
+2. The choking scene takes place before Third Impact has started. We have no in-text reason to believe that this is some
+   kind of pre-Instrumentality, besides "it's surreal". We also have no in-text reason to believe it isn't. Both
+   interpretations require stronger justifications.
+
+3. I don't see a lot of good evidence for the "it's pre-Instrumentality and they're really interacting" tack. I can
+   /entertain/ that it is some kind of foreshock, there's nothing that outright disproves it, but I don't see any good
+   evidence for /it/ either, besides just trying to draw a box around /everything/ surreal and hard to explain that
+   happens before Instrumentality -- e.g. the Rei apparitions. I don't think that's a very useful box.
+
+4. Asuka's behavior during their confrontation is... strange. Not totally out of character, don't get me wrong, but she
+   talks and moves and is dressed and behaves a /little off./ Which could mean any number of things, but I think it
+   supports the idea that this isn't a literal interaction.
+
+5. Moreover, if during the beach scene she thought/knew that Shinji had choked her before, why would she behave so
+   passively? That's totally out of character for no thematic benefit, other than confusing the audience, maybe.
+
+6. If we assume that the midpoint choking scene is nonliteral, then it forms a very compelling three-beat structure of
+   scenes between Shinji, Asuka, and Shinji's hands: first, the hospital masturbation scene; second, the choking that
+   starts instrumentality; third, the choking on the beach. Shinji vs. Asuka the body, Shinji vs. Asuka the idea, and
+   Shinji vs. Asuka the real person. Roughly: Id, Ego, and Super-Ego. What he thinks he wants, what he thinks he needs,
+   and the truth.
+
+7. The point of the final scene, then, is that when Shinji lashes out at the /real/ Asuka, she refutes his expectation
+   that other people will hate him simply because he hates himself. Likewise, she shows compassion (or at least
+   acknowledgement, which for these two, right now, kind of amounts to the same thing) for someone who threatens her for
+   the first time, and he (eventually) relents, and refutes her fear of being killed simply for depending on another.
+
+   They've both taken the... well, not the first step towards recovery, but maybe the /zeroth/ step. Everything sucks
+   and there's an ocean of bad blood between them, but they've acknowledged a future is even possible. We, the audience,
+   are left to do the rest of the work ourselves.
+
+8. If we still want to assume otherwise, that the pre-Impact choking /is/ an actual interaction between them as
+   characters, then we lose that nice structure and a coherent reading becomes (IMO) difficult. Shinji vs. Asuka the
+   body, Shinji vs. Asuka the person, Shinji vs. Asuka the person but it plays out differently for... some reason?
+   Everyone got character development offscreen? Anno just hates the audience? There's something in the air tonight?
+
+9. Assuming otherwise also, IMO, also makes it harder to follow why they are only two choking scenes. If the point of
+   their conflict had been to /set up/ a dynamic, why wouldn't we revisit it somewhere during Instrumentality? Or at
+   least have someone acknowledge it even happened? We acknowledge the hospital scene, which we /know/ was a real
+   interaction, so why only that one? The one that has less symmetry with the ending? Moreover, why revisit the choking
+   with the ending in the first place? Asuka hasn't had enough onscreen character development to narratively justify
+   reacting so differently to the exact same scenario, and Shinji isn't in a sufficiently new place to justify showing
+   us what happens when we run him through the same events again.
+
+10. But if it /was/ nonliteral, then all of that makes sense. There are only two choking scenes because the goal is to
+    show the difference between /expectations/ and /reality/ -- that's a binary, you can't come at it from another
+    angle. That's also /why/ we're revisiting the choking with the ending, the characters haven't changed, but now
+    they're /both actually present./ The hospital scene is referenced not in spite of being less symmetrical, but
+    /because of it,/ now that reference serves as a reminder of both scenes as we move towards the ending. We don't
+    revisit the choking during instrumentality because instrumentality /also/ isn't real -- nothing has changed.
+
+11. I also think that the cut live action sequence (and the short sequence that still made it in) makes more sense if we
+    assume a nonliteral choking. Shinji is experiencing the real Asuka, Misato, and Rei without the blinders of having
+    to interact with them, something he hasn't really /done/ up until this point in the film. (Besides Misato's death
+    speech, which is a great moment he doesn't really seem present for, and regardless I think his relationship with
+    Misato or Rei is less central than Asuka. We open and close the sequence with her for a reason. Feel free to
+    disagree, though!)
+
+    With a /literal/ choking, this the second time he's seeing the real Asuka. What narrative purpose does that serve?
+    It's sort of incoherent, I can't come up with anything strong.
+
+There are other defensible readings of /EoE,/ of course, probably about as many as there are people who've seen the
+film. But after a lot of thinking, I think this the /most/ defensible. (That I've been able to come up with, anyway.)
+
+* {{{license_footer(2025)}}}

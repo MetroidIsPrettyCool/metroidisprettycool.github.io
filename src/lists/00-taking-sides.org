@@ -1,8 +1,9 @@
 #+SETUPFILE: ../common/common.org
 {{{extra_config}}}
+#+OPTIONS: toc:2
+
 #+TITLE: Taking Sides!
 #+SUBTITLE: Opinions On Some Trivial Debates
-#+OPTIONS: toc:2
 
 * General-Topic
 
@@ -13,9 +14,9 @@ When I wake up from a nap, I want as little ambiguity possible about whether it'
 time!
 
 *** Best Date Format?
-ISO 8601 is basically the only one that has a property the others don't: it makes lexicographic ordering and temporal
-ordering the same. If you need to standardize on something, then, it only makes sense to standardize on the one that's
-strictly more useful.
+Only ISO 8601 has a unique capability -- making lexicographic ordering and temporal ordering the same -- every other
+format is just about personal preference. If you need to standardize on something, then, it makes sense to standardize
+on the one that's strictly more useful.
 
 Relatedly, I'm a fan of the so-called "Holocene calendar" or "human era calendar". Just take the current year, prefix a
 '1', and that gives you roughly (around 300 years off) the number of years since the start of the Holocene, /without/
@@ -115,8 +116,8 @@ It's also why you should use pre-wash detergent. See:
 #+end_center
 
 *** Is the Ship of Theseus Still the Same Ship?
-Are we still calling it the Ship of Theseus? The /name/ remains. The history remains. The people's relationship to the
-symbol remains. It's still as much the same the ship as /anything/ ever could be what it used to be.
+Are we still calling it the Ship of Theseus? Then the /name/ remains. The history remains. The people's relationship to
+the symbol remains. It's still as much the same the ship as /anything/ ever could be what it used to be.
 
 * Technical
 
@@ -365,83 +366,7 @@ inter-operating /programs./ You can even go look up their source code, whenever 
 foo-bar RET~.[fn:7]
 
 Who's the real UNIX philosophy exemplar here? ~ed~ with bolt-ons? Or the purpose-built, hackable, extensible, cohesive
-software distribution?
-
-You can even use Elisp programs in your shell scripts! (With pipes!) Some trivial examples:
-
-#+begin_example
-$ emacs --batch --eval="(pp (car '(:foo :bar)))"
-:foo
-$ seq 10 | emacs --batch --eval='(with-temp-buffer
-                                   (insert-file-contents "/dev/stdin")
-                                   (while (re-search-forward "[123]" nil t)
-                                     (replace-match "W"))
-                                   (princ (buffer-string)))'
-W
-W
-4
-5
-6
-7
-8
-9
-W0
-$ emacs --batch \
-      --load=~/.emacs \
-      --file=index.org \
-      --funcall=hack-dir-local-variables-non-file-buffer \
-      --funcall=org-publish-current-project
-Loading /home/fooUser/metroidisprettycool.github.io/.emacs/yt-embed.el (source)...
-Created yt link.
-Loading /home/fooUser/.org-timestamps/metroidisprettycool.github.io.cache...
-Publishing file /home/fooUser/metroidisprettycool.github.io/src/lists/00-taking-sides.org using ‘org-html-publish-to-html’
-Skipping unmodified file /home/fooUser/metroidisprettycool.github.io/src/essays/00-more-right.org
-Publishing file /home/fooUser/metroidisprettycool.github.io/src/essays/10-java.org using ‘org-html-publish-to-html’
-Publishing file /home/fooUser/metroidisprettycool.github.io/src/index.org using ‘org-html-publish-to-html’
-#+end_example
-
-I admit it's less /flexible/ when you yank it out into shell-land like this, but why /should/ it be flexible? The
-ecosystem is the /point/ of the ecosystem. The interactivity is the /point/ of the interactivity.
-
-If I find I have a real need to move some data around between Emacs and a shell program, I've got so many more options
-from /within/ than I do without:
-
-1. There's the inferior shell, invoked with the command ~M-x shell~;
-2. and the Eshell, invoked with the command ~M-x eshell~;
-3. and inferior terminal mode, AKA ~term-mode~, invoked with the commands ~M-x term~ or ~M-x ansi-term~ (depending on
-   what /exactly/ you want, behavior-wise).
-4. Then there's the command ~shell-command~, invoked with ~M-!~ or ~M-x shell-command~, /or/ with a prefix argument
-   (~C-u M-!~, ~C-u M-x shell-command~) to insert output into the current buffer, /or/ called directly from lisp via
-   ~M-: (shell-command COMMAND &optional OUTPUT-BUFFER ERROR-BUFFER) RET~;
-5. and the command ~shell-command-on-region~, invoked with ~M-|~ or ~M-x shell-command-on-region~, /or/ with a
-   prefix argument (~C-u M-|~, ~C-u M-x shell-command-on-region~) to /replace/ the given region with the results.
-6. There's the command ~dired-do-shell-command~, bound by default to ~!~ in ~dired-mode~ and /also/ invocable with ~M-x
-   dired-do-shell-command~.
-7. There's the lisp function ~(make-process)~, invocable interactively with ~M-: (make-process &rest ARGS)~;
-8. and the lisp function ~(call-process)~, invocable interactively with ~M-: (call-process PROGRAM &optional INFILE
-   DESTINATION DISPLAY &rest ARGS)~;
-9. and the lisp function ~(call-process-region)~, invocable interactively with ~M-: (call-process-region START END
-   PROGRAM &optional DELETE BUFFER DISPLAY &rest ARGS)~.
-10. and like three or for more I don't remember the details of.
-11. Oh, and like a billion external packages from GNU, NonGNU, MELPA, etc.
-
-And guess what? Commands are merely a specially-marked kind of lisp function, so they're also usable anywhere a
-non-command lisp function would be, such as being invoked explicitly via ~M-:~, from within Elisp scripts, and from
-within other functions. All are customizable and hackable and extensible and re-usable and /documented./
-
-Everything in Emacs is documented! Want the help page for the function ~foobar~? ~C-h f foobar~, and as a bonus you get
-whatever key bindings will invoke it (if any). Want the help page for the variable ~foobar~? ~C-h v foobar~. Want both?
-(Elisp is a Lisp-2.) ~C-h o foobar~. Not sure what exactly you're looking for? Try ~C-h a~ to do an apropos search. Want
-to search for something in the Emacs ~info~ manual? ~C-h r~ for ~info-emacs-manual~, then ~s~ in the ~info~ window for
-~Info-search~, then just type what you're searching for. Repeat the search until you find it. What about the Elisp
-~info~ manual? ~C-h R elisp~ for ~info-display-manual~, then ~s~ and the thing you're searching for like before. Want a
-specific ~info~ top-level manual, like, for example, the eshell manual? ~C-h R eshell~. Not sure what ~info~ manuals are
-installed? ~C-h i~. Need a man page instead? ~M-x man~. Not sure what keybindings are available in a given major-mode?
-~C-h m~ lists the major mode of a window, and all the minor modes, and all their key bindings. Want to know what
-function a key binding runs? ~C-h k~, and then type the key binding, e.g. ~C-h k C-x C-f~ opens the help page for
-~find-file~. It even works for mouse bindings, too!
-
-I could go on and on. What do Bash and Vi and tmux and a thousand little ncurses programs -- all of which are still
+software distribution? What do Bash and Vi and tmux and a thousand little ncurses programs -- all of which are still
 complexity you'll have to learn, I might add -- give me that Emacs doesn't? Worse scripting languages? "Job control"?
 
 No thanks.
@@ -473,16 +398,88 @@ or this talk that he did:
 [[yt:o8_8En04p08][YouTube video: CXC 2022: Heathcliff is Having a Moment with Peter Gallagher]]
 #+end_center
 
-*** So, like, What Is /Evangelion/ Even About?
+*** Was /Avatar/ (2009) A Bad Movie All Along?
+I... I dunno. It's certainly /tactless./ And shallow. And overlong. And it's got that annoying sort of
+conservative-streaked paternalism -- "we must protect innocence" etc etc.
+
+The verisimilarity is still commendable, though. And I like Sam Worthington's performance. Is that enough to make it
+worth watching? I dunno, I don't think I can give an unqualified opinion either way.
+
+The sequel is a better, more interesting movie all around, but still has the same problems.
+
+*** /Evangelion/
+
+**** So, like, What Is /Evangelion/ Even About?
 A lot of things. Human relationships. Losing. Winning. Growing up in a world too traumatized to look you in the eye.
 Child soldiers. Playing the cello. Sexuality. Greed. Suicide.
 
 Broadly, though? /Evangelion/ is about how when you don't understand yourself or the world around you, everything you
 touch starts to die. Uh-oh!
 
+**** Is the Religious Imagery Significant?
+/Evangelion/ is about Christianity in the same way that /Thor: Ragnarok/ (2017) is about Norse Paganism. A background of
+esoterica might give you some good clues about which /nouns/ are gonna show up next, but not much else.
+
+**** Is Asuka Just a Bitch?
+No! No, no, no, no, no. Where do you people get these ideas?
+
+Asuka is a girl who thinks -- unconsciously, if not consciously -- that the moment she has to depend on someone else --
+for her self-worth, for love, for a home -- they'll turn on her. Kill her. You know why. How could you blame her?
+
+She thinks that if she can cultivate and protect an image of her in peoples minds of someone perfect, someone that they
+need; it will give her room to make up for not being perfect. She'll sacrifice anything for that. Anything. If her
+real-world performance doesn't match her words, then fine, she'll lie. She'll lie however big and for however long it
+takes. If they grow to hate her for it, so be it. If they choose exploit her, so be it. If they deprave and defile her,
+so be it. It's worth it, just to know they won't kill her.
+
+Compare her with Rei. Rei, who never acknowledges Asuka's thin pleas for recognition. Rei, the prototype for the dummy
+plug that killed Toji. The one they picked first. The porcelain doll, willing to kill anyone or be killed by anyone at
+her master's orders. That /terrifies/ Asuka! She feels like she has a suicide bomber for a co-worker!
+
+Shinji isn't much better. He's too aloof to openly reciprocate her feelings and that equally frustrates and terrifies
+her. Stupid Shinji, why can't he see past her fa\ccedil​de and hold her? She doesn't understand it's a two-way street.
+Well, besides maybe that bit where he saves her in Magmadiver. There, the deprecation is reversed. He's stupid for
+saving someone as worthless as her -- the loser.
+
+The only person Asuka really gels with is her foil: Misato. Oh, Misato. They're both putting on the same act, more or
+less. Misato buys Asuka's BS about being fine so easily because if she didn't, she'd have to confront her own BS about
+being fine. It goes by quick, but that other moment in Magmadiver where Asuka /barely/ cracks open the possibility she
+might be struggling ("You know about my past, don't you?") and Misato shuts her down with "that's ancient history, don't
+let it bother you"? That's the beginning of the end.
+
+The inevitable tragedy here is twofold:
+
+First, obviously, she really /does/ need other people. She's fourteen! When working alone she's pretty conclusively the
+worst, least successful pilot out of the first three children; she loves Shinji, and her home life is a choice between
+"child soldier who lives with her commanding officer", and hanging up the towel and moving back in with her father and
+stepmother who... well, for whom moving back in with would be tantamount to suicide.
+
+Second, her failure to reconcile that drives everyone else to /start working to make her replaceable./ She just doesn't
+know how to "fix" things without sacrificing her relationships. "Maybe if I keep digging this hole deeper", she thinks,
+"I'll eventually dig up a ladder I can use to get out of here."
+
+She doesn't. Cross my heart and hope to die, *stick a needle in my eye.*
+
+#+CAPTION: Still from the /End of Evangelion,/ showing the Lance of Longinus driven through the head of Unit 02. \copy Khara / Gainax.
+[[file:../../docs/images/EoE_Lance_Through_Head.webp]]
+
+SEELE are the only people so despicable that they really would kill her just because they can, and they do. You lose!
+/That's/ who Asuka is.
+
+**** Thoughts on the "Unified Timeline" / "Both Endings Are Concurrent" Theory?
+Hooey. Apologia. Maybe the rebuilds say things are different, I can't say until I've seen them, but it makes no sense in
+the context of just /End of TV/ vs. /End of Evangelion/. They are not in agreement. I think Codex Entry's video makes
+the strongest case for why this is:
+
+#+begin_center
+[[yt:ZMOYxjYIgeU]]
+#+end_center
+
+Though I do disagree a little with her interpretation of the final scene. Essay TODO!
+
 *** Are the Star Wars Prequels / Sequels / Originals Actually Good?
 Possession of a legal right to continue a work does not confer the ability to say anything interesting about that work.
-Franchises are not /real./
+Franchises are not /real./ They are a legal fiction.
 
 I don't give a damn about any of the shows besides Tartakovsky's /Clone Wars/, so here's just my thoughts on every
 movie, in in-universe chronological order:
@@ -490,8 +487,8 @@ movie, in in-universe chronological order:
 - TPM :: The best production design we see outside the OT, coupled with a plot that's a lot of boring dicking around in
   a desert. Racist and boring and clumsy. Still, could be worse.
 
-- AotC :: Unwatchable nonsense. There are maybe two interesting plot threads here, and in a perfect world they would've
-  been merged into /TPM/ to make room for the clone wars on the big screen. Oops.
+- AotC :: Worse. Unwatchable nonsense. There are maybe two interesting plot threads here, and in a perfect world they
+  would've been merged into /TPM/ to make room for the clone wars on the big screen. Oops.
 
 - SW:TCW :: Uuuuuhghghhhhh. You can tell that this is a bunch of first season /TCW/ episodes edited together. Dave just
   Filoni'ed all over them. Can I please watch the 2003 /Clone Wars/ instead?
@@ -509,8 +506,8 @@ movie, in in-universe chronological order:
   design too much to really hate this film, weak performances notwithstanding, but it /is/ a pretty weak film.
 
 - ANH :: This film has a lot of charismatic characters but not a lot of /interesting/ characters. Joseph Campbell's
-  poison pill has already entered the bloodstream. Still, the production design is too much of a winner to make this a
-  /bad/ movie.
+  poison pill has already entered the bloodstream. Still, the production design is once more too much of a winner to
+  make this a /bad/ movie.
 
 - SWHS :: Demented cinema verite variety show Wookie bullshit. Feels like eight hours. That's so brazen it's almost
   respectable, but for all its cult status, it's /still/ not worth watching. Really, honestly: *don't bother.* Don't
@@ -529,8 +526,9 @@ movie, in in-universe chronological order:
 - E:TBfE :: TODO!
 
 - TFA :: A coward's movie, which introduces essentially nothing to the franchise but a new cast of charismatic
-  non-characters. Is this a commentary on the cyclical nature of war, or just a depiction of the same. (The latter.)
-  Only Kylo Ren is set up for an arc, but watching him is like putting on a pair of wet socks. I'm so tired of padding.
+  non-characters. Is this a commentary on the cyclical nature of war, or just a depiction of the same? The latter. Only
+  Kylo Ren is set up for an arc, but actually watching him is like putting on a pair of wet socks. I'm so tired of
+  padding.
 
 - TLJ :: After the non-start of /TFA/, /TLJ/ stumbles hard trying to play catch up in some characteristically Rian
   Johnson ways. Still more interesting than its successor or antecessor though.
@@ -557,8 +555,22 @@ build up a CD collection. Good sound that works natively with my computer /and/ 
 I can watch my $2 thrift store DVDs whenever I want, /and/ they have deleted scenes + BTS content + directors
 commentary. Even most piracy sites only bother dealing in the movies themselves. I want historical context!
 
+**** Video Games
+I trust Steam to keep my library playable for my lifetime more than I don't trust them. I do not extend this trust to
+anyone else. Physical copies wherever possible.
+
 *** Is Adblock Piracy?
-Probably! But that's not a value judgment.
+Probably! But again, who cares? Are you a judge, tasked with interpreting a legal code and deciding whether to sentence
+someone to prison? No? Then why act like it? Nothing hinges on your opinion.
+
+*** Is Piracy Theft?
+I think there's an implicit conflation here between "Is piracy moral?" and "Is piracy /legal?/" So often I see this
+"piracy isn't theft" mantra get carted out like a ward against evil against any mention of copyright law. These are
+unrelated questions!
+
+"Should I commit piracy?" is for you and you alone to decide, "Should I be punished by the legal system for committing
+piracy" is for the court and the court alone to decide. This is a resource management problem, not a confessional.
+Choose accordingly.
 
 * Space and Spaceflight
 
@@ -616,76 +628,15 @@ ATLAS-1 or SEPAC?
 I don't think so.
 
 *** Who Won the Space Race?
-It's easy to paint the USSR as an unambiguous winner if we just look at the "first to X milestone" numbers. I'm sure
-we've all seen that meme that goes something like "first satellite in space, first animal in space, first man in space,
-first woman in space, first space walk, first space station -- USSR. First man on the moon, USA. Winner? USA!?"
+When measuring success here, there are more important factors to consider than "who was first to meet these exact
+criteria". Science isn't built on cheevos.
 
-Well, here's something to note: Between April 12th, 1961 (first human spaceflight) and December 26th, 1991 (collapse of
-the USSR) the USSR flew 2 women on 3 person-flights,[fn:8] out of 94 flying cosmonauts and 142 person-flights.[fn:9] If
-we include /Interkosmos/ cosmonauts, these numbers rise to 3 women, on 4 person-flights, out of 101 flying cosmonauts
-and 150 person-flights.
+I'm still working a decent comprehensive summary of the data, so instead of a straight answer I'll leave /you/ with a
+research question. Between 1962 (first crewed spaceflight) and 1991 (collapse of the Soviet Union), the United States
+flew 13 individual female career astronauts, together making 19 person-flights (including /Challenger/ STS-51L).
 
-In that same time, the USA flew 13 women on 19 person-flights,[fn:10] out of 154 flying astronauts and 285
-person-flights.[fn:11] If we include payload specialists (whose selection is (was?) more complicated than traditional
-astronauts) these numbers rise to 15 women on 22 person-flights, out of 154 astronauts and 312 person-missions.
-
-Now, 13 is obviously not half of 285. Even if we restrict ourselves just to the Space Shuttle program, 13 is still not
-half of 201. /Obviously/ inequitable. But 6.7% is a hell of a lot bigger than 2.1%.
-
-Today the disparity is even wider -- 20 women and 28 men are active members of the NASA astronaut corps, 1 woman and 22
-men are active members of the Roscosmos cosmonaut corps. Only four Russian women have flown to space since 1991, three
-cosmonauts and an actress. (Not actress-turned-cosmonaut, just actress. She went to the International Space Station to
-film a movie for state-owned TV broadcaster Channel One Russia.) The US has put up another fifty or so. (exact figure
-depends on how you want to consider private spaceflights, payload specialists, space tourists, etc.) No Russian woman
-has flown more than once since Yelena Kondakova in 1997, who flew twice. No Russian or Soviet woman has flown more than
-twice.
-
-There are more American women who have flown to space /exactly four times,/ than there are Russian women who have flown
-/ever./ No Russian woman has ever commanded the ISS, or, for that matter, any mission. (Arguably the Soviets had one,
-Valentina Tereshkova "commanded" her single-occupant Vostok 6; but given the technical nature of the Vostok capsule, and
-the fact her flight was shorter than the three flight preceding her, I'm more inclined to say she was treated closer to
-a human life sciences payload.)
-
-The Soviet Union flew the first woman into space because they heard the US might be doing the same (misconstruing the
-Mercury 13), and they wanted to be first. Then, they didn't fly a single woman for another twenty years. None of the
-other four candidates would ever fly. Then the Soviet Union did the first female spacewalk, because they heard the U.S.
-was going to be doing the same, and they wanted to first. No Soviet or Russian woman has conducted a spacewalk since.
-
-Here's another bit of trivia you might not know: from 1963 to 1975, the USSR made 7 successful robotic landings on the
-Moon, including the very first with Luna 9 in 1966. If we also consider 1976 -- the last year of first-gen lunar
-landings and only a year beyond our 1975 ASTP cutoff date -- that's 8 landings.
-
-8 landings out of *27 attempts*, that is.
-
-In the same time-frame, the US made five robotic landings and six manned landings -- out of seven and seven attempts,
-respectively.
-
-This sort of parallels the respective Venus programs of both countries a couple years later. The Soviet Union made nine
-landings on Venus, out of twelve attempts; the US made one landing on Venus out of *no* attempts. Did you know that?
-Hughes overbuilt the Day probe (intended only for atmospheric data collection) so much that when it hit the ground
-/without a parachute,/ it just kept transmitting! For over an hour! (The Night probe, part of the same mission, /also/
-survived impact, but only for two seconds. Still a laudable accomplishment, but not really a "successful landing" in my
-book.)
-
-Here's a third piece of trivia: while the USSR did get the first ever EVA ("spacewalk"), it's the US that got the second
-and third. And fourth. And fifth. And sixth and seventh. Also eight, ninth, and tenth. Then the USSR got the eleventh,
-and the US got the twelfth. And thirteenth, fourteenth, fifteenth, sixteenth, seventeenth, eighteenth, nineteenth,
-twentieth, and twenty-first (though you might not count those, because they didn't happen in Zero G. Walking on the Moon
-is cheating!) then the twenty-second EVA in deep space, before another six moonwalks and two more deep-spacewalks. Oh,
-and also the thirty-first, thirty-second, thirty-third, thirty-fourth, thirty-fifth, thirty-sixth, thirty-seventh,
-thirty-eighth, thirty-ninth, and fortieth on Skylab.
-
-Then we hit Apollo-Soyuz, and the space race is officially over!
-
-Isn't it a little ridiculous to claim a milestone is yours when you could barely replicate it? EVAs are only valuable
-when you have a facility that requires them -- usually either a station, or a surface ops site. The USSR did not develop
-such facilities or mission profiles before the US did. Period.
-
-I am aware that, unlike the number of women flown in space, this statistic evens out a bit after 1975, as both nations
-entered their respective 80s forever programs -- STS, and second and third generation DOS space stations. The USSR would
-make 41 spacewalks from 1975-1991, the US only 15. This brings totals up to 43 and 55, respectively. Things would swing
-back the other way going into the ISS, but at that point the USSR was no more and things get even more geopolitically
-complicated.
+How many women do you think the Soviet Union flew in that same time? Write down your hypothesis, then go ahead and count
+'em: [[https://en.wikipedia.org/wiki/List_of_women_astronauts]].
 
 * {{{license_footer(2025)}}}
 
@@ -706,13 +657,3 @@ built-ins. The thing you're commanding isn't /Emacs./ It's whatever package decl
 
 [fn:7] Stuff that's in C source code (like ~car~ and ~cdr~ and ~self-insert-command~ and other primitives) require a bit
 of extra config, and you need to have the source code available on-disk somewhere. Can still do it, though.
-
-[fn:8] Not including unflown cosmonauts or /Interkosmos/ cosmonauts.
-
-[fn:9] Including Soyuz 1, 11, 7K-T No.39, 7K-ST No.16L, and TM-13; not including unflown cosmonauts or /Interkosmos/
-cosmonauts.
-
-[fn:10] Including /Challenger/ STS-51L, not including unflown astronauts or payload specialists.
-
-[fn:11] Including /Challenger/ STS-51L, X-15 flights over 50 miles -- even X-15 flight 191 -- and Apollo 1, and Gemini
-6; not including Gemini 9, ALT 1-16, unflown astronauts or payload specialists.

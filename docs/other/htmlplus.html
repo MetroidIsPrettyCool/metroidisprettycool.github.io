@@ -1,0 +1,169 @@
+<!DOCTYPE htmlplus SYSTEM "http://www.w3.org/MarkUp/htmlplus_paper/htmlplus.dtd" [
+ <!ENTITY % HTML.icons "INCLUDE">
+]>
+<HTMLPLUS CHARSET="UTF-8">
+  <HEAD>
+    <TITLE>HTML+ Lives!</TITLE>
+    <LINK REL="StyleSheet" HREF="/common/stylesheet.css">
+  </HEAD>
+  <BODY>
+    <PROLOGUE>
+      <P>
+        Back to the top-level index: <A HREF="/index.xhtml">/index.xhtml</A>
+      </P>
+      <HR>
+    </PROLOGUE>
+    <DIV1>
+      <H1>HTML+ Lives!</H1>
+      <P>
+        Well, actually, no it doesn't. Your browser has no goddamned idea what's going on here. Total tag soup, as far
+        as it's concerned. But <I>boy</I> is it trying its hardest to make sense of it anyway! Most of it probably came
+        through, at least.
+      </P>
+      <DIV2>
+        <H2>What the Heck is HTML+?</H2>
+        <P>
+          Good question. HTML+ is a superset of the <I>original,</I> pre-2.0 draft HTML. It was in development for
+          <I>probably</I> not more than a year, starting sometime around mid-to-late 1993 before being abandoned in
+          early 1994.
+        </P>
+        <P>
+          Most of its interesting features, like tables, <TT>&lt;TEXTAREA&gt;</TT>, <TT>&lt;ISINDEX&gt;</TT>, etc.
+          eventually got rolled into HTML 3.2 and later; but there's also a lot of stuff that never went anywhere else,
+          like the numbered division tags <TT>&lt;DIV1&gt;</TT>, <TT>&lt;DIV2&gt;</TT>, etc.
+          through <TT>&lt;DIV6&gt;</TT> (which did eventually become the unnumbered <TT>&lt;DIV&gt;</TT>, in a very
+          different context), <TT>&lt;FOOTNOTE&gt;</TT>, <TT>&lt;ABSTRACT&gt;</TT>, and many more &mdash; plus
+          attributes and possible <I>values</I> for attributes that also never left HTML+.
+        </P>
+        <P>
+          If you want better, more comprehensive resources on the subject, I recommend you take a look at the official
+          write-up, the official review (still being hosted by W3C, perfectly preserved from 1993 and 1994!) and this
+          great summary (from a very strange individual &mdash; I hope I don't sound like he does&hellip;) I found while
+          researching the topic:
+        </P>
+        <UL>
+          <LI><P><A HREF="https://www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html">https://www.w3.org/MarkUp/HTMLPlus/htmlplus_1.html</A>
+          <LI><P><A HREF="https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html">https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html</A>
+          <LI><P><A HREF="http://www.the-pope.com/htmlplus.html">http://www.the-pope.com/htmlplus.html</A>
+        </UL>
+      </DIV2>
+      <DIV2>
+        <H2>Is This Page Actually HTML+?</H2>
+        <P>
+          Sure is. If I'm reading everything right, it should be totally valid too, according to
+          the <A HREF="https://www.w3.org/MarkUp/htmlplus_paper/htmlplus.dtd">final DTD draft</A>.
+        </P>
+        <P>
+          The trouble with actually making sure about that is that I haven't been able to actually track down an SGML
+          validating tool crusty enough to be happy with that aforementioned DTD. <TT>onsgmls</TT> and <TT>nsgmls
+          1.3.4</TT> (from 1998, had to compile from source after massaging it into a modern <TT>g++</TT> compatible
+          form) both give the same complaints:
+        </P>
+        <PRE>/usr/bin/onsgmls:&lt;URL&gt;http://www.w3.org/MarkUp/htmlplus_paper/htmlplus.dtd:1:2:E: unknown declaration type "SGML"
+/usr/bin/onsgmls:&lt;URL&gt;http://www.w3.org/MarkUp/htmlplus_paper/htmlplus.dtd:12:41:E: "DOCTYPE" declaration not allowed in DTD subset
+/usr/bin/onsgmls:&lt;URL&gt;http://www.w3.org/MarkUp/htmlplus_paper/htmlplus.dtd:16:7:E: "DOCTYPE" declaration not allowed in DTD subset
+/usr/bin/onsgmls:&lt;URL&gt;http://www.w3.org/MarkUp/htmlplus_paper/htmlplus.dtd:19:5:E: character "]" not allowed in declaration subset
+/usr/bin/onsgmls:&lt;URL&gt;http://www.w3.org/MarkUp/htmlplus_paper/htmlplus.dtd:165:2:E: "DOCTYPE" declaration not allowed in DTD subset
+/usr/bin/onsgmls:&lt;URL&gt;http://www.w3.org/MarkUp/htmlplus_paper/htmlplus.dtd:1017:0:E: character "]" not allowed in declaration subset</PRE>
+        <P>
+          And that's <I>after</I> manually going into my SGML catalog files and modifying them to accept the older form
+          of ISO FPIs &mdash; the ones with hyphens instead of colons to separate the year. Otherwise we get a billion
+          undefined character reference errors.
+        </P>
+        <P>
+          Still, no errors reported about <B>my</B> document, so I think I'm in the clear? Probably?
+        </P>
+      </DIV2>
+      <DIV2>
+        <H2>Is That a Good Joke?</H2>
+        <P>
+          I dunno.
+        </P>
+        <P>
+          It would be a better gag if any of this was actually <I>supported</I> by modern browsers. The Web 1.0 HTML
+          3.2/4.0 days are easy to parody and nostalgically revive, because <TT>&lt;BLINK&gt;</TT>
+          and <TT>&lt;MARQUEE&gt;</TT> and big spinny GIFs are all still supported.
+        </P>
+        <P>
+          HTML+ was never supported. By anything. What is there to even parody? You can't be retro-cool if nobody has
+          ever heard of or understood the relevant retro. The harder I lean into HTML+, the less you'll actually be able
+          to <I>see.</I> Am I going to <TT>&lt;LINK&gt;</TT> a glossary to this page that you'll never be able to
+          interact with? That's sort of stupid.
+        </P>
+        <P>
+          All I really can do is write a simple static page, like this one, in the intersection between valid HTML+ and
+          tolerable HTML5. The end result of actually doing that is just a boring, web 0.0 looking text-only page with
+          some parsing errors thrown in for flavor, again like this one. (Though I guess there's also the anachronistic
+          stylesheet I've thrown in.)
+        </P>
+        <P>
+          So I guess I have to leave the question up to you: do you think HTML+ is funny? Write to your local
+          congressperson with your response.
+        </P>
+      </DIV2>
+      <DIV2>
+        <H2>If It's a Superset of HTML, Does That Mean It's Not Actually HTML?</H2>
+        <P>
+          Yep. As related as C and C++, if C suddenly turned around and integrated half of the C++ standard library.
+        </P>
+        <P>
+          As I said earlier, your browser is doing its damnedest to understand this page as really, really malformed
+          HTML. But it isn't! Thus, some weird behavior, and a lot of missing features from HTML+.
+        </P>
+        <P>
+          For example, here's a list of items that <I>should</I> be using gopher-style icons:
+        </P>
+        <UL>
+          <LI ICON="&gopher;"><P>Item with a gopher icon
+          <LI ICON="&ftp;"><P>Item with an FTP icon
+          <LI ICON="&calculator;"><P>Item with a calculator icon
+          <LI><P>Item with no icon but a bunch of entities in its text: &fixed.disk; &toc; &caution; &tn3270;
+        </UL>
+        <P>
+          but this doesn't work whatsoever, for obvious reasons. Today's <TT>&lt;LI&gt;</TT> doesn't even <I>have</I>
+          an <TT>icon</TT> attribute!
+        </P>
+        <P>
+          You may also notice the weird "]&gt;" at the top of the document, that's not supposed to be there &mdash; it's
+          part of the SGML doctype declaration that no modern browser has any idea what to do with.
+        </P>
+        <P>
+          This all might make a little more sense if you open the developer console in your browser of choice and
+          compare the raw, over the-wire-source of this file to the DOM. The HTML+ root tag <TT>&lt;HTMLPLUS&gt;</TT> is
+          getting interpreted, via quirks mode, as though this were a document <I>without</I> a proper root tag (the
+          browser is expecting <TT>&lt;html&gt;</TT>), and so it's getting inserted into a
+          synthetic <TT>&lt;body&gt;</TT> in the DOM, along with the closing "]&gt;" of the doctype declaration. Worse,
+          my <TT>&lt;HEAD&gt;</TT> and <TT>&lt;BODY&gt;</TT> tags have also been <I>inlined</I> into this
+          synthetic <TT>&lt;BODY&gt;</TT>; though, thanks to tolerant parsing, at least the <TT>&lt;TITLE&gt;</TT> is
+          still recognized. Very funny.
+        </P>
+      </DIV2>
+      <DIV2>
+        <H2>Why Is It so Different?</H2>
+        <P>
+          Reading the available HTML+ literature really puts you into the headspace of where the Web was in 1993. This
+          is a great language for publishing, not so much single page applications.
+        </P>
+        <P>
+          The spec reminds me a lot of Org mode actually, with its tables and enforced hierarchical divisions with
+          headlines and inspiration from LaTeX and math markup and hyperlinked glossaries and so forth. Very, very
+          different from the HTML we got.
+        </P>
+        <P>
+          It's too focused on publishing for its own good, and probably wouldn't have survived unalloyed if the web was
+          going to grow like it did, but I have a lot of affection for it. The little standard that couldn't quite.
+        </P>
+      </DIV2>
+    </DIV1>
+    <EPILOGUE>
+      <HR>
+      <P>
+        Back to the top-level index: <A HREF="/index.xhtml">/index.xhtml</A>
+      </P>
+    </EPILOGUE>
+  </BODY>
+</HTMLPLUS>
+
+<!-- Local Variables: -->
+<!-- mode: sgml -->
+<!-- End: -->
